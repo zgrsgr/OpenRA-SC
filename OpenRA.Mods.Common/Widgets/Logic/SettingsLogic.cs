@@ -90,13 +90,21 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						Game.SwitchToExternalMod(external, null, closeAndExit);
 					};
 
+					// ConfirmationDialogs.ButtonPrompt(
+					// 	title: "Restart Now?",
+					// 	text: "Some changes will not be applied until\nthe game is restarted. Restart now?",
+					// 	onConfirm: restart,
+					// 	onCancel: closeAndExit,
+					// 	confirmText: "Restart Now",
+					// 	cancelText: "Restart Later");
+
 					ConfirmationDialogs.ButtonPrompt(
-						title: "Restart Now?",
-						text: "Some changes will not be applied until\nthe game is restarted. Restart now?",
+						title: "现在重启？",
+						text: "某些设置将会在下一次启动时\n生效，现在重启？",
 						onConfirm: restart,
 						onCancel: closeAndExit,
-						confirmText: "Restart Now",
-						cancelText: "Restart Later");
+						confirmText: "立即重启",
+						cancelText: "稍后重启");
 				}
 				else
 					closeAndExit();
@@ -201,18 +209,24 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var windowModeDropdown = panel.Get<DropDownButtonWidget>("MODE_DROPDOWN");
 			windowModeDropdown.OnMouseDown = _ => ShowWindowModeDropdown(windowModeDropdown, ds);
+			// windowModeDropdown.GetText = () => ds.Mode == WindowMode.Windowed ?
+			// 	"Windowed" : ds.Mode == WindowMode.Fullscreen ? "Fullscreen (Legacy)" : "Fullscreen";
 			windowModeDropdown.GetText = () => ds.Mode == WindowMode.Windowed ?
-				"Windowed" : ds.Mode == WindowMode.Fullscreen ? "Fullscreen (Legacy)" : "Fullscreen";
+				"窗口化" : ds.Mode == WindowMode.Fullscreen ? "全屏化（旧方法）" : "全屏化";
 
 			var statusBarsDropDown = panel.Get<DropDownButtonWidget>("STATUS_BAR_DROPDOWN");
 			statusBarsDropDown.OnMouseDown = _ => ShowStatusBarsDropdown(statusBarsDropDown, gs);
+			// statusBarsDropDown.GetText = () => gs.StatusBars == StatusBarsType.Standard ?
+			// 	"Standard" : gs.StatusBars == StatusBarsType.DamageShow ? "Show On Damage" : "Always Show";
 			statusBarsDropDown.GetText = () => gs.StatusBars == StatusBarsType.Standard ?
-				"Standard" : gs.StatusBars == StatusBarsType.DamageShow ? "Show On Damage" : "Always Show";
+				"标准" : gs.StatusBars == StatusBarsType.DamageShow ? "受损时显示" : "一直显示";
 
 			var targetLinesDropDown = panel.Get<DropDownButtonWidget>("TARGET_LINES_DROPDOWN");
 			targetLinesDropDown.OnMouseDown = _ => ShowTargetLinesDropdown(targetLinesDropDown, gs);
+			// targetLinesDropDown.GetText = () => gs.TargetLines == TargetLinesType.Automatic ?
+			// 	"Automatic" : gs.TargetLines == TargetLinesType.Manual ? "Manual" : "Disabled";
 			targetLinesDropDown.GetText = () => gs.TargetLines == TargetLinesType.Automatic ?
-				"Automatic" : gs.TargetLines == TargetLinesType.Manual ? "Manual" : "Disabled";
+				"自动" : gs.TargetLines == TargetLinesType.Manual ? "手动" : "禁用";
 
 			// Update zoom immediately
 			var pixelDoubleCheckbox = panel.Get<CheckboxWidget>("PIXELDOUBLE_CHECKBOX");
@@ -436,15 +450,22 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var middleMouseScrollDropdown = panel.Get<DropDownButtonWidget>("MIDDLE_MOUSE_SCROLL");
 			middleMouseScrollDropdown.OnMouseDown = _ => ShowMouseScrollDropdown(middleMouseScrollDropdown, gs, false);
-			middleMouseScrollDropdown.GetText = () => gs.MiddleMouseScroll.ToString();
+			middleMouseScrollDropdown.GetText = () => 	gs.MiddleMouseScroll.ToString() == "Disabled" ? "禁用" :
+														gs.MiddleMouseScroll.ToString() == "Standard" ? "标准" :
+														gs.MiddleMouseScroll.ToString() == "Inverted" ? "反向" : "摇杆";
 
 			var rightMouseScrollDropdown = panel.Get<DropDownButtonWidget>("RIGHT_MOUSE_SCROLL");
 			rightMouseScrollDropdown.OnMouseDown = _ => ShowMouseScrollDropdown(rightMouseScrollDropdown, gs, true);
-			rightMouseScrollDropdown.GetText = () => gs.RightMouseScroll.ToString();
+			rightMouseScrollDropdown.GetText = () => 	gs.RightMouseScroll.ToString() == "Disabled" ? "禁用" :
+														gs.RightMouseScroll.ToString() == "Standard" ? "标准" :
+														gs.RightMouseScroll.ToString() == "Inverted" ? "反向" : "摇杆";
+
+
+
 
 			var zoomModifierDropdown = panel.Get<DropDownButtonWidget>("ZOOM_MODIFIER");
 			zoomModifierDropdown.OnMouseDown = _ => ShowZoomModifierDropdown(zoomModifierDropdown, gs);
-			zoomModifierDropdown.GetText = () => gs.ZoomModifier.ToString();
+			zoomModifierDropdown.GetText = () => gs.ZoomModifier.ToString() == "None" ? "无" : gs.ZoomModifier.ToString();
 
 			return () => { };
 		}
@@ -596,10 +617,14 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, MouseScrollType>()
 			{
-				{ "Disabled", MouseScrollType.Disabled },
-				{ "Standard", MouseScrollType.Standard },
-				{ "Inverted", MouseScrollType.Inverted },
-				{ "Joystick", MouseScrollType.Joystick },
+				// { "Disabled", MouseScrollType.Disabled },
+				// { "Standard", MouseScrollType.Standard },
+				// { "Inverted", MouseScrollType.Inverted },
+				// { "Joystick", MouseScrollType.Joystick },
+				{ "禁用", MouseScrollType.Disabled },
+				{ "标准", MouseScrollType.Standard },
+				{ "反向", MouseScrollType.Inverted },
+				{ "摇杆", MouseScrollType.Joystick },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -618,11 +643,16 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, Modifiers>()
 			{
+				// { "Alt", Modifiers.Alt },
+				// { "Ctrl", Modifiers.Ctrl },
+				// { "Meta", Modifiers.Meta },
+				// { "Shift", Modifiers.Shift },
+				// { "None", Modifiers.None }
 				{ "Alt", Modifiers.Alt },
 				{ "Ctrl", Modifiers.Ctrl },
 				{ "Meta", Modifiers.Meta },
 				{ "Shift", Modifiers.Shift },
-				{ "None", Modifiers.None }
+				{ "无", Modifiers.None }
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -662,9 +692,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, WindowMode>()
 			{
-				{ "Fullscreen", WindowMode.PseudoFullscreen },
-				{ "Fullscreen (Legacy)", WindowMode.Fullscreen },
-				{ "Windowed", WindowMode.Windowed },
+				// { "Fullscreen", WindowMode.PseudoFullscreen },
+				// { "Fullscreen (Legacy)", WindowMode.Fullscreen },
+				// { "Windowed", WindowMode.Windowed },
+				{ "全屏化", WindowMode.PseudoFullscreen },
+				{ "全屏化 (旧方法)", WindowMode.Fullscreen },
+				{ "窗口化", WindowMode.Windowed },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -699,9 +732,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, StatusBarsType>()
 			{
-				{ "Standard", StatusBarsType.Standard },
-				{ "Show On Damage", StatusBarsType.DamageShow },
-				{ "Always Show", StatusBarsType.AlwaysShow },
+				// { "Standard", StatusBarsType.Standard },
+				// { "Show On Damage", StatusBarsType.DamageShow },
+				// { "Always Show", StatusBarsType.AlwaysShow },
+				{ "标准", StatusBarsType.Standard },
+				{ "受损时显示", StatusBarsType.DamageShow },
+				{ "一直显示", StatusBarsType.AlwaysShow },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -721,9 +757,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, TargetLinesType>()
 			{
-				{ "Automatic", TargetLinesType.Automatic },
-				{ "Manual", TargetLinesType.Manual },
-				{ "Disabled", TargetLinesType.Disabled },
+				// { "Automatic", TargetLinesType.Automatic },
+				// { "Manual", TargetLinesType.Manual },
+				// { "Disabled", TargetLinesType.Disabled },
+				{ "自动", TargetLinesType.Automatic },
+				{ "手动", TargetLinesType.Manual },
+				{ "禁用", TargetLinesType.Disabled },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
