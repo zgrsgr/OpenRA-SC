@@ -18,7 +18,7 @@ BADR:
 		RenderSelectionBars: False
 	-Voiced:
 	Tooltip:
-		Name: Badger
+		Name: 獾式运输机
 	Contrail@1:
 		Offset: -432,560,0
 	Contrail@2:
@@ -57,7 +57,7 @@ BADR.Bomber:
 		RenderSelectionBars: False
 	-Voiced:
 	Tooltip:
-		Name: Badger
+		Name: 獾式轰炸机
 	Contrail@1:
 		Offset: -432,560,0
 	Contrail@2:
@@ -87,11 +87,11 @@ MIG:
 		BuildAtProductionType: Plane
 		BuildPaletteOrder: 50
 		Prerequisites: ~afld, stek, ~techlevel.high
-		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: 高速反装甲攻击机\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵、飞行器
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: MiG Attack Plane
+		Name: 米格战机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -151,11 +151,11 @@ YAK:
 		BuildAtProductionType: Plane
 		BuildPaletteOrder: 30
 		Prerequisites: ~afld, ~techlevel.medium
-		Description: Attack Plane armed with\ndual machine guns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: 高速反步兵攻击机\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Valued:
 		Cost: 1350
 	Tooltip:
-		Name: Yak Attack Plane
+		Name: 雅克攻击机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -219,11 +219,11 @@ TRAN:
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 10
 		Prerequisites: ~hpad, ~techlevel.medium
-		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+		Description: 用于运输步兵\n\n·无武装
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Chinook
+		Name: 支努干运输机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -274,11 +274,11 @@ HELI:
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 40
 		Prerequisites: ~hpad, atek, ~techlevel.high
-		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Buildings, Vehicles, Aircraft\n  Weak vs Infantry
+		Description: 多用途武装直升机\n\n·强势对抗：载具、建筑、飞行器 \n·弱势对抗：步兵
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Longbow
+		Name: 长弓武装直升机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -339,11 +339,11 @@ HIND:
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 20
 		Prerequisites: ~disabled, ~hpad, ~techlevel.medium
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: 反步兵武装直升机\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Hind
+		Name: 雌鹿武装直升机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -405,7 +405,7 @@ U2:
 	Health:
 		HP: 200000
 	Tooltip:
-		Name: Spy Plane
+		Name: 侦察机
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 7
@@ -439,11 +439,11 @@ MH60:
 		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 20
 		Prerequisites: ~hpad, ~techlevel.medium
-		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: 反步兵武装直升机\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Black Hawk
+		Name: 黑鹰武装直升机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

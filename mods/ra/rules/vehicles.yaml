@@ -6,11 +6,11 @@ V2RL:
 		Queue: Vehicle
 		BuildPaletteOrder: 80
 		Prerequisites: dome, ~vehicles.soviet, ~techlevel.medium
-		Description: Long-range rocket artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: 机动型远程火箭发射平台\n\n·强势对抗：步兵、建筑\n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: V2 Rocket Launcher
+		Name: V2火箭发射车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -55,12 +55,12 @@ V2RL:
 		Queue: Vehicle
 		BuildPaletteOrder: 50
 		Prerequisites: ~vehicles.allies, ~techlevel.low
-		Description: Fast tank, good for scouting.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
+		Description: 高机动性侦察用坦克 \n\n·强势对抗：轻型载具\n·弱势对抗：步兵、装甲载具、飞行器
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Light Tank
-		GenericName: Tank
+		Name: 轻型坦克
+		GenericName: 坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -98,12 +98,12 @@ V2RL:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
 		Prerequisites: fix, ~vehicles.allies, ~techlevel.medium
-		Description: Allied Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: 盟军主战坦克\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: Medium Tank
-		GenericName: Tank
+		Name: 中型坦克
+		GenericName: 坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -144,12 +144,12 @@ V2RL:
 		Queue: Vehicle
 		BuildPaletteOrder: 120
 		Prerequisites: fix, ~vehicles.soviet, ~techlevel.medium
-		Description: Soviet Main Battle Tank, with dual cannons\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: 苏军标志性双炮管主战坦克\n\n·强势对抗：载具 \n·弱势对抗：步兵、飞行器
 	Valued:
 		Cost: 1150
 	Tooltip:
-		Name: Heavy Tank
-		GenericName: Tank
+		Name: 重型坦克
+		GenericName: 坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -190,12 +190,12 @@ V2RL:
 		Queue: Vehicle
 		BuildPaletteOrder: 180
 		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
-		Description: Big and slow tank, with anti-air capability.\nCan crush concrete walls.\n  Strong vs Vehicles, Infantry, Aircraft\n  Weak vs Nothing
+		Description: 具有防空能力的超重型移动堡垒\n可以碾压混凝土围墙\n\n·强势对抗：地面单位\n·弱势对抗：无\n·特殊能力：自动恢复生命值至50%
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Mammoth Tank
-		GenericName: Tank
+		Name: 猛犸坦克
+		GenericName: 坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -249,11 +249,11 @@ ARTY:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
 		Prerequisites: dome, ~vehicles.allies, ~techlevel.medium
-		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: 长程轻型火炮\n\n·强势对抗：步兵、建筑\n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: Artillery
+		Name: 自行火炮
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -291,12 +291,12 @@ HARV:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
 		Prerequisites: proc, ~techlevel.infonly
-		Description: Collects Ore and Gems for processing.\n  Unarmed
+		Description: 采集矿物以供生产\n\n·无武装
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Ore Truck
-		GenericName: Harvester
+		Name: 采矿车
+		GenericName: 采矿车
 	Selectable:
 		Priority: 7
 		DecorationBounds: 42,42
@@ -346,11 +346,11 @@ MCV:
 		BuildPaletteOrder: 90
 		Prerequisites: fix, ~techlevel.medium
 		BuildDurationModifier: 50
-		Description: Deploys into another Construction Yard.\n  Unarmed
+		Description: 可部署为建筑工厂\n多个建筑工厂能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n\n·无武装
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Mobile Construction Vehicle
+		Name: 移动基地车
 	Selectable:
 		Priority: 4
 		DecorationBounds: 42,42
@@ -386,11 +386,11 @@ JEEP:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
 		Prerequisites: ~vehicles.allies, ~techlevel.low
-		Description: Fast scout & anti-infantry vehicle.\nCan carry one infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 高机动性反步兵侦察载具\n可以搭载一名步兵\n搭载的步兵无法从中攻击\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Ranger
+		Name: 突击侦察车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -432,11 +432,11 @@ APC:
 		Queue: Vehicle
 		BuildPaletteOrder: 40
 		Prerequisites: ~vehicles.soviet, ~techlevel.low
-		Description: Tough infantry transport.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+		Description: 配备重装甲的反步兵运输载具\n可以运送五名步兵\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: Armored Personnel Carrier
+		Name: 装甲运兵车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -472,11 +472,11 @@ MNLY:
 		Queue: Vehicle
 		BuildPaletteOrder: 100
 		Prerequisites: fix, ~techlevel.medium
-		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
+		Description: 部署地雷以伏击敌方地面单位\n可以探测地雷\n\n·无武装
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Minelayer
+		Name: 布雷车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Selectable:
@@ -516,11 +516,11 @@ TRUK:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
 		Prerequisites: ~techlevel.low
-		Description: Transports cash to other players.\n  Unarmed
+		Description: 将资金转移给其他玩家\n\n·无武装
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Supply Truck
+		Name: 补给车
 	Selectable:
 		Priority: 6
 	Health:
@@ -543,11 +543,11 @@ MGG:
 		Queue: Vehicle
 		BuildPaletteOrder: 150
 		Prerequisites: atek, ~vehicles.england, ~techlevel.high
-		Description: Regenerates the shroud nearby, \nobscuring the area.\n  Unarmed
+		Description: 重置区域的雷达信号\n并屏蔽周围区域\n\n·无武装
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Mobile Gap Generator
+		Name: 机动裂缝产生器
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -575,14 +575,14 @@ MRJ:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Mobile Radar Jammer
+		Name: 机动雷达干扰器
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
 		Prerequisites: atek, ~vehicles.allies, ~techlevel.high
-		Description: Jams nearby enemy radar domes\nand deflects incoming missiles.\n  Unarmed
+		Description: 干扰附近的敌方雷达\n并破坏敌方导弹的制导能力\n可以侦测匿踪单位\n\n·无武装
 	Health:
 		HP: 22000
 	Armor:
@@ -615,12 +615,12 @@ TTNK:
 		Queue: Vehicle
 		BuildPaletteOrder: 170
 		Prerequisites: tsla, stek, ~vehicles.russia, ~techlevel.high
-		Description: Tank with mounted Tesla coil.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+		Description: 装备磁暴武器的轻型坦克\n\n·强势对抗：地面单位\n·弱势对抗：飞行器
 	Valued:
 		Cost: 1350
 	Tooltip:
-		Name: Tesla Tank
-		GenericName: Tank
+		Name: 磁能坦克
+		GenericName: 坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -655,11 +655,11 @@ FTRK:
 		Queue: Vehicle
 		BuildPaletteOrder: 60
 		Prerequisites: ~vehicles.soviet, ~techlevel.low
-		Description: Mobile unit with mounted Flak cannon.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Tanks
+		Description: 高速轻型地对空载具\n\n·强势对抗：步兵、轻型载具、飞行器\n·弱势对抗：装甲载具
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Mobile Flak
+		Name: 防空侦察车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -702,11 +702,11 @@ DTRK:
 		Queue: Vehicle
 		BuildPaletteOrder: 160
 		Prerequisites: stek, ~vehicles.ukraine, ~techlevel.high
-		Description: Truck with actively armed nuclear\nexplosives. Has very weak armor.
+		Description: 装有核子武器的自毁型载具\n几乎没有防护能力\n被作用于铁幕或超时空传送时将立刻自毁\n部署以立即自毁\n破坏力可以影响空中单位
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Demolition Truck
+		Name: 自爆卡车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -743,12 +743,12 @@ CTNK:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
 		Prerequisites: atek, ~vehicles.germany, ~techlevel.high
-		Description: Armed with anti-ground missiles.\nTeleports to areas within range.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft\n  Special ability: Can teleport
+		Description: 装备反装甲导弹的高科技载具\n可以超时空传送至附近的区域\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵、飞行器\n·特殊能力：超时空传送
 	Valued:
 		Cost: 1350
 	Tooltip:
-		Name: Chrono Tank
-		GenericName: Tank
+		Name: 超时空坦克
+		GenericName: 坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	SelectionDecorations:
@@ -786,12 +786,12 @@ QTNK:
 		Queue: Vehicle
 		BuildPaletteOrder: 190
 		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
-		Description: Deals seismic damage to nearby vehicles\nand structures.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+		Description: 通过制造地震波破坏周围的建筑和载具的自毁型单位\n·自身无武装，但地震波能造成伤害\n通过部署发动攻击并自毁\n\n·地震波强势对抗：载具、建筑\n·地震波弱势对抗：步兵、飞行器
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: MAD Tank
-		GenericName: Tank
+		Name: M.A.D.坦克
+		GenericName: 坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -828,11 +828,11 @@ STNK:
 		Queue: Vehicle
 		BuildPaletteOrder: 130
 		Prerequisites: atek, ~vehicles.france, ~techlevel.high
-		Description: Lightly armored infantry transport which\ncan cloak. Armed with anti-ground missiles.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
+		Description: 装备微型导弹的高科技运兵车\n非攻击状态时保持匿踪\n辗毙步兵时不会解除匿踪\n·强势对抗：轻型载具\n·弱势对抗：步兵、装甲载具、飞行器\n·特殊能力：匿踪
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Phase Transport
+		Name: 相位运兵车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

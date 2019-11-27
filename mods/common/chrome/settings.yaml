@@ -34,7 +34,7 @@ Background@SETTINGS_PANEL:
 			Y: 20
 			Width: PARENT_RIGHT
 			Height: 25
-			Text: Settings
+			Text: 设置
 			Align: Center
 			Font: Bold
 		Button@RESET_BUTTON:
@@ -42,7 +42,7 @@ Background@SETTINGS_PANEL:
 			Y: PARENT_BOTTOM - 45
 			Width: 160
 			Height: 25
-			Text: Reset
+			Text: 重置
 			Font: Bold
 		Button@BACK_BUTTON:
 			Key: escape
@@ -50,7 +50,7 @@ Background@SETTINGS_PANEL:
 			Y: PARENT_BOTTOM - 45
 			Width: 160
 			Height: 25
-			Text: Back
+			Text: 返回
 			Font: Bold
 		Container@TAB_CONTAINER:
 			Y: 50
@@ -61,31 +61,31 @@ Background@SETTINGS_PANEL:
 					X: 70
 					Width: 90
 					Height: 25
-					Text: Display
+					Text: 显示
 					Font: Bold
 				Button@AUDIO_TAB:
 					X: 70 + WIDTH
 					Width: 90
 					Height: 25
-					Text: Audio
+					Text: 音效
 					Font: Bold
 				Button@INPUT_TAB:
 					X: 70 + 2 * WIDTH
 					Width: 90
 					Height: 25
-					Text: Input
+					Text: 输入设备
 					Font: Bold
 				Button@HOTKEYS_TAB:
 					X: 70 + 3 * WIDTH
 					Width: 90
 					Height: 25
-					Text: Hotkeys
+					Text: 快捷键
 					Font: Bold
 				Button@ADVANCED_TAB:
 					X: 70 + 4 * WIDTH
 					Width: 90
 					Height: 25
-					Text: Advanced
+					Text: 高级
 					Font: Bold
 		Container@DISPLAY_PANEL:
 			X: 5
@@ -99,14 +99,14 @@ Background@SETTINGS_PANEL:
 					Width: 45
 					Height: 25
 					Align: Right
-					Text: Mode:
+					Text: 模式
 				DropDownButton@MODE_DROPDOWN:
 					X: 160
 					Y: 40
 					Width: 170
 					Height: 25
 					Font: Regular
-					Text: Windowed
+					Text: 窗口化
 				Container@WINDOW_RESOLUTION:
 					X: 330
 					Y: 40
@@ -144,41 +144,41 @@ Background@SETTINGS_PANEL:
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Use Hardware Cursors
+					Text: 使用硬件指针
 				Label@VIDEO_DESC:
 					Y: 93
 					Width: PARENT_RIGHT
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Mode, resolution, and cursor changes will be applied after the game is restarted
+					Text: 模式，分辨率和指针的更改将在重启游戏后生效
 				Checkbox@FRAME_LIMIT_CHECKBOX:
 					X: 15
 					Y: 125
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Enable Frame Limiter
+					Text: 限制帧率
 				Checkbox@PIXELDOUBLE_CHECKBOX:
 					X: 310
 					Y: 125
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Enable Pixel Doubling
+					Text: 启用双倍像素
 				Checkbox@CURSORDOUBLE_CHECKBOX:
 					X: 340
 					Y: 160
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Also Double Cursor
+					Text: 启用双倍光标
 				Label@FRAME_LIMIT_DESC_A:
 					X: 45
 					Y: 159
 					Width: 50
 					Height: 25
-					Text: Limit to
+					Text: 限制帧率为
 					Align: Right
 				TextField@FRAME_LIMIT_TEXTFIELD:
 					X: 100
@@ -198,13 +198,13 @@ Background@SETTINGS_PANEL:
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Player Stance Colors
+					Text: 敌我颜色模式
 				Label@PLAYER:
-					Text: Player:
+					Text: 玩家：
 					X: 15
 					Y: 208
 				TextField@PLAYERNAME:
-					Text: Name
+					Text: 名字
 					X: 65
 					Y: 195
 					Width: 145
@@ -227,7 +227,7 @@ Background@SETTINGS_PANEL:
 					X: 250
 					Y: 278
 					Width: 145
-					Text: Status Bars:
+					Text: 生命条显示：
 					Align: Right
 				DropDownButton@STATUS_BAR_DROPDOWN:
 					X: 400
@@ -235,12 +235,12 @@ Background@SETTINGS_PANEL:
 					Width: 170
 					Height: 25
 					Font: Regular
-					Text: Standard
+					Text: 标准
 				Label@TARGET_LINES:
 					X: 250
 					Y: 243
 					Width: 145
-					Text: Target Lines:
+					Text: 显示目标线：
 					Align: Right
 				DropDownButton@TARGET_LINES_DROPDOWN:
 					X: 400
@@ -252,7 +252,7 @@ Background@SETTINGS_PANEL:
 					Y: 270
 					Width: PARENT_RIGHT
 					Font: Bold
-					Text: Localization
+					Text: 本地化
 					Align: Center
 					Visible: false
 				Label@LANGUAGE_LABEL:
@@ -261,7 +261,7 @@ Background@SETTINGS_PANEL:
 					Width: 75
 					Height: 25
 					Align: Right
-					Text: Language:
+					Text: 语言：
 					Visible: false
 				DropDownButton@LANGUAGE_DROPDOWNBUTTON:
 					X: 230
@@ -275,7 +275,7 @@ Background@SETTINGS_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Language changes will be applied after the game is restarted
+					Text: 语言的更改将在重启后生效
 					Visible: false
 				Label@LANGUAGE_DESC_B:
 					Y: 325
@@ -283,7 +283,7 @@ Background@SETTINGS_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Translations apply to text strings only; Speech and build icons will remain in English
+					Text: 翻译仅适用于文本，语音和图标将保留为英语
 					Visible: false
 		Container@AUDIO_PANEL:
 			X: 5
@@ -297,7 +297,7 @@ Background@SETTINGS_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Sound Volume:
+					Text: 音效音量：
 				ExponentialSlider@SOUND_VOLUME:
 					X: PARENT_RIGHT - WIDTH - 15
 					Y: 43
@@ -310,21 +310,21 @@ Background@SETTINGS_PANEL:
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Cash Ticks
+					Text: 资金变动音效
 				Checkbox@MUTE_SOUND:
 					X: 15
 					Y: 70
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Mute Sound
+					Text: 静音
 				Label@MUSIC_LABEL:
 					X: PARENT_RIGHT - WIDTH - 270
 					Y: 69
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Music Volume:
+					Text: 音乐音量：
 				ExponentialSlider@MUSIC_VOLUME:
 					X: PARENT_RIGHT - WIDTH - 15
 					Y: 73
@@ -337,7 +337,7 @@ Background@SETTINGS_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Video Volume:
+					Text: 视频音量：
 				ExponentialSlider@VIDEO_VOLUME:
 					X: PARENT_RIGHT - WIDTH - 15
 					Y: 103
@@ -350,7 +350,7 @@ Background@SETTINGS_PANEL:
 					Width: 75
 					Height: 25
 					Align: Right
-					Text: Audio Device:
+					Text: 音频设备：
 				DropDownButton@AUDIO_DEVICE:
 					X: 190
 					Y: 245
@@ -362,7 +362,7 @@ Background@SETTINGS_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Device changes will be applied after the game is restarted
+					Text: 设备的更改将在重启游戏后生效
 		Container@INPUT_PANEL:
 			X: 5
 			Y: 50
@@ -375,14 +375,14 @@ Background@SETTINGS_PANEL:
 					Width: 250
 					Height: 20
 					Font: Regular
-					Text: Left-click Orders
+					Text: 左键下令模式
 				Label@MIDDLE_MOUSE_SCROLL_LABEL:
 					X: PARENT_RIGHT - WIDTH - 120
 					Y: 41
 					Width: 160
 					Height: 20
 					Font: Regular
-					Text: Middle-mouse Scrolling:
+					Text: 按住滚轮键滚屏：
 					Align: Right
 				DropDownButton@MIDDLE_MOUSE_SCROLL:
 					X: PARENT_RIGHT - WIDTH - 15
@@ -396,7 +396,7 @@ Background@SETTINGS_PANEL:
 					Width: 160
 					Height: 20
 					Font: Regular
-					Text: Right-mouse Scrolling:
+					Text: 按住右键滚屏：
 					Align: Right
 				DropDownButton@RIGHT_MOUSE_SCROLL:
 					X: PARENT_RIGHT - WIDTH - 15
@@ -410,7 +410,7 @@ Background@SETTINGS_PANEL:
 					Width: 160
 					Height: 20
 					Font: Regular
-					Text: Scroll-zoom Modifier:
+					Text: 滚轮缩放控制键：
 					Align: Right
 				DropDownButton@ZOOM_MODIFIER:
 					X: PARENT_RIGHT - WIDTH - 15
@@ -425,27 +425,27 @@ Background@SETTINGS_PANEL:
 					Width: 130
 					Height: 20
 					Font: Regular
-					Text: Edge Scrolling
+					Text: 边缘滚屏
 				Checkbox@ALLOW_ZOOM_CHECKBOX:
 					X: 15
 					Y: 100
 					Width: 130
 					Height: 20
 					Font: Regular
-					Text: Scroll Zooming
+					Text: 允许滚轮缩放
 				Checkbox@LOCKMOUSE_CHECKBOX:
 					X: 15
 					Y: 130
 					Width: 130
 					Height: 20
 					Font: Regular
-					Text: Lock mouse to window
+					Text: 将鼠标锁定在窗口内
 				Label@SCROLL_SPEED_LABEL:
 					X: PARENT_RIGHT - WIDTH - 270
 					Y: 129
 					Width: 95
 					Height: 25
-					Text: Scroll Speed:
+					Text: 滚屏速度：
 					Align: Right
 				Slider@SCROLLSPEED_SLIDER:
 					X: PARENT_RIGHT - WIDTH - 170
@@ -460,7 +460,7 @@ Background@SETTINGS_PANEL:
 					Y: 129
 					Width: 95
 					Height: 25
-					Text: UI Scroll:
+					Text: 界面滚动速度：
 					Align: Right
 				Slider@UI_SCROLLSPEED_SLIDER:
 					X: PARENT_RIGHT - WIDTH - 6
@@ -569,27 +569,27 @@ Background@SETTINGS_PANEL:
 									Height: PARENT_BOTTOM
 									Font: Tiny
 									Align: Left
-									Text: This is the default
+									Text: 这是默认快捷键
 								Label@ORIGINAL_NOTICE:
 									Width: PARENT_RIGHT
 									Height: PARENT_BOTTOM
 									Font: Tiny
 									Align: Left
-									Text: The default is "{0}"
+									Text: 默认快捷键是 "{0}"
 								Label@DUPLICATE_NOTICE:
 									Width: PARENT_RIGHT
 									Height: PARENT_BOTTOM
 									Font: Tiny
 									Align: Left
-									Text: This is already used for "{0}"
+									Text: 该按键已被设置于 "{0}"
 						Button@CLEAR_HOTKEY_BUTTON:
 							X: PARENT_RIGHT - 2 * WIDTH - 30
 							Y: 20
 							Width: 65
 							Height: 25
-							Text: Clear
+							Text: 清除
 							Font: Bold
-							TooltipText: Unbind the hotkey
+							TooltipText: 不设置快捷键
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
 						Button@RESET_HOTKEY_BUTTON:
@@ -597,9 +597,9 @@ Background@SETTINGS_PANEL:
 							Y: 20
 							Width: 65
 							Height: 25
-							Text: Reset
+							Text: 重置
 							Font: Bold
-							TooltipText: Reset to default
+							TooltipText: 还原为默认快捷键
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
 		Container@ADVANCED_PANEL:
@@ -614,42 +614,42 @@ Background@SETTINGS_PANEL:
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Enable Network Discovery (UPnP)
+					Text: 启用网络发现 (UPnP)
 				Checkbox@PERFTEXT_CHECKBOX:
 					X: 15
 					Y: 70
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Show Performance Text
+					Text: 显示性能文本
 				Checkbox@PERFGRAPH_CHECKBOX:
 					X: 15
 					Y: 100
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Show Performance Graph
+					Text: 显示性能图表
 				Checkbox@FETCH_NEWS_CHECKBOX:
 					X: 310
 					Y: 40
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Fetch Community News
+					Text: 获取社区新闻
 				Checkbox@CHECK_VERSION_CHECKBOX:
 					X: 310
 					Y: 70
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Check for Updates
+					Text:  检查更新
 				Checkbox@SENDSYSINFO_CHECKBOX:
 					X: 310
 					Y: 100
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Send System Information
+					Text: 发送系统信息
 				Label@SENDSYSINFO_DESC:
 					X: 310
 					Y: 115
@@ -657,12 +657,20 @@ Background@SETTINGS_PANEL:
 					Height: 30
 					Font: Tiny
 					WordWrap: True
-					Text: Your Operating System, OpenGL and .NET runtime versions, and language settings will be sent along with an anonymous ID to help prioritize future development.
+					Text: 您的部分系统信息将匿名反馈给OpenRA开
+				Label@SENDSYSINFO_DESC2:
+					X: 310
+					Y: 130
+					Width: 250
+					Height: 30
+					Font: Tiny
+					WordWrap: True
+					Text: 发组，促进研发与优化。
 				Label@DEBUG_TITLE:
 					Y: 200
 					Width: PARENT_RIGHT
 					Font: Bold
-					Text: Developer
+					Text: 开发者
 					Align: Center
 				Container@DEBUG_HIDDEN_LABEL:
 					Y: 250
@@ -672,14 +680,14 @@ Background@SETTINGS_PANEL:
 							Width: PARENT_RIGHT
 							Height: 20
 							Font: Regular
-							Text: Additional developer-specific options can be enabled via the
+							Text: 可通过以下方式启用其他特定于开发人员的选项
 							Align: Center
 						Label@B:
 							Y: 20
 							Width: PARENT_RIGHT
 							Height: 20
 							Font: Regular
-							Text: Debug.DisplayDeveloperSettings setting or launch flag
+							Text: Debug.DisplayDeveloperSettings设置或启动项
 							Align: Center
 				Container@DEBUG_OPTIONS:
 					Width: PARENT_RIGHT
@@ -691,33 +699,33 @@ Background@SETTINGS_PANEL:
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Show Bot Debug Messages
+							Text: 显示AI调试消息
 						Checkbox@CHECKUNSYNCED_CHECKBOX:
 							X: 15
 							Y: 250
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Check Sync around Unsynced Code
+							Text: 检查未同步代码周围的同步
 						Checkbox@CHECKBOTSYNC_CHECKBOX:
 							X: 15
 							Y: 280
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Check Sync around BotModule Code
+							Text: 检查BotModule代码周围的同步
 						Checkbox@LUADEBUG_CHECKBOX:
 							X: 310
 							Y: 220
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Show Map Debug Messages
+							Text: 显示地图调试消息
 						Checkbox@REPLAY_COMMANDS_CHECKBOX:
 							X: 310
 							Y: 250
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Enable Debug Commands in Replays
+							Text: 在重播中启用调试命令
 		TooltipContainer@TOOLTIP_CONTAINER:

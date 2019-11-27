@@ -68,7 +68,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: This map is not compatible
+					Text: 此地图在此版本的OpenRa下不被兼容
 					IgnoreMouseOver: true
 				Label@MAP_STATUS_B:
 					Y: 201
@@ -118,7 +118,7 @@ Container@MAP_PREVIEW:
 					Width: PARENT_RIGHT
 					Height: 25
 					Font: Bold
-					Text: Install Map
+					Text: 安装地图
 		Container@MAP_PROGRESS:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -148,7 +148,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Searching OpenRA Resource Center...
+					Text: 搜索OpenRA资源中心......
 					IgnoreMouseOver: true
 				Container@MAP_STATUS_UNAVAILABLE:
 					Width: PARENT_RIGHT
@@ -159,7 +159,7 @@ Container@MAP_PREVIEW:
 							Height: 25
 							Font: Tiny
 							Align: Center
-							Text: This map was not found on the
+							Text: 在OpenRA资源中心找不到此地图
 						Label@b:
 							Y: 171
 							Width: PARENT_RIGHT
@@ -173,7 +173,7 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: An error occurred during installation
+					Text: 安装期间发生了一个错误
 				Label@MAP_STATUS_DOWNLOADING:
 					Y: 158
 					Width: PARENT_RIGHT

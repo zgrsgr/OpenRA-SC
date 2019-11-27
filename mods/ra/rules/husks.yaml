@@ -1,7 +1,7 @@
 1TNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Light Tank)
+		Name: 轻型坦克残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -14,7 +14,7 @@
 2TNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Medium Tank)
+		Name: 中型坦克残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -27,7 +27,7 @@
 3TNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Heavy Tank)
+		Name: 重型坦克残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -40,7 +40,7 @@
 4TNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Mammoth Tank)
+		Name: 猛犸坦克残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -53,7 +53,7 @@
 HARV.FullHusk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Ore Truck)
+		Name: 采矿车残骸
 	TransformOnCapture:
 		IntoActor: harv
 	InfiltrateForTransform:
@@ -64,7 +64,7 @@ HARV.FullHusk:
 HARV.EmptyHusk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Ore Truck)
+		Name: 采矿车残骸
 	TransformOnCapture:
 		IntoActor: harv
 	InfiltrateForTransform:
@@ -75,7 +75,7 @@ HARV.EmptyHusk:
 MCV.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Mobile Construction Vehicle)
+		Name: 移动基地车残骸
 	TransformOnCapture:
 		IntoActor: mcv
 	InfiltrateForTransform:
@@ -86,7 +86,7 @@ MCV.Husk:
 MGG.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Mobile Gap Generator)
+		Name: 米格战机
 	ThrowsParticle@spinner:
 		Anim: spinner-idle
 		Offset: -299,0,171
@@ -100,7 +100,7 @@ MGG.Husk:
 TRAN.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Chinook
+		Name: 支努干运输机
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 149
@@ -123,7 +123,7 @@ TRAN.Husk:
 TRAN.Husk1:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Chinook)
+		Name: 支努干运输机残骸
 	RenderSprites:
 		Image: tran1husk
 	-Capturable:
@@ -133,7 +133,7 @@ TRAN.Husk1:
 TRAN.Husk2:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Chinook)
+		Name: 支努干运输机残骸
 	RenderSprites:
 		Image: tran2husk
 	-Capturable:
@@ -143,7 +143,7 @@ TRAN.Husk2:
 BADR.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Badger
+		Name: 獾式运输机
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 149
@@ -162,7 +162,7 @@ BADR.Husk:
 MIG.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: MiG Attack Plane
+		Name: 米格战机
 	Contrail@1:
 		Offset: -598,-683,0
 	Contrail@2:
@@ -187,7 +187,7 @@ MIG.Husk:
 YAK.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Yak Attack Plane
+		Name: 雅克攻击机
 	Contrail:
 		Offset: -853,0,0
 	Aircraft:
@@ -210,7 +210,7 @@ YAK.Husk:
 HELI.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Longbow
+		Name: 长弓武装直升机
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 149
@@ -233,7 +233,7 @@ HELI.Husk:
 HIND.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Hind
+		Name: 雌鹿武装直升机
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 112
@@ -255,7 +255,7 @@ HIND.Husk:
 U2.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Husk (Spy Plane)
+		Name: 侦察机残骸
 	Aircraft:
 		TurnSpeed: 7
 		Speed: 373
@@ -444,7 +444,7 @@ TC05.Husk:
 MH60.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Black Hawk
+		Name: 黑鹰武装直升机
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 112

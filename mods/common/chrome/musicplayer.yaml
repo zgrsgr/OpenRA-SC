@@ -39,14 +39,14 @@ Background@MUSIC_PANEL:
 				Label@TITLE:
 					Width: 100
 					Height: 25
-					Text: Track
+					Text: 曲目
 					Align: Center
 					Font: Bold
 				Label@TYPE:
 					X: PARENT_RIGHT - 85
 					Height: 25
 					Width: 50
-					Text: Length
+					Text: 时长
 					Align: Right
 					Font: Bold
 		Container@BUTTONS:
@@ -137,13 +137,13 @@ Background@MUSIC_PANEL:
 			Y: 335
 			Width: 85
 			Height: 20
-			Text: Shuffle
+			Text: 随机播放
 		Checkbox@REPEAT:
 			X: PARENT_RIGHT - 15 - WIDTH
 			Y: 335
 			Width: 70
 			Height: 20
-			Text: Loop
+			Text: 循环播放
 		Container@NO_MUSIC_LABEL:
 			X: 15
 			Y: 136
@@ -156,25 +156,25 @@ Background@MUSIC_PANEL:
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: Music Not Installed
+					Text: 音乐未安装
 				Label@DESCA:
 					Y: 20
 					Width: PARENT_RIGHT - 24
 					Height: 25
 					Align: Center
-					Text: The game music can be installed
+					Text: 可以在资源管理器中 
 				Label@DESCB:
 					Y: 40
 					Width: PARENT_RIGHT - 24
 					Height: 25
 					Align: Center
-					Text: from the "Manage Content" menu.
+					Text: 安装游戏音乐
 		Button@BACK_BUTTON:
 			X: PARENT_RIGHT - 140
 			Y: PARENT_BOTTOM - 45
 			Width: 120
 			Height: 25
-			Text: Close
+			Text: 关闭
 			Font: Bold
 			Key: escape
 		Label@MUTE_LABEL:

@@ -9,7 +9,7 @@ Container@SCRIPT_ERROR_PANEL:
 			Height: 20
 			Font: Bold
 			Align: Center
-			Text: The map script has encountered a fatal error
+			Text: 地图脚本遇到致命错误
 		Label@DESCB:
 			X: 15
 			Y: 46
@@ -17,11 +17,11 @@ Container@SCRIPT_ERROR_PANEL:
 			Height: 20
 			Font: Regular
 			WordWrap: true
-			Text: The details of the error have been saved to lua.log in the logs directory.
+			Text: 错误的详细信息已保存到logs目录中的lua.log中。
 		Label@DESCC:
 			X: 15
 			Y: 66
 			Width: PARENT_RIGHT - 30
 			Height: 20
 			Font: Regular
-			Text: Please send this file to the map author so that they can fix this issue.
+			Text: 请将此文件发送给地图作者，以便他们可以解决此问题。

@@ -1,5 +1,5 @@
 Metadata:
-	Title: Red Alert
+	Title: Red Alert Simplified Chinese
 	Version: {DEV_VERSION}
 	Website: https://www.openra.net
 	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
@@ -155,7 +155,7 @@ Hotkeys:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: ra|uibits/loadscreen.png
-	Text: Filling Crates..., Charging Capacitors..., Reticulating Splines..., Planting Trees..., Building Bridges..., Aging Empires..., Compiling EVA..., Constructing Pylons..., Activating Skynet..., Splitting Atoms...
+	Text: 悄悄取走工具箱里的部分现金..., 为发电厂的机组上发条..., 擦掉地图上的网格线..., 种下一颗快乐的小树苗..., 从桥墩里抽走一块砖头..., 帮助拿破仑建立法兰西第一帝国..., 重新编写EVA的程序..., 试图为磁暴线圈加上高射机枪..., 看着天上的云朵..., 将铀原子核一分为二..., 给铁幕除锈..., 确保猛犸坦克没有超重..., 为机枪碉堡涂抹迷彩..., 疏散战场附近的平民..., 往你的炮弹里掺沙子...
 
 ServerTraits:
 	LobbyCommands
@@ -169,32 +169,32 @@ ChromeMetrics:
 
 Fonts:
 	Tiny:
-		Font: common|FreeSans.ttf
-		Size: 10
+		Font: common|FZHTK.TTF
+		Size: 12
 		Ascender: 8
 	TinyBold:
-		Font: common|FreeSansBold.ttf
-		Size: 10
+		Font: common|FZHTK.TTF
+		Size: 12
 		Ascender: 8
 	Small:
-		Font: common|FreeSans.ttf
-		Size: 12
+		Font: common|FZHTK.TTF
+		Size: 14
 		Ascender: 9
 	Regular:
-		Font: common|FreeSans.ttf
-		Size: 14
+		Font: common|FZHTK.TTF
+		Size: 16
 		Ascender: 11
 	Bold:
-		Font: common|FreeSansBold.ttf
-		Size: 14
+		Font: common|FZHTK.TTF
+		Size: 17
 		Ascender: 11
 	MediumBold:
-		Font: common|FreeSansBold.ttf
-		Size: 18
+		Font: common|FZHTK.TTF
+		Size: 20
 		Ascender: 14
 	BigBold:
-		Font: common|FreeSansBold.ttf
-		Size: 24
+		Font: common|FZHTK.TTF
+		Size: 26
 		Ascender: 18
 	Title:
 		Font: ra|ZoodRangmah.ttf
@@ -225,27 +225,27 @@ ModelSequenceFormat: PlaceholderModelSequence
 
 GameSpeeds:
 	slowest:
-		Name: Slowest
+		Name: 最慢
 		Timestep: 80
 		OrderLatency: 2
 	slower:
-		Name: Slower
+		Name: 较慢
 		Timestep: 50
 		OrderLatency: 3
 	default:
-		Name: Normal
+		Name: 默认
 		Timestep: 40
 		OrderLatency: 3
 	fast:
-		Name: Fast
+		Name: 较快
 		Timestep: 35
 		OrderLatency: 4
 	faster:
-		Name: Faster
+		Name: 很快
 		Timestep: 30
 		OrderLatency: 4
 	fastest:
-		Name: Fastest
+		Name: 最快
 		Timestep: 20
 		OrderLatency: 6
 

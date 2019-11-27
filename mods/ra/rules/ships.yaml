@@ -6,11 +6,11 @@ SS:
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 30
 		Prerequisites: ~spen, ~techlevel.low
-		Description: Submerged anti-ship unit\narmed with torpedoes.\nCan detect other submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft\n  Special Ability: Submerge
+		Description: 装备鱼雷的反舰潜艇\n可以侦测潜艇\n\n·强势对抗：舰艇\n·弱势对抗：地面单位、飞行器\n·特殊能力：下潜
 	Valued:
 		Cost: 950
 	Tooltip:
-		Name: Submarine
+		Name: 潜艇
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -75,11 +75,11 @@ MSUB:
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 60
 		Prerequisites: ~spen, stek, ~techlevel.high
-		Description: Submerged anti-ground siege unit\nwith anti-air capabilities.\nCan detect other submarines.\n  Strong vs Buildings, Ground units, Aircraft\n  Weak vs Naval units\n  Special Ability: Submerge
+		Description: 具备防空能力并搭载战略攻城武器的潜艇\n可以侦测潜艇\n\n·强势对抗：地面单位\n·弱势对抗：舰艇\n·特殊能力：下潜
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Missile Submarine
+		Name: 弹道导弹潜艇
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -146,11 +146,11 @@ DD:
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 40
 		Prerequisites: ~syrd, dome, ~techlevel.medium
-		Description: Fast multi-role ship.\nCan detect submarines.\n  Strong vs Naval units, Vehicles, Aircraft\n  Weak vs Infantry
+		Description: 高速多用途舰艇\n可以侦测潜艇\n\n·强势对抗：舰艇、载具、飞行器\n·弱势对抗：步兵 
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Destroyer
+		Name: 导弹驱逐舰
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -198,11 +198,11 @@ CA:
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 50
 		Prerequisites: ~syrd, atek, ~techlevel.high
-		Description: Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
+		Description: 重装攻城炮舰\n\n·强势对抗：地面单位、建筑\n·弱势对抗：舰艇、飞行器
 	Valued:
 		Cost: 2400
 	Tooltip:
-		Name: Cruiser
+		Name: 重型巡洋舰
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -259,11 +259,11 @@ LST:
 		Queue: Ship
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.low
-		Description: General-purpose naval transport.\nCan carry infantry and tanks.\n  Unarmed
+		Description: 泛用型水域运输船\n可以运输载具和步兵\n\n·无武装
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Transport
+		Name: 运兵船
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -300,11 +300,11 @@ PT:
 		BuildAtProductionType: Boat
 		BuildPaletteOrder: 20
 		Prerequisites: ~syrd, ~techlevel.low
-		Description: Light scout & support ship.\nCan detect submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
+		Description: 轻型反潜与侦察舰\n可以侦测潜艇\n\n·强势对抗：潜艇\n·弱势对抗：地面单位、飞行器
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Gunboat
+		Name: 猎潜艇
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

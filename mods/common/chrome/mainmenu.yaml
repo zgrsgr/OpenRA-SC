@@ -51,28 +51,28 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: Singleplayer
+							Text: 单人游戏
 							Font: Bold
 						Button@MULTIPLAYER_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: Multiplayer
+							Text: 多人游戏
 							Font: Bold
 						Button@SETTINGS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: Settings
+							Text: 设置
 							Font: Bold
 						Button@EXTRAS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
-							Text: Extras
+							Text: 附加功能
 							Font: Bold
 						Button@CONTENT_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -86,7 +86,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Quit
+							Text: 退出
 							Font: Bold
 				Background@SINGLEPLAYER_MENU:
 					Width: PARENT_RIGHT
@@ -97,7 +97,7 @@ Container@MAINMENU:
 							Y: 20
 							Width: 200
 							Height: 30
-							Text: Singleplayer
+							Text: 单人游戏
 							Align: Center
 							Font: Bold
 						Button@SKIRMISH_BUTTON:
@@ -105,21 +105,21 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: Skirmish
+							Text: 遭遇战
 							Font: Bold
 						Button@MISSIONS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: Missions
+							Text: 战役任务
 							Font: Bold
 						Button@LOAD_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: Load
+							Text: 载入游戏
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -127,7 +127,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Back
+							Text: 返回
 							Font: Bold
 				Background@EXTRAS_MENU:
 					Width: PARENT_RIGHT
@@ -138,7 +138,7 @@ Container@MAINMENU:
 							Y: 20
 							Width: 200
 							Height: 30
-							Text: Extras
+							Text: 附加功能
 							Align: Center
 							Font: Bold
 						Button@REPLAYS_BUTTON:
@@ -146,35 +146,35 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: Replays
+							Text: 录像回放
 							Font: Bold
 						Button@MUSIC_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: Music
+							Text: 音乐
 							Font: Bold
 						Button@MAP_EDITOR_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: Map Editor
+							Text: 地图编辑器
 							Font: Bold
 						Button@ASSETBROWSER_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
-							Text: Asset Browser
+							Text: 资源浏览器
 							Font: Bold
 						Button@CREDITS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 220
 							Width: 140
 							Height: 30
-							Text: Credits
+							Text: 鸣谢
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -182,7 +182,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Back
+							Text: 返回
 							Font: Bold
 				Background@MAP_EDITOR_MENU:
 					Width: PARENT_RIGHT
@@ -193,7 +193,7 @@ Container@MAINMENU:
 							Y: 20
 							Width: 200
 							Height: 30
-							Text: Map Editor
+							Text: 地图编辑器
 							Align: Center
 							Font: Bold
 						Button@NEW_MAP_BUTTON:
@@ -201,14 +201,14 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: New Map
+							Text: 新地图
 							Font: Bold
 						Button@LOAD_MAP_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: Load Map
+							Text: 加载地图
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -216,7 +216,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Back
+							Text: 返回
 							Font: Bold
 		Background@SYSTEM_INFO_PROMPT:
 			X: (WINDOW_RIGHT - WIDTH) / 2
@@ -230,21 +230,21 @@ Container@MAINMENU:
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: System Information
+					Text: 系统信息
 				Label@PROMPT_TEXT_A:
 					X: 15
 					Y: 50
 					Width: PARENT_RIGHT - 30
 					Height: 16
 					Align: Center
-					Text: We would like to collect some details that will help us optimize OpenRA.
+					Text: 我们想收集一些有助于我们优化OpenRA的细节。
 				Label@PROMPT_TEXT_B:
 					X: 15
 					Y: 68
 					Width: PARENT_RIGHT - 30
 					Height: 16
 					Align: Center
-					Text: With your permission, the following anonymous system data will be sent:
+					Text: 如您许可的话，我们将获取以下匿名的系统数据：
 				ScrollPanel@SYSINFO_DATA:
 					X: 20
 					Y: 98
@@ -264,13 +264,13 @@ Container@MAINMENU:
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Send System Information
+					Text: 确认发送系统信息
 				Button@BACK_BUTTON:
 					X: PARENT_RIGHT - WIDTH - 20
 					Y: PARENT_BOTTOM - 45
 					Width: 120
 					Height: 25
-					Text: Continue
+					Text: 继续
 					Font: Bold
 					Key: return
 		Container@PERFORMANCE_INFO:
@@ -307,7 +307,7 @@ Container@MAINMENU:
 					Y: 15
 					Width: 400
 					Height: 25
-					Text: Battlefield News
+					Text: 战地新闻
 					Font: Bold
 		Container@UPDATE_NOTICE:
 			X: (WINDOW_RIGHT - WIDTH) / 2
@@ -319,14 +319,14 @@ Container@MAINMENU:
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: You are running an outdated version of OpenRA.
+					Text: 您正在运行过时的OpenRA版本，
 				Label@B:
 					Y: 20
 					Width: PARENT_RIGHT
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: Download the latest version from www.openra.net
+					Text: 请从www.openra.net下载最新版本
 		Container@PLAYER_PROFILE_CONTAINER:
 			X: 25
 			Y: 25
