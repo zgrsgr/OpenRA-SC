@@ -6,6 +6,7 @@ OpenRA是一款专注于西木早期RTS游戏的开源即时战略游戏引擎�
 * IRC: \#openra on irc.freenode.net
 * 官方仓库: [https://github.com/OpenRA/OpenRA](https://github.com/OpenRA/OpenRA) [![Travis CI build status](https://travis-ci.org/OpenRA/OpenRA.svg?branch=bleed)](https://travis-ci.org/OpenRA/OpenRA) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/axc9k6jd25ej2o4w?svg=true)](https://ci.appveyor.com/project/OpenRA/openra) [![Coverity Scan Build Status](https://scan.coverity.com/projects/3650/badge.svg)](https://scan.coverity.com/projects/3650)
 * 中文仓库: [https://gitee.com/CastleJing/OpenRA](https://gitee.com/CastleJing/OpenRA)
+* QQ群: [742982428](https://jq.qq.com/?_wv=1027&k=5oAfBQu)
 
 如有疑惑请在我们的[百科](https://gitee.com/CastleJing/OpenRA/wikis/Home)页面查看[常见问题](https://gitee.com/CastleJing/OpenRA/wikis/FAQ)来获取更多帮助，如果遇到程序的漏洞请到 [http://bugs.openra.net](http://bugs.openra.net)反馈您发现的问题。
 
