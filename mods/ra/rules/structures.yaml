@@ -125,7 +125,7 @@ SPEN:
 		Queue: Building
 		BuildPaletteOrder: 50
 		Prerequisites: anypower, ~structures.soviet, ~techlevel.low
-		Description: 生产与维修海上单位\n多个潜艇母港能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升盟军舰船的生产效率
+		Description: 生产与维修海上单位\n多个潜艇母港能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升盟军舰艇的生产效率
 	Targetable:
 		TargetTypes: Ground, Water, Structure, WaterStructure, C4, DetonateAttack, SpyInfiltrate
 	Building:
@@ -507,8 +507,8 @@ PDOX:
 		Prerequisites: pdox.germany
 		Icon: chrono
 		ChargeInterval: 3000
-		Description: 超时空传送 #Advanced Chronoshift
-		LongDesc: 将一定范围内的载具传送到目标地点，20秒后返回原位置
+		Description: 先进超时空传送 #Advanced Chronoshift
+		LongDesc: 将更大范围内的载具传送到目标地点，20秒后返回原位置
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		BeginChargeSpeechNotification: ChronosphereCharging
@@ -533,7 +533,7 @@ TSLA:
 		Queue: Defense
 		BuildPaletteOrder: 80
 		Prerequisites: weap, ~structures.soviet, ~techlevel.medium
-		Description: 先进基地防御\n需要电力才能运转\n可以侦测匿踪单位\n\n·强势对抗：地面单位\n·弱势对抗：飞行器
+		Description: 先进基地防御\n需要电力才能运转\n可以侦测隐形单位\n\n·强势对抗：地面单位\n·弱势对抗：飞行器
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -677,7 +677,7 @@ PBOX:
 		Queue: Defense
 		BuildPaletteOrder: 40
 		Prerequisites: tent, ~structures.allies, ~techlevel.low
-		Description: 内置一名步枪兵的基地反步兵防御\n可以侦测匿踪单位\n\n·默认强势对抗：步兵、轻型载具\n·默认弱势对抗：装甲载具、飞行器\n\n·特殊能力：可以驻扎1名步兵
+		Description: 内置一名步枪兵的基地反步兵防御\n可以侦测隐形单位\n\n·默认强势对抗：步兵、轻型载具\n·默认弱势对抗：装甲载具、飞行器\n\n·特殊能力：可以驻扎1名步兵
 	Valued:
 		Cost: 600
 	CustomSellValue:
@@ -727,7 +727,7 @@ HBOX:
 		Queue: Defense
 		BuildPaletteOrder: 50
 		Prerequisites: tent, ~structures.allies, ~techlevel.medium
-		Description: 覆盖战术迷彩的机枪碉堡\n可以侦测匿踪单位\n\n·默认强势对抗：步兵、轻型载具\n·默认弱势对抗：装甲载具、飞行器\n\n·特殊能力：可以驻扎1名步兵
+		Description: 覆盖战术迷彩的机枪碉堡\n可以侦隐形单位\n\n·默认强势对抗：步兵、轻型载具\n·默认弱势对抗：装甲载具、飞行器\n\n·特殊能力：可以驻扎1名步兵\n·特殊能力：隐形
 	Valued:
 		Cost: 750
 	CustomSellValue:
@@ -781,7 +781,7 @@ GUN:
 		Queue: Defense
 		BuildPaletteOrder: 70
 		Prerequisites: tent, ~structures.allies, ~techlevel.medium
-		Description: 反装甲基地防御\n可以侦测匿踪单位\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
+		Description: 反装甲基地防御\n可以侦测隐形单位\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -824,11 +824,11 @@ FTUR:
 		Queue: Defense
 		BuildPaletteOrder: 60
 		Prerequisites: barr, ~structures.soviet, ~techlevel.low
-		Description: 高效反集群步兵基地防御建筑\n可以侦测匿踪单位\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器 
+		Description: 高效反集群步兵基地防御建筑\n可以侦隐形单位\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器 
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Flame Tower
+		Name: 火焰喷射塔
 	Building:
 	Health:
 		HP: 40000
@@ -1319,7 +1319,7 @@ HPAD:
 		Queue: Building
 		BuildPaletteOrder: 120
 		Prerequisites: dome, ~structures.allies, ~techlevel.medium
-		Description: 制造和维护直升机\n多个停机坪能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升苏军飞行器的生产效率
+		Description: 制造和维护直升机\n多个停机坪能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升苏军战机的生产效率
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1410,7 +1410,7 @@ AFLD:
 		Queue: Building
 		BuildPaletteOrder: 130
 		Prerequisites: dome, ~structures.soviet, ~techlevel.medium, ~!structures.ukraine
-		Description: 制造和维护战机\n多个战地机场能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升盟军飞行器的生产效率\n多个战地机场无法缩减支援能力的冷却时间\n\n·提供 支援能力：侦察机 \n·提供 支援能力：伞兵
+		Description: 制造和维护战机\n多个战地机场能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升盟军直升机的生产效率\n多个战地机场无法缩减支援能力的冷却时间\n\n·提供 支援能力：侦察机 \n·提供 支援能力：伞兵
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1555,7 +1555,7 @@ AFLD.Ukraine:
 	Inherits: AFLD
 	Buildable:
 		Prerequisites: dome, ~techlevel.medium, ~structures.ukraine
-		Description: 制造和维护战机\n多个战地机场能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升盟军飞行器的生产效率\n多个战地机场无法缩减支援能力的冷却时间\n\n·提供 支援能力：侦察机 \n·提供 支援能力：伞兵 \n·提供 支援能力：地毯式轰炸
+		Description: 制造和维护战机\n多个战地机场能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升盟军直升机的生产效率\n多个战地机场无法缩减支援能力的冷却时间\n\n·提供 支援能力：侦察机 \n·提供 支援能力：伞兵 \n·提供 支援能力：地毯式轰炸
 	RenderSprites:
 		Image: afld
 
@@ -1777,7 +1777,7 @@ KENN:
 		Queue: Building
 		BuildPaletteOrder: 175
 		Prerequisites: anypower, ~structures.soviet, ~techlevel.infonly
-		Description: 训练警犬\n多个狗窝能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n可以提升盟军步兵的生产效率\n无法提升步兵的生产效率
+		Description: 训练警犬\n多个狗窝能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升步兵的生产效率
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -1834,7 +1834,7 @@ TENT:
 		Queue: Building
 		BuildPaletteOrder: 20
 		Prerequisites: anypower, ~structures.allies, ~techlevel.infonly
-		Description: 训练步兵单位\n多个兵营能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n可以提升苏军步兵的生产效率\n无法提升军犬的生产效率
+		Description: 训练步兵单位\n多个兵营能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升军犬的生产效率
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1927,7 +1927,7 @@ FIX:
 		Queue: Building
 		BuildPaletteOrder: 100
 		Prerequisites: weap, ~techlevel.medium
-		Description: 以消耗资源为代价\n高效修复载具和飞行器
+		Description: 消耗一定资源高效修复载具和飞行器
 	Valued:
 		Cost: 1200
 	Tooltip:

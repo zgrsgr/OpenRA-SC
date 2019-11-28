@@ -184,7 +184,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (world.Type != WorldType.Regular)
 				return;
 
-			var button = AddButton("ABORT_MISSION", world.IsGameOver ? "Leave" : "Abort Mission");
+			var button = AddButton("ABORT_MISSION", world.IsGameOver ? "离开" : "放弃任务");
 
 			button.OnClick = () =>
 			{
@@ -213,13 +213,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					}
 
 					ConfirmationDialogs.ButtonPrompt(
-						title: "Leave Mission",
-						text: "Leave this game and return to the menu?",
+						title: "离开游戏",
+						text: "离开游戏并返回菜单？",
 						onConfirm: OnQuit,
 						onCancel: ShowMenu,
-						confirmText: "Leave",
-						cancelText: "Stay",
-						otherText: "Restart",
+						confirmText: "离开",
+						cancelText: "取消",
+						otherText: "重新开始",
 						onOther: restartAction);
 				}
 				else
@@ -238,18 +238,18 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				CloseMenu();
 			};
 
-			var button = AddButton("SURRENDER", "Surrender");
+			var button = AddButton("SURRENDER", "放弃游戏");
 			button.IsDisabled = () => world.LocalPlayer.WinState != WinState.Undefined || hasError || leaving;
 			button.OnClick = () =>
 			{
 				hideMenu = true;
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Surrender",
-					text: "Are you sure you want to surrender?",
+					title: "放弃",
+					text: "你确定想要放弃这场游戏吗？",
 					onConfirm: onSurrender,
 					onCancel: ShowMenu,
-					confirmText: "Surrender",
-					cancelText: "Stay");
+					confirmText: "放弃",
+					cancelText: "取消");
 			};
 		}
 
@@ -258,7 +258,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (world.Type != WorldType.Regular || !world.LobbyInfo.GlobalSettings.GameSavesEnabled || world.IsReplay)
 				return;
 
-			var button = AddButton("LOAD_GAME", "Load Game");
+			var button = AddButton("LOAD_GAME", "载入游戏");
 			button.IsDisabled = () => leaving || !GameSaveBrowserLogic.IsLoadPanelEnabled(modData.Manifest);
 			button.OnClick = () =>
 			{
@@ -278,7 +278,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (world.Type != WorldType.Regular || !world.LobbyInfo.GlobalSettings.GameSavesEnabled || world.IsReplay)
 				return;
 
-			var button = AddButton("SAVE_GAME", "Save Game");
+			var button = AddButton("SAVE_GAME", "保存游戏");
 			button.IsDisabled = () => hasError || leaving || !world.Players.Any(p => p.Playable && p.WinState == WinState.Undefined);
 			button.OnClick = () =>
 			{
@@ -295,7 +295,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 		void CreateMusicButton()
 		{
-			var button = AddButton("MUSIC", "Music");
+			var button = AddButton("MUSIC", "音乐");
 			button.OnClick = () =>
 			{
 				hideMenu = true;
@@ -309,7 +309,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 		void CreateSettingsButton()
 		{
-			var button = AddButton("SETTINGS", "Settings");
+			var button = AddButton("SETTINGS", "设置");
 			button.OnClick = () =>
 			{
 				hideMenu = true;
@@ -324,7 +324,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 		void CreateResumeButton()
 		{
-			var button = AddButton("RESUME", world.IsGameOver ? "Return to map" : "Resume");
+			var button = AddButton("RESUME", world.IsGameOver ? "返回地图" : "回到游戏");
 			button.Key = modData.Hotkeys["escape"];
 			button.OnClick = CloseMenu;
 		}
@@ -334,7 +334,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (world.Type != WorldType.Editor)
 				return;
 
-			var button = AddButton("SAVE_MAP", "Save Map");
+			var button = AddButton("SAVE_MAP", "保存地图");
 			button.OnClick = () =>
 			{
 				hideMenu = true;
@@ -355,15 +355,17 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (world.Type != WorldType.Editor)
 				return;
 
-			var button = AddButton("EXIT_EDITOR", "Exit Map Editor");
+			var button = AddButton("EXIT_EDITOR", "退出编辑器");
 			button.OnClick = () =>
 			{
 				hideMenu = true;
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Exit Map Editor",
-					text: "Exit and lose all unsaved changes?",
+					title: "退出地图编辑器",
+					text: "放弃新的改动并退出地图编辑器？",
 					onConfirm: OnQuit,
-					onCancel: ShowMenu);
+					onCancel: ShowMenu,
+					confirmText: "退出",
+					cancelText: "取消");
 			};
 		}
 	}

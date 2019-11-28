@@ -43,7 +43,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				panel.Get<LabelWidget>("MUTE_LABEL").GetText = () =>
 				{
 					if (Game.Settings.Sound.Mute)
-						return "Audio has been muted in settings.";
+						return "静音已启动。";
 
 					return "";
 				};
@@ -97,7 +97,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var musicTitle = panel.GetOrNull<LabelWidget>("TITLE_LABEL");
 			if (musicTitle != null)
-				musicTitle.GetText = () => currentSong != null ? currentSong.Title : "No song playing";
+				musicTitle.GetText = () => currentSong != null ? currentSong.Title : "无正在播放的音乐。";
 
 			var musicSlider = panel.Get<SliderWidget>("MUSIC_SLIDER");
 			musicSlider.OnChange += x => Game.Sound.MusicVolume = x;

@@ -336,8 +336,8 @@ Container@EDITOR_WORLD_ROOT:
 							Y: 12
 							Width: 55
 							Height: 25
-							Text: Search:
-							Align: 搜索：
+							Text: 搜索：
+							Align: Right
 							Font: TinyBold
 						TextField@SEARCH_TEXTFIELD:
 							X: 60

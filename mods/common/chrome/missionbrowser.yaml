@@ -102,28 +102,28 @@ Background@MISSIONBROWSER_PANEL:
 			Y: PARENT_BOTTOM - 45
 			Width: 130
 			Height: 25
-			Text: 查看过场简报
+			Text: 过场电影
 			Font: Bold
 		Button@STOP_BRIEFING_VIDEO_BUTTON:
 			X: 20
 			Y: PARENT_BOTTOM - 45
 			Width: 130
 			Height: 25
-			Text: 停止过场简报
+			Text: 停止播放
 			Font: Bold
 		Button@START_INFO_VIDEO_BUTTON:
 			X: 160
 			Y: PARENT_BOTTOM - 45
 			Width: 130
 			Height: 25
-			Text: 观看片头视频
+			Text: 序幕
 			Font: Bold
 		Button@STOP_INFO_VIDEO_BUTTON:
 			X: 160
 			Y: PARENT_BOTTOM - 45
 			Width: 130
 			Height: 25
-			Text: 停止片头视频
+			Text: 停止播放
 			Font: Bold
 		Button@STARTGAME_BUTTON:
 			X: PARENT_RIGHT - 140 - 130

@@ -189,7 +189,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				// 'all game types' extra item
 				categories.Insert(0, Pair.New(null as string, tabMaps[tab].Count()));
 
-				Func<Pair<string, int>, string> showItem = x => "{0} ({1})".F(x.First ?? "All Maps", x.Second);
+				Func<Pair<string, int>, string> showItem = x => "{0} ({1})".F(x.First ?? "全部地图", x.Second);
 
 				Func<Pair<string, int>, ScrollItemWidget, ScrollItemWidget> setupItem = (ii, template) =>
 				{
@@ -207,7 +207,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					var item = categories.FirstOrDefault(m => m.First == category);
 					if (item == default(Pair<string, int>))
-						item.First = "No matches";
+						item.First = "未找到匹配的地图";
 
 					return showItem(item);
 				};
@@ -269,7 +269,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					if (type != null)
 						details = type + " ";
 
-					details += "({0} players)".F(preview.PlayerCount);
+					details += "({0} 人地图)".F(preview.PlayerCount);
 					detailsWidget.GetText = () => details;
 				}
 
@@ -277,7 +277,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				if (authorWidget != null)
 				{
 					var font = Game.Renderer.Fonts[authorWidget.Font];
-					var author = WidgetUtils.TruncateText("Created by {0}".F(preview.Author), authorWidget.Bounds.Width, font);
+					var author = WidgetUtils.TruncateText("由 {0} 创建".F(preview.Author), authorWidget.Bounds.Width, font);
 					authorWidget.GetText = () => author;
 				}
 
@@ -286,10 +286,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					var size = preview.Bounds.Width + "x" + preview.Bounds.Height;
 					var numberPlayableCells = preview.Bounds.Width * preview.Bounds.Height;
-					if (numberPlayableCells >= 120 * 120) size += " (Huge)";
-					else if (numberPlayableCells >= 90 * 90) size += " (Large)";
-					else if (numberPlayableCells >= 60 * 60) size += " (Medium)";
-					else size += " (Small)";
+					if (numberPlayableCells >= 120 * 120) size += " (巨大)";
+					else if (numberPlayableCells >= 90 * 90) size += " (大型)";
+					else if (numberPlayableCells >= 60 * 60) size += " (中型)";
+					else size += " (小型)";
 					sizeWidget.GetText = () => size;
 				}
 
@@ -327,30 +327,32 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		void DeleteOneMap(string map, Action<string> after)
 		{
 			ConfirmationDialogs.ButtonPrompt(
-				title: "Delete map",
-				text: "Delete the map '{0}'?".F(modData.MapCache[map].Title),
+				title: "删除地图",
+				text: "删除地图'{0}'？".F(modData.MapCache[map].Title),
 				onConfirm: () =>
 				{
 					var newUid = DeleteMap(map);
 					if (after != null)
 						after(newUid);
 				},
-				confirmText: "Delete",
+				confirmText: "删除",
+				cancelText: "取消",
 				onCancel: () => { });
 		}
 
 		void DeleteAllMaps(string[] maps, Action<string> after)
 		{
 			ConfirmationDialogs.ButtonPrompt(
-				title: "Delete maps",
-				text: "Delete all maps on this page?",
+				title: "删除地图",
+				text: "删除本页的全部地图？",
 				onConfirm: () =>
 				{
 					maps.Do(m => DeleteMap(m));
 					if (after != null)
 						after(Game.ModData.MapCache.ChooseInitialMap(null, Game.CosmeticRandom));
 				},
-				confirmText: "Delete",
+				confirmText: "删除",
+				cancelText: "取消",
 				onCancel: () => { });
 		}
 	}

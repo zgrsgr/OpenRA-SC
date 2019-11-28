@@ -5,7 +5,7 @@ DOG:
 		BuildAtProductionType: Dog
 		BuildPaletteOrder: 50
 		Prerequisites: ~kenn, ~techlevel.infonly
-		Description: 反步兵军犬\n可以侦测匿踪单位\n\n强势对抗：步兵\n弱势对抗：载具、建筑、飞行器
+		Description: 反步兵军犬\n可以侦测伪装单位\n\n强势对抗：步兵\n弱势对抗：载具、建筑、飞行器
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -295,7 +295,7 @@ SPY:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 90
 		Prerequisites: ~!infantry.england, dome, ~tent, ~techlevel.medium
-		Description: 渗透敌方建筑进行破坏\n破坏效果视目标建筑而异\n可以伪装成敌方步兵\n伪装时视为匿踪单位\n在攻击时会失去伪装\n可以侦测匿踪单位\n\n·强势对抗：步兵、建筑 \n·特殊能力：伪装 
+		Description: 渗透敌方建筑进行破坏\n破坏效果视目标建筑而异\n可以伪装成敌方步兵\n在攻击时会失去伪装\n可以侦测伪装单位\n\n·强势对抗：步兵、建筑\n·特殊能力：伪装 
 	Valued:
 		Cost: 500
 	-Tooltip:
@@ -559,7 +559,7 @@ THF:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 110
 		Prerequisites: ~barr, dome, ~techlevel.medium
-		Description: 可以窃取敌方资金或载具\n\n·无武装
+		Description: 可以窃取敌方资金或载具\n静止一段时间后隐形\n\n·无武装
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -663,7 +663,7 @@ SNIPER:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 80
 		Prerequisites: ~disabled
-		Description: 高效猎杀敌方步兵的精英射手\n可以侦测匿踪单位\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器、建筑 
+		Description: 高效猎杀敌方步兵的精英射手\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器、建筑 
 	Health:
 		HP: 8000
 	Passenger:

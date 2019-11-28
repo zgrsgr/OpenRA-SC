@@ -79,7 +79,7 @@ Container@MAINMENU:
 							Y: 220
 							Width: 140
 							Height: 30
-							Text: Manage Content
+							Text: 资源管理
 							Font: Bold
 						Button@QUIT_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -167,7 +167,7 @@ Container@MAINMENU:
 							Y: 180
 							Width: 140
 							Height: 30
-							Text: 资源浏览器
+							Text: 素材浏览器
 							Font: Bold
 						Button@CREDITS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2

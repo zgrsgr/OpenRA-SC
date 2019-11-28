@@ -516,7 +516,7 @@ TRUK:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
 		Prerequisites: ~techlevel.low
-		Description: 将资金转移给其他玩家\n\n·无武装
+		Description: 为其他玩家输送资金\n\n·无武装
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -582,7 +582,7 @@ MRJ:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
 		Prerequisites: atek, ~vehicles.allies, ~techlevel.high
-		Description: 干扰附近的敌方雷达\n并破坏敌方导弹的制导能力\n可以侦测匿踪单位\n\n·无武装
+		Description: 干扰附近的敌方雷达\n并破坏敌方导弹的制导能力\n\n·无武装
 	Health:
 		HP: 22000
 	Armor:
@@ -702,7 +702,7 @@ DTRK:
 		Queue: Vehicle
 		BuildPaletteOrder: 160
 		Prerequisites: stek, ~vehicles.ukraine, ~techlevel.high
-		Description: 装有核子武器的自毁型载具\n几乎没有防护能力\n被作用于铁幕或超时空传送时将立刻自毁\n部署以立即自毁\n破坏力可以影响空中单位
+		Description: 装有核子武器的自杀型载具\n几乎没有防护能力\n被作用于铁幕或超时空传送时将立刻自毁\n部署以立即自毁\n破坏力可以影响空中单位
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -786,7 +786,7 @@ QTNK:
 		Queue: Vehicle
 		BuildPaletteOrder: 190
 		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
-		Description: 通过制造地震波破坏周围的建筑和载具的自毁型单位\n·自身无武装，但地震波能造成伤害\n通过部署发动攻击并自毁\n\n·地震波强势对抗：载具、建筑\n·地震波弱势对抗：步兵、飞行器
+		Description: 通过制造地震波破坏周围的建筑和载具的自杀型单位\n·自身无武装，但地震波能造成伤害\n通过部署发动攻击并自毁\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵、飞行器
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -828,7 +828,7 @@ STNK:
 		Queue: Vehicle
 		BuildPaletteOrder: 130
 		Prerequisites: atek, ~vehicles.france, ~techlevel.high
-		Description: 装备微型导弹的高科技运兵车\n非攻击状态时保持匿踪\n辗毙步兵时不会解除匿踪\n·强势对抗：轻型载具\n·弱势对抗：步兵、装甲载具、飞行器\n·特殊能力：匿踪
+		Description: 装备微型导弹的高科技运兵车\n非攻击状态时保持隐形\n·强势对抗：轻型载具\n·弱势对抗：步兵、装甲载具、飞行器\n·特殊能力：隐形
 	Valued:
 		Cost: 1000
 	Tooltip:
