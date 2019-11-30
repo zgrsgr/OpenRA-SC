@@ -52,7 +52,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						return;
 					}
 
-					labelText = "Available spawn";
+					labelText = "位置可用";
 					playerFaction = null;
 					playerTeam = 0;
 					widget.Bounds.Height = singleHeight;
@@ -83,7 +83,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			flag.IsVisible = () => playerFaction != null;
 			flag.GetImageCollection = () => "flags";
 			flag.GetImageName = () => playerFaction;
-			team.GetText = () => "Team {0}".F(playerTeam);
+			team.GetText = () => "队伍{0}".F(playerTeam);
 			team.IsVisible = () => playerTeam > 0;
 		}
 	}

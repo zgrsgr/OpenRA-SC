@@ -114,13 +114,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					{
 						var map = getMap();
 						if (map.DownloadBytes == 0)
-							return "Connecting...";
+							return "正在连接...";
 
 						// Server does not provide the total file length
 						if (map.DownloadPercentage == 0)
-							return "Downloading {0} kB".F(map.DownloadBytes / 1024);
+							return "已下载 {0} kB".F(map.DownloadBytes / 1024);
 
-						return "Downloading {0} kB ({1}%)".F(map.DownloadBytes / 1024, map.DownloadPercentage);
+						return "已下载 {0} kB ({1}%)".F(map.DownloadBytes / 1024, map.DownloadPercentage);
 					};
 				}
 
@@ -149,7 +149,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 							modData.MapCache.QueryRemoteMapDetails(mapRepository, new[] { map.Uid });
 					};
 
-					retry.GetText = () => getMap().Status == MapStatus.DownloadError ? "Retry Install" : "Retry Search";
+					retry.GetText = () => getMap().Status == MapStatus.DownloadError ? "重新安装" : "重新搜索";
 				}
 
 				var progressbar = progress.GetOrNull<ProgressBarWidget>("MAP_PROGRESSBAR");
@@ -202,7 +202,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				var font = Game.Renderer.Fonts[authorLabel.Font];
 				var author = new CachedTransform<MapPreview, string>(
-					m => WidgetUtils.TruncateText("Created by {0}".F(m.Author), authorLabel.Bounds.Width, font));
+					m => WidgetUtils.TruncateText("由{0}创建".F(m.Author), authorLabel.Bounds.Width, font));
 				authorLabel.GetText = () => author.Update(getMap());
 			}
 		}

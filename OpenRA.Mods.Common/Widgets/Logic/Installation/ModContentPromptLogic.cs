@@ -83,7 +83,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			};
 
 			var quitButton = panel.Get<ButtonWidget>("QUIT_BUTTON");
-			quitButton.GetText = () => requiredContentInstalled ? "Continue" : "Quit";
+			quitButton.GetText = () => requiredContentInstalled ? "继续" : "退出";
 			quitButton.Bounds.Y += headerHeight;
 			quitButton.OnClick = () =>
 			{

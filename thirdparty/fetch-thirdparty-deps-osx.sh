@@ -1,27 +1,26 @@
 #!/bin/bash
 
-LAUNCHER_TAG="osx-launcher-20191007"
+set -e
 
-download_dir="${0%/*}/download/osx"
-mkdir -p "$download_dir"
-cd "$download_dir" || exit 1
+cd "${0%/*}" || exit 1
 
-if [ ! -f libSDL2.dylib ]; then
-	echo "Fetching OS X SDL2 library from GitHub."
-	curl -LOs https://github.com/OpenRA/OpenRALauncherOSX/releases/download/${LAUNCHER_TAG}/libSDL2.dylib
+if [ -d "./download" ]; then
+	rm -rf download
 fi
 
-if [ ! -f liblua.5.1.dylib ]; then
-	echo "Fetching OS X Lua 5.1 library from GitHub."
-	curl -LOs https://github.com/OpenRA/OpenRALauncherOSX/releases/download/${LAUNCHER_TAG}/liblua.5.1.dylib
+if [ ! -f "deps.zip" ]; then
+	echo "Fetching thirdparty deps from Gitee."
+	if command -v curl >/dev/null 2>&1; then
+		curl -s -L "https://gitee.com/CastleJing/OpenRA_thirdparty_deps/repository/archive/deps.zip" -o "deps.zip"
+	else
+		wget -cq "https://gitee.com/CastleJing/OpenRA_thirdparty_deps/repository/archive/deps.zip" -O "deps.zip"
+	fi
 fi
 
-if [ ! -f Eluant.dll.config ]; then
-	echo "Fetching OS X Lua configuration file from GitHub."
-	curl -LOs https://raw.githubusercontent.com/OpenRA/OpenRALauncherOSX/${LAUNCHER_TAG}/Eluant.dll.config
-fi
+unzip -o -qq "deps.zip" 
 
-if [ ! -f libfreetype.6.dylib ]; then
-	echo "Fetching OS X FreeType library from GitHub."
-	curl -LOs https://github.com/OpenRA/OpenRALauncherOSX/releases/download/${LAUNCHER_TAG}/libfreetype.6.dylib
-fi
+mv "./OpenRA_thirdparty_deps/osx" "./download"
+
+rm -rf "./OpenRA_thirdparty_deps"
+
+

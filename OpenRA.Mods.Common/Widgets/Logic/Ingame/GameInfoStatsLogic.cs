@@ -42,8 +42,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					checkbox.GetText = () => mo.Objectives.First().Description;
 				}
 
-				statusLabel.GetText = () => player.WinState == WinState.Won ? "Accomplished" :
-					player.WinState == WinState.Lost ? "Failed" : "In progress";
+				statusLabel.GetText = () => player.WinState == WinState.Won ? "胜利" :
+					player.WinState == WinState.Lost ? "失败" : "正在处理";
 				statusLabel.GetColor = () => player.WinState == WinState.Won ? Color.LimeGreen :
 					player.WinState == WinState.Lost ? Color.Red : Color.White;
 			}
@@ -74,7 +74,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				if (teams.Count() > 1)
 				{
 					var teamHeader = ScrollItemWidget.Setup(teamTemplate, () => true, () => { });
-					teamHeader.Get<LabelWidget>("TEAM").GetText = () => t.Key == 0 ? "No Team" : "Team {0}".F(t.Key);
+					teamHeader.Get<LabelWidget>("TEAM").GetText = () => t.Key == 0 ? "无队伍" : "队伍{0}".F(t.Key);
 					var teamRating = teamHeader.Get<LabelWidget>("TEAM_SCORE");
 					var scoreCache = new CachedTransform<int, string>(s => s.ToString());
 					var teamMemberScores = t.Select(tt => tt.Second).Where(s => s != null).ToArray().Select(s => s.Experience);
@@ -101,7 +101,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					{
 						var suffix = pp.WinState == WinState.Undefined ? "" : " (" + pp.WinState + ")";
 						if (client != null && client.State == Session.ClientState.Disconnected)
-							suffix = " (Gone)";
+							suffix = " (已离开)";
 
 						return name.Update(Pair.New(pp.PlayerName, suffix));
 					};
@@ -131,7 +131,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (spectators.Any())
 			{
 				var spectatorHeader = ScrollItemWidget.Setup(teamTemplate, () => true, () => { });
-				spectatorHeader.Get<LabelWidget>("TEAM").GetText = () => "Spectators";
+				spectatorHeader.Get<LabelWidget>("TEAM").GetText = () => "观众";
 
 				playerPanel.AddChild(spectatorHeader);
 
@@ -149,7 +149,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 					nameLabel.GetText = () =>
 					{
-						var suffix = client.State == Session.ClientState.Disconnected ? " (Gone)" : "";
+						var suffix = client.State == Session.ClientState.Disconnected ? " (已离开)" : "";
 						return name.Update(Pair.New(client.Name, suffix));
 					};
 

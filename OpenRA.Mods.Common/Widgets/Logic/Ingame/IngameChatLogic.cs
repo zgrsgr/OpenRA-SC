@@ -68,7 +68,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			chatChrome.Visible = true;
 
 			var chatMode = chatChrome.Get<ButtonWidget>("CHAT_MODE");
-			chatMode.GetText = () => teamChat && !disableTeamChat ? "Team" : "All";
+			chatMode.GetText = () => teamChat && !disableTeamChat ? "队伍" : "全部";
 			chatMode.OnClick = () => teamChat ^= true;
 
 			// Enable teamchat if we are a player and die,

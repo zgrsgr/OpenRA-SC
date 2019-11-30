@@ -89,7 +89,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			});
 
 			var replayDuration = new CachedTransform<ReplayMetadata, string>(r =>
-				"Duration: {0}".F(WidgetUtils.FormatTimeSeconds((int)selectedReplay.GameInfo.Duration.TotalSeconds)));
+				"持续时间: {0}".F(WidgetUtils.FormatTimeSeconds((int)selectedReplay.GameInfo.Duration.TotalSeconds)));
 			panel.Get<LabelWidget>("DURATION").GetText = () => replayDuration.Update(selectedReplay);
 
 			SetupFilters();
@@ -141,8 +141,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					var options = new List<Pair<GameType, string>>
 					{
 						Pair.New(GameType.Any, ddb.GetText()),
-						Pair.New(GameType.Singleplayer, "Singleplayer"),
-						Pair.New(GameType.Multiplayer, "Multiplayer")
+						Pair.New(GameType.Singleplayer, "单人游戏"),
+						Pair.New(GameType.Multiplayer, "多人游戏")
 					};
 
 					var lookup = options.ToDictionary(kvp => kvp.First, kvp => kvp.Second);
@@ -174,10 +174,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					var options = new List<Pair<DateType, string>>
 					{
 						Pair.New(DateType.Any, ddb.GetText()),
-						Pair.New(DateType.Today, "Today"),
-						Pair.New(DateType.LastWeek, "Last 7 days"),
-						Pair.New(DateType.LastFortnight, "Last 14 days"),
-						Pair.New(DateType.LastMonth, "Last 30 days")
+						Pair.New(DateType.Today, "今天"),
+						Pair.New(DateType.LastWeek, "一周内"),
+						Pair.New(DateType.LastFortnight, "两周内"),
+						Pair.New(DateType.LastMonth, "一月内")
 					};
 
 					var lookup = options.ToDictionary(kvp => kvp.First, kvp => kvp.Second);
@@ -210,10 +210,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					var options = new List<Pair<DurationType, string>>
 					{
 						Pair.New(DurationType.Any, ddb.GetText()),
-						Pair.New(DurationType.VeryShort, "Under 5 min"),
-						Pair.New(DurationType.Short, "Short (10 min)"),
-						Pair.New(DurationType.Medium, "Medium (30 min)"),
-						Pair.New(DurationType.Long, "Long (60+ min)")
+						Pair.New(DurationType.VeryShort, "5 min 以内"),
+						Pair.New(DurationType.Short, "短 (10 min)"),
+						Pair.New(DurationType.Medium, "中等 (30 min)"),
+						Pair.New(DurationType.Long, "长 (60+ min)")
 					};
 
 					var lookup = options.ToDictionary(kvp => kvp.First, kvp => kvp.Second);
@@ -247,8 +247,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					var options = new List<Pair<WinState, string>>
 					{
 						Pair.New(WinState.Undefined, ddb.GetText()),
-						Pair.New(WinState.Lost, "Defeat"),
-						Pair.New(WinState.Won, "Victory")
+						Pair.New(WinState.Lost, "失败"),
+						Pair.New(WinState.Won, "胜利")
 					};
 
 					var lookup = options.ToDictionary(kvp => kvp.First, kvp => kvp.Second);
@@ -382,12 +382,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var invalidChars = Path.GetInvalidFileNameChars();
 
 				ConfirmationDialogs.TextInputPrompt(
-					"Rename Replay",
-					"Enter a new file name:",
+					"重命名录像",
+					"输入一个新的文件名:",
 					initialName,
 					onAccept: newName => RenameReplay(r, newName),
 					onCancel: null,
-					acceptText: "Rename",
+					acceptText: "重命名",
 					cancelText: null,
 					inputValidator: newName =>
 					{
@@ -410,15 +410,15 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			Action<ReplayMetadata, Action> onDeleteReplay = (r, after) =>
 			{
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Delete selected replay?",
-					text: "Delete replay '{0}'?".F(Path.GetFileNameWithoutExtension(r.FilePath)),
+					title: "删除所选录像?",
+					text: "删除录像'{0}'?".F(Path.GetFileNameWithoutExtension(r.FilePath)),
 					onConfirm: () =>
 					{
 						DeleteReplay(r);
 						if (after != null)
 							after.Invoke();
 					},
-					confirmText: "Delete",
+					confirmText: "删除",
 					onCancel: () => { });
 			};
 
@@ -448,15 +448,15 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				}
 
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Delete all selected replays?",
-					text: "Delete {0} replays?".F(list.Count),
+					title: "删除全部录像?",
+					text: "删除 {0} 录像?".F(list.Count),
 					onConfirm: () =>
 					{
 						list.ForEach(DeleteReplay);
 						if (selectedReplay == null)
 							SelectFirstVisibleReplay();
 					},
-					confirmText: "Delete All",
+					confirmText: "删除全部",
 					onCancel: () => { });
 			};
 		}
@@ -628,7 +628,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var noTeams = players.Count() == 1;
 				foreach (var p in players)
 				{
-					var label = noTeams ? "Players" : p.Key == 0 ? "No Team" : "Team {0}".F(p.Key);
+					var label = noTeams ? "玩家" : p.Key == 0 ? "无队伍" : "队伍 {0}".F(p.Key);
 					teams.Add(label, p);
 				}
 

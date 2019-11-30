@@ -19,14 +19,16 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		[ObjectCreator.UseCtor]
 		public KickSpectatorsLogic(Widget widget, string clientCount, Action okPressed, Action cancelPressed)
 		{
-			widget.Get<LabelWidget>("TEXT").GetText = () => "Are you sure you want to kick {0} spectators?".F(clientCount);
+			widget.Get<LabelWidget>("TEXT").GetText = () => "你确定要踢出{0}观众？".F(clientCount);
 
+			widget.Get<ButtonWidget>("OK_BUTTON").GetText = () => "确定";
 			widget.Get<ButtonWidget>("OK_BUTTON").OnClick = () =>
 			{
 				widget.Parent.RemoveChild(widget);
 				okPressed();
 			};
 
+			widget.Get<ButtonWidget>("CANCEL_BUTTON").GetText = () => "取消";
 			widget.Get<ButtonWidget>("CANCEL_BUTTON").OnClick = () =>
 			{
 				widget.Parent.RemoveChild(widget);

@@ -55,18 +55,18 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			categorySelector.GetText = () =>
 			{
 				if (SelectedCategories.Count == 0)
-					return "None";
+					return "无";
 
 				if (!string.IsNullOrEmpty(searchFilter))
-					return "Search Results";
+					return "搜索结果";
 
 				if (SelectedCategories.Count == 1)
 					return SelectedCategories.First();
 
 				if (SelectedCategories.Count == allCategories.Length)
-					return "All";
+					return "全部";
 
-				return "Multiple";
+				return "多种结果";
 			};
 
 			categorySelector.OnMouseDown = _ =>

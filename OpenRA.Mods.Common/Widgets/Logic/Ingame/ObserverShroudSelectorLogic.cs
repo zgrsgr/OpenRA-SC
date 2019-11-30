@@ -79,10 +79,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var groups = new Dictionary<string, IEnumerable<CameraOption>>();
 
-			combined = new CameraOption(this, world, "All Players", world.Players.First(p => p.InternalName == "Everyone"));
-			disableShroud = new CameraOption(this, world, "Disable Shroud", null);
+			combined = new CameraOption(this, world, "全部玩家", world.Players.First(p => p.InternalName == "Everyone"));
+			disableShroud = new CameraOption(this, world, "禁用迷雾", null);
 			if (!limitViews)
-				groups.Add("Other", new List<CameraOption>() { combined, disableShroud });
+				groups.Add("其他", new List<CameraOption>() { combined, disableShroud });
 
 			teams = world.Players.Where(p => !p.NonCombatant && p.Playable)
 				.Select(p => new CameraOption(this, p))
@@ -92,7 +92,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var noTeams = teams.Count() == 1;
 			foreach (var t in teams)
 			{
-				var label = noTeams ? "Players" : t.Key == 0 ? "No Team" : "Team {0}".F(t.Key);
+				var label = noTeams ? "玩家" : t.Key == 0 ? "无队伍" : "队伍{0}".F(t.Key);
 				groups.Add(label, t);
 			}
 

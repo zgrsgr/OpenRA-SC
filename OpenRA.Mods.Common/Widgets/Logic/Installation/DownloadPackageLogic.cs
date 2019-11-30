@@ -50,7 +50,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var status = new CachedTransform<string, string>(s => WidgetUtils.TruncateText(s, statusLabel.Bounds.Width, statusFont));
 			statusLabel.GetText = () => status.Update(getStatusText());
 
-			var text = "Downloading {0}".F(download.Title);
+			var text = "已下载 {0}".F(download.Title);
 			panel.Get<LabelWidget>("TITLE").Text = text;
 
 			ShowDownloadDialog();
@@ -58,7 +58,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 		void ShowDownloadDialog()
 		{
-			getStatusText = () => "Fetching list of mirrors...";
+			getStatusText = () => "获取镜像列表...";
 			progressBar.Indeterminate = true;
 
 			var retryButton = panel.Get<ButtonWidget>("RETRY_BUTTON");
@@ -87,9 +87,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					dataReceived = i.BytesReceived / (float)(1L << (mag * 10));
 					dataSuffix = SizeSuffixes[mag];
 
-					getStatusText = () => "Downloading from {2} {0:0.00} {1}".F(dataReceived,
+					getStatusText = () => "已从{2}下载 {0:0.00} {1}".F(dataReceived,
 						dataSuffix,
-						downloadHost ?? "unknown host");
+						downloadHost ?? "未知主机");
 					progressBar.Indeterminate = true;
 				}
 				else
@@ -99,9 +99,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					dataReceived = i.BytesReceived / (float)(1L << (mag * 10));
 					dataSuffix = SizeSuffixes[mag];
 
-					getStatusText = () => "Downloading from {4} {1:0.00}/{2:0.00} {3} ({0}%)".F(i.ProgressPercentage,
+					getStatusText = () => "已从{4}下载{1:0.00}/{2:0.00} {3} ({0}%)".F(i.ProgressPercentage,
 						dataReceived, dataTotal, dataSuffix,
-						downloadHost ?? "unknown host");
+						downloadHost ?? "未知主机");
 					progressBar.Indeterminate = false;
 				}
 
@@ -116,7 +116,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 				progressBar.Indeterminate = false;
 				progressBar.Percentage = 100;
-				getStatusText = () => "Error: " + s;
+				getStatusText = () => "错误: " + s;
 				retryButton.IsVisible = () => true;
 				cancelButton.OnClick = Ui.CloseWindow;
 			});
@@ -140,7 +140,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				// Validate integrity
 				if (!string.IsNullOrEmpty(download.SHA1))
 				{
-					getStatusText = () => "Verifying archive...";
+					getStatusText = () => "正在验证...";
 					progressBar.Indeterminate = true;
 
 					var archiveValid = false;
@@ -162,14 +162,14 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 					if (!archiveValid)
 					{
-						onError("Archive validation failed");
+						onError("验证失败");
 						deleteTempFile();
 						return;
 					}
 				}
 
 				// Automatically extract
-				getStatusText = () => "Extracting...";
+				getStatusText = () => "正在提取...";
 				progressBar.Indeterminate = true;
 
 				var extracted = new List<string>();
@@ -184,7 +184,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 							if (entry == null || !entry.IsFile)
 								continue;
 
-							onExtractProgress("Extracting " + entry.Name);
+							onExtractProgress("正在提取 " + entry.Name);
 							Log.Write("install", "Extracting " + entry.Name);
 							var targetPath = Platform.ResolvePath(kv.Key);
 							Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
@@ -210,7 +210,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						File.Delete(f);
 					}
 
-					onError("Archive extraction failed");
+					onError("提取失败");
 				}
 				finally
 				{
@@ -258,7 +258,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					{
 						Log.Write("install", "Mirror selection failed with error:");
 						Log.Write("install", e.ToString());
-						onError("Online mirror is not available. Please install from an original disc.");
+						onError("在线镜像不可用，请尝试从原光盘安装。");
 					}
 				};
 

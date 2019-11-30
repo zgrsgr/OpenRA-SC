@@ -32,12 +32,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			Func<string> statusText = () =>
 			{
 				if (world.Paused || world.Timestep == 0)
-					return "Paused";
+					return "暂停";
 
 				if (world.Timestep == 1)
-					return "Max Speed";
+					return "全速";
 
-				return "{0}% Speed".F(world.LobbyInfo.GlobalSettings.Timestep * 100 / world.Timestep);
+				return "{0}倍速度".F(world.LobbyInfo.GlobalSettings.Timestep / world.Timestep);
 			};
 
 			if (timer != null)
@@ -70,9 +70,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				var connection = orderManager.Connection as ReplayConnection;
 				if (connection != null && connection.FinalGameTick != 0)
-					timerTooltip.GetTooltipText = () => "{0}% complete".F(world.WorldTick * 100 / connection.FinalGameTick);
+					timerTooltip.GetTooltipText = () => "{0}% 已完成".F(world.WorldTick * 100 / connection.FinalGameTick);
 				else if (connection != null && connection.TickCount != 0)
-					timerTooltip.GetTooltipText = () => "{0}% complete".F(orderManager.NetFrameNumber * 100 / connection.TickCount);
+					timerTooltip.GetTooltipText = () => "{0}% 已完成".F(orderManager.NetFrameNumber * 100 / connection.TickCount);
 				else
 					timerTooltip.GetTooltipText = null;
 			}

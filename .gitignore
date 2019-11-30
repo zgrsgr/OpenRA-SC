@@ -26,6 +26,7 @@ mods/*/*.pdb
 /*.exe
 /*.exe.config
 thirdparty/download/*
+thirdparty/deps.zip
 *.mmdb.gz
 
 # backup files by various editors

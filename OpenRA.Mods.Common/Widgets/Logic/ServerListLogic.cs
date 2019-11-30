@@ -66,8 +66,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			switch (searchStatus)
 			{
-				case SearchStatus.Failed: return "Failed to query server list.";
-				case SearchStatus.NoGames: return "No games found. Try changing filters.";
+				case SearchStatus.Failed: return "查询服务器列表失败。";
+				case SearchStatus.NoGames: return "未查询到服务器, 请尝试改变过滤中的选项";
 				default: return "";
 			}
 		}
@@ -222,7 +222,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var playersLabel = widget.GetOrNull<LabelWidget>("PLAYER_COUNT");
 			if (playersLabel != null)
 			{
-				var playersText = new CachedTransform<int, string>(c => c == 1 ? "1 Player Online" : c.ToString() + " Players Online");
+				var playersText = new CachedTransform<int, string>(c => c.ToString() + "名玩家在线");
 				playersLabel.IsVisible = () => playerCount != 0;
 				playersLabel.GetText = () => playersText.Update(playerCount);
 			}
@@ -241,13 +241,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				mapTitle.GetText = () =>
 				{
 					if (currentMap == null)
-						return "No Server Selected";
+						return "未选择服务器";
 
 					if (currentMap.Status == MapStatus.Searching)
-						return "Searching...";
+						return "正在查找...";
 
 					if (currentMap.Class == MapClassification.Unknown)
-						return "Unknown Map";
+						return "未知地图";
 
 					return title.Update(currentMap);
 				};
@@ -314,9 +314,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		string PlayersLabel(GameServer game)
 		{
 			return "{0}{1}{2}".F(
-				"{0} Player{1}".F(game.Players > 0 ? game.Players.ToString() : "No", game.Players != 1 ? "s" : ""),
-				game.Bots > 0 ? ", {0} Bot{1}".F(game.Bots, game.Bots != 1 ? "s" : "") : "",
-				game.Spectators > 0 ? ", {0} Spectator{1}".F(game.Spectators, game.Spectators != 1 ? "s" : "") : "");
+				"{0}玩家".F(game.Players > 0 ? game.Players.ToString() + "名" : "没有"),
+				game.Bots > 0 ? ", {0}名电脑玩家".F(game.Bots) : "",
+				game.Spectators > 0 ? ", {0}名观众".F(game.Spectators) : "");
 		}
 
 		public void RefreshServerList()
@@ -452,12 +452,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var noTeams = players.Count() == 1;
 			foreach (var p in players)
 			{
-				var label = noTeams ? "Players" : p.Key == 0 ? "No Team" : "Team {0}".F(p.Key);
+				var label = noTeams ? "玩家" : p.Key == 0 ? "无队伍" : "队伍{0}".F(p.Key);
 				teams.Add(label, p);
 			}
 
 			if (server.Clients.Any(c => c.IsSpectator))
-				teams.Add("Spectators", server.Clients.Where(c => c.IsSpectator));
+				teams.Add("观众", server.Clients.Where(c => c.IsSpectator));
 
 			var factionInfo = modData.DefaultRules.Actors["world"].TraitInfos<FactionInfo>();
 			foreach (var kv in teams)
@@ -486,7 +486,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						var flag = item.Get<ImageWidget>("FLAG");
 						flag.IsVisible = () => true;
 						flag.GetImageCollection = () => "flags";
-						flag.GetImageName = () => (factionInfo != null && factionInfo.Any(f => f.InternalName == o.Faction)) ? o.Faction : "Random";
+						flag.GetImageName = () => (factionInfo != null && factionInfo.Any(f => f.InternalName == o.Faction)) ? o.Faction : "随机";
 					}
 					else
 					{
@@ -634,7 +634,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 								if (game.Clients.Length > 10)
 									displayClients = displayClients
 										.Take(9)
-										.Append("+ {0} other players".F(game.Clients.Length - 9));
+										.Append("+ {0}名其他玩家".F(game.Clients.Length - 9));
 
 								var tooltip = displayClients.JoinWith("\n");
 								players.GetTooltipText = () => tooltip;
@@ -647,7 +647,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						if (state != null)
 						{
 							var label = game.State >= (int)ServerState.GameStarted ?
-								"Playing" : "Waiting";
+								"游戏中" : "等待中";
 							state.GetText = () => label;
 
 							var color = GetStateColor(game, state, !canJoin);
@@ -658,7 +658,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						if (location != null)
 						{
 							var font = Game.Renderer.Fonts[location.Font];
-							var cachedServerLocation = game.Id != -1 ? GeoIP.LookupCountry(game.Address.Split(':')[0]) : "Local Network";
+							var cachedServerLocation = game.Id != -1 ? GeoIP.LookupCountry(game.Address.Split(':')[0]) : "本地网络";
 							var label = WidgetUtils.TruncateText(cachedServerLocation, location.Bounds.Width, font);
 							location.GetText = () => label;
 							location.GetColor = () => canJoin ? location.TextColor : incompatibleGameColor;
@@ -682,24 +682,24 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			if (game.State == (int)ServerState.GameStarted)
 			{
-				var label = "In progress";
+				var label = "已进行";
 
 				if (game.PlayTime > 0)
 				{
 					var totalMinutes = Math.Ceiling(game.PlayTime / 60.0);
-					label += " for {0} minute{1}".F(totalMinutes, totalMinutes > 1 ? "s" : "");
+					label += "了{0}分钟".F(totalMinutes);
 				}
 
 				return label;
 			}
 
 			if (game.State == (int)ServerState.WaitingPlayers)
-				return game.Protected ? "Password protected" : "Waiting for players";
+				return game.Protected ? "密码保护" : "等待玩家";
 
 			if (game.State == (int)ServerState.ShuttingDown)
-				return "Server shutting down";
+				return "服务器正在关闭";
 
-			return "Unknown server state";
+			return "未知服务器状态";
 		}
 
 		Color GetStateColor(GameServer game, LabelWidget label, bool darkened = false)

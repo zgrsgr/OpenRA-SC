@@ -70,7 +70,7 @@ namespace OpenRA.Network
 
 		public static string LookupCountry(string ip)
 		{
-			const string Unknown = "Unknown Location";
+			const string Unknown = "未知地点";
 
 			try
 			{

@@ -138,7 +138,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var requiresDiscWidget = container.Get<LabelWidget>("REQUIRES_DISC");
 				requiresDiscWidget.IsVisible = () => !installed && !downloadEnabled;
 				if (!isSourceAvailable)
-					requiresDiscWidget.GetText = () => "Manual Install";
+					requiresDiscWidget.GetText = () => "手动安装";
 
 				scrollPanel.AddChild(container);
 			}

@@ -45,8 +45,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					"Slot", new List<SlotDropDownOption>
 					{
-						new SlotDropDownOption("Open", "slot_open " + slot.PlayerReference, () => (!slot.Closed && client == null)),
-						new SlotDropDownOption("Closed", "slot_close " + slot.PlayerReference, () => slot.Closed)
+						new SlotDropDownOption("开启", "slot_open " + slot.PlayerReference, () => (!slot.Closed && client == null)),
+						new SlotDropDownOption("关闭", "slot_close " + slot.PlayerReference, () => slot.Closed)
 					}
 				}
 			};
@@ -63,7 +63,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				}
 			}
 
-			options.Add(bots.Any() ? "Bots" : "Bots Disabled", bots);
+			options.Add(bots.Any() ? "电脑玩家" : "禁用电脑玩家", bots);
 
 			Func<SlotDropDownOption, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
 			{
@@ -97,7 +97,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				new DropDownOption
 				{
-					Title = "Kick",
+					Title = "踢出",
 					OnClick = onClick
 				},
 			};
@@ -106,7 +106,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				options.Add(new DropDownOption
 				{
-					Title = "Transfer Admin",
+					Title = "移交房主",
 					OnClick = () => orderManager.IssueOrder(Order.Command("make_admin {0}".F(c.Index)))
 				});
 			}
@@ -115,7 +115,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				options.Add(new DropDownOption
 				{
-					Title = "Move to Spectator",
+					Title = "移动到观众",
 					OnClick = () => orderManager.IssueOrder(Order.Command("make_spectator {0}".F(c.Index)))
 				});
 			}
@@ -410,7 +410,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				WidgetUtils.TruncateText(name, slot.Bounds.Width - slot.Bounds.Height - slot.LeftMargin - slot.RightMargin,
 				Game.Renderer.Fonts[slot.Font]));
 
-			slot.GetText = () => truncated.Update(c != null ? c.Name : s.Closed ? "Closed" : "Open");
+			slot.GetText = () => truncated.Update(c != null ? c.Name : s.Closed ? "关闭" : "开启");
 			slot.OnMouseDown = _ => ShowSlotDropDown(slot, s, c, orderManager, map);
 
 			// Ensure Name selector (if present) is hidden
@@ -421,7 +421,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var name = parent.Get<LabelWidget>("NAME");
 			name.IsVisible = () => true;
-			name.GetText = () => c != null ? c.Name : s.Closed ? "Closed" : "Open";
+			name.GetText = () => c != null ? c.Name : s.Closed ? "关闭" : "开启";
 
 			// Ensure Slot selector (if present) is hidden
 			HideChildWidget(parent, "SLOT_OPTIONS");

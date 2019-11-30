@@ -25,7 +25,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			siloBar.GetProvided = () => playerResources.ResourceCapacity;
 			siloBar.GetUsed = () => playerResources.Resources;
-			siloBar.TooltipFormat = "Silo Usage: {0}/{1}";
+			siloBar.TooltipFormat = "储藏井已使用: {0}/{1}";
 			siloBar.GetBarColor = () =>
 			{
 				if (playerResources.Resources == playerResources.ResourceCapacity)

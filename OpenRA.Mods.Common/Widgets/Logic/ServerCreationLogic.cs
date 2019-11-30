@@ -79,7 +79,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					var font = Game.Renderer.Fonts[authorLabel.Font];
 					var author = new CachedTransform<MapPreview, string>(
-						m => WidgetUtils.TruncateText("Created by {0}".F(m.Author), authorLabel.Bounds.Width, font));
+						m => WidgetUtils.TruncateText("由{0}创建".F(m.Author), authorLabel.Bounds.Width, font));
 					authorLabel.GetText = () => author.Update(preview);
 				}
 			}
@@ -146,13 +146,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			if (advertiseOnline)
 			{
-				noticesLabelA.Text = "Internet Server (UPnP ";
+				noticesLabelA.Text = "网络服务器 (UPnP ";
 				var aWidth = Game.Renderer.Fonts[noticesLabelA.Font].Measure(noticesLabelA.Text).X;
 				noticesLabelA.Bounds.Width = aWidth;
 
 				var status = UPnP.Status;
-				noticesLabelB.Text = status == UPnPStatus.Enabled ? "Enabled" :
-					status == UPnPStatus.NotSupported ? "Not Supported" : "Disabled";
+				noticesLabelB.Text = status == UPnPStatus.Enabled ? "启动" :
+					status == UPnPStatus.NotSupported ? "不支持" : "禁用";
 
 				noticesLabelB.TextColor = status == UPnPStatus.Enabled ? ChromeMetrics.Get<Color>("UPnPEnabledColor") :
 					status == UPnPStatus.NotSupported ? ChromeMetrics.Get<Color>("UPnPNotSupportedColor") :
@@ -169,7 +169,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 			else
 			{
-				noticesLabelA.Text = "Local Server:";
+				noticesLabelA.Text = "本地服务器:";
 				noticesLabelB.Visible = false;
 				noticesLabelC.Visible = false;
 			}
@@ -203,15 +203,15 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 			catch (System.Net.Sockets.SocketException e)
 			{
-				var message = "Could not listen on port {0}.".F(Game.Settings.Server.ListenPort);
+				var message = "无法监听端口{0}。".F(Game.Settings.Server.ListenPort);
 
 				// AddressAlreadyInUse (WSAEADDRINUSE)
 				if (e.ErrorCode == 10048)
-					message += "\nCheck if the port is already being used.";
+					message += "\n请检查端口是否已被使用。";
 				else
-					message += "\nError is: \"{0}\" ({1})".F(e.Message, e.ErrorCode);
+					message += "\n发生错误: \"{0}\" ({1})".F(e.Message, e.ErrorCode);
 
-				ConfirmationDialogs.ButtonPrompt("Server Creation Failed", message, onCancel: () => { }, cancelText: "Back");
+				ConfirmationDialogs.ButtonPrompt("服务器创建失败", message, onCancel: () => { }, cancelText: "Back");
 				return;
 			}
 
