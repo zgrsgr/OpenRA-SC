@@ -1,0 +1,57 @@
+apc2:
+	idle: apc
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	open: apc
+		Start: 32
+		Length: 3
+	unload: apc
+		Start: 32
+	image: apc
+	icon: filledapc
+		Start: 0
+
+
+cyborg:
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 130
+	piston: zombie
+		Start: 106
+		Length: 7
+	die1: zombie
+		Start: 106
+		Length: 7
+		Tick: 200
+	die2: zombie
+		Start: 106
+		Length: 7
+		Tick: 200
+	die3: zombie
+		Start: 106
+		Length: 7
+		Tick: 200
+	die4: zombie
+		Start: 106
+		Length: 7
+		Tick: 200
+	die5: zombie
+		Start: 106
+		Length: 7
+		Tick: 200
+	die6: zombie
+		Start: 106
+		Length: 7
+		Tick: 200
+	die-crushed: zombie
+		Start: 106
+		Length: 7
+		Tick: 200
+	icon: cyborgicon

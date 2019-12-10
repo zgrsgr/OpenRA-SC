@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 05:   Distant Thunder
+Title: 05:   迅雷打击
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 20,42,90,50
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 
@@ -477,6 +477,10 @@ Actors:
 		Location: 58,89
 		Facing: 60
 		TurretFacing: 60
+	Helper: proc
+		Owner: Greece
+		Location: 42,42
+		FreeActor: False
 	Actor181: mine
 		Owner: Neutral
 		Location: 63,65

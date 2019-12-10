@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Shattered Mountain
+Title: 山崩
 
 Author: james.bong
 
@@ -14,7 +14,7 @@ Bounds: 1,1,127,127
 
 Visibility: Lobby
 
-Categories: Conquest
+Categories: 作战 #Conquest
 
 Players:
 	PlayerReference@Neutral:

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Snow Off
+Title: 扫雪机
 
 Author: Aaron Lloyd
 
@@ -14,7 +14,7 @@ Bounds: 1,1,60,50
 
 Visibility: Lobby
 
-Categories: Conquest
+Categories: 作战 #Conquest
 
 Players:
 	PlayerReference@Neutral:

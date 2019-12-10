@@ -6,11 +6,22 @@ World:
 	LuaScript:
 		Scripts: soviet02b.lua
 	MissionData:
-		Briefing: Tomorrow, the attack on Germany begins, but today, we must protect our facility from Allied attacks.\n\nKeep the Command Center intact at all costs, and destroy any Allied fortification you might find.
+		Briefing: 明天，\n红军就要对德国发起进攻！\n但在今天，\n这些资本主义走狗胆敢先对我们动手！\n\n你必须不惜一切代价保护指挥中心，\n并且摧毁此地所有的盟军武装力量。\n
+		# Briefing: Tomorrow, the attack on Germany begins, but today, we must protect our facility from Allied attacks.\n\nKeep the Command Center intact at all costs, and destroy any Allied fortification you might find.
 		BriefingVideo: soviet2.vqa
 		StartVideo: spotter.vqa
 		WinVideo: sovtstar.vqa
 		LossVideo: sovcemet.vqa
+
+
+
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: 难度 #Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: True
 
 SPEN:
 	Buildable:
@@ -95,7 +106,7 @@ GUN:
 HARV:
 	Harvester:
 		SearchFromProcRadius: 50
-		SearchFromHarvesterRadius: 50
+		SearchFromOrderRadius: 50
 
 powerproxy.paratroopers:
 	ParatroopersPower:

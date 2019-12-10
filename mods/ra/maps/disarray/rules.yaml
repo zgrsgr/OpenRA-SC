@@ -1,0 +1,155 @@
+Player:
+	PlayerResources:
+		DefaultCash: 0
+        
+World:
+	LuaScript:
+		Scripts: disarray.lua, disarray-AI.lua, disarray-RebuildData.lua
+	MissionData:
+		Briefing: 情报显示：\n我军试图坚守本区阵地的尝试已经失败...\n我们失去了同前哨基地的联络...\n\n这些俄国佬，\n甚至窃取了我们遗留在此地的信号干扰设备，\n并反过来以此对付我们！\n好在他们不知如何运用这一技术，\n却以为从此可以高枕无忧了。\n必须抓住他们大意的机会！\n\n司令部以任命你为本次行动的总指挥，\n不过我们手头只有有限的装甲力量，\n当然我会设法...\n你懂的，这需要一些时间。\n\n请善加利用这些宝贵的武力，\n抓紧与前哨站取得联系，\n并确保前哨站不会再次陷落。\n\n当然，\n如果我能收到你的一些捷报的话，\n我就能更有效地说服司令部尽速派遣增援，\n比如，摧毁那些该死的通讯干扰设备！\n\n最后，为了确保本区域不会再次落入敌手，\n我们必须肃清此地区的所有苏军。\n\n我想我们时间有限，\n祝你好运！\n\n\n\n此战役剧本由 Narcoleptic 制作，\nOpenRA汉化组代为收录至RASC。\n
+		#Our recent attempts to hold the sector have been unfructiferous. Central command dispatched an armored battalion to strengthen the area but enemy electronic warfare systems are disrupting and delaying our efforts. \n\nA vanguard force will rush to the destination and prevent our sortie to end before it even starts. Use it to hold your ground until the rest of the convoy arrives. \n\nCommand assures enemy jammers and electronic warfare radar systems will be present in the area, pressuring our communications. Eliminate as much of this threat as possible. Our transmissions need relief of this stress if we want to lessen time wasted on the rest of the convoy journey to the sector.\n\nGood luck Commander.\n
+		BriefingVideo: ally2.vqa
+		StartVideo: mcv.vqa
+		WinVideo: montpass.vqa
+		LossVideo: frozen.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			easy: 简单
+			normal: 正常
+			hard: 困难
+		Default: easy
+    
+CAMERA.map:
+	Inherits: CAMERA
+	RevealsShroud:
+		Range: 40c0
+    
+powerproxy.paratroopers:
+	ParatroopersPower:
+		DropItems: E1,E1,E1,E2,E2
+    
+APWR:
+	Buildable:
+		Prerequisites: ~structures.soviet
+
+MCV:
+	Buildable:
+		Prerequisites: ~disabled
+
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies      
+        
+MRJ:
+	Buildable:
+		Prerequisites: ~disabled
+
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+
+STEK:
+	Buildable:
+		Prerequisites: ~disabled        
+
+SAM:
+	Buildable:
+		Prerequisites: ~disabled        
+
+MIG:
+	Buildable:
+		Prerequisites: ~disabled        
+        
+IRON:
+	Buildable:
+		Prerequisites: ~disabled        
+        
+THF:
+	Buildable:
+		Prerequisites: ~disabled        
+        
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+        
+QTNK:
+	Buildable:
+		Prerequisites: ~disabled
+        
+4TNK:
+    Buildable:
+		Prerequisites: ~disabled
+
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled        
+        
+SYRD:
+	Buildable:
+		Prerequisites: ~disabled
+
+HPAD:
+	Buildable:
+		Prerequisites: ~disabled
+
+ATEK:
+	Buildable:
+		Prerequisites: ~disabled
+
+BRIK:
+	Buildable:
+		Prerequisites: ~disabled
+
+GAP:
+	Buildable:
+		Prerequisites: ~disabled
+
+PDOX:
+	Buildable:
+		Prerequisites: ~disabled
+
+MSLO:
+	Buildable:
+		Prerequisites: ~disabled
+
+MECH:
+	Buildable:
+		Prerequisites: ~disabled
+
+E7:
+	Buildable:
+		Prerequisites: ~disabled
+
+FACF:
+	Buildable:
+		Prerequisites: ~disabled
+
+WEAF:
+	Buildable:
+		Prerequisites: ~disabled
+
+SYRF:
+	Buildable:
+		Prerequisites: ~disabled
+
+DOMF:
+	Buildable:
+		Prerequisites: ~disabled
+
+ATEF:
+	Buildable:
+		Prerequisites: ~disabled
+
+MSLF:
+	Buildable:
+		Prerequisites: ~disabled
+
+PDOF:
+	Buildable:
+		Prerequisites: ~disabled
+
+FLARE:
+	RevealsShroud:
+		Range: 5c0  

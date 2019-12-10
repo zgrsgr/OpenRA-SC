@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 01:   In the thick of it
+Title: 01:   深入敌后
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 49,45,30,36
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

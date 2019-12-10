@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Evacuation
+Title: 飞身援救
 
 Author: Scott_NZ
 
@@ -14,7 +14,7 @@ Bounds: 16,16,96,96
 
 Visibility: Lobby, MissionSelector
 
-Categories: Mission, Cooperative Mission
+Categories: 战役, 合作战役 #Mission, Cooperative Mission
 
 LockPreview: True
 

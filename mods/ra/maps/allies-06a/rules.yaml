@@ -6,7 +6,8 @@ World:
 	LuaScript:
 		Scripts: allies06a.lua, allies06a-AI.lua
 	MissionData:
-		Briefing: Priority one is to establish a base and get your spy into one of the Soviet Tech Centers in the base across the gulf.\nData on the Iron Curtain is in there and we need it.\n\nOnce you get the data complete your mission...\nWipe out everything.
+		Briefing: 为了获取铁幕的情报，\n我们必须指派间谍潜入对岸的苏军基地，\n我们需要的信息就藏在那几幢科研大楼内，\n当然，为了顺利完成任务，\n我们建议你首先建立一个行动基地。 \n\n在得到铁幕的情报之后，\n记得将这个科研中心夷为平地。
+		# Briefing: Priority one is to establish a base and get your spy into one of the Soviet Tech Centers in the base across the gulf.\nData on the Iron Curtain is in there and we need it.\n\nOnce you get the data complete your mission...\nWipe out everything.
 		BriefingVideo: ally6.vqa
 		WinVideo: allymorf.vqa
 		LossVideo: overrun.vqa
@@ -15,11 +16,11 @@ World:
 		TechLevel: medium
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 powerproxy.paratroopers:

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 02:   Five to one
+Title: 02:   以一敌五
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 43,44,50,42
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

@@ -2,18 +2,19 @@ World:
 	LuaScript:
 		Scripts: soviet03.lua
 	MissionData:
-		Briefing: A spy who has compromised the security of one of the northern sarin gas sites has been traced back to Lund, Sweden, by Nadia's intelligence groups.\n\nHe has been marked for death and a squad of Soviet troops was dispatched to the location to hunt him down.
+		Briefing: 一名破坏了我国北部某沙林研究所的特务，\n终于在瑞典隆德露出了马脚。\n这都要归功于潜伏于欧洲的，\n由纳蒂亚同志领导的情报小组！\n\n至于这名特务，\n我们已派遣一支行刑队，\n就让这冰天雪地成为他的葬身之所吧。\n
+		# Briefing: A spy who has compromised the security of one of the northern sarin gas sites has been traced back to Lund, Sweden, by Nadia's intelligence groups.\n\nHe has been marked for death and a squad of Soviet troops was dispatched to the location to hunt him down.
 		BriefingVideo: soviet3.vqa
 		StartVideo: search.vqa
 		WinVideo: execute.vqa
 		LossVideo: take_off.vqa
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 Player:

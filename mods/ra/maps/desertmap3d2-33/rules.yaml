@@ -1,0 +1,451 @@
+
+Player:
+	-ConquestVictoryConditions:
+	-LobbyPrerequisiteCheckbox@GLOBALBOUNTY:
+		
+World:
+	CrateSpawner:
+		SpawnInterval: 1500
+		Minimum: 3
+		CheckboxEnabled: True
+		CheckboxLocked: True
+	-SpawnMPUnits:
+	MPStartLocations:
+	StartGameNotification:
+	LuaScript:
+		Scripts: desert-zjordyedit.lua
+	MissionData:
+		Briefing: 由Zjordy制作的多人在线合作对抗地图。\n本地图以OpenRA主界面背景图为蓝本，\n由OpenRA汉化组代为收录。\n --------------- \n小队1和小队2固定为苏联与盟军。\n与传统对抗地图不同，\n盟军玩家必须涉水才能抵达正面战场。\n双方小队都有一名已处于战争状态的AI队友。\n工具箱内可以获得本地图的独特单位——战地机甲！\n-------------\n究竟谁能为这场永无止境的战斗划上句点？\n那位英雄会是你吗？
+		#This is the shellmap made into an online conquest by Zjordy. \n --- \n Team 1 Soviet vs Team 2 Allies. \n This map is just like a normal conquest but Allies start in the water with a transport ship carrying a MCV. \n Both teams have an AI friend that are already in battle. \n Crates can contain a bonus Mech Robot unit \n --- \n Who will win this everlasting battle? You decide!
+
+
+SHARP:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: 神枪手
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 90
+		Prerequisites: ~tent, dome
+		Description: 使用狙击步枪的精英步兵\n射程高于一般步兵\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
+	Health:
+		HP: 8000
+	Passenger:
+		PipType: Red
+	RevealsShroud:
+		Range: 7c0
+	AutoTarget:
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry
+	Armament@PRIMARY:
+		Weapon: Sniper2
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Sniper2
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	DetectCloaked:
+		CloakTypes: Cloak, Hijacker
+		Range: 6c0
+	-MustBeDestroyed:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+		Image: sniper
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true	
+
+APC2:
+	Inherits: ^TrackedVehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 50
+		Prerequisites: ~vehicles.soviet, ~techlevel.low
+		Description: 已经满员！\n请勿忘记下车！\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: 满员的装甲运兵车
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 142
+		RequiresCondition: !notmobile && !being-captured
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Armament:
+		Weapon: M60mg
+		LocalOffset: 85,0,171
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	WithMuzzleOverlay:
+	Cargo:
+		InitialUnits: e1, e1, e2, e3, e4
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		LoadingCondition: notmobile
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+	RenderSprites:
+		Image: apc2
+
+TRAN.Husk2:
+	Burns:
+		Damage: 0
+
+powerproxy.paratroopers:
+	ParatroopersPower:
+		DisplayBeacon: false
+		DropItems: E1,E1,E2,E3,E4
+
+MISS:
+	DamageMultiplier@INVULNERABLE:
+		Modifier: 0
+	-Targetable:
+
+LST2:
+	Inherits: ^Ship
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: 运兵船
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 35000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: lcraft
+		Speed: 113
+		RequiresCondition: !notmobile
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	SelectionDecorations:
+	WithLandingCraftAnimation:
+		OpenTerrainTypes: Clear, Rough, Road, Ore, Gems, Beach
+	Cargo:
+		InitialUnits: e1, e1, e3, e3, mcv
+		Types: Infantry, Vehicle
+		MaxWeight: 5
+		PipCount: 5
+		PassengerFacing: 0
+		LoadingCondition: notmobile
+	-Chronoshiftable:
+	Selectable:
+		DecorationBounds: 36,36
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Burns:
+		Damage: 100
+	RenderSprites:
+		Image: lst
+
+PDOX2:
+	Inherits: ^ScienceBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 48,48
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: 坚不可摧的超时空传送仪
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 100000
+	Armor:
+		Type: Wood
+	WithBuildingBib:
+		HasMinibib: Yes
+	ProvidesPrerequisite@germany:
+		Factions: germany
+		Prerequisite: pdox.germany
+	ProvidesPrerequisite@germanstructure:
+		RequiresPrerequisites: structures.germany
+		Prerequisite: pdox.germany
+	ChronoshiftPower@chronoshift:
+		OrderName: Chronoshift
+		Prerequisites: !pdox.germany
+		Icon: chrono
+		ChargeInterval: 3000
+		Description: 超时空传送
+		LongDesc: 将一定范围内的载具传送到目标地点，20秒后返回原位置
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: ChronosphereCharging
+		EndChargeSpeechNotification: ChronosphereReady
+		Duration: 400
+		KillCargo: yes
+		DisplayRadarPing: True
+	ChronoshiftPower@advancedchronoshift:
+		OrderName: AdvancedChronoshift
+		Prerequisites: pdox.germany
+		Icon: chrono
+		ChargeInterval: 3000
+		Description: 超时空传送
+		LongDesc: 将一定范围内的载具传送到目标地点，20秒后返回原位置
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: ChronosphereCharging
+		EndChargeSpeechNotification: ChronosphereReady
+		Duration: 400
+		KillCargo: yes
+		DisplayRadarPing: True
+		Range: 2
+	SupportPowerChargeBar:
+	Power:
+		Amount: 0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: pdox
+	DamageMultiplier@INVULNERABLE:
+		Modifier: 0
+	-Targetable:
+
+AFLD:
+	Inherits: ^Building
+	Inherits@shape: ^3x2Shape
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 420,0,0, 420,-1024,0, 420,1024,0, -777,0,0, -777,-1024,0, -777,1024,0
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 130
+		Prerequisites: dome, ~structures.soviet, ~techlevel.medium, ~!structures.ukraine
+		Description: Produces and reloads aircraft.\n  Special Ability: Spy Plane\n  Special Ability: Paratroopers
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: 战地机场
+	Selectable:
+		Class: afld
+		Bounds: 72,48
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 100000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Exit@1:
+		RequiresCondition: !being-captured
+		ExitCell: 1,1
+		Facing: 192
+		MoveIntoWorld: false
+	RallyPoint:
+	Production:
+		Produces: Aircraft, Plane
+	Reservable:
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine
+		Prerequisite: aircraft.soviet
+	ProvidesPrerequisite@sovietvanilla:
+		Factions: soviet
+		Prerequisite: aircraft.sovietvanilla
+	ProvidesPrerequisite@russia:
+		Factions: russia
+		Prerequisite: aircraft.russia
+	ProvidesPrerequisite@ukraine:
+		Factions: ukraine
+		Prerequisite: aircraft.ukraine
+	ProvidesPrerequisite@sovietstructure:
+		RequiresPrerequisites: structures.soviet
+		Prerequisite: aircraft.soviet
+	ProvidesPrerequisite@sovietvanillastructure:
+		RequiresPrerequisites: structures.sovietvanilla
+		Prerequisite: aircraft.sovietvanilla
+	ProvidesPrerequisite@russianstructure:
+		RequiresPrerequisites: structures.russia
+		Prerequisite: aircraft.russia
+	ProvidesPrerequisite@ukrainianstructure:
+		RequiresPrerequisites: structures.ukraine
+		Prerequisite: aircraft.ukraine
+	AirstrikePower@spyplane:
+		OrderName: SovietSpyPlane
+		Prerequisites: aircraft.soviet
+		Icon: spyplane
+		ChargeInterval: 3750
+		Description: 侦察机
+		LongDesc: 侦察地图上一片区域\n可以选择飞机行进的方向
+		SelectTargetSpeechNotification: SelectTarget
+		EndChargeSpeechNotification: SpyPlaneReady
+		CameraActor: camera.spyplane
+		CameraRemoveDelay: 150
+		UnitType: u2
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: camicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	ParatroopersPower@paratroopers:
+		OrderName: SovietParatroopers
+		Prerequisites: aircraft.soviet
+		Icon: paratroopers
+		ChargeInterval: 7500
+		Description: 伞兵
+		LongDesc: 友方运输机将在目标位置投放一队伞兵\n可以选择飞机行进的方向
+		DropItems: E1R1,E1R1,E1R1,E3R1,E3R1
+		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+		AllowImpassableCells: false
+		QuantizedFacings: 8
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: pinficon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeInterval: 9500
+		Description:  地毯式轰炸
+		LongDesc: 友方轰炸机将在目标位置投放炸弹\n轰炸机飞行速度较快\n炸弹下落速度较慢\n可以选择飞机行进的方向
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	ProductionBar:
+		ProductionType: Aircraft
+	SupportPowerChargeBar:
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: afld
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForSupportPower:
+		Proxy: aircraft.upgraded
+		Types: SpyInfiltrate
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	WithResupplyAnimation:
+		RequiresCondition: !build-incomplete
+
+CTNK:
+	Buildable: 
+		Prerequisites: atek, ~vehicles.allies, ~techlevel.high
+
+STNK:
+	Buildable: 
+		Prerequisites: atek, ~vehicles.allies, ~techlevel.high
+
+CRATE:
+	Inherits: ^Crate
+	GiveUnitCrateAction@bonus:
+		SelectionShares: 80
+		Units: bonus
+
+BONUS:
+	Inherits: ^Vehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 900
+		Prerequisites: atek, stek, ~techlevel.infonly
+		Description: 高科技战地机甲\n装备激光炮与空地两用导弹\n必须拥有盟军和苏联双方的科技中心\n\n·强势对抗：一切\n·弱势对抗：无
+	Valued:
+		Cost: 999
+	Tooltip:
+		Name: 战地机甲
+	Mobile:
+		Speed: 47
+	Voiced:
+		VoiceSet: EinsteinVoice
+	Armament@PRIMARY:
+		Weapon: laser2
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 171
+		RecoilRecovery: 30
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: Maverick2
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100,100
+		Recoil: 43
+	AttackFrontal:
+	Health:
+		HP: 120000
+	Armor:
+		Type: Heavy
+	RenderSprites:
+		Image: cyborg
+		Scale: 1
+	Selectable:
+		Bounds: 24,24
+		DecorationBounds: 24,24
+	WithInfantryBody:
+		IdleSequences: stand
+		StandSequences: stand
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithDeathAnimation:
+		DeathTypes:
+			DefaultDeath: 1
+			BulletDeath: 2
+			SmallExplosionDeath: 3
+			ExplosionDeath: 4
+			FireDeath: 5
+			ElectricityDeath: 6
+	-WithFacingSpriteBody:
+	SelfHealing:
+		Step: 50
+		Delay: 1
+		HealIfBelow: 110000
+		DamageCooldown: 1
+	RevealsShroud:
+		Range: 8c0
+
+MECH:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Bonus, Vehicle, Ship
+
+
+

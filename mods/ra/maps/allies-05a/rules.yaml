@@ -2,7 +2,8 @@ World:
 	LuaScript:
 		Scripts: allies05a.lua, allies05a-AI.lua
 	MissionData:
-		Briefing: Rescue Tanya.\n\nOnce disguised, your spy can move past any enemy unit, except dogs, without being detected. Direct him into the weapons factory located at a nearby Soviet Base where he will hijack a truck and free Tanya.\n\nWith Tanya's help, take out the air defenses on the island and a Chinook will arrive to rescue her.\n\nThen destroy all remaining Soviet buildings and units.
+		Briefing: 援救谭雅！\n\n首先，\n引导我们的特工潜入苏军的战车工厂，\n他高超的伪装技巧能骗过所有苏联人，\n但切记避开训练有素的苏联军犬。\n\n一旦特工渗透了战车工厂后，\n他将会按计划营救谭雅。\n\n一旦谭雅获救，指挥她摧毁岛上的防空系统，\n支努干运输机将协助她撤离。\n\n最后，\n消灭该地区所有苏军力量。\n
+		# Briefing: Rescue Tanya.\n\nOnce disguised, your spy can move past any enemy unit, except dogs, without being detected. Direct him into the weapons factory located at a nearby Soviet Base where he will hijack a truck and free Tanya.\n\nWith Tanya's help, take out the air defenses on the island and a Chinook will arrive to rescue her.\n\nThen destroy all remaining Soviet buildings and units.
 		BriefingVideo: ally5.vqa
 		StartVideo: tanya1.vqa
 		WinVideo: tanya2.vqa
@@ -11,12 +12,12 @@ World:
 		TechLevel: medium
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
-			tough: Real tough guy
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
+			tough: 挑战 #Real tough guy
 		Default: easy
 
 Camera.Small:
@@ -95,7 +96,7 @@ WEAP.infiltratable:
 
 MISS:
 	Tooltip:
-		Name: Prison
+		Name: 监狱 #Prison
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, Mission Objectives
 	AttackOmni:

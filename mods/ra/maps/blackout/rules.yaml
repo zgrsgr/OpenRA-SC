@@ -1,0 +1,294 @@
+
+Player:
+	PlayerResources:
+		DefaultCash: 0
+        
+World:
+	LuaScript:
+		Scripts: blackout.lua
+	MissionData:
+		Briefing: 我们的渗透小组已顺利潜入本区域，\n此地是苏联方面在本战区最大的供电中心。\n\n上峰已对本地的苏军发动了电子信号干扰，\n赶在苏军从中恢复之前，\n好好利用这一优势。\n苏联前敌指挥部正在着手重新点亮他们在此地的通讯网络，\n用实际行动告诉他们黑暗的滋味。\n\n另外，\n千万要远离海岸线，\n苏军在沿岸部署了大量防御设施。\n\n\n\n此战役剧本由 Narcoleptic 制作，\nOpenRA汉化组代为收录至RASC。\n
+		#An small team has successfully infiltrated on the sector our intel tells is one of enemy biggest power supply.\n\nCommand has created a gap in enemy communications so move fast and take advantage of enemy disarray and hinder they efforts to restore it. Then proceed with termination of the objective. Most probably they'll try to re-establish they're systems \n\nStay away from the beach at south where enemy defences are the deadliest.\n\n
+		BriefingVideo: ally2.vqa
+		StartVideo: mcv.vqa
+		WinVideo: montpass.vqa
+		LossVideo: frozen.vqa
+	SmudgeLayer@CRATER:
+		InitialSmudges:
+            60,79: cr1,0
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			easy: 简单
+			normal: 正常
+			hard: 困难
+		Default: easy
+    
+HARV:
+	Buildable:
+		Prerequisites: weap
+
+APWR:
+	Buildable:
+		Prerequisites: ~disabled
+
+FIX:
+	Buildable:
+		Prerequisites: ~disabled
+
+SYRD:
+	Buildable:
+		Prerequisites: ~disabled
+
+WEAP:
+	Buildable:
+		Prerequisites: ~disabled
+
+DOME:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, Mission Objectives
+	-InfiltrateForExploration:
+
+HPAD:
+	Buildable:
+		Prerequisites: ~disabled
+
+ATEK:
+	Buildable:
+		Prerequisites: ~disabled
+
+BRIK:
+	Buildable:
+		Prerequisites: ~disabled
+
+HBOX:
+	Buildable:
+		Prerequisites: ~disabled
+
+PBOX:
+	Buildable:
+		Prerequisites: ~disabled
+
+GUN:
+	Buildable:
+		Prerequisites: ~disabled
+
+AGUN:
+	Buildable:
+		Prerequisites: ~disabled
+
+GAP:
+	Buildable:
+		Prerequisites: ~disabled
+
+PDOX:
+	Buildable:
+		Prerequisites: ~disabled
+
+MSLO:
+	Buildable:
+		Prerequisites: ~disabled
+
+E6:
+	Buildable:
+		Prerequisites: ~disabled
+
+MECH:
+	Buildable:
+		Prerequisites: ~disabled
+
+E7:
+	Buildable:
+		Prerequisites: ~disabled
+
+FACF:
+	Buildable:
+		Prerequisites: ~disabled
+
+WEAF:
+	Buildable:
+		Prerequisites: ~disabled
+
+SYRF:
+	Buildable:
+		Prerequisites: ~disabled
+
+DOMF:
+	Buildable:
+		Prerequisites: ~disabled
+
+ATEF:
+	Buildable:
+		Prerequisites: ~disabled
+
+MSLF:
+	Buildable:
+		Prerequisites: ~disabled
+
+PDOF:
+	Buildable:
+		Prerequisites: ~disabled        
+
+SPY:
+	Buildable:
+		Prerequisites: ~disabled
+	Infiltrates:
+		Types: Mission Objectives
+	RevealsShroud:
+		Range: 6c0
+        
+BARL:
+	Health:
+		HP: 1
+
+BRL3:
+	Health:
+		HP: 1        
+        
+SPY.Unarmed:
+	Inherits: SPY
+	Buildable:
+		Prerequisites: ~disabled
+	Infiltrates:
+		Types: Mission Objectives
+	RevealsShroud:
+		Range: 6c0
+	-Armament:
+	RenderSprites:
+		Image: SPY      
+
+SPY.Afterdome:
+	Inherits: SPY
+	Buildable:
+		Prerequisites: ~disabled
+	-Infiltrates:
+	RevealsShroud:
+		Range: 6c0
+	RenderSprites:
+		Image: SPY
+    Armament:
+		Weapon: SilencedPPK
+
+SPY.AfterdomeUnarmed:
+	Inherits: SPY
+	Buildable:
+		Prerequisites: ~disabled
+	-Infiltrates:
+	RevealsShroud:
+		Range: 6c0
+	-Armament:
+	RenderSprites:
+		Image: SPY
+
+E1.Defendstance:
+	Inherits: E1
+	Buildable:
+		Prerequisites: ~disabled
+	AutoTarget:
+		InitialStance: Defend
+		ScanRadius: 5
+	RenderSprites:
+		Image: E1
+
+E1.Autotarget:
+	Inherits: E1
+	Buildable:
+		Prerequisites: ~disabled
+	RevealsShroud:
+		Range: 8c0
+	AutoTarget:
+		ScanRadius: 7
+	RenderSprites:
+		Image: E1
+
+E2.Autotarget:
+	Inherits: E2
+	Buildable:
+		Prerequisites: ~disabled
+	RevealsShroud:
+		Range: 8c0
+	AutoTarget:
+		ScanRadius: 7
+	RenderSprites:
+		Image: E2
+
+E3.Defendstance:
+	Inherits: E3
+	Buildable:
+		Prerequisites: ~disabled
+	AutoTarget:
+		InitialStance: Defend
+		ScanRadius: 5
+	RenderSprites:
+		Image: E3
+
+E4.Autotarget:
+	Inherits: E4
+	Buildable:
+		Prerequisites: ~disabled
+	RevealsShroud:
+		Range: 8c0
+	AutoTarget:
+		ScanRadius: 7
+	RenderSprites:
+		Image: E4        
+
+        
+FLARE:
+	RevealsShroud:
+		Range: 5c0  
+        
+CAMERA.tesla:
+	Inherits: CAMERA
+	RevealsShroud:
+		Range: 2c0
+CAMERA.map:
+	Inherits: CAMERA
+	RevealsShroud:
+		Range: 40c0
+CAMERA.base:
+	Inherits: CAMERA
+	RevealsShroud:
+		Range: 8c0
+
+
+TRUK.mission:
+	Inherits: TRUK
+	Buildable:
+		Prerequisites: ~disabled
+	WithFacingSpriteBody:
+	-SpawnActorOnDeath:
+	RevealsShroud:
+		Range: 4c0
+		ValidStances: Ally, Enemy
+		RequiresCondition: hijacked
+	ExternalCondition@hijacked:
+		Condition: hijacked
+	RenderSprites:
+		Image: TRUK
+        
+TRAN.Extraction:
+	Inherits: TRAN
+	WithFacingSpriteBody:
+	RevealsShroud:
+		Range: 0c0
+	RejectsOrders:
+	-Selectable:
+	Cargo:
+		Types: Einstein
+		MaxWeight: 1
+	RenderSprites:
+		Image: tran
+	Interactable:
+        
+TRAN.Insertion:
+	Inherits: TRAN.Extraction
+	WithFacingSpriteBody:
+	Cargo:
+		MaxWeight: 0
+	RenderSprites:
+		Image: tran
+	Interactable:
+        
+        

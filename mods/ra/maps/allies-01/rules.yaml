@@ -2,12 +2,20 @@ World:
 	LuaScript:
 		Scripts: allies01.lua
 	MissionData:
-		Briefing: Rescue Einstein from the Headquarters inside this Soviet complex.\n\nOnce found, evacuate him via the helicopter at the signal flare.\n\nEinstein and Tanya must be kept alive at all costs.\n\nBeware the Soviet's Tesla Coils.\n\nDirect Tanya to destroy the westmost power plants to take them off-line.\n
+		Briefing: 爱因斯坦博士被俘了。\n幸运的是，\n我军情报人员已经定位了关押他的苏军基地，\n现在由谭雅带领的营救小队已经就绪，\n请在行动中确保爱因斯坦博士和谭雅的安全。\n\n\n提示：\n磁暴线圈虽然强大，但可以通过破坏发电厂\n使其停止工作。\n
 		BackgroundVideo: prolog.vqa
 		BriefingVideo: ally1.vqa
 		StartVideo: landing.vqa
 		WinVideo: snowbomb.vqa
 		LossVideo: bmap.vqa
+
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: 难度 #Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: True
 
 TRAN.Extraction:
 	Inherits: TRAN

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 01: Discovery
+Title: 01: 探索与发现
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 40,40,50,50
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 
@@ -43,7 +43,7 @@ Players:
 		Enemies: AntMan
 		Color: F6D679
 	PlayerReference@AntMan:
-		Name: AntMan
+		Name: AntMan 
 		Faciton: soviet
 		Enemies: Spain, Creeps
 		Bot: campaign

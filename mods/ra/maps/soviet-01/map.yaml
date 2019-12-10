@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 01:   Lesson in Blood
+Title: 01:   血的教训
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 32,47,32,38
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

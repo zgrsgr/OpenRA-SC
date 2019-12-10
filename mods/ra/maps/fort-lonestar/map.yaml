@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Fort Lonestar
+Title: 孤星要塞-联防型小游戏
 
 Author: Nuke'm Bro, abcdefg30
 
@@ -14,7 +14,7 @@ Bounds: 8,8,48,48
 
 Visibility: Lobby
 
-Categories: Minigame
+Categories: 小游戏 #Minigame
 
 Players:
 	PlayerReference@Neutral:

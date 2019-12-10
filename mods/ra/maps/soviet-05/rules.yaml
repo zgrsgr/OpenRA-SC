@@ -6,7 +6,8 @@ World:
 	LuaScript:
 		Scripts: soviet05.lua, soviet05-AI.lua, soviet05-reinforcements_teams.lua
 	MissionData:
-		Briefing: Khalkis island contains a large quantity of ore that we need.\n\nThe Allies are well aware of our plans, and intend to establish their own base there. See to it that they fail.\n\nIn addition, capture their radar center so we can track Allied activity in this area.
+		Briefing: 红军目前正急需军费，\n而希腊哈尔基斯岛上的资源显然非常充足，\n但打入我军内部的特务已将这一情报泄露，\n因此这些资本主义肥猪正打算捷足先登！\n\n粉碎盟军的计划！\n\n盟军雷达站内有我们的潜伏同志，\n如果能占领雷达，\n盟军的所有小动作都将一清二楚。\n
+		# Briefing: Khalkis island contains a large quantity of ore that we need.\n\nThe Allies are well aware of our plans, and intend to establish their own base there. See to it that they fail.\n\nIn addition, capture their radar center so we can track Allied activity in this area.
 		BriefingVideo: soviet5.vqa
 		StartVideo: double.vqa
 		WinVideo: strafe.vqa
@@ -15,11 +16,11 @@ World:
 		TechLevel: medium
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 HARV:

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 06b: Bridge over the River VizchGoi
+Title: 06b: 维奇戈伊之桥
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 18,10,81,58
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Six Below Zero
+Title: 零下六度
 
 Author: Echo of Damnation
 
@@ -14,7 +14,7 @@ Bounds: 1,1,128,128
 
 Visibility: Lobby
 
-Categories: Conquest
+Categories: 作战 #Conquest
 
 Players:
 	PlayerReference@Neutral:

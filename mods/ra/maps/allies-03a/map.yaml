@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 03a: Dead End
+Title: 03a: 穷途末路
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 35,48,72,36
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

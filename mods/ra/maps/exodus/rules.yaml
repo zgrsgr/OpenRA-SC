@@ -4,16 +4,17 @@ Player:
 
 World:
 	MissionData:
-		Briefing: The Allies are now being flanked from both sides. Evacuate before the remaining Allied forces in the area are wiped out. Einstein has recently developed a technology which allows us to obscure units from the enemy. Pull out at least one prototype mobile gap generator intact.
+		Briefing: 紧急情况！\n我军现在正被苏军两面夹击！\n\n我们必须尽最大努力撤离剩余部队，\n尤其是爱因斯坦博士研发的原型机，\n这些车辆搭载了能够隐蔽我军的设备，\n必须确保至少一辆机动裂缝产生器成功撤离。\n
+		#The Allies are now being flanked from both sides. Evacuate before the remaining Allied forces in the area are wiped out. Einstein has recently developed a technology which allows us to obscure units from the enemy. Pull out at least one prototype mobile gap generator intact.
 	LuaScript:
 		Scripts: exodus.lua
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单
+			normal: 正常
+			hard: 困难
 		Default: normal
 	TimeLimitManager:
 		TimeLimitLocked: True

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Rapa Nui
+Title: 复活节岛登陆战
 
 Author: American Blunt
 
@@ -14,7 +14,7 @@ Bounds: 1,1,300,200
 
 Visibility: Lobby
 
-Categories: Conquest
+Categories: 作战 #Conquest
 
 Players:
 	PlayerReference@Neutral:

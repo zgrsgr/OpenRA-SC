@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Intervention
+Title: 见义勇为
 
 Author: Antares79
 
@@ -14,7 +14,7 @@ Bounds: 16,16,128,128
 
 Visibility: MissionSelector
 
-Categories: Mission
+Categories: 战役 #Mission
 
 LockPreview: True
 

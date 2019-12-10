@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: A Nuclear Winter
+Title: 核冬天
 
 Author: Lucian
 
@@ -14,7 +14,7 @@ Bounds: 1,1,100,70
 
 Visibility: Lobby
 
-Categories: Conquest
+Categories: 作战 #Conquest
 
 Players:
 	PlayerReference@Neutral:

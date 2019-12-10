@@ -14,7 +14,7 @@ Bounds: 1,1,126,126
 
 Visibility: Shellmap
 
-Categories: Shellmap
+Categories: 主菜单的背景地图 #Shellmap
 
 Players:
 	PlayerReference@Neutral:

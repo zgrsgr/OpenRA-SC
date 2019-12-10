@@ -4,17 +4,18 @@ Player:
 World:
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 	LuaScript:
 		Scripts: ant-01.lua, ant-attack.lua
 	MissionData:
 		BackgroundVideo: antintro.vqa
-		Briefing: We've lost contact with one of our outposts. Before it went off-line, we recieved a brief communique about giant ants. We're unsure what to make of this report, so we want you to investigate.  \n\nScout the area, bring the outpost back on-line, and report your findings. If there is a threat, reinforcements will be sent in to help you.  \n\nKeep the base functional and radio contact open -- we don't want to lose the outpost again.
+		Briefing: 我们和一个前哨站失去了联系。\n该前哨站之前曾向指挥部递交了一份报告，\n提到了所谓的“巨型蚂蚁”。\n指挥部对“巨型蚂蚁”不明所以，\n但显然二者之间存在某种联系。\n\n\n侦察这一地区，将前哨站重新接入通讯网络，\n并向指挥部汇报调查结论。\n鉴于可能的威胁，\n指挥部后续会准备增援部队。\n\n\n务必保持无线电通畅，\n并且确保前哨站不会再次沦陷。\n\n如果真的有什么危险降临的话。\n
+		# Briefing: We've lost contact with one of our outposts. Before it went off-line, we recieved a brief communique about giant ants. We're unsure what to make of this report, so we want you to investigate.  \n\nScout the area, bring the outpost back on-line, and report your findings. If there is a threat, reinforcements will be sent in to help you.  \n\nKeep the base functional and radio contact open -- we don't want to lose the outpost again.
 
 ^Palettes:
 	IndexedPlayerPalette@scoutant:

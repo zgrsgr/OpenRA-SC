@@ -2,18 +2,18 @@ World:
 	LuaScript:
 		Scripts: soviet08a.lua, soviet08a-AI.lua
 	MissionData:
-		Briefing: We have detected Allied activity on Elba island. The Allies plan to use this island to stage an attack on the Soviet Empire.\n\nYou must ensure that the island ceases to be under Allied control. Destroy all Allied units on and around the island.\n\nThe local population has been aiding the Allies as well. There is only one punishment for helping the enemy - Death.
+		Briefing: 厄尔巴岛上出现了盟军活动。\n显然盟军试图以此为跳板，\n向苏联本土发动突袭。\n\n以下是你的任务目标：\n击溃所有盟军舰队，\n肃清岛上盟军，\n为苏联重新获取该岛的控制权。\n\n岛上的居民也已背叛我们，\n反革命和叛徒的下场只有一个，\n你清楚该怎么做。\n
 		BriefingVideo: soviet8.vqa
 		StartVideo: slntsrvc.vqa
 		WinVideo: bombrun.vqa
 		LossVideo: allymorf.vqa
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 Player:
