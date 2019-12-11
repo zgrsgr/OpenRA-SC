@@ -199,6 +199,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 		}
 
+		static object fontCacheLocker = new object();
+
 		void SelectMap(MapPreview preview)
 		{
 			selectedMap = preview;
@@ -234,7 +236,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					infoVideo = missionData.BackgroundVideo;
 					infoVideoVisible = infoVideo != null;
 
-					var briefing = WidgetUtils.WrapText(missionData.Briefing.Replace("\\n", "\n"), description.Bounds.Width, descriptionFont);
+					string briefing;
+
+					lock(fontCacheLocker)
+					{
+						briefing = WidgetUtils.WrapText(missionData.Briefing.Replace("\\n", "\n"), description.Bounds.Width, descriptionFont);
+					}
+
 					var height = descriptionFont.Measure(briefing).Y;
 					Game.RunAfterTick(() =>
 					{

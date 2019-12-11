@@ -117,7 +117,9 @@ namespace OpenRA
 		{
 			V ret;
 			if (!d.TryGetValue(k, out ret))
+			{
 				d.Add(k, ret = createFn(k));
+			}
 			return ret;
 		}
 
