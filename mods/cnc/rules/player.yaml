@@ -31,8 +31,8 @@ Player:
 		FogCheckboxDisplayOrder: 3
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		ID: factundeploy
-		Label: Redeployable MCVs
-		Description: Allow undeploying Construction Yard
+		Label: MCV重新部署
+		Description: 允许重新部署建筑工厂
 		Enabled: True
 		DisplayOrder: 7
 		Prerequisites: global-factundeploy
@@ -40,19 +40,19 @@ Player:
 	FrozenActorLayer:
 	PlaceBeacon:
 	ProvidesTechPrerequisite@low:
-		Name: Low
+		Name: 低
 		Prerequisites: techlevel.low
 		Id: low
 	ProvidesTechPrerequisite@medium:
-		Name: Medium
+		Name: 中
 		Prerequisites: techlevel.low, techlevel.medium
 		Id: medium
 	ProvidesTechPrerequisite@nosuper:
-		Name: No Powers
+		Name: 无电力
 		Prerequisites: techlevel.low, techlevel.medium, techlevel.high
 		Id: nopowers
 	ProvidesTechPrerequisite@all:
-		Name: Unrestricted
+		Name: 无限制
 		Prerequisites: techlevel.low, techlevel.medium, techlevel.high, techlevel.superweapons
 		Id: unrestricted
 	GrantConditionOnPrerequisiteManager:

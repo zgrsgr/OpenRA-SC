@@ -152,7 +152,7 @@ Hotkeys:
 
 LoadScreen: CncLoadScreen
 	Image: cnc|uibits/chrome.png
-	Text: Loading
+	Text: 载入中...
 
 ServerTraits:
 	LobbyCommands
@@ -166,36 +166,36 @@ ChromeMetrics:
 
 Fonts:
 	Tiny:
-		Font: common|FreeSans.ttf
-		Size: 10
+		Font: common|FZHTK.TTF
+		Size: 12
 		Ascender: 8
 	TinyBold:
-		Font: common|FreeSansBold.ttf
-		Size: 10
+		Font: common|FZHTK.TTF
+		Size: 12
 		Ascender: 8
 	Small:
-		Font: common|FreeSans.ttf
-		Size: 12
+		Font: common|FZHTK.TTF
+		Size: 14
 		Ascender: 9
 	Regular:
-		Font: common|FreeSans.ttf
-		Size: 14
+		Font: common|FZHTK.TTF
+		Size: 16
 		Ascender: 11
 	Bold:
-		Font: common|FreeSansBold.ttf
-		Size: 14
+		Font: common|FZHTK.TTF
+		Size: 17
 		Ascender: 11
 	MediumBold:
-		Font: common|FreeSansBold.ttf
-		Size: 18
+		Font: common|FZHTK.TTF
+		Size: 20
 		Ascender: 14
 	BigBold:
-		Font: common|FreeSansBold.ttf
-		Size: 24
+		Font: common|FZHTK.TTF
+		Size: 26
 		Ascender: 18
 	Title:
-		Font: common|FreeSansBold.ttf
-		Size: 32
+		Font: common|FZHTK.TTF
+		Size: 48
 		Ascender: 24
 
 Missions:
@@ -223,27 +223,27 @@ ModelSequenceFormat: PlaceholderModelSequence
 
 GameSpeeds:
 	slowest:
-		Name: Slowest
+		Name: 最慢
 		Timestep: 80
 		OrderLatency: 2
 	slower:
-		Name: Slower
+		Name: 较慢
 		Timestep: 50
 		OrderLatency: 3
 	default:
-		Name: Normal
+		Name: 默认
 		Timestep: 40
 		OrderLatency: 3
 	fast:
-		Name: Fast
+		Name: 较快
 		Timestep: 35
 		OrderLatency: 4
 	faster:
-		Name: Faster
+		Name: 很快
 		Timestep: 30
 		OrderLatency: 4
 	fastest:
-		Name: Fastest
+		Name: 最快
 		Timestep: 20
 		OrderLatency: 6
 

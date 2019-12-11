@@ -14,7 +14,7 @@ V20:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Sala's House
+		Name: 莎拉家
 
 V20.Husk:
 	Inherits: ^CivBuildingHusk
@@ -24,7 +24,7 @@ V20.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Sala's House (Destroyed)
+		Name: 莎拉家的废墟
 
 V21:
 	Inherits: ^CivBuilding
@@ -47,7 +47,7 @@ V21:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Abdul's House
+		Name: 阿卜杜拉家
 
 V21.Husk:
 	Inherits: ^CivBuildingHusk
@@ -57,7 +57,7 @@ V21.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Abdul's House (Destroyed)
+		Name: 阿卜杜拉家的废墟
 
 V22:
 	Inherits: ^CivBuilding
@@ -70,7 +70,7 @@ V22:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Pablo's Wicked Pub
+		Name: 保罗的罪恶酒馆
 
 V22.Husk:
 	Inherits: ^CivBuildingHusk
@@ -80,7 +80,7 @@ V22.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Pablo's Wicked Pub (Destroyed)
+		Name: 保罗的罪恶酒馆废墟
 
 V23:
 	Inherits: ^CivBuilding
@@ -89,14 +89,14 @@ V23:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Village Well
+		Name: 村井
 
 V23.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Village Well (Destroyed)
+		Name: 村井废墟
 
 V24:
 	Inherits: ^CivBuilding
@@ -114,7 +114,7 @@ V24:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Camel Trader
+		Name: 骆驼商站
 
 V24.Husk:
 	Inherits: ^CivBuildingHusk
@@ -124,7 +124,7 @@ V24.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Camel Trader (Destroyed)
+		Name: 骆驼商站废墟
 
 V25:
 	Inherits: ^CivBuilding
@@ -138,7 +138,7 @@ V25:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Church
+		Name: 教堂
 	SpawnActorOnDeath:
 		Actor: V25.Husk
 	MapEditorData:
@@ -150,7 +150,7 @@ V25.Husk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Church (Destroyed)
+		Name: 教堂废墟
 	MapEditorData:
 		RequireTilesets: DESERT
 
@@ -165,7 +165,7 @@ V26:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Ali's House
+		Name: 阿里家
 
 V26.Husk:
 	Inherits: ^CivBuildingHusk
@@ -175,7 +175,7 @@ V26.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Ali's House (Destroyed)
+		Name: 阿里家的废墟
 
 V27:
 	Inherits: ^CivBuilding
@@ -184,14 +184,14 @@ V27:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Trader Ted's
+		Name: 泰德贸易行
 
 V27.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Trader Ted's (Destroyed)
+		Name: 泰德贸易行废墟
 
 V28:
 	Inherits: ^CivBuilding
@@ -200,14 +200,14 @@ V28:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Menelik's House
+		Name: 梅内力克家
 
 V28.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Menelik's House (Destroyed)
+		Name: 梅内力克家的废墟
 
 V29:
 	Inherits: ^CivBuilding
@@ -216,14 +216,14 @@ V29:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Prestor John's House
+		Name: 约翰·普雷斯特家
 
 V29.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Prestor John's House (Destroyed)
+		Name: 约翰·普雷斯特家的废墟
 
 V30:
 	Inherits: ^CivBuilding
@@ -236,7 +236,7 @@ V30:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Village Well
+		Name: 水井
 
 V30.Husk:
 	Inherits: ^CivBuildingHusk
@@ -246,7 +246,7 @@ V30.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Village Well (Destroyed)
+		Name: 水井废墟
 
 V31:
 	Inherits: ^CivBuilding
@@ -259,7 +259,7 @@ V31:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Witch Doctor's Hut
+		Name: 巫医小屋
 
 V31.Husk:
 	Inherits: ^CivBuildingHusk
@@ -269,7 +269,7 @@ V31.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Witch Doctor's Hut (Destroyed)
+		Name: 巫医小屋废墟
 
 V32:
 	Inherits: ^CivBuilding
@@ -282,7 +282,8 @@ V32:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Rikitikitembo's Hut
+		Name: 雷基提吉滕博小屋
+		#Rikitikitembo's Hut
 
 V32.Husk:
 	Inherits: ^CivBuildingHusk
@@ -292,7 +293,7 @@ V32.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Rikitikitembo's Hut (Destroyed)
+		Name: 雷基提吉滕博小屋废墟
 
 V33:
 	Inherits: ^CivBuilding
@@ -305,7 +306,7 @@ V33:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Roarke's Hut
+		Name: 洛基小屋
 
 V33.Husk:
 	Inherits: ^CivBuildingHusk
@@ -315,7 +316,7 @@ V33.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Roarke's Hut (Destroyed)
+		Name: 洛基小屋废墟
 
 V34:
 	Inherits: ^CivBuilding
@@ -324,14 +325,14 @@ V34:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Mubasa's Hut
+		Name: 穆芭莎小屋
 
 V34.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Mubasa's Hut (Destroyed)
+		Name: 穆芭莎小屋废墟
 
 V35:
 	Inherits: ^CivBuilding
@@ -340,14 +341,14 @@ V35:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Aksum's Hut
+		Name: 阿克苏姆小屋
 
 V35.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Aksum's Hut (Destroyed)
+		Name: 阿克苏姆小屋废墟
 
 V36:
 	Inherits: ^CivBuilding
@@ -356,14 +357,14 @@ V36:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Mambo's Hut
+		Name: 曼波小屋
 
 V36.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: Mambo's Hut (Destroyed)
+		Name: 曼波小屋废墟
 
 V37:
 	Inherits: ^CivBuilding
@@ -381,7 +382,7 @@ V37:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: The Studio
+		Name: 西木工作室
 
 V37.Husk:
 	Inherits: ^CivBuildingHusk
@@ -391,4 +392,4 @@ V37.Husk:
 	MapEditorData:
 		RequireTilesets: DESERT
 	Tooltip:
-		Name: The Studio (Destroyed)
+		Name: 西木工作室废墟

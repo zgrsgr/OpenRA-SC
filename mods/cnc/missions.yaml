@@ -1,4 +1,4 @@
-GDI Campaign:
+GDI任务:
 	gdi01
 	gdi02
 	gdi03
@@ -10,7 +10,7 @@ GDI Campaign:
 	gdi06
 	gdi07
 
-Nod Campaign:
+Nod任务:
 	nod01
 	nod02a
 	nod02b
@@ -31,8 +31,8 @@ Nod Campaign:
 	nod10a
 	nod10b
 
-Funpark Campaign:
+恐龙乐园:
 	funpark01
 
-Bonus Missions:
+奖励任务:
 	cnc64gdi01

@@ -10,7 +10,7 @@ V01:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Church
+		Name: 教堂
 	SpawnActorOnDeath:
 		Actor: V01.Husk
 	MapEditorData:
@@ -22,7 +22,7 @@ V01.Husk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Church (Destroyed)
+		Name: 教堂废墟
 	MapEditorData:
 		ExcludeTilesets: DESERT
 
@@ -42,7 +42,7 @@ V02:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Han's and Gretel's
+		Name: 汉与格雷特家
 
 V02.Husk:
 	Inherits: ^CivBuildingHusk
@@ -52,7 +52,7 @@ V02.Husk:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Han's and Gretel's (Destroyed)
+		Name: 汉与格雷特家的废墟
 
 V03:
 	Inherits: ^CivBuilding
@@ -70,7 +70,7 @@ V03:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Hewitt's House
+		Name: 休伊特家
 
 V03.Husk:
 	Inherits: ^CivBuildingHusk
@@ -80,7 +80,7 @@ V03.Husk:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Hewitt's House (Destroyed)
+		Name: 休伊特家废墟
 
 V04:
 	Inherits: ^CivBuilding
@@ -98,7 +98,7 @@ V04:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Ricktor's House
+		Name: 里克特家
 
 V04.Husk:
 	Inherits: ^CivBuildingHusk
@@ -108,7 +108,7 @@ V04.Husk:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Ricktor's House (Destroyed)
+		Name: 里克特家的废墟
 
 V05:
 	Inherits: ^CivBuilding
@@ -121,7 +121,7 @@ V05:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Gretchkin's house
+		Name: 格雷奇钦家
 
 V05.Husk:
 	Inherits: ^CivBuildingHusk
@@ -131,7 +131,7 @@ V05.Husk:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Gretchkin's house (Destroyed)
+		Name: 格雷奇钦家废墟
 
 V06:
 	Inherits: ^CivBuilding
@@ -144,7 +144,7 @@ V06:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: The Barn
+		Name: 谷仓
 
 V06.Husk:
 	Inherits: ^CivBuildingHusk
@@ -154,7 +154,7 @@ V06.Husk:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: The Barn (Destroyed)
+		Name: 谷仓废墟
 
 V07:
 	Inherits: ^CivBuilding
@@ -167,7 +167,7 @@ V07:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Damon's Pub
+		Name: 戴蒙酒吧
 
 V07.Husk:
 	Inherits: ^CivBuildingHusk
@@ -177,7 +177,7 @@ V07.Husk:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Damon's Pub (Destroyed)
+		Name: 戴蒙酒吧废墟
 
 V08:
 	Inherits: ^CivBuilding
@@ -186,14 +186,14 @@ V08:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Fran's House
+		Name: 弗兰家
 
 V08.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Fran's House (Destroyed)
+		Name: 弗兰家废墟
 
 V09:
 	Inherits: ^CivBuilding
@@ -202,14 +202,14 @@ V09:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Music Factory
+		Name: 唱片工厂
 
 V09.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Music Factory (Destroyed)
+		Name: 唱片工厂废墟
 
 V10:
 	Inherits: ^CivBuilding
@@ -218,14 +218,14 @@ V10:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Toymaker's
+		Name: 玩具加工厂
 
 V10.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Toymaker's (Destroyed)
+		Name: 玩具加工厂废墟
 
 V11:
 	Inherits: ^CivBuilding
@@ -234,14 +234,14 @@ V11:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Ludwig's House
+		Name: 贝多芬家
 
 V11.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Ludwig's House (Destroyed)
+		Name: 贝多芬家的废墟
 
 V12:
 	Inherits: ^CivField
@@ -250,14 +250,14 @@ V12:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Haystacks
+		Name: 干草堆
 
 V12.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Haystacks (Destroyed)
+		Name: 干草堆残骸
 
 V13:
 	Inherits: ^CivField
@@ -266,14 +266,14 @@ V13:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Haystacks
+		Name: 干草堆
 
 V13.Husk:
 	Inherits: ^CivBuildingHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Haystacks (Destroyed)
+		Name: 干草堆残骸
 
 V14:
 	Inherits: ^CivField
@@ -282,14 +282,14 @@ V14:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Wheat Field
+		Name: 小麦田
 
 V14.Husk:
 	Inherits: ^CivFieldHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Wheat Field (Destroyed)
+		Name: 被糟蹋的小麦田
 
 V15:
 	Inherits: ^CivField
@@ -298,14 +298,14 @@ V15:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Fallow Field
+		Name: 休耕地
 
 V15.Husk:
 	Inherits: ^CivFieldHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Fallow Field (Destroyed)
+		Name: 被糟蹋的休耕地
 
 V16:
 	Inherits: ^CivField
@@ -314,14 +314,14 @@ V16:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Corn Field
+		Name: 玉米田
 
 V16.Husk:
 	Inherits: ^CivFieldHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Corn Field (Destroyed)
+		Name: 被糟蹋的玉米田
 
 V17:
 	Inherits: ^CivField
@@ -330,14 +330,14 @@ V17:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Celery Field
+		Name: 大白菜田
 
 V17.Husk:
 	Inherits: ^CivFieldHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Celery Field (Destroyed)
+		Name: 被糟蹋的大白菜田
 
 V18:
 	Inherits: ^CivField
@@ -346,14 +346,14 @@ V18:
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Potato Field
+		Name: 马铃薯田
 
 V18.Husk:
 	Inherits: ^CivFieldHusk
 	MapEditorData:
 		ExcludeTilesets: DESERT
 	Tooltip:
-		Name: Potato Field (Destroyed)
+		Name: 被糟蹋的马铃薯田
 
 ARCO:
 	Inherits: ^CivBuilding
@@ -364,7 +364,7 @@ ARCO:
 	SpawnActorOnDeath:
 		Actor: ARCO.Husk
 	Tooltip:
-		Name: Oil Pump
+		Name: 钻油井
 		ShowOwnerRow: True
 
 ARCO.Husk:
@@ -373,14 +373,14 @@ ARCO.Husk:
 		Footprint: xx
 		Dimensions: 2,1
 	Tooltip:
-		Name: Oil Pump (Destroyed)
+		Name: 钻油井废墟
 
 BARB:
 	Inherits: ^Wall
 	Armor:
 		Type: Light
 	Tooltip:
-		Name: Barbwire Fence
+		Name: 铁丝网
 	LineBuild:
 		NodeTypes: barbwire
 	LineBuildNode:
@@ -393,7 +393,7 @@ WOOD:
 	Armor:
 		Type: Wood
 	Tooltip:
-		Name: Wooden Fence
+		Name: 木栅栏
 	LineBuild:
 		NodeTypes: woodfence
 	LineBuildNode:
@@ -536,7 +536,7 @@ DELPHI:
 CHAN:
 	Inherits: ^CivInfantry
 	Tooltip:
-		Name: Dr. Chan
+		Name: 陈博士
 
 MOEBIUS:
 	Inherits: ^CivInfantry
@@ -544,7 +544,7 @@ MOEBIUS:
 	Voiced:
 		VoiceSet: MoebiusVoice
 	Tooltip:
-		Name: Dr. Moebius
+		Name: 莫比乌斯博士
 
 VICE:
 	Inherits: ^Viceroid

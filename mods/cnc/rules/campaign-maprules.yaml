@@ -29,7 +29,7 @@ Player:
 		DefaultCashDropdownLocked: True
 		DefaultCash: 5000
 	ModularBot@CampaignAI:
-		Name: Campaign Player AI
+		Name: 战役AI
 		Type: campaign
 
 airstrike.proxy:
@@ -40,8 +40,8 @@ airstrike.proxy:
 		ChargeInterval: 3000
 		SquadSize: 3
 		QuantizedFacings: 8
-		Description: Air Strike
-		LongDesc: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Description: 	A-10空袭
+		LongDesc: 部署轰炸信标\n对一条直线上的单位与建筑造成伤害
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower

@@ -1,7 +1,7 @@
 MCV.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Mobile Construction Vehicle (Destroyed)
+		Name: 移动基地车残骸
 	TransformOnCapture:
 		IntoActor: mcv
 	RenderSprites:
@@ -10,7 +10,7 @@ MCV.Husk:
 HARV.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Harvester (Destroyed)
+		Name: 采矿车残骸
 	TransformOnCapture:
 		IntoActor: harv
 	RenderSprites:
@@ -19,7 +19,7 @@ HARV.Husk:
 APC.Husk:
 	Inherits: ^LightHusk
 	Tooltip:
-		Name: APC (Destroyed)
+		Name: 装甲运兵车残骸
 	TransformOnCapture:
 		IntoActor: apc
 	RenderSprites:
@@ -28,7 +28,7 @@ APC.Husk:
 FTNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Flame Tank (Destroyed)
+		Name: 火焰坦克残骸
 	TransformOnCapture:
 		IntoActor: ftnk
 	RenderSprites:
@@ -37,7 +37,7 @@ FTNK.Husk:
 ARTY.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Artillery (Destroyed)
+		Name: 自行火炮残骸
 	TransformOnCapture:
 		IntoActor: arty
 	RenderSprites:
@@ -46,7 +46,7 @@ ARTY.Husk:
 BGGY.Husk:
 	Inherits: ^LightHusk
 	Tooltip:
-		Name: Nod Buggy (Destroyed)
+		Name: 越野侦察车残骸
 	TransformOnCapture:
 		IntoActor: bggy
 	RenderSprites:
@@ -55,7 +55,7 @@ BGGY.Husk:
 BIKE.Husk:
 	Inherits: ^LightHusk
 	Tooltip:
-		Name: Recon Bike (Destroyed)
+		Name: 侦察摩托残骸
 	TransformOnCapture:
 		IntoActor: bike
 	RenderSprites:
@@ -64,7 +64,7 @@ BIKE.Husk:
 JEEP.Husk:
 	Inherits: ^LightHusk
 	Tooltip:
-		Name: Hum-Vee (Destroyed)
+		Name: 悍马侦察车残骸
 	TransformOnCapture:
 		IntoActor: jeep
 	RenderSprites:
@@ -73,7 +73,7 @@ JEEP.Husk:
 LTNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Light Tank (Destroyed)
+		Name: 轻型坦克残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -84,7 +84,7 @@ LTNK.Husk:
 MTNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Medium Tank (Destroyed)
+		Name: 中型坦克残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -95,7 +95,7 @@ MTNK.Husk:
 HTNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Mammoth Tank (Destroyed)
+		Name: 猛犸坦克残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -106,7 +106,7 @@ HTNK.Husk:
 MSAM.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Rocket Launcher (Destroyed)
+		Name: 自行火箭炮残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -117,7 +117,7 @@ MSAM.Husk:
 MLRS.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Mobile S.A.M. (Destroyed)
+		Name: 机动防空导弹发射车残骸
 	ThrowsParticle@turret:
 		Anim: turret
 	TransformOnCapture:
@@ -128,7 +128,7 @@ MLRS.Husk:
 STNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Stealth Tank (Destroyed)
+		Name: 隐形坦克残骸
 	TransformOnCapture:
 		IntoActor: stnk
 	RenderSprites:
@@ -137,7 +137,7 @@ STNK.Husk:
 TRUCK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Supply Truck (Destroyed)
+		Name: 补给车残骸
 	TransformOnCapture:
 		IntoActor: truck
 	RenderSprites:

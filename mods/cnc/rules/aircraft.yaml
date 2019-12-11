@@ -3,14 +3,14 @@ TRAN:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Chinook Transport
+		Name: 支努干运输机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: hpad
 		Queue: Aircraft.GDI, Aircraft.Nod
-		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+		Description: 用于运输步兵\n\n·无武装
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 150
@@ -56,14 +56,14 @@ HELI:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Apache Longbow
+		Name: 阿帕奇武装直升机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Nod
-		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Weak vs Tanks
+		Description: Nod反步兵武装直升机\n\n·强势对抗：步兵、轻型载具、飞行器\n·弱势对抗：装甲载具
 	Aircraft:
 		TurnSpeed: 7
 		Speed: 180
@@ -121,14 +121,14 @@ ORCA:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Orca
+		Name: 奥卡战机
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.GDI
-		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+		Description: GDI反装甲武装直升机\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵
 	Aircraft:
 		TurnSpeed: 7
 		Speed: 186
@@ -173,7 +173,7 @@ C17:
 	Inherits: ^Plane
 	Interactable:
 	Tooltip:
-		Name: Supply Aircraft
+		Name: 重型运输机
 	Valued:
 		Cost: 2000
 	Aircraft:
@@ -207,7 +207,7 @@ A10:
 	Inherits: ^Plane
 	Interactable:
 	Tooltip:
-		Name: A10 Bomber
+		Name: A10轰炸机
 	Valued:
 		Cost: 2000
 	Aircraft:
@@ -236,7 +236,7 @@ A10:
 TRAN.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Chinook Transport
+		Name: 支努干运输机
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 140
@@ -255,7 +255,7 @@ TRAN.Husk:
 HELI.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Apache Longbow
+		Name: 阿帕奇武装直升机
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186
@@ -271,7 +271,7 @@ HELI.Husk:
 ORCA.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Orca
+		Name: 奥卡战机
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186

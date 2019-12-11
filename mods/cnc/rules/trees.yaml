@@ -23,7 +23,7 @@ SPLITBLUE:
 		Interval: 110
 	WithIdleAnimation:
 	Tooltip:
-		Name: Blossom Tree (blue)
+		Name: 蓝色晶化孢子树
 	RadarColorFromTerrain:
 		Terrain: BlueTiberium
 	AppearsOnMapPreview:

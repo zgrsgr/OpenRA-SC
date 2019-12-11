@@ -6,7 +6,7 @@ FACT:
 	Valued:
 		Cost: 3500
 	Tooltip:
-		Name: Construction Yard
+		Name: 建筑工厂
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -119,7 +119,7 @@ FACT.GDI:
 		Prerequisites: ~disabled
 		ForceFaction: gdi
 	Tooltip:
-		Name: Construction Yard (GDI)
+		Name: GDI建筑工厂
 
 FACT.NOD:
 	Inherits: FACT
@@ -131,7 +131,7 @@ FACT.NOD:
 		Prerequisites: ~disabled
 		ForceFaction: nod
 	Tooltip:
-		Name: Construction Yard (Nod)
+		Name: Nod建筑工厂
 
 NUKE:
 	Inherits: ^BaseBuilding
@@ -143,7 +143,7 @@ NUKE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Power Plant
+		Name: 核电厂
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
@@ -151,7 +151,7 @@ NUKE:
 		Prerequisites: fact
 		Queue: Building.GDI, Building.Nod
 		BuildDuration: 330
-		Description: Generates power
+		Description: 为基地其他建筑提供电力
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -175,14 +175,14 @@ NUK2:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Advanced Power Plant
+		Name: 大型核电厂
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Building.GDI, Building.Nod
-		Description: Provides more power, cheaper than the\nstandard Power Plant
+		Description: 供电效率为核电厂的两倍
 	Building:
 		Footprint: xX xx ==
 		Dimensions: 2,3
@@ -209,12 +209,12 @@ PROC:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Tiberium Refinery
+		Name: 泰伯利亚精炼厂
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Queue: Building.GDI, Building.Nod
-		Description: Processes raw Tiberium\ninto useable resources
+		Description: 将泰伯利亚晶矿转化为战争资金\n\n·可以储存$1000
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -257,12 +257,12 @@ SILO:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Tiberium Silo
+		Name: 泰伯利亚矿仓
 	Buildable:
 		BuildPaletteOrder: 35
 		Prerequisites: proc
 		Queue: Defence.GDI, Defence.Nod
-		Description: Stores processed Tiberium
+		Description: 储存富余的泰伯利亚
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -302,14 +302,14 @@ PYLE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Barracks
+		Name: 兵营
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Queue: Building.GDI
-		Description: Trains infantry
+		Description: 训练步兵单位\n提供一个GDI步兵训练排程
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -358,14 +358,14 @@ HAND:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Hand of Nod
+		Name: Nod之手
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Queue: Building.Nod
-		Description: Trains infantry
+		Description: 训练步兵单位\n提供一个Nod步兵训练排程
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -415,14 +415,14 @@ AFLD:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Airstrip
+		Name: 战地跑道
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Queue: Building.Nod
-		Description: Provides a dropzone\nfor vehicle reinforcements
+		Description: 一块货运机着陆区\n提供一个Nod载具生产排程
 	Building:
 		Footprint: XXXX xxxx ====
 		Dimensions: 4,3
@@ -471,14 +471,14 @@ WEAP:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Weapons Factory
+		Name: 战车工厂
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Queue: Building.GDI
-		Description: Produces vehicles
+		Description: 载具生产中心\n提供一个GDI载具生产排程
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -535,12 +535,12 @@ HPAD:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Helipad
+		Name: 停机坪
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: proc
 		Queue: Building.GDI, Building.Nod
-		Description: Produces, rearms and\nrepairs helicopters
+		Description: 制造和维护飞行器\n提供一个飞行器生产排程
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -603,14 +603,14 @@ HQ:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Communications Center
+		Name: 通讯中心
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
 		Queue: Building.GDI, Building.Nod
-		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
+		Description: 提供战场视野\n提供战术地图\n需要电力才能运转\n\n·提供 支援能力：A-10空袭
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -639,8 +639,8 @@ HQ:
 		ChargeInterval: 6000
 		SquadSize: 3
 		QuantizedFacings: 8
-		Description: Air Strike
-		LongDesc: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		Description: A-10空袭
+		LongDesc: 部署轰炸信标\n对一条直线上的单位与建筑造成伤害
 		EndChargeSpeechNotification: AirstrikeReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -670,12 +670,12 @@ FIX:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Repair Facility
+		Name: 维修平台
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction
 		Queue: Building.GDI, Building.Nod
-		Description: Repairs vehicles
+		Description: 以消耗资源为代价\n高效修复载具和飞行器
 	Building:
 		Footprint: _X_ xxx _X_
 		Dimensions: 3,3
@@ -713,14 +713,14 @@ EYE:
 	Valued:
 		Cost: 1800
 	Tooltip:
-		Name: Advanced Communications Center
+		Name: 高级通讯中心
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.high
 		Queue: Building.GDI
-		Description: Provides radar and Orbital Ion Cannon support power.\nUnlocks Mammoth Tank and Commando.\nRequires power to operate.
+		Description: 解锁GDI高级科技\n提供战术地图\n需要电力才能运转\n\n·提供 超级武器：离子炮轰炸
 	Building:
 		Footprint: X_ xx ==
 		Dimensions: 2,3
@@ -748,8 +748,8 @@ EYE:
 		Icon: ioncannon
 		Cursor: ioncannon
 		ChargeInterval: 6750
-		Description: Ion Cannon
-		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		Description: 离子炮轰炸
+		LongDesc: 向目标区域发射离子炮\n立即对小范围内的一切单位造成高额伤害
 		BeginChargeSpeechNotification: IonCannonCharging
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -773,14 +773,14 @@ TMPL:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Temple of Nod
+		Name: Nod神庙
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.high
 		Queue: Building.Nod
-		Description: Provides Nuclear Strike support power.\nUnlocks Stealth Tank, Chem. Warrior and Obelisk of Light.\nRequires power to operate.
+		Description: 解锁Nod高级科技\n需要电力才能运转\n\n·提供 超级武器：核弹攻击
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -803,8 +803,8 @@ TMPL:
 		Icon: abomb
 		Cursor: nuke
 		ChargeInterval: 9000
-		Description: Nuclear Strike
-		LongDesc: Launch a tactical nuclear warhead.\nApplies heavy damage over a large area.
+		Description: 核弹攻击
+		LongDesc: 向目标区域发射载有常规核武器的洲际导弹\n一段时间后对大范围内的一切单位造成高额伤害
 		EndChargeSpeechNotification: NuclearWeaponAvailable
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -841,14 +841,14 @@ GUN:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Turret
+		Name: 反坦克炮塔
 	Buildable:
 		BuildPaletteOrder: 45
 		Prerequisites: barracks
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 1440
 		BuildDurationModifier: 40
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+		Description: 反装甲防御设施\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
 	Building:
 	Health:
 		HP: 41000
@@ -892,14 +892,14 @@ SAM:
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: SAM Site
+		Name: 防空导弹阵地
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: hand
 		Queue: Defence.Nod
 		BuildDuration: 1700
 		BuildDurationModifier: 40
-		Description: Anti-Aircraft base defense.\n  Strong vs Aircraft\n  Cannot target Ground units.
+		Description: 基地防空设施\n无法攻击地面单位\n\n·强势对抗：飞行器\n·弱势对抗：地面单位
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -939,14 +939,14 @@ OBLI:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Obelisk of Light
+		Name: 光明石碑
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Defence.Nod
 		BuildDuration: 3120
 		BuildDurationModifier: 40
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Description: 先进对地防御设施\n需要电力才能运转\n\n·强势对抗：地面单位\n·弱势对抗：飞行器
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 22,44,0,-10
@@ -989,14 +989,14 @@ GTWR:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Guard Tower
+		Name: 机枪哨塔
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 1440
 		BuildDurationModifier: 40
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: 反步兵哨塔\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Building:
 	Health:
 		HP: 40000
@@ -1027,14 +1027,15 @@ ATWR:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Advanced Guard Tower
+		Name: 先进导弹塔
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Defence.GDI
 		BuildDuration: 2880
 		BuildDurationModifier: 40
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: 泛用型先进基地防御\n\n·强势对抗：载具、飞行器\n·弱势对抗：步兵
+		#All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 22,48,0,-12
@@ -1076,12 +1077,12 @@ SBAG:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Sandbag Barrier
+		Name: 沙袋
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
 		Queue: Defence.GDI
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: 阻止步兵与轻型载具\n但无法阻挡装甲载具
 	Armor:
 		Type: Light
 	LineBuild:
@@ -1098,12 +1099,12 @@ CYCL:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Chain Link Barrier
+		Name: 铁丝网
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
 		Queue: Defence.Nod
-		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+		Description: 阻止步兵与轻型载具\n但无法阻挡装甲载具
 	Armor:
 		Type: Light
 	LineBuild:
@@ -1120,14 +1121,14 @@ BRIK:
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Concrete Barrier
+		Name: 混凝土围墙
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 500
 		BuildDurationModifier: 40
-		Description: Stops infantry and most tanks.\nBlocks some projectiles.
+		Description: 阻止步兵与载具通过\n并可以阻挡枪炮类型的火力
 	Health:
 		HP: 25000
 	Armor:
@@ -1149,30 +1150,30 @@ BARRACKS:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Infantry Production
+		Name: 兵营或Nod之手
 	Buildable:
-		Description: Infantry Production
+		Description: 步兵生产
 
 VEHICLEPRODUCTION:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Vehicle Production
+		Name: 战车工厂或战地跑道
 	Buildable:
-		Description: Vehicle Production
+		Description: 载具生产
 
 ANYPOWER:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Power Plant
+		Name: 核电厂
 	Buildable:
-		Description: Power Plant
+		Description: 核电厂
 
 ANYHQ:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: a communications center
+		Name: 通讯中心
 	Buildable:
-		Description: a communications center
+		Description: 通讯中心

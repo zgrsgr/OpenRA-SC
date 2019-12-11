@@ -9,12 +9,12 @@ V19:
 	Health:
 		HP: 80000
 	Tooltip:
-		Name: Oil Derrick
+		Name: 油井
 	TooltipDescription@ally:
-		Description: Provides additional funds.
+		Description: 提供额外资金
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to receive additional funds.
+		Description: 占领以获取额外资金
 		ValidStances: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: V19.Husk
@@ -32,7 +32,7 @@ V19.Husk:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Oil Derrick (Destroyed)
+		Name: 油井废墟
 
 HOSP:
 	Inherits: ^TechBuilding
@@ -46,12 +46,12 @@ HOSP:
 	Health:
 		HP: 250000
 	Tooltip:
-		Name: Hospital
+		Name: 市民医院
 	TooltipDescription@ally:
-		Description: Provides infantry with self-healing.
+		Description: 为步兵提供自愈能力
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to enable self-healing for infantry.
+		Description: 占领后为步兵提供自愈能力
 		ValidStances: Neutral, Enemy
 	SpawnActorOnDeath:
 		Actor: HOSP.Husk
@@ -82,12 +82,12 @@ BIO:
 	Health:
 		HP: 250000
 	Tooltip:
-		Name: Biological Lab
+		Name: 生物实验室
 	TooltipDescription@ally:
-		Description: Produces Bio-Lab units.
+		Description: 解锁生物科技单位
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to produce Bio-Lab units.
+		Description: 占领以解锁生物科技单位
 		ValidStances: Neutral, Enemy
 	Exit@1:
 		SpawnOffset: 0,-426,0
@@ -120,7 +120,7 @@ BIO.Husk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Biological Lab (Destroyed)
+		Name: 生物实验室废墟
 
 MISS:
 	Inherits: ^CivBuilding
@@ -131,7 +131,7 @@ MISS:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	Tooltip:
-		Name: Tech Center
+		Name: 科技中心
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1000
