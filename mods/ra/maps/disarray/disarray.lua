@@ -292,13 +292,13 @@ InitTriggers = function()
 end
 
 InitObjectives = function()
+    Trigger.OnObjectiveAdded(player, function(p, id)
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "任务目标")
+	end)
 
 	ArriveToBase = player.AddPrimaryObjective("确认前哨站位置")
 	ussrObj = enemy.AddPrimaryObjective("消灭盟军")
 	
-    Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "任务目标")
-	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "任务目标已完成")
 	end)

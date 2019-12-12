@@ -41,7 +41,8 @@ FinishTimer = function()
 		if i % 2 == 0 then
 			c = HSLColor.White
 		end
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("Allied forces have arrived!", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("友军部队到达！", c) end)
+		-- Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("Allied forces have arrived!", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(10), function() UserInterface.SetMissionText("") end)
 end
@@ -60,7 +61,8 @@ DiscoveredAlliedBase = function(actor, discoverer)
 
 		--Need to delay this so we don't fail mission before obj added
 		Trigger.AfterDelay(DateTime.Seconds(1), function()
-			SurviveObjective = allies.AddPrimaryObjective("Defend outpost until reinforcements arrive.")
+			SurviveObjective = allies.AddPrimaryObjective("在援军到达之前守住前哨站。")
+			-- SurviveObjective = allies.AddPrimaryObjective("Defend outpost until reinforcements arrive.")
 			SetupTimeNotifications()
 			Trigger.OnAllRemovedFromWorld(AlliedBase, function()
 				allies.MarkFailedObjective(SurviveObjective)
@@ -124,7 +126,8 @@ Tick = function()
 			end
 
 			ticks = ticks - 1;
-			UserInterface.SetMissionText("Reinforcements arrive in " .. Utils.FormatTime(ticks), TimerColor)
+			UserInterface.SetMissionText("援军将在" .. Utils.FormatTime(ticks) .. "之后到达", TimerColor)
+			-- UserInterface.SetMissionText("Reinforcements arrive in " .. Utils.FormatTime(ticks), TimerColor)
 		else
 			if not AtEndGame then
 				Media.PlaySpeechNotification(allies, "SecondObjectiveMet")
@@ -141,10 +144,12 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(allies, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
 	end)
 
-	DiscoverObjective = allies.AddPrimaryObjective("Find the outpost.")
+	DiscoverObjective = allies.AddPrimaryObjective("找到失联的前哨站。")
+	-- DiscoverObjective = allies.AddPrimaryObjective("Find the outpost.")
 
 	Utils.Do(AlliedBase, function(actor)
 		Trigger.OnEnteredProximityTrigger(actor.CenterPosition, WDist.FromCells(8), function(discoverer, id)
@@ -157,10 +162,12 @@ InitObjectives = function()
 	end)
 
 	Trigger.OnObjectiveCompleted(allies, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 	end)
 	Trigger.OnObjectiveFailed(allies, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 	end)
 
 	Trigger.OnPlayerLost(allies, function()

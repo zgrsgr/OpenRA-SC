@@ -59,7 +59,8 @@ SendAlliedUnits = function()
 
 	if TanyaType == "e7.noautotarget" then
 		Trigger.AfterDelay(DateTime.Seconds(2), function()
-			Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
+			Media.DisplayMessage("根据参加这场行动的合约，我必须接到你明确的命令之后\n才会开火，指挥官！", "谭雅")
+			-- Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
 		end)
 	end
 	Artillery.Stance = "HoldFire"
@@ -111,20 +112,29 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
 	end)
 
-	KillBridges = player.AddPrimaryObjective("Destroy all bridges.")
-	TanyaSurvive = player.AddPrimaryObjective("Tanya must survive.")
-	KillUSSR = player.AddSecondaryObjective("Destroy all Soviet oil pumps.")
-	FreePrisoners = player.AddSecondaryObjective("Free all Allied soldiers and keep them alive.")
-	ussr.AddPrimaryObjective("Bridges must not be destroyed.")
+	-- KillBridges = player.AddPrimaryObjective("Destroy all bridges.")
+	-- TanyaSurvive = player.AddPrimaryObjective("Tanya must survive.")
+	-- KillUSSR = player.AddSecondaryObjective("Destroy all Soviet oil pumps.")
+	-- FreePrisoners = player.AddSecondaryObjective("Free all Allied soldiers and keep them alive.")
+	-- ussr.AddPrimaryObjective("Bridges must not be destroyed.")
+	
+	KillBridges = player.AddPrimaryObjective("摧毁所有桥梁。")
+	TanyaSurvive = player.AddPrimaryObjective("谭雅必须存活。")
+	KillUSSR = player.AddSecondaryObjective("摧毁苏军所有的钻油井。")
+	FreePrisoners = player.AddSecondaryObjective("救出所有盟军士兵并保持他们存活。")
+	ussr.AddPrimaryObjective("保护桥梁。")
 
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 	end)
 
 	Trigger.OnPlayerLost(player, function()

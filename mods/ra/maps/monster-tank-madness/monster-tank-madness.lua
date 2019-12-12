@@ -68,9 +68,14 @@ SetupAlliedBase = function()
 	AlliedBaseHarv.Owner = player
 	AlliedBaseHarv.FindResources()
 
-	FindDemitri = player.AddPrimaryObjective("Find Dr. Demitri. He is likely hiding in the village\n to the far south.")
-	InfiltrateRadarDome = player.AddPrimaryObjective("Reprogram the super tanks by sending a spy into\n the Soviet radar dome.")
-	DefendOutpost = player.AddSecondaryObjective("Defend and repair our outpost.")
+	-- FindDemitri = player.AddPrimaryObjective("Find Dr. Demitri. He is likely hiding in the village\n to the far south.")
+	-- InfiltrateRadarDome = player.AddPrimaryObjective("Reprogram the super tanks by sending a spy into\n the Soviet radar dome.")
+	-- DefendOutpost = player.AddSecondaryObjective("Defend and repair our outpost.")
+
+	FindDemitri = player.AddPrimaryObjective("找到迪米特里博士。他好像躲在最南端的\n村子里。")
+	InfiltrateRadarDome = player.AddPrimaryObjective("渗透苏军雷达站以获取超级坦克的控制权。")
+	DefendOutpost = player.AddSecondaryObjective("修复并保护我们的前哨站。")
+
 	player.MarkCompletedObjective(FindOutpost)
 
 	-- Don't fail the Objective instantly
@@ -174,7 +179,8 @@ SuperTankDomeInfiltrated = function()
 		Media.PlaySpeechNotification(player, "ControlCenterDeactivated")
 
 		Trigger.AfterDelay(DateTime.Seconds(4), function()
-			Media.DisplayMessage("In 3 minutes the super tanks will self-destruct.")
+			-- Media.DisplayMessage("In 3 minutes the super tanks will self-destruct.")
+			Media.DisplayMessage("三分钟后超级坦克将会自毁。", "战场控制")
 			Media.PlaySpeechNotification(player, "WarningThreeMinutesRemaining")
 		end)
 	end)
@@ -204,7 +210,8 @@ CreateDemitri = function()
 	demitri.Move(DemitriTriggerAreaCenter.Location)
 
 	Media.PlaySpeechNotification(player, "TargetFreed")
-	EvacuateDemitri = player.AddPrimaryObjective("Evacuate Dr. Demitri with the helicopter waiting\n at our outpost.")
+	-- EvacuateDemitri = player.AddPrimaryObjective("Evacuate Dr. Demitri with the helicopter waiting\n at our outpost.")
+	EvacuateDemitri = player.AddPrimaryObjective("通过等在前哨站的直升机来撤离迪米特里博士。")
 	player.MarkCompletedObjective(FindDemitri)
 
 	local flarepos = CPos.New(DemitriLZ.Location.X, DemitriLZ.Location.Y - 1)
@@ -246,7 +253,8 @@ Tick = function()
 	end
 
 	if ticked > 0 then
-		UserInterface.SetMissionText("The super tanks self-destruct in " .. Utils.FormatTime(ticked), TimerColor)
+		-- UserInterface.SetMissionText("The super tanks self-destruct in " .. Utils.FormatTime(ticked), TimerColor)
+		UserInterface.SetMissionText("超级坦克将在 " .. Utils.FormatTime(ticked) .. " 后自毁", TimerColor)
 		ticked = ticked - 1
 	elseif ticked == 0 then
 		FinishTimer()
@@ -261,7 +269,8 @@ FinishTimer = function()
 			c = HSLColor.White
 		end
 
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("The super tanks are destroyed!", c) end)
+		-- Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("The super tanks are destroyed!", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("超级坦克已经被毁了！", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(10), function() UserInterface.SetMissionText("") end)
 end
@@ -293,23 +302,36 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
 	end)
 
-	EliminateSuperTanks = player.AddPrimaryObjective("Eliminate these super tanks.")
-	CrossRiver = player.AddPrimaryObjective("Secure transport to the mainland.")
-	FindOutpost = player.AddPrimaryObjective("Find our outpost and start repairs on it.")
-	RescueCivilians = player.AddSecondaryObjective("Evacuate all civilians from the hospital.")
-	BadGuyObj = badguy.AddPrimaryObjective("Deny the destruction of the super tanks.")
-	USSRObj = ussr.AddPrimaryObjective("Deny the destruction of the super tanks.")
-	UkraineObj = ukraine.AddPrimaryObjective("Survive.")
-	TurkeyObj = turkey.AddPrimaryObjective("Destroy.")
+	-- EliminateSuperTanks = player.AddPrimaryObjective("Eliminate these super tanks.")
+	-- CrossRiver = player.AddPrimaryObjective("Secure transport to the mainland.")
+	-- FindOutpost = player.AddPrimaryObjective("Find our outpost and start repairs on it.")
+	-- RescueCivilians = player.AddSecondaryObjective("Evacuate all civilians from the hospital.")
+	-- BadGuyObj = badguy.AddPrimaryObjective("Deny the destruction of the super tanks.")
+	-- USSRObj = ussr.AddPrimaryObjective("Deny the destruction of the super tanks.")
+	-- UkraineObj = ukraine.AddPrimaryObjective("Survive.")
+	-- TurkeyObj = turkey.AddPrimaryObjective("Destroy.")
+
+	EliminateSuperTanks = player.AddPrimaryObjective("摧毁超级坦克。")
+	CrossRiver = player.AddPrimaryObjective("将部队运送到大陆上。")
+	FindOutpost = player.AddPrimaryObjective("找到我们的前哨站并且开始修复他。")
+	RescueCivilians = player.AddSecondaryObjective("撤离医院的平民。")
+	BadGuyObj = badguy.AddPrimaryObjective("防止超级坦克被毁。")
+	USSRObj = ussr.AddPrimaryObjective("防止超级坦克被毁。")
+	UkraineObj = ukraine.AddPrimaryObjective("活下去。")
+	TurkeyObj = turkey.AddPrimaryObjective("破坏！")
+
 
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 	end)
 
 	Trigger.OnPlayerLost(player, function()
@@ -322,7 +344,8 @@ InitObjectives = function()
 	end)
 	Trigger.OnPlayerWon(player, function()
 		Media.PlaySpeechNotification(player, "MissionAccomplished")
-		Media.DisplayMessage("Dr. Demitri has been extracted and the super tanks have been dealt with.")
+		Media.DisplayMessage("迪米特里博士已经被撤离，超级坦克也已经\n被摧毁。","战场控制")
+		-- Media.DisplayMessage("Dr. Demitri has been extracted and the super tanks have been dealt with.")
 
 		ussr.MarkFailedObjective(USSRObj)
 		badguy.MarkFailedObjective(BadGuyObj)

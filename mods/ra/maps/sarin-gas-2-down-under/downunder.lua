@@ -69,7 +69,8 @@ ConsoleTriggers = function()
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger1)
 			if not FlameTower1.IsDead then
-				Media.DisplayMessage("Flame Turret deactivated", "Console")
+				-- Media.DisplayMessage("Flame Turret deactivated", "Console")
+				Media.DisplayMessage("火焰喷射塔已关闭", "控制面板")
 				FlameTower1.Kill()
 			end
 		end
@@ -79,7 +80,8 @@ ConsoleTriggers = function()
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger2)
 			if not FlameTower2.IsDead then
-				Media.DisplayMessage("Flame Turret deactivated", "Console")
+				-- Media.DisplayMessage("Flame Turret deactivated", "Console")
+				Media.DisplayMessage("火焰喷射塔已关闭", "控制面板")
 				FlameTower2.Kill()
 			end
 		end
@@ -89,7 +91,8 @@ ConsoleTriggers = function()
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger3)
 			if not FlameTower3.IsDead then
-				Media.DisplayMessage("Flame Turret deactivated", "Console")
+				-- Media.DisplayMessage("Flame Turret deactivated", "Console")
+				Media.DisplayMessage("火焰喷射塔已关闭", "控制面板")
 				FlameTower3.Kill()
 			end
 		end
@@ -98,7 +101,8 @@ ConsoleTriggers = function()
 	Trigger.OnEnteredProximityTrigger(Terminal4.CenterPosition, WDist.FromCells(1), function(actor, trigger4)
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger4)
-			Media.DisplayMessage("Sarin Nerve Gas dispensers activated", "Console")
+			-- Media.DisplayMessage("Sarin Nerve Gas dispensers activated", "Console")
+			Media.DisplayMessage("毒气阀门已打开", "控制面板")
 			local KillCamera = Actor.Create("camera", true, { Owner = greece, Location = Sarin2.Location })
 			local flare1 = Actor.Create("flare", true, { Owner = england, Location = Sarin1.Location })
 			local flare2 = Actor.Create("flare", true, { Owner = england, Location = Sarin2.Location })
@@ -126,7 +130,8 @@ ConsoleTriggers = function()
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger5)
 			if not BadCoil.IsDead then
-				Media.DisplayMessage("Tesla Coil deactivated", "Console")
+				-- Media.DisplayMessage("Tesla Coil deactivated", "Console")
+				Media.DisplayMessage("磁暴线圈已关闭", "控制面板")
 				BadCoil.Kill()
 			end
 		end
@@ -135,7 +140,8 @@ ConsoleTriggers = function()
 	Trigger.OnEnteredProximityTrigger(Terminal6.CenterPosition, WDist.FromCells(1), function(actor, trigger6)
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger6)
-			Media.DisplayMessage("Initialising Tesla Coil defence", "Console")
+			-- Media.DisplayMessage("Initialising Tesla Coil defence", "Console")
+			Media.DisplayMessage("磁能防御系统正在初始化...", "控制面板")
 			local tesla1 = Actor.Create("tsla", true, { Owner = turkey, Location = TurkeyCoil1.Location })
 			local tesla2 = Actor.Create("tsla", true, { Owner = turkey, Location = TurkeyCoil2.Location })
 			Trigger.AfterDelay(DateTime.Seconds(10), function()
@@ -153,11 +159,13 @@ ConsoleTriggers = function()
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger7)
 			if not FlameTowerTanya1.IsDead then
-				Media.DisplayMessage("Flame Turret deactivated", "Console")
+				-- Media.DisplayMessage("Flame Turret deactivated", "Console")
+				Media.DisplayMessage("火焰喷射塔已关闭", "控制面板")
 				FlameTowerTanya1.Kill()
 			end
 			if not FlameTowerTanya2.IsDead then
-				Media.DisplayMessage("Flame Turret deactivated", "Console")
+				-- Media.DisplayMessage("Flame Turret deactivated", "Console")
+				Media.DisplayMessage("火焰喷射塔已关闭", "控制面板")
 				FlameTowerTanya2.Kill()
 			end
 		end
@@ -167,11 +175,13 @@ ConsoleTriggers = function()
 		if actor.Owner == greece then
 			Trigger.RemoveProximityTrigger(trigger8)
 			if not FlameTowerExit1.IsDead then
-				Media.DisplayMessage("Flame Turret deactivated", "Console")
+				-- Media.DisplayMessage("Flame Turret deactivated", "Console")
+				Media.DisplayMessage("火焰喷射塔已关闭", "控制面板")
 				FlameTowerExit1.Kill()
 			end
 			if not FlameTowerExit3.IsDead then
-				Media.DisplayMessage("Flame Turret deactivated", "Console")
+				-- Media.DisplayMessage("Flame Turret deactivated", "Console")
+				Media.DisplayMessage("火焰喷射塔已关闭", "控制面板")
 				FlameTowerExit3.Kill()
 			end
 		end
@@ -320,7 +330,7 @@ IdleHunt = function(actor) if not actor.IsDead then Trigger.OnIdle(actor, actor.
 PrisonEscape = function()
 	Trigger.OnEnteredFootprint(PrisonAlarm, function(unit, id)
 		Trigger.RemoveFootprintTrigger(id)
-		Media.DisplayMessage("Warning, prisoners are attempting to escape!", "Intercom")
+		Media.DisplayMessage("警告：俘虏正试图越狱！", "警报系统")
 		Media.PlaySoundNotification(greece, "AlertBuzzer")
 		Utils.Do(GuardDogs, function(actor)
 			if not actor.IsDead then
@@ -332,7 +342,7 @@ end
 
 ScientistExecution = function()
 	Media.PlaySoundNotification(greece, "AlertBleep")
-	Media.DisplayMessage("The base is compromised. We have to hurry the execution!", "Soviet Officer")
+	Media.DisplayMessage("设施遭到入侵，立刻执行紧急计划", "苏联军官")
 	Utils.Do(DemoTeam, function(actor)
 		actor.AttackMove(DemoDrive2.Location)
 	end)
@@ -345,13 +355,13 @@ ScientistExecution = function()
 
 	Trigger.AfterDelay(DateTime.Seconds(7), function()
 		if not Officer2.IsDead then
-			Media.DisplayMessage("Prepare to Fire!", "Soviet Officer")
+			Media.DisplayMessage("准备开火！", "苏联军官")
 		end
 	end)
 
 	Trigger.AfterDelay(DateTime.Seconds(15), function()
 		if not Officer2.IsDead then
-			Media.DisplayMessage("Fire!", "Soviet Officer")
+			Media.DisplayMessage("开火！", "苏联军官")
 		end
 
 		Utils.Do(FiringSquad, function(actor)
@@ -363,10 +373,10 @@ ScientistExecution = function()
 end
 
 ScientistRescued = function()
-	Media.DisplayMessage("Thanks for the rescue!", "Scientist")
+	Media.DisplayMessage("感谢救援！", "科学家")
 	Trigger.AfterDelay(DateTime.Seconds(5), function()
 		if not ScientistMan.IsDead and not DemoTruck.IsDead then
-			Media.DisplayMessage("The Soviets have an unstable nuclear device stored here. \n I need to move it out of the facility!", "Scientist")
+			Media.DisplayMessage("苏联在设施内部署了一些原型核能设备，\n我们必须将它们转移出去！", "科学家")
 			DemoTruck.GrantCondition("mission")
 			ScientistMan.EnterTransport(DemoTruck)
 		end
@@ -380,7 +390,7 @@ DemoTruckExit = function()
 		return
 	end
 
-	Media.DisplayMessage("I hope the exit is clear!", "Scientist")
+	Media.DisplayMessage("最好这里是安全出口！", "科学家")
 	Utils.Do(DemoTruckPath, function(waypoint)
 		DemoTruck.Move(waypoint.Location)
 	end)
@@ -413,23 +423,32 @@ WorldLoaded = function()
 	germany = Player.GetPlayer("Germany")
 
 	Trigger.OnObjectiveAdded(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
 	end)
 
-	ussrObj = ussr.AddPrimaryObjective("Defeat the Allies.")
-	ExitBase = greece.AddPrimaryObjective("Reach the eastern exit of the facility.")
-	FreeTanya = greece.AddPrimaryObjective("Free Tanya and keep her alive.")
-	KillVIPs = greece.AddSecondaryObjective("Kill all Soviet officers and scientists.")
-	StealTank = greece.AddSecondaryObjective("Steal a Soviet mammoth tank.")
+	-- ussrObj = ussr.AddPrimaryObjective("Defeat the Allies.")
+	-- ExitBase = greece.AddPrimaryObjective("Reach the eastern exit of the facility.")
+	-- FreeTanya = greece.AddPrimaryObjective("Free Tanya and keep her alive.")
+	-- KillVIPs = greece.AddSecondaryObjective("Kill all Soviet officers and scientists.")
+	-- StealTank = greece.AddSecondaryObjective("Steal a Soviet mammoth tank.")
+	ussrObj = ussr.AddPrimaryObjective("歼灭盟军")
+	ExitBase = greece.AddPrimaryObjective("从东面的设施出口撤离")
+	FreeTanya = greece.AddPrimaryObjective("解救谭雅并确保她的存活")
+	KillVIPs = greece.AddSecondaryObjective("消灭所有苏联军官与科研人员")
+	StealTank = greece.AddSecondaryObjective("窃取一辆猛犸坦克")
 	if Map.LobbyOption("difficulty") == "hard" then
-		NoCasualties = greece.AddPrimaryObjective("Do not lose a single soldier or civilian\nunder your command.")
+		-- NoCasualties = greece.AddPrimaryObjective("Do not lose a single soldier or civilian\nunder your command.")
+		NoCasualties = greece.AddPrimaryObjective("不损失一兵一卒完成撤离")
 	end
 
 	Trigger.OnObjectiveCompleted(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(greece, function()

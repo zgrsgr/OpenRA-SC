@@ -85,7 +85,7 @@ BaseRaids = function()
 	if Map.LobbyOption("difficulty") == "easy" then
 		return
 	else
-		Trigger.AfterDelay(Utils.RandomInteger(BaseRaidDelay1[1], BaseRaidDelay1[2]), function()
+		Trigger.AfterDelay(Utils.RandomInteger(BaseRaidDelay1[1], BaseRaidDelay1[2]), function()	
 			local raiders = Reinforcements.ReinforceWithTransport(ussr, "lst", RaidingParty, RaidOnePath, { RaidOneEntry.Location })[2]
 			Utils.Do(raiders, function(a)
 				Trigger.OnAddedToWorld(a, function()
@@ -95,7 +95,7 @@ BaseRaids = function()
 			end)
 		end)
 
-		Trigger.AfterDelay(Utils.RandomInteger(BaseRaidDelay2[1], BaseRaidDelay2[2]), function()
+		Trigger.AfterDelay(Utils.RandomInteger(BaseRaidDelay2[1], BaseRaidDelay2[2]), function()	
 			local raiders = Reinforcements.ReinforceWithTransport(ussr, "lst", RaidingParty, RaidTwoPath, { RaidTwoEntry.Location })[2]
 			Utils.Do(raiders, function(a)
 				Trigger.OnAddedToWorld(a, function()
@@ -121,12 +121,13 @@ FinishTimer = function()
 			c = HSLColor.White
 		end
 
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("Enemy approaching", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("敌军正在接近", c) end)
+		-- Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("Enemy approaching", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(6), function() UserInterface.SetMissionText("") end)
 end
 
-BattalionWays =
+BattalionWays = 
 {
 	{ HardEntry1.Location, HardLanding1.Location },
 	{ HardEntry2.Location, HardLanding2.Location },
@@ -138,7 +139,7 @@ BattalionWays =
 
 SendArmoredBattalion = function()
 	Media.PlaySpeechNotification(greece, "EnemyUnitsApproaching")
-	Utils.Do(BattalionWays, function(way)
+	Utils.Do(BattalionWays, function(way) 
 		local units = { "3tnk", "3tnk", "3tnk", "4tnk", "4tnk" }
 		local armor = Reinforcements.ReinforceWithTransport(ussr, "lst", units , way, { way[2], way[1] })[2]
 		Utils.Do(armor, function(a)
@@ -146,7 +147,7 @@ SendArmoredBattalion = function()
 				a.AttackMove(PlayerBase.Location)
 				IdleHunt(a)
 			end)
-		end)
+		end)	
 	end)
 end
 
@@ -164,7 +165,8 @@ Tick = function()
 
 	if StartTimer then
 		if ticked > 0 then
-			UserInterface.SetMissionText("Soviet armored battalion arrives in " .. Utils.FormatTime(ticked), TimerColor)
+			UserInterface.SetMissionText("苏军装甲部队将在" .. Utils.FormatTime(ticked) .. "抵达战场", TimerColor)
+			-- UserInterface.SetMissionText("Soviet armored battalion arrives in " .. Utils.FormatTime(ticked), TimerColor)
 			ticked = ticked - 1
 		elseif ticked == 0 then
 			FinishTimer()
@@ -185,16 +187,28 @@ WorldLoaded = function()
 
 	Camera.Position = DefaultCameraPosition.CenterPosition
 
-	CaptureRadarDomeObj = greece.AddPrimaryObjective("Capture the Radar Dome.")
-	DestroySubPens = greece.AddPrimaryObjective("Destroy all Soviet Sub Pens")
-	ClearSubActivity = greece.AddSecondaryObjective("Clear the area of all sub activity")
-	BeatAllies = ussr.AddPrimaryObjective("Defeat the Allied forces.")
+	Trigger.OnObjectiveAdded(greece, function(p, id)
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+	end)
+
+	-- CaptureRadarDomeObj = greece.AddPrimaryObjective("Capture the Radar Dome.")
+	-- DestroySubPens = greece.AddPrimaryObjective("Destroy all Soviet Sub Pens")
+	-- ClearSubActivity = greece.AddSecondaryObjective("Clear the area of all sub activity")
+	-- BeatAllies = ussr.AddPrimaryObjective("Defeat the Allied forces.")
+
+	CaptureRadarDomeObj = greece.AddPrimaryObjective("占领雷达站。")
+	DestroySubPens = greece.AddPrimaryObjective("摧毁苏军的所有潜艇母港。")
+	ClearSubActivity = greece.AddSecondaryObjective("清除这个区域的所有潜艇。")
+	BeatAllies = ussr.AddPrimaryObjective("击败盟军的部队。")
 
 	Trigger.OnObjectiveCompleted(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 	end)
 	Trigger.OnObjectiveFailed(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 	end)
 
 	Trigger.OnPlayerLost(greece, function()

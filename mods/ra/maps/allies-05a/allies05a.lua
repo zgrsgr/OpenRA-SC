@@ -137,7 +137,8 @@ SendWaterExtraction = function()
 	Camera.Position = flare.CenterPosition
 
 	WaterExtractionTran = Reinforcements.ReinforceWithTransport(greece, ExtractionTransport, nil, SpyEntryPath)[1]
-	ExtractObj = greece.AddPrimaryObjective("Get all your forces into the transport.")
+	ExtractObj = greece.AddPrimaryObjective("命令你所有的部队进入运兵船。")
+	-- ExtractObj = greece.AddPrimaryObjective("Get all your forces into the transport.")
 
 	Trigger.OnKilled(WaterExtractionTran, function() ussr.MarkCompletedObjective(ussrObj) end)
 	Trigger.OnAllRemovedFromWorld(greece.GetGroundAttackers(), function()
@@ -185,25 +186,29 @@ FreeTanya = function()
 
 	if TanyaType == "e7.noautotarget" then
 		Trigger.AfterDelay(DateTime.Seconds(1), function()
-			Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
+			Media.DisplayMessage("根据参加这场行动的合约，我必须接到你的明确命令之后\n才会开火，指挥官！", "谭雅")
+			-- Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
 		end)
 	end
 
 	Trigger.OnKilled(Tanya, function() ussr.MarkCompletedObjective(ussrObj) end)
 
 	if Map.LobbyOption("difficulty") == "tough" then
-		KillSams = greece.AddPrimaryObjective("Destroy all four SAM Sites that block\nour reinforcements' helicopter.")
+		KillSams = greece.AddPrimaryObjective("必须摧毁威胁着我方救援直升机的四个地对空导弹阵地。")
+		-- KillSams = greece.AddPrimaryObjective("Destroy all four SAM Sites that block\nour reinforcements' helicopter.")
 
 		greece.MarkCompletedObjective(mainObj)
-		surviveObj = greece.AddPrimaryObjective("Tanya must not die!")
+		surviveObj = greece.AddPrimaryObjective("谭雅必须存活。")
+		-- surviveObj = greece.AddPrimaryObjective("Tanya must not die!")
 		Media.PlaySpeechNotification(greece, "TanyaRescued")
 	else
-		KillSams = greece.AddPrimaryObjective("Destroy all four SAM sites that block\nthe extraction helicopter.")
+		KillSams = greece.AddPrimaryObjective("必须摧毁威胁着我方救援直升机的四个地对空导弹阵地。")
+		-- KillSams = greece.AddPrimaryObjective("Destroy all four SAM sites that block\nthe extraction helicopter.")
 
 		Media.PlaySpeechNotification(greece, "TargetFreed")
 	end
 
-	if not SpecialCameras and PrisonCamera and PrisonCamera.IsInWorld then
+	if not SpecialCameras then
 		PrisonCamera.Destroy()
 	end
 end
@@ -220,7 +225,8 @@ SendSpy = function()
 	end
 
 	Trigger.AfterDelay(DateTime.Seconds(3), function()
-		Media.DisplayMessage("Commander! You have to disguise me in order to get through the enemy patrols.", "Spy")
+		Media.DisplayMessage("指挥官！我只有在伪装之后才能突破敌方的巡逻！", "间谍")
+		-- Media.DisplayMessage("Commander! You have to disguise me in order to get through the enemy patrols.", "Spy")
 	end)
 end
 
@@ -262,9 +268,9 @@ InitTriggers = function()
 		if greece.IsObjectiveCompleted(mainObj) then
 			return
 		end
-
 		if not greece.IsObjectiveCompleted(infWarfactory) then
-			Media.DisplayMessage("Good work! But next time skip the heroics!", "Battlefield Control")
+			Media.DisplayMessage("干得好！ 但下次不要再逞英雄了！", "战场控制")
+			-- Media.DisplayMessage("Good work! But next time skip the heroics!", "Battlefield Control")
 			greece.MarkCompletedObjective(infWarfactory)
 		end
 
@@ -367,19 +373,27 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
 	end)
 
-	ussrObj = ussr.AddPrimaryObjective("Deny the Allies.")
-	mainObj = greece.AddPrimaryObjective("Rescue Tanya.")
-	KillAll = greece.AddPrimaryObjective("Eliminate all Soviet units in this area.")
-	infWarfactory = greece.AddSecondaryObjective("Infiltrate the Soviet warfactory.")
+	-- ussrObj = ussr.AddPrimaryObjective("Deny the Allies.")
+	-- mainObj = greece.AddPrimaryObjective("Rescue Tanya.")
+	-- KillAll = greece.AddPrimaryObjective("Eliminate all Soviet units in this area.")
+	-- infWarfactory = greece.AddSecondaryObjective("Infiltrate the Soviet warfactory.")
+
+	ussrObj = ussr.AddPrimaryObjective("消灭盟军。")
+	mainObj = greece.AddPrimaryObjective("营救谭雅。")
+	KillAll = greece.AddPrimaryObjective("消灭该地区的全部苏军单位。")
+	infWarfactory = greece.AddSecondaryObjective("渗透苏军的战车工厂。")
 
 	Trigger.OnObjectiveCompleted(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 	end)
 	Trigger.OnObjectiveFailed(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 	end)
 
 	Trigger.OnPlayerLost(greece, function()

@@ -82,7 +82,8 @@ Tick = function()
 		if DestroyObj then
 			allies.MarkCompletedObjective(DestroyObj)
 		else
-			DestroyObj = allies.AddPrimaryObjective("Destroy all Soviet forces in the area.")
+			DestroyObj = allies.AddPrimaryObjective("消灭这个区域的全部苏军部队。")
+			-- DestroyObj = allies.AddPrimaryObjective("Destroy all Soviet forces in the area.")
 			allies.MarkCompletedObjective(DestroyObj)
 		end
 	end
@@ -119,7 +120,8 @@ Tick = function()
 	end
 
 	if ticked > 0 then
-		UserInterface.SetMissionText("Soviet reinforcements arrive in " .. Utils.FormatTime(ticked), TimerColor)
+		UserInterface.SetMissionText("苏军的援军将在" .. Utils.FormatTime(ticked) .. "后到达", TimerColor)
+		-- UserInterface.SetMissionText("Soviet reinforcements arrive in " .. Utils.FormatTime(ticked), TimerColor)
 		ticked = ticked - 1
 	elseif ticked == 0 then
 		FinishTimer()
@@ -215,8 +217,10 @@ FinalAttack = function()
 
 	Trigger.OnAllKilledOrCaptured(units, function()
 		if not DestroyObj then
-			Media.DisplayMessage("Excellent work Commander! We have reinforced our position enough to initiate a counter-attack.", "Incoming Report")
-			DestroyObj = allies.AddPrimaryObjective("Destroy the remaining Soviet forces in the area.")
+			-- Media.DisplayMessage("Excellent work Commander! We have reinforced our position enough to initiate a counter-attack.", "Incoming Report")
+			-- DestroyObj = allies.AddPrimaryObjective("Destroy the remaining Soviet forces in the area.")
+			Media.DisplayMessage("干得漂亮，指挥官！我们已经稳固了我们的阵地，是时候发起反击了！", "接到报告")
+			DestroyObj = allies.AddPrimaryObjective("消灭这个地区残余的苏军部队。")
 		end
 		allies.MarkCompletedObjective(SurviveObj)
 	end)
@@ -255,8 +259,11 @@ SetupBridges = function()
 		end
 	end
 
-	Media.DisplayMessage("Commander! The Soviets destroyed the bridges to disable our reinforcements. Repair them for additional reinforcements.", "Incoming Report")
-	RepairBridges = allies.AddSecondaryObjective("Repair the two southern bridges.")
+	-- Media.DisplayMessage("Commander! The Soviets destroyed the bridges to disable our reinforcements. Repair them for additional reinforcements.", "Incoming Report")
+	-- RepairBridges = allies.AddSecondaryObjective("Repair the two southern bridges.")
+	
+	Media.DisplayMessage("指挥官！苏联人摧毁了桥梁来阻止我们获得增援。修复它们以获得额外的援军。", "接到报告")
+	RepairBridges = allies.AddSecondaryObjective("修复南部的两座桥梁。")
 
 	local bridgeA = Map.ActorsInCircle(BrokenBridge1.CenterPosition, WDist.FromCells(1), function(self) return self.Type == "bridge1" end)
 	local bridgeB = Map.ActorsInCircle(BrokenBridge2.CenterPosition, WDist.FromCells(1), function(self) return self.Type == "bridge1" end)
@@ -288,21 +295,26 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(allies, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
 	end)
 
-	SurviveObj = allies.AddPrimaryObjective("Enforce your position and hold-out the onslaught.")
-	SovietObj = soviets.AddPrimaryObjective("Eliminate all Allied forces.")
-
+	-- SurviveObj = allies.AddPrimaryObjective("Enforce your position and hold-out the onslaught.")
+	-- SovietObj = soviets.AddPrimaryObjective("Eliminate all Allied forces.")
+	
+	SurviveObj = allies.AddPrimaryObjective("在援军到达之前守住你的位置并将敌军阻挡\n在外。")
+	SovietObj = soviets.AddPrimaryObjective("消灭所有盟军部队。")
 	Trigger.AfterDelay(DateTime.Seconds(15), function()
 		SetupBridges()
 	end)
 
 	Trigger.OnObjectiveCompleted(allies, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 	end)
 	Trigger.OnObjectiveFailed(allies, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
+		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 	end)
 
 	Trigger.OnPlayerLost(allies, function()
@@ -310,7 +322,8 @@ InitObjectives = function()
 	end)
 	Trigger.OnPlayerWon(allies, function()
 		Media.PlaySpeechNotification(allies, "Win")
-		Media.DisplayMessage("We have destroyed the remaining Soviet presence!", "Incoming Report")
+		Media.DisplayMessage("我们已经完全歼灭了剩余的苏军！", "接到报告")
+		-- Media.DisplayMessage("We have destroyed the remaining Soviet presence!", "Incoming Report")
 	end)
 end
 
@@ -321,7 +334,8 @@ InitMission = function()
 	Trigger.AfterDelay(DateTime.Seconds(1), function() Media.PlaySpeechNotification(allies, "MissionTimerInitialised") end)
 
 	Trigger.AfterDelay(TimerTicks, function()
-		Media.DisplayMessage("The Soviet reinforcements are approaching!", "Incoming Report")
+		-- Media.DisplayMessage("The Soviet reinforcements are approaching!", "Incoming Report")
+		Media.DisplayMessage("苏军的援军正在接近！", "接到报告")
 		Media.PlaySpeechNotification(allies, "SovietReinforcementsArrived")
 		SpawnSovietVehicle(NewSovietEntryPoints, NewSovietRallyPoints)
 		FinalAttack()

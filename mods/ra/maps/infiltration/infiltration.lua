@@ -82,8 +82,10 @@ reinforcementsHaveArrived = false
 LabInfiltrated = function()
 	Utils.Do(humans, function(player)
 		if player then
-			secureLab = player.AddPrimaryObjective("Secure the laboratory by eliminating its guards.")
-			destroyBase = player.AddPrimaryObjective("Destroy the remaining Soviet presence.")
+			-- secureLab = player.AddPrimaryObjective("Secure the laboratory by eliminating its guards.")
+			-- destroyBase = player.AddPrimaryObjective("Destroy the remaining Soviet presence.")
+			secureLab = player.AddPrimaryObjective("消灭实验室的所有守卫部队。")
+			destroyBase = player.AddPrimaryObjective("摧毁所有剩余的苏军部队。")
 			player.MarkCompletedObjective(infiltrateLab)
 			Trigger.ClearAll(Lab)
 			Trigger.AfterDelay(0, function()
@@ -173,7 +175,8 @@ end
 InsertSpies = function()
 	Utils.Do(humans, function(player)
 		if player then
-			infiltrateLab = player.AddPrimaryObjective("Get our spy into the laboratory undetected.")
+			-- infiltrateLab = player.AddPrimaryObjective("Get our spy into the laboratory undetected.")
+			infiltrateLab = player.AddPrimaryObjective("让我们的间谍秘密潜入实验室。")
 		end
 	end)
 
@@ -272,11 +275,13 @@ SecureLabTimer = function()
 	end
 
 	if ticked > 0 then
-		UserInterface.SetMissionText("Secure lab in: " .. Utils.FormatTime(ticked), TimerColor)
+		-- UserInterface.SetMissionText("Secure lab in: " .. Utils.FormatTime(ticked), TimerColor)
+		UserInterface.SetMissionText("在 " .. Utils.FormatTime(ticked) .. "清除实验室周边守军。", TimerColor)
 		ticked = ticked - 1
 	elseif ticked <= 0 then
 		TimerColor = soviets.Color
-		UserInterface.SetMissionText("The Soviet research laboratory was not secured in time.", TimerColor)
+		-- UserInterface.SetMissionText("The Soviet research laboratory was not secured in time.", TimerColor)
+		UserInterface.SetMissionText("未能及时清除实验室周围守军。", TimerColor)
 		SecureLabFailed()
 	end
 end
@@ -286,6 +291,7 @@ SovietBaseMaintenanceSetup = function()
 		return a.Owner == soviets and a.HasProperty("StartBuildingRepairs")
 	end)
 
+	-- This includes killed, captured (actor is temporarily removed) and sold.
 	Trigger.OnAllKilledOrCaptured(sovietbuildings, function()
 		Utils.Do(humans, function(player)
 			player.MarkCompletedObjective(destroyBase)
@@ -360,15 +366,18 @@ WorldLoaded = function()
 		if player and player.IsLocalPlayer then
 			Trigger.OnObjectiveAdded(player, function(p, id)
 				local objectiveType = string.lower(p.GetObjectiveType(id))
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. objectiveType .. " objective")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. objectiveType .. "目标")
+				-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. objectiveType .. " objective")
 			end)
 
 			Trigger.OnObjectiveCompleted(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
+				-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 			end)
 
 			Trigger.OnObjectiveFailed(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
+				-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 			end)
 
 			Trigger.OnPlayerWon(player, function()
