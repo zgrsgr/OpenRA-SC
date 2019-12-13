@@ -58,7 +58,8 @@ namespace OpenRA.Mods.Common.Server
 
 			if (requiresHost && !client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can do that.");
+				// server.SendOrderTo(conn, "Message", "Only the host can do that.");
+				server.SendOrderTo(conn, "Message", "只有房主才能做这个。");
 				return false;
 			}
 
@@ -69,12 +70,14 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (server.State == ServerState.GameStarted)
 			{
-				server.SendOrderTo(conn, "Message", "Cannot change state when game started. ({0})".F(cmd));
+				server.SendOrderTo(conn, "Message", "该选项无法在游戏开始后进行更改。 ({0})".F(cmd));
+				// server.SendOrderTo(conn, "Message", "Cannot change state when game started. ({0})".F(cmd));
 				return false;
 			}
 			else if (client.State == Session.ClientState.Ready && !(cmd.StartsWith("state") || cmd == "startgame"))
 			{
-				server.SendOrderTo(conn, "Message", "Cannot change state when marked as ready.");
+				server.SendOrderTo(conn, "Message", "该选项无法在准备就绪时进行更改。");
+				// server.SendOrderTo(conn, "Message", "Cannot change state when marked as ready.");
 				return false;
 			}
 
@@ -121,7 +124,8 @@ namespace OpenRA.Mods.Common.Server
 			var state = Session.ClientState.Invalid;
 			if (!Enum<Session.ClientState>.TryParse(s, false, out state))
 			{
-				server.SendOrderTo(conn, "Message", "Malformed state command");
+				server.SendOrderTo(conn, "Message", "状态命令格式错误");
+				// server.SendOrderTo(conn, "Message", "Malformed state command");
 				return true;
 			}
 
@@ -141,14 +145,16 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can start the game.");
+				// server.SendOrderTo(conn, "Message", "Only the host can start the game.");
+				server.SendOrderTo(conn, "Message", "只有房主才能开始游戏。");
 				return true;
 			}
 
 			if (server.LobbyInfo.Slots.Any(sl => sl.Value.Required &&
 												 server.LobbyInfo.ClientInSlot(sl.Key) == null))
 			{
-				server.SendOrderTo(conn, "Message", "Unable to start the game until required slots are full.");
+				// server.SendOrderTo(conn, "Message", "Unable to start the game until required slots are full.");
+				server.SendOrderTo(conn, "Message", "游戏人数达到要求之前不能开始游戏。");
 				return true;
 			}
 
@@ -201,7 +207,8 @@ namespace OpenRA.Mods.Common.Server
 			}
 			else
 			{
-				server.SendOrderTo(conn, "Message", "Malformed allow_spectate command");
+				// server.SendOrderTo(conn, "Message", "Malformed allow_spectate command");
+				server.SendOrderTo(conn, "Message", "格式错误的allow_spectate命令");
 				return true;
 			}
 		}
@@ -247,7 +254,8 @@ namespace OpenRA.Mods.Common.Server
 					var occupantConn = server.Conns.FirstOrDefault(c => c.PlayerIndex == occupant.Index);
 					if (occupantConn != null)
 					{
-						server.SendOrderTo(occupantConn, "ServerError", "Your slot was closed by the host.");
+						// server.SendOrderTo(occupantConn, "ServerError", "Your slot was closed by the host.");
+						server.SendOrderTo(occupantConn, "ServerError", "你的位置被房主关闭了。");
 						server.DropClient(occupantConn);
 					}
 				}
@@ -292,7 +300,8 @@ namespace OpenRA.Mods.Common.Server
 
 			if (parts.Length < 3)
 			{
-				server.SendOrderTo(conn, "Message", "Malformed slot_bot command");
+				server.SendOrderTo(conn, "Message", "格式错误的slot_bot命令");
+				// server.SendOrderTo(conn, "Message", "Malformed slot_bot command");
 				return true;
 			}
 
@@ -311,7 +320,8 @@ namespace OpenRA.Mods.Common.Server
 			// Invalid slot
 			if (bot != null && bot.Bot == null)
 			{
-				server.SendOrderTo(conn, "Message", "Can't add bots to a slot with another client.");
+				// server.SendOrderTo(conn, "Message", "Can't add bots to a slot with another client.");
+				server.SendOrderTo(conn, "Message", "该位置已有一名人类玩家。");
 				return true;
 			}
 
@@ -321,7 +331,8 @@ namespace OpenRA.Mods.Common.Server
 
 			if (botInfo == null)
 			{
-				server.SendOrderTo(conn, "Message", "Invalid bot type.");
+				// server.SendOrderTo(conn, "Message", "Invalid bot type.");
+				server.SendOrderTo(conn, "Message", "错误的电脑玩家种类。");
 				return true;
 			}
 
@@ -370,7 +381,8 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can change the map.");
+				// server.SendOrderTo(conn, "Message", "Only the host can change the map.");
+				server.SendOrderTo(conn, "Message", "只有房主才能更换地图。");
 				return true;
 			}
 
@@ -433,15 +445,18 @@ namespace OpenRA.Mods.Common.Server
 
 				server.SyncLobbyInfo();
 
-				server.SendMessage("{0} changed the map to {1}.".F(client.Name, server.Map.Title));
+				server.SendMessage("{0}将地图更换为{1}.".F(client.Name, server.Map.Title));
+				// server.SendMessage("{0} changed the map to {1}.".F(client.Name, server.Map.Title));
 
 				if (server.Map.DefinesUnsafeCustomRules)
-					server.SendMessage("This map contains custom rules. Game experience may change.");
+					// server.SendMessage("This map contains custom rules. Game experience may change.");
+					server.SendMessage("该地图包含自定义的规则，游戏规则可能与往常不同。");
 
 				if (!server.LobbyInfo.GlobalSettings.EnableSingleplayer)
 					server.SendMessage(server.TwoHumansRequiredText);
 				else if (server.Map.Players.Players.Where(p => p.Value.Playable).All(p => !p.Value.AllowBots))
-					server.SendMessage("Bots have been disabled on this map.");
+					server.SendMessage("该地图禁用了电脑玩家。");
+					// server.SendMessage("Bots have been disabled on this map.");
 
 				var briefing = MissionBriefingOrDefault(server);
 				if (briefing != null)
@@ -449,14 +464,16 @@ namespace OpenRA.Mods.Common.Server
 			};
 
 			Action queryFailed = () =>
-				server.SendOrderTo(conn, "Message", "Map was not found on server.");
+				// server.SendOrderTo(conn, "Message", "Map was not found on server.");
+				server.SendOrderTo(conn, "Message", "服务器上未找到该地图。");
 
 			var m = server.ModData.MapCache[s];
 			if (m.Status == MapStatus.Available || m.Status == MapStatus.DownloadAvailable)
 				selectMap(m);
 			else if (server.Settings.QueryMapRepository)
 			{
-				server.SendOrderTo(conn, "Message", "Searching for map on the Resource Center...");
+				// server.SendOrderTo(conn, "Message", "Searching for map on the Resource Center...");
+				server.SendOrderTo(conn, "Message", "正在资源中心搜索地图。。。");
 				var mapRepository = server.ModData.Manifest.Get<WebServices>().MapRepository;
 				server.ModData.MapCache.QueryRemoteMapDetails(mapRepository, new[] { s }, selectMap, queryFailed);
 			}
@@ -470,7 +487,8 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can change the configuration.");
+				// server.SendOrderTo(conn, "Message", "Only the host can change the configuration.");
+				server.SendOrderTo(conn, "Message", "只有房主才能更改该设置。");
 				return true;
 			}
 
@@ -488,13 +506,15 @@ namespace OpenRA.Mods.Common.Server
 			if (split.Length < 2 || !options.TryGetValue(split[0], out option) ||
 				!option.Values.ContainsKey(split[1]))
 			{
-				server.SendOrderTo(conn, "Message", "Invalid configuration command.");
+				// server.SendOrderTo(conn, "Message", "Invalid configuration command.");
+				server.SendOrderTo(conn, "Message", "无效的配置命令。");
 				return true;
 			}
 
 			if (option.IsLocked)
 			{
-				server.SendOrderTo(conn, "Message", "{0} cannot be changed.".F(option.Name));
+				// server.SendOrderTo(conn, "Message", "{0} cannot be changed.".F(option.Name));
+				server.SendOrderTo(conn, "Message", "{0}不能被更改".F(option.Name));
 				return true;
 			}
 
@@ -521,14 +541,16 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can set that option.");
+				// server.SendOrderTo(conn, "Message", "Only the host can set that option.");
+				server.SendOrderTo(conn, "Message", "自有房主才能更改这个选项。");
 				return true;
 			}
 
 			int teamCount;
 			if (!Exts.TryParseIntegerInvariant(s, out teamCount))
 			{
-				server.SendOrderTo(conn, "Message", "Number of teams could not be parsed: {0}".F(s));
+				// server.SendOrderTo(conn, "Message", "Number of teams could not be parsed: {0}".F(s));
+				server.SendOrderTo(conn, "Message", "无法解析的队伍编号: {0}".F(s));
 				return true;
 			}
 
@@ -562,14 +584,16 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can kick players.");
+				server.SendOrderTo(conn, "Message", "自有房主才可以踢人。");
+				// server.SendOrderTo(conn, "Message", "Only the host can kick players.");
 				return true;
 			}
 
 			var split = s.Split(' ');
 			if (split.Length < 2)
 			{
-				server.SendOrderTo(conn, "Message", "Malformed kick command");
+				server.SendOrderTo(conn, "Message", "踢人命令格式错误");
+				// server.SendOrderTo(conn, "Message", "Malformed kick command");
 				return true;
 			}
 
@@ -579,15 +603,18 @@ namespace OpenRA.Mods.Common.Server
 			var kickConn = server.Conns.SingleOrDefault(c => server.GetClient(c) != null && server.GetClient(c).Index == kickClientID);
 			if (kickConn == null)
 			{
-				server.SendOrderTo(conn, "Message", "No-one in that slot.");
+				server.SendOrderTo(conn, "Message", "该位置没有玩家。");
+				// server.SendOrderTo(conn, "Message", "No-one in that slot.");
 				return true;
 			}
 
 			var kickClient = server.GetClient(kickConn);
 
 			Log.Write("server", "Kicking client {0}.", kickClientID);
-			server.SendMessage("{0} kicked {1} from the server.".F(client.Name, kickClient.Name));
-			server.SendOrderTo(kickConn, "ServerError", "You have been kicked from the server.");
+			server.SendMessage("{0}将{1}从服务器踢出。".F(client.Name, kickClient.Name));
+			// server.SendMessage("{0} kicked {1} from the server.".F(client.Name, kickClient.Name));
+			server.SendOrderTo(kickConn, "ServerError", "你已被从服务器踢出。");
+			// server.SendOrderTo(kickConn, "ServerError", "You have been kicked from the server.");
 			server.DropClient(kickConn);
 
 			bool tempBan;
@@ -596,7 +623,8 @@ namespace OpenRA.Mods.Common.Server
 			if (tempBan)
 			{
 				Log.Write("server", "Temporarily banning client {0} ({1}).", kickClientID, kickClient.IpAddress);
-				server.SendMessage("{0} temporarily banned {1} from the server.".F(client.Name, kickClient.Name));
+				server.SendMessage("{0}临时禁止{1}加入该服务器。".F(client.Name, kickClient.Name));
+				// server.SendMessage("{0} temporarily banned {1} from the server.".F(client.Name, kickClient.Name));
 				server.TempBans.Add(kickClient.IpAddress);
 			}
 
@@ -610,7 +638,8 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only admins can transfer admin to another player.");
+				server.SendOrderTo(conn, "Message", "只有房主才能将房主转交给其他玩家。");
+				// server.SendOrderTo(conn, "Message", "Only admins can transfer admin to another player.");
 				return true;
 			}
 
@@ -620,14 +649,16 @@ namespace OpenRA.Mods.Common.Server
 
 			if (newAdminConn == null)
 			{
-				server.SendOrderTo(conn, "Message", "No-one in that slot.");
+				server.SendOrderTo(conn, "Message", "该位置没有玩家。");
+				// server.SendOrderTo(conn, "Message", "No-one in that slot.");
 				return true;
 			}
 
 			var newAdminClient = server.GetClient(newAdminConn);
 			client.IsAdmin = false;
 			newAdminClient.IsAdmin = true;
-			server.SendMessage("{0} is now the admin.".F(newAdminClient.Name));
+			// server.SendMessage("{0} is now the admin.".F(newAdminClient.Name));
+			server.SendMessage("{0}成为了房主。".F(newAdminClient.Name));
 			Log.Write("server", "{0} is now the admin.".F(newAdminClient.Name));
 			server.SyncLobbyClients();
 
@@ -638,7 +669,8 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can move players to spectators.");
+				// server.SendOrderTo(conn, "Message", "Only the host can move players to spectators.");
+				server.SendOrderTo(conn, "Message", "只有房主才能将玩家移动至观众席。");
 				return true;
 			}
 
@@ -648,7 +680,8 @@ namespace OpenRA.Mods.Common.Server
 
 			if (targetConn == null)
 			{
-				server.SendOrderTo(conn, "Message", "No-one in that slot.");
+				server.SendOrderTo(conn, "Message", "该位置没有玩家。");
+				// server.SendOrderTo(conn, "Message", "No-one in that slot.");
 				return true;
 			}
 
@@ -658,7 +691,8 @@ namespace OpenRA.Mods.Common.Server
 			targetClient.Team = 0;
 			targetClient.Color = Color.White;
 			targetClient.State = Session.ClientState.NotReady;
-			server.SendMessage("{0} moved {1} to spectators.".F(client.Name, targetClient.Name));
+			// server.SendMessage("{0} moved {1} to spectators.".F(client.Name, targetClient.Name));
+			server.SendMessage("{0}将{1}移动至观众席。".F(client.Name, targetClient.Name));
 			Log.Write("server", "{0} moved {1} to spectators.".F(client.Name, targetClient.Name));
 			server.SyncLobbyClients();
 			CheckAutoStart(server);
@@ -672,7 +706,8 @@ namespace OpenRA.Mods.Common.Server
 			if (sanitizedName == client.Name)
 				return true;
 
-			Log.Write("server", "Player@{0} is now known as {1}.", conn.Socket.RemoteEndPoint, sanitizedName);
+			// Log.Write("server", "Player@{0} is now known as {1}.", conn.Socket.RemoteEndPoint, sanitizedName);
+			Log.Write("server", "{0}位置的玩家被重命名为{1}.", conn.Socket.RemoteEndPoint, sanitizedName);
 			server.SendMessage("{0} is now known as {1}.".F(client.Name, sanitizedName));
 			client.Name = sanitizedName;
 			server.SyncLobbyClients();
@@ -698,8 +733,10 @@ namespace OpenRA.Mods.Common.Server
 
 			if (!factions.Contains(parts[1]))
 			{
-				server.SendOrderTo(conn, "Message", "Invalid faction selected: {0}".F(parts[1]));
-				server.SendOrderTo(conn, "Message", "Supported values: {0}".F(factions.JoinWith(", ")));
+				// server.SendOrderTo(conn, "Message", "Invalid faction selected: {0}".F(parts[1]));
+				server.SendOrderTo(conn, "Message", "所选阵营无效: {0}".F(parts[1]));
+				// server.SendOrderTo(conn, "Message", "Supported values: {0}".F(factions.JoinWith(", ")));
+				server.SendOrderTo(conn, "Message", "可用的阵营为: {0}".F(factions.JoinWith(", ")));
 				return true;
 			}
 
@@ -762,7 +799,8 @@ namespace OpenRA.Mods.Common.Server
 
 			if (server.LobbyInfo.Clients.Where(cc => cc != client).Any(cc => (cc.SpawnPoint == spawnPoint) && (cc.SpawnPoint != 0)))
 			{
-				server.SendOrderTo(conn, "Message", "You cannot occupy the same spawn point as another player.");
+				// server.SendOrderTo(conn, "Message", "You cannot occupy the same spawn point as another player.");
+				server.SendOrderTo(conn, "Message", "您不能与其他玩家占用相同的出生点。");
 				return true;
 			}
 
@@ -777,7 +815,8 @@ namespace OpenRA.Mods.Common.Server
 
 				if (spawnLockedByAnotherSlot)
 				{
-					server.SendOrderTo(conn, "Message", "The spawn point is locked to another player slot.");
+					// server.SendOrderTo(conn, "Message", "The spawn point is locked to another player slot.");
+					server.SendOrderTo(conn, "Message", "生成点被另一个玩家位置锁定。");
 					return true;
 				}
 			}
@@ -818,14 +857,16 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "Only the host can set lobby info");
+				// server.SendOrderTo(conn, "Message", "Only the host can set lobby info");
+				server.SendOrderTo(conn, "Message", "自有房主才能设置大厅信息。");
 				return true;
 			}
 
 			var lobbyInfo = Session.Deserialize(s);
 			if (lobbyInfo == null)
 			{
-				server.SendOrderTo(conn, "Message", "Invalid Lobby Info Sent");
+				// server.SendOrderTo(conn, "Message", "Invalid Lobby Info Sent");
+				server.SendOrderTo(conn, "Message", "发送的大厅信息有误。");
 				return true;
 			}
 

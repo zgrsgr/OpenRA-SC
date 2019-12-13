@@ -903,7 +903,8 @@ namespace OpenRA
 		{
 			var settings = new ServerSettings()
 			{
-				Name = "Skirmish Game",
+				// Name = "Skirmish Game",
+				Name = "遭遇战",
 				Map = map,
 				AdvertiseOnline = false
 			};

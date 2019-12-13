@@ -80,9 +80,11 @@ namespace OpenRA.Mods.Common.Traits
 			var timelimits = TimeLimitOptions.ToDictionary(c => c.ToString(), c =>
 			{
 				if (c == 0)
-					return "No limit";
+					// return "No limit";
+					return "不限时";
 				else
-					return c.ToString() + " minute{0}".F(c > 1 ? "s" : null);
+					// return c.ToString() + " minute{0}".F(c > 1 ? "s" : null);
+					return c.ToString() + "分钟";
 			});
 
 			yield return new LobbyOption("timelimit", TimeLimitLabel, TimeLimitDescription, TimeLimitDropdownVisible, TimeLimitDisplayOrder,

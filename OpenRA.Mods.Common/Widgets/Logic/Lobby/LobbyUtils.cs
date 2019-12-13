@@ -43,7 +43,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var options = new Dictionary<string, IEnumerable<SlotDropDownOption>>
 			{
 				{
-					"Slot", new List<SlotDropDownOption>
+					// "Slot", new List<SlotDropDownOption>
+					"位置", new List<SlotDropDownOption>
 					{
 						new SlotDropDownOption("开启", "slot_open " + slot.PlayerReference, () => (!slot.Closed && client == null)),
 						new SlotDropDownOption("关闭", "slot_close " + slot.PlayerReference, () => slot.Closed)

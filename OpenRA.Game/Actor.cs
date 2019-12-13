@@ -59,13 +59,15 @@ namespace OpenRA
 		public CPos Location { get { return OccupiesSpace.TopLeft; } }
 		public WPos CenterPosition { get { return OccupiesSpace.CenterPosition; } }
 
+		public WRot Posture { get; private set; } 
+		public int Facing { get { return facing.Facing; } }
 		public WRot Orientation
 		{
 			get
 			{
 				// TODO: Support non-zero pitch/roll in IFacing (IOrientation?)
 				var facingValue = facing != null ? facing.Facing : 0;
-				return new WRot(WAngle.Zero, WAngle.Zero, WAngle.FromFacing(facingValue));
+				return new WRot(Posture.Roll, Posture.Pitch, Posture.Yaw + WAngle.FromFacing(facingValue));
 			}
 		}
 
@@ -90,6 +92,7 @@ namespace OpenRA
 
 			World = world;
 			ActorID = world.NextAID();
+			Posture = WRot.Zero;
 			if (initDict.Contains<OwnerInit>())
 				Owner = init.Get<OwnerInit, Player>();
 
