@@ -114,7 +114,7 @@
 		Name: 德国
 		InternalName: germany
 		Side: 盟军
-		Description: 先进科技\n·独有能力：先进超时空传送技术\n·独有单位：超时空坦克
+		Description: 先进科技\n·独有能力：先进超时空传送仪\n·独有单位：超时空坦克
 	Faction@4:
 		Name: 苏联
 		InternalName: soviet
@@ -196,7 +196,7 @@ World:
 		WaterChance: 20
 		InitialSpawnDelay: 1500
 		CheckboxLabel: 随机工具箱
-		CheckboxDescription: 在地图上随机产生装有惊喜和"惊喜"的工具箱
+		CheckboxDescription: 启用后地图上随机出现奖惩效果不一的工具箱
 		CheckboxDisplayOrder: 1
 	DomainIndex:
 	SmudgeLayer@SCORCH:
@@ -211,18 +211,18 @@ World:
 	WarheadDebugOverlay:
 	SpawnMapActors:
 	MapBuildRadius:
-		AllyBuildRadiusCheckboxLabel: 盟友旁建造
-		AllyBuildRadiusCheckboxDescription: 允许盟友将建筑建造在您的建造区域内
+		AllyBuildRadiusCheckboxLabel: 协助建设
+		AllyBuildRadiusCheckboxDescription: 启用后可以在盟友附近建设且与盟友共享建筑范围
 		AllyBuildRadiusCheckboxDisplayOrder: 4
-		BuildRadiusCheckboxLabel: 限制建造范围
-		BuildRadiusCheckboxDescription: 您只能在建造厂附近的一定范围内建造建筑
+		BuildRadiusCheckboxLabel: 有限的建筑范围
+		BuildRadiusCheckboxDescription: 启用后建筑只能放置在建筑工厂的一定范围之内
 		BuildRadiusCheckboxDisplayOrder: 5
 	MapOptions:
 		ShortGameCheckboxLabel: 快速游戏
-		ShortGameCheckboxDescription: 当玩家的全部生产建筑被摧毁时判定他们失败
+		ShortGameCheckboxDescription: 消灭敌方所有基础建筑与移动基地车即可获胜
 		ShortGameCheckboxDisplayOrder: 2
-		TechLevelDropdownLabel: 科技等级
-		TechLevelDropdownDescription:　更改游戏中有关科技水平的限制
+		TechLevelDropdownLabel: 科技等级限制
+		TechLevelDropdownDescription:　限制玩家最高能使用的科技技术
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownLabel: 游戏速度
 		GameSpeedDropdownDescription: 更改游戏内时间的流速
@@ -266,12 +266,12 @@ World:
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartLocations:
-		SeparateTeamSpawnsCheckboxLabel: 远离敌军生成
-		SeparateTeamSpawnsCheckboxDescription: 没有指定生成点的玩家将尽可能远离敌人玩家。
+		SeparateTeamSpawnsCheckboxLabel: 安全出生点
+		SeparateTeamSpawnsCheckboxDescription: 启用后所有随机出生的玩家将被分配到尽可能远离对手的位置
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:
-		DropdownLabel: 初始单位
-		DropdownDescription: 更改游戏开始时单位增援的程度
+		DropdownLabel: 初始部队
+		DropdownDescription: 调整玩家初始部队的规模
 		DropdownDisplayOrder: 1
 	PathFinder:
 	ValidateOrder:
@@ -283,8 +283,8 @@ World:
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
 	TimeLimitManager:
-		TimeLimitLabel: 时间限制
-		TimeLimitDescription: 在时间限制内得分最高的玩家或小队将会获得胜利
+		TimeLimitLabel: 时限作战
+		TimeLimitDescription: 游戏进行到选定时刻时，得分最高的玩家或小队将会立即获得胜利
 		TimeLimitWarnings:
 			40: FourtyMinutesRemaining
 			30: ThirtyMinutesRemaining

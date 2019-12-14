@@ -276,7 +276,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Vehicle
+		GenericName: 载具
 	CaptureManager:
 		BeingCapturedCondition: being-captured
 	Capturable:
@@ -977,7 +977,7 @@
 	RenderSprites:
 		Palette: player
 	Tooltip:
-		Name: Boxes
+		Name: 箱子
 	MapEditorData:
 		-ExcludeTilesets:
 		Categories: Decoration

@@ -69,7 +69,7 @@ APC2:
 		Queue: Vehicle
 		BuildPaletteOrder: 50
 		Prerequisites: ~vehicles.soviet, ~techlevel.low
-		Description: 已经满员！\n请勿忘记下车！\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
+		Description: 已经满员！\n请不要忘记随身行李！\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -235,7 +235,7 @@ AFLD:
 		Queue: Building
 		BuildPaletteOrder: 130
 		Prerequisites: dome, ~structures.soviet, ~techlevel.medium, ~!structures.ukraine
-		Description: Produces and reloads aircraft.\n  Special Ability: Spy Plane\n  Special Ability: Paratroopers
+		Description: 制造和维护战机\n多个战地机场能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升盟军直升机的生产效率\n多个战地机场无法缩减支援能力的冷却时间\n\n·提供 支援能力：侦察机 \n·提供 支援能力：伞兵
 	Valued:
 		Cost: 500
 	Tooltip:

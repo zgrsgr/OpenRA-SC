@@ -6,7 +6,7 @@ Tileset: DESERT
 MapSize: 128,128
 Bounds: 1,1,126,126
 Visibility: Lobby
-Categories: 盟军 Vs. 苏联
+Categories: 合作对抗
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral

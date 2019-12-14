@@ -75,7 +75,7 @@ MSUB:
 		BuildAtProductionType: Submarine
 		BuildPaletteOrder: 60
 		Prerequisites: ~spen, stek, ~techlevel.high
-		Description: 具备防空能力并搭载战略攻城武器的潜艇\n可以侦测潜艇\n\n·强势对抗：地面单位\n·弱势对抗：舰艇\n·特殊能力：下潜
+		Description: 具备防空能力并搭载战略攻城武器的潜艇\n可以侦测潜艇\n\n·强势对抗：地面单位、飞行器\n·弱势对抗：舰艇\n·特殊能力：下潜
 	Valued:
 		Cost: 2000
 	Tooltip:

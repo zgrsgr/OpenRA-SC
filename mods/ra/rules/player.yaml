@@ -85,7 +85,7 @@ Player:
 		LoseNotification: Lose
 		LeaveNotification: Leave
 	ConquestVictoryConditions:
-		Objective: 消灭全部敌军！
+		Objective: 击败所有敌人！
 	PowerManager:
 		SpeechNotification: LowPower
 	AllyRepair:
@@ -98,7 +98,7 @@ Player:
 	DeveloperMode:
 		CheckboxLabel: 调试模式
 		CheckboxVisible: True
-		CheckboxDescription: 启用调试与作弊指令
+		CheckboxDescription: 启用调试与作弊选项
 		CheckboxDisplayOrder: 10
 	GpsWatcher:
 	Shroud:
@@ -111,8 +111,8 @@ Player:
 		FogCheckboxDisplayOrder: 3
 	LobbyPrerequisiteCheckbox@GLOBALBOUNTY:
 		ID: bounty
-		Label: 赏金 #Kill Bounties
-		Description: 玩家在杀死敌方单位时可获得现金奖励 #Players receive cash bonuses when killing enemy units
+		Label: 赏金机制 #Kill Bounties
+		Description: 玩家消灭敌方单位后获得现金奖励 #Players receive cash bonuses when killing enemy units
 		Enabled: False
 		DisplayOrder: 8
 		Prerequisites: global-bounty
@@ -135,23 +135,23 @@ Player:
 	PlayerStatistics:
 	PlaceBeacon:
 	ProvidesTechPrerequisite@infonly:
-		Name: 极低-仅基础步兵 #Infantry Only
+		Name: 仅一阶步兵 #Infantry Only
 		Prerequisites: techlevel.infonly
 		Id: infantryonly
 	ProvidesTechPrerequisite@low:
-		Name: 低-无雷达 #Low
+		Name: 一阶科技 #Low
 		Prerequisites: techlevel.infonly, techlevel.low
 		Id: low
 	ProvidesTechPrerequisite@medium:
-		Name: 中-无科技中心 #Medium
+		Name: 二阶科技 #Medium
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium
 		Id: medium
 	ProvidesTechPrerequisite@high:
-		Name: 禁用超级武器 #No Superweapons
+		Name: 仅禁用超级武器 #No Superweapons
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high
 		Id: nosuperweapons
 	ProvidesTechPrerequisite@unrestricted:
-		Name: 无科技限制 #Unrestricted
+		Name: 完整科技 #Unrestricted
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high, techlevel.unrestricted
 		Id: unrestricted
 	GrantConditionOnPrerequisiteManager:
