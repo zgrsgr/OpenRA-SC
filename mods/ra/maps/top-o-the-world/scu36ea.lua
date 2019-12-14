@@ -102,7 +102,7 @@ WorldLoaded = function()
 --Objectives Setup
 	Trigger.OnObjectiveAdded(player, function(p, id)
 		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
 		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")

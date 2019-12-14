@@ -189,6 +189,7 @@ namespace OpenRA.Mods.Common.Scripting
 		}
 
 		[Desc("Display a text message to the player.")]
+		// public void DisplayMessage(string text, string prefix = "Mission", Color? color = null)
 		public void DisplayMessage(string text, string prefix = "Mission", Color? color = null)
 		{
 			if (string.IsNullOrEmpty(text))

@@ -424,7 +424,7 @@ WorldLoaded = function()
 
 	Trigger.OnObjectiveAdded(greece, function(p, id)
 		-- Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "目标")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
 	-- ussrObj = ussr.AddPrimaryObjective("Defeat the Allies.")

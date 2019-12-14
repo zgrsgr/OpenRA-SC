@@ -43,7 +43,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				}
 
 				statusLabel.GetText = () => player.WinState == WinState.Won ? "胜利" :
-					player.WinState == WinState.Lost ? "失败" : "正在处理";
+					player.WinState == WinState.Lost ? "失败" : "正在进行";
 				statusLabel.GetColor = () => player.WinState == WinState.Won ? Color.LimeGreen :
 					player.WinState == WinState.Lost ? Color.Red : Color.White;
 			}

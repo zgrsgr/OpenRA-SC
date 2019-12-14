@@ -263,12 +263,14 @@ namespace OpenRA.Mods.Common.Widgets
 
 					// Check if selecting actors on the screen has selected new units
 					if (ownUnitsOnScreen.Count > World.Selection.Actors.Count())
-						Game.AddSystemLine("Battlefield Control", "Selected across screen");
+						// Game.AddSystemLine("Battlefield Control", "Selected across screen");
+						Game.AddSystemLine("战场控制", "选择当前屏幕");
 					else
 					{
 						// Select actors in the world that have highest selection priority
 						ownUnitsOnScreen = SelectActorsInWorld(World, null, eligiblePlayers).SubsetWithHighestSelectionPriority(e.Modifiers).ToList();
-						Game.AddSystemLine("Battlefield Control", "Selected across map");
+						// Game.AddSystemLine("Battlefield Control", "Selected across map");
+						Game.AddSystemLine("战场控制", "选择全地图");
 					}
 
 					World.Selection.Combine(World, ownUnitsOnScreen, false, false);
@@ -295,12 +297,14 @@ namespace OpenRA.Mods.Common.Widgets
 
 					// Check if selecting actors on the screen has selected new units
 					if (newSelection.Count > World.Selection.Actors.Count())
-						Game.AddSystemLine("Battlefield Control", "Selected across screen");
+						// Game.AddSystemLine("Battlefield Control", "Selected across screen");
+						Game.AddSystemLine("战场控制", "选择当前屏幕");
 					else
 					{
 						// Select actors in the world that have the same selection class as one of the already selected actors
 						newSelection = SelectActorsInWorld(World, selectedClasses, eligiblePlayers).ToList();
-						Game.AddSystemLine("Battlefield Control", "Selected across map");
+						// Game.AddSystemLine("Battlefield Control", "Selected across map");
+						Game.AddSystemLine("战场控制", "选择全地图");
 					}
 
 					World.Selection.Combine(World, newSelection, true, false);

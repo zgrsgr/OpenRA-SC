@@ -9,7 +9,8 @@ Container@MISSION_OBJECTIVES:
 			Width: 80
 			Height: 25
 			Font: MediumBold
-			Text: Mission:
+			# Text: Mission:
+			Text: 任务:
 		Label@MISSION_STATUS:
 			X: 100
 			Y: 21
