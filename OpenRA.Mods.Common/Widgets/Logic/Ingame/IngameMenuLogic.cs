@@ -184,7 +184,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (world.Type != WorldType.Regular)
 				return;
 
-			var button = AddButton("ABORT_MISSION", world.IsGameOver ? "离开" : "放弃任务");
+			var button = AddButton("ABORT_MISSION", "离开游戏");
 
 			button.OnClick = () =>
 			{
@@ -238,7 +238,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				CloseMenu();
 			};
 
-			var button = AddButton("SURRENDER", "放弃游戏");
+			var button = AddButton("SURRENDER", "投降");
 			button.IsDisabled = () => world.LocalPlayer.WinState != WinState.Undefined || hasError || leaving;
 			button.OnClick = () =>
 			{

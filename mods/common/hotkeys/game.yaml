@@ -1,111 +1,139 @@
 CycleBase: H
-	Description: Jump to base
+	# Description: Jump to base
+	Description: 跳到生产建筑界面
 	Types: World, Player, Spectator
 
 ToLastEvent: SPACE
-	Description: Jump to last radar event
+	# Description: Jump to last radar event
+	Description: 跳至上一个雷达事件
 	Types: World, Player, Spectator
 
 ToSelection: HOME
-	Description: Jump to selection
+	# Description: Jump to selection
+	Description: 跳至当前选中单位
 	Types: World, Player, Spectator
 
 SelectAllUnits: Q
-	Description: Select all combat units
+	# Description: Select all combat units
+	Description: 选择所有作战单位
 	Types: World, Player, Spectator
 
 SelectUnitsByType: W
-	Description: Select units by type
+	# Description: Select units by type
+	Description: 按类型选择单位
 	Types: World, Player, Spectator
 
 RemoveFromControlGroup:
-	Description: Remove from control group
+	# Description: Remove from control group
+	Description: 从当前选中中删除
 	Types: World, Player
 
 Pause: PAUSE
-	Description: Pause / Unpause
+	# Description: Pause / Unpause
+	Description: 暂停 / 取消暂停
 	Types: World, Player, Spectator
 
 Sell: Z
-	Description: Sell mode
+	# Description: Sell mode
+	Description: 出售
 	Types: OrderGenerator, Player
 
 Repair: C
-	Description: Repair mode
+	# Description: Repair mode
+	Description: 维修
 	Types: OrderGenerator, Player
 
 PlaceBeacon: B
-	Description: Place beacon
+	# Description: Place beacon
+	Description: 放置信标
 	Types: OrderGenerator, Player, Spectator
 
 CycleStatusBars: COMMA
-	Description: Cycle status bars display
+	# Description: Cycle status bars display
+	Description: 显示生命条
 	Types: World, Player, Spectator
 
 TogglePixelDouble: PERIOD
-	Description: Toggle pixel doubling
+	# Description: Toggle pixel doubling
+	Description: 双倍像素
 	Types: World, Player, Spectator
 
 ToggleMute: M
-	Description: Toggle audio mute
+	# Description: Toggle audio mute
+	Description: 静音
 	Types: World, Menu, Player, Spectator
 
 TogglePlayerStanceColor: COMMA Ctrl
-	Description: Toggle player stance colors
+	# Description: Toggle player stance colors
+	Description: 启动敌我颜色
 	Types: World, Player, Spectator
 
 TakeScreenshot: P Ctrl
-	Description: Take screenshot
+	# Description: Take screenshot
+	Description: 保存截图
 	Types: World, Menu, Player, Spectator
 
 AttackMove: A
-	Description: Attack Move
+	# Description: Attack Move
+	Description: 移动攻击
 	Types: Unit, Player
 
 Stop: S
-	Description: Stop
+	# Description: Stop
+	Description: 停止
 	Types: Unit, Player
 
 Scatter: X Ctrl
-	Description: Scatter
+	# Description: Scatter
+	Description: 分散
 	Types: Unit, Player
 
 Deploy: F
-	Description: Deploy
+	# Description: Deploy
+	Description: 部署
 	Types: Unit, Player
 
 Guard: D
-	Description: Guard
+	# Description: Guard
+	Description: 守卫
 	Types: Unit, Player
 
 StanceAttackAnything: A Alt
-	Description: Attack anything
+	# Description: Attack anything
+	Description: 侵略姿态
 	Types: Stance, Player
 
 StanceDefend: S Alt
-	Description: Defend
+	# Description: Defend
+	Description: 守卫姿态
 	Types: Stance, Player
 
 StanceReturnFire: D Alt
-	Description: Return fire
+	# Description: Return fire
+	Description: 反击姿态
 	Types: Stance, Player
 
 StanceHoldFire: F Alt
-	Description: Hold fire
+	# Description: Hold fire
+	Description: 停火姿态
 	Types: Stance, Player
 
 StopMusic: AUDIOSTOP
-	Description: Stop
+	# Description: Stop
+	Description: 停止
 	Types: Music, Player, Spectator
 
 PauseMusic: AUDIOPLAY
-	Description: Pause or Resume
+	# Description: Pause or Resume
+	Description: 暂停 / 恢复
 	Types: Music, Player, Spectator
 
 PrevMusic: AUDIOPREV
-	Description: Previous
+	# Description: Previous
+	Description: 上一首
 	Types: Music, Player, Spectator
 
 NextMusic: AUDIONEXT
-	Description: Next
+	# Description: Next
+	Description: 下一首
 	Types: Music, Player, Spectator

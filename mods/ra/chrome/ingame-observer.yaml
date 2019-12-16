@@ -948,8 +948,10 @@ Container@OBSERVER_WIDGETS:
 							YAxisValueFormat: ${0:F0}
 							XAxisSize: 40
 							XAxisTicksPerLabel: 2
-							XAxisLabel: Game Minute
-							YAxisLabel: Earnings
+							# XAxisLabel: Game Minute
+							# YAxisLabel: Earnings
+							XAxisLabel: 时间 / 分钟
+							YAxisLabel: 收入
 							LabelFont: TinyBold
 							AxisFont: TinyBold
 				Container@ARMY_VALUE_GRAPH_CONTAINER:
@@ -974,7 +976,9 @@ Container@OBSERVER_WIDGETS:
 							YAxisValueFormat: ${0:F0}
 							XAxisSize: 40
 							XAxisTicksPerLabel: 2
-							XAxisLabel: Game Minute
-							YAxisLabel: Army Value
+							# XAxisLabel: Game Minute
+							# YAxisLabel: Army Value
+							XAxisLabel: 时间 / 分钟
+							YAxisLabel: 军队价值
 							LabelFont: TinyBold
 							AxisFont: TinyBold

@@ -38,18 +38,18 @@ Container@OBSERVER_WIDGETS:
 			Width: 250
 			Height: 250
 			Children:
-						Radar@INGAME_RADAR:
-              X: 10
-              Y: 10
-              Width: PARENT_RIGHT - 19
-              Height: PARENT_BOTTOM - 19
-							WorldInteractionController: INTERACTION_CONTROLLER
-						VqaPlayer@PLAYER:
-              X: 10
-              Y: 10
-              Width: PARENT_RIGHT - 20
-              Height: PARENT_BOTTOM - 20
-							Skippable: false
+				Radar@INGAME_RADAR:
+					X: 10
+					Y: 10
+					Width: PARENT_RIGHT - 19
+					Height: PARENT_BOTTOM - 19
+					WorldInteractionController: INTERACTION_CONTROLLER
+				VqaPlayer@PLAYER:
+					X: 10
+					Y: 10
+					Width: PARENT_RIGHT - 20
+					Height: PARENT_BOTTOM - 20
+					Skippable: false
 		Background@OBSERVER_CONTROL_BG:
 			X: WINDOW_RIGHT - 255
 			Y: 260
@@ -90,61 +90,61 @@ Container@OBSERVER_WIDGETS:
 					Visible: false
 			Children:
 				Button@BUTTON_PAUSE:
-          X: 15
-          Y: 10
-          Width: 26
-          Height: 26
+					X: 15
+					Y: 10
+					Width: 26
+					Height: 26
 					Key: Pause
 					TooltipText: 暂停
 					TooltipContainer: TOOLTIP_CONTAINER
-          IgnoreChildMouseOver: true
+					IgnoreChildMouseOver: true
 					Children:
 						Image@IMAGE_PAUSE:
-              Y: 1
-              Width: 25
-              Height: 25
+							Y: 1
+							Width: 25
+							Height: 25
 							ImageCollection: music
 							ImageName: pause
 				Button@BUTTON_PLAY:
-          X: 15
-          Y: 10
-          Width: 26
-          Height: 26
+					X: 15
+					Y: 10
+					Width: 26
+					Height: 26
 					Key: Pause
-          IgnoreChildMouseOver: true
+					IgnoreChildMouseOver: true
 					TooltipText: 继续
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@IMAGE_PLAY:
-              Width: 25
-              Height: 25
+							Width: 25
+							Height: 25
 							ImageCollection: music
 							ImageName: play
 				Button@BUTTON_SLOW:
-          X: 55
-          Y: 13
-          Width: 36
-          Height: 20
+					X: 55
+					Y: 13
+					Width: 36
+					Height: 20
 					Key: ReplaySpeedSlow
 					TooltipText: 慢速
 					TooltipContainer: TOOLTIP_CONTAINER
 					Text: 50%
 					Font: TinyBold
 				Button@BUTTON_REGULAR:
-          X: 55 + 45
-          Y: 13
-          Width: 38
-          Height: 20
+					X: 55 + 45
+					Y: 13
+					Width: 38
+					Height: 20
 					Key: ReplaySpeedRegular
 					TooltipText: 常速
 					TooltipContainer: TOOLTIP_CONTAINER
 					Text: 100%
 					Font: TinyBold
 				Button@BUTTON_FAST:
-          X: 55 + 45 * 2
-          Y: 13
-          Width: 38
-          Height: 20
+					X: 55 + 45 * 2
+					Y: 13
+					Width: 38
+					Height: 20
 					Key: ReplaySpeedFast
 					TooltipText: 快速
 					TooltipContainer: TOOLTIP_CONTAINER

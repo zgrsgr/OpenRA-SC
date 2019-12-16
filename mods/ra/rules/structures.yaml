@@ -240,13 +240,6 @@ SPEN:
 	ProvidesPrerequisite@buildingname:
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	HitShape:
 		Type: Rectangle
 			TopLeft: -1536, -598
@@ -368,13 +361,6 @@ SYRD:
 	ProvidesPrerequisite@buildingname:
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	HitShape:
 		TargetableOffsets: 768,0,0, 768,-1024,0, 768,1024,0
 		Type: Rectangle
@@ -1067,13 +1053,6 @@ WEAP:
 	InfiltrateForSupportPower:
 		Proxy: vehicles.upgraded
 		Types: SpyInfiltrate
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	-ActorPreviewPlaceBuildingPreview:
 	SequencePlaceBuildingPreview:
 		Sequence: place
@@ -1392,13 +1371,6 @@ HPAD:
 	InfiltrateForSupportPower:
 		Proxy: aircraft.upgraded
 		Types: SpyInfiltrate
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 
 AFLD:
 	Inherits: ^Building
@@ -1541,13 +1513,6 @@ AFLD:
 	InfiltrateForSupportPower:
 		Proxy: aircraft.upgraded
 		Types: SpyInfiltrate
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 	WithResupplyAnimation:
 		RequiresCondition: !build-incomplete
 
@@ -1761,13 +1726,6 @@ BARR:
 		Types: SpyInfiltrate
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 
 KENN:
 	Inherits: ^Building
@@ -1814,13 +1772,6 @@ KENN:
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 
 TENT:
 	Inherits: ^Building
@@ -1913,13 +1864,6 @@ TENT:
 		Types: SpyInfiltrate
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		ReferencePoint: Top
-		ZOffset: 256
-		RequiresCondition: primary
 
 FIX:
 	Inherits: ^Building

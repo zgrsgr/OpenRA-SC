@@ -721,6 +721,19 @@
 		ReferencePoint: Center
 		Palette: player
 		IsPlayerPalette: True
+	# WithDecoration@primary:
+	# 	RequiresSelection: true
+	# 	Image: pips
+	# 	Sequence: tag-primary
+	# 	ReferencePoint: Top
+	# 	ZOffset: 256
+	# 	RequiresCondition: primary
+	WithTextDecoration@primary:
+		RequiresSelection: true
+		Text: 主要生产建筑
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
 
 ^ScienceBuilding:
 	Inherits: ^Building

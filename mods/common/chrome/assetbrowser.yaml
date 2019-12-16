@@ -14,7 +14,8 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: Asset Browser
+			# Text: Asset Browser
+			Text: 资源浏览器
 		Label@SOURCE_SELECTOR_DESC:
 			X: 20
 			Y: 36
@@ -22,14 +23,16 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: TinyBold
 			Align: Center
-			Text: Select asset source
+			# Text: Select asset source
+			Text: 选择来源
 		DropDownButton@SOURCE_SELECTOR:
 			X: 20
 			Y: 60
 			Width: 160
 			Height: 25
 			Font: Bold
-			Text: Folders
+			# Text: Folders
+			Text: 目录
 		ScrollPanel@ASSET_LIST:
 			X: 20
 			Y: 90
@@ -58,7 +61,8 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: TinyBold
 			Align: Center
-			Text: Filter by name
+			# Text: Filter by name
+			Text: 按照名称筛选
 		TextField@FILENAME_INPUT:
 			X: 20
 			Y: 395
@@ -72,7 +76,8 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: Bold
 			Align: Right
-			Text: Palette:
+			# Text: Palette:
+			Text: 色盘:
 		DropDownButton@PALETTE_SELECTOR:
 			X: PARENT_RIGHT - WIDTH - 110
 			Y: 60
@@ -111,7 +116,8 @@ Background@ASSETBROWSER_PANEL:
 					Height: 330
 					Align: Center
 					Visible: false
-					Text: Error displaying file. See assetbrowser.log for details.
+					# Text: Error displaying file. See assetbrowser.log for details.
+					Text: 显示文件错误，查看assetbrowser.log了解更多细节。
 		Container@FRAME_SELECTOR:
 			X: 190
 			Y: 425
@@ -207,5 +213,6 @@ Background@ASSETBROWSER_PANEL:
 			Width: 160
 			Height: 25
 			Font: Bold
-			Text: Close
+			# Text: Close
+			Text: 关闭
 		TooltipContainer@TOOLTIP_CONTAINER:
