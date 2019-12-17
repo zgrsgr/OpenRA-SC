@@ -1,31 +1,31 @@
 CycleBase: H
 	# Description: Jump to base
-	Description: 跳到生产建筑界面
+	Description: 跳转到建筑工厂
 	Types: World, Player, Spectator
 
 ToLastEvent: SPACE
 	# Description: Jump to last radar event
-	Description: 跳至上一个雷达事件
+	Description: 跳转到最近的雷达提示
 	Types: World, Player, Spectator
 
 ToSelection: HOME
 	# Description: Jump to selection
-	Description: 跳至当前选中单位
+	Description: 跳转到选中的单位
 	Types: World, Player, Spectator
 
 SelectAllUnits: Q
 	# Description: Select all combat units
-	Description: 选择所有作战单位
+	Description: 选中所有作战单位
 	Types: World, Player, Spectator
 
 SelectUnitsByType: W
 	# Description: Select units by type
-	Description: 按类型选择单位
+	Description: 选中所有同类单位
 	Types: World, Player, Spectator
 
 RemoveFromControlGroup:
 	# Description: Remove from control group
-	Description: 从当前选中中删除
+	Description: 从选中单位中移除
 	Types: World, Player
 
 Pause: PAUSE
@@ -65,12 +65,12 @@ ToggleMute: M
 
 TogglePlayerStanceColor: COMMA Ctrl
 	# Description: Toggle player stance colors
-	Description: 启动敌我颜色
+	Description: 敌友颜色模式
 	Types: World, Player, Spectator
 
 TakeScreenshot: P Ctrl
 	# Description: Take screenshot
-	Description: 保存截图
+	Description: 截屏
 	Types: World, Menu, Player, Spectator
 
 AttackMove: A

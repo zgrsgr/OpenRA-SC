@@ -33,6 +33,7 @@ Packages:
 	ra|bits
 	ra|bits/desert
 	ra|uibits
+	ra|icons
 
 MapFolders:
 	ra|maps: System

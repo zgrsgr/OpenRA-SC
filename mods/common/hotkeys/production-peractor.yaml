@@ -1,7 +1,9 @@
 NextProductionTab: PAGEDOWN
-	Description: Next tab
+	# Description: Next tab
+	Description: 下个生产设施
 	Types: Production, Player
 
 PreviousProductionTab: PAGEUP
-	Description: Previous tab
+	# Description: Previous tab
+	Description: 上个生产设施
 	Types: Production, Player

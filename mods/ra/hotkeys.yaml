@@ -1,27 +1,34 @@
 ProductionTypeBuilding: E
-	Description: Building Tab
+	# Description: Building Tab
+	Description: 基础建筑栏
 	Types: Production, Player
 
 ProductionTypeDefense: R
-	Description: Defense Tab
+	# Description: Defense Tab
+	Description: 防御建筑栏
 	Types: Production, Player
 
 ProductionTypeInfantry: T
-	Description: Infantry Tab
+	# Description: Infantry Tab
+	Description: 步兵生产栏
 	Types: Production, Player
 
 ProductionTypeVehicle: Y
-	Description: Vehicle Tab
+	# Description: Vehicle Tab
+	Description: 载具生产栏
 	Types: Production, Player
 
 ProductionTypeAircraft: U
-	Description: Aircraft Tab
+	# Description: Aircraft Tab
+	Description: 飞行器生产栏
 	Types: Production, Player
 
 ProductionTypeNaval: I
-	Description: Naval Tab 
+	# Description: Naval Tab 
+	Description: 海军生产栏 
 	Types: Production, Player
 
 PowerDown: X
-	Description: Power-down mode
+	# Description: Power-down mode
+	Description: 停止供电
 	Types: OrderGenerator, Player

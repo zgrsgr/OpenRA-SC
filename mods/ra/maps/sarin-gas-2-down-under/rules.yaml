@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: downunder.lua
 	MissionData:
-		Briefing: 我们追踪着的沙林毒气车队开进了这个地下工厂。\n我们有理由相信这座宏大的地底设施内，\n隐藏着苏联方面的毒气研发实验室。\n\n指挥官，\n带领你的突击队从地道潜入这一设施，\n肃清整座地底设施。\n\n请小心，\n我们也不知道他们具体在其中做些什么，\n对于飞来的投掷物品务必保持警惕！\n\n我们身经百战的特工可以渗透敌方的工厂，\n从而窃取设施内的部分载具。\n\n祝你好运，\n我们隧道出口见！\n
+		Briefing: 我们追踪着的沙林毒气车队开进了这个地下工厂。\n我们有理由相信这座宏大的地底设施内，\n隐藏着苏联方面的毒气研发实验室。\n\n指挥官，\n带领你的突击队从地道潜入，\n肃清整座地底设施。\n\n请小心，\n我们也不知道他们具体在其中做些什么，\n对于飞来的投掷物品务必保持警惕！\n\n我们身经百战的特工可以渗透敌方的工厂，\n从而窃取设施内的部分载具。\n\n祝你好运，\n我们隧道出口见！\n
 		#We've traced the convoy's route to this underground facility. We suspect that this is a hidden access to the Soviet's main Sarin plant.\n\nLead your troops through the tunnels and remove any opposition you may find. Be careful -- the Soviets are conducting all kinds of research in this facility, and we don't know what they may throw at you.\n\nUse spies to scout and infiltrate factories where they can steal vehicles.\n\nThe mission is complete when your forces reach the far exit of the facility.\n
 		WinVideo: spy.vqa
 		LossVideo: execute.vqa

@@ -8,7 +8,7 @@ Background@SETTINGS_PANEL:
 			视角指令:
 				Template: TWO_COLUMN
 				Types: Viewport
-			观察者 / 回放指令:
+			观战 / 回放指令:
 				Template: TWO_COLUMN
 				Types: Observer, Replay
 			单位指令:
@@ -152,7 +152,7 @@ Background@SETTINGS_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: 模式，分辨率和指针的更改将在重启游戏后生效
+					Text: 模式、分辨率和指针的更改将在重启游戏后生效
 				Checkbox@FRAME_LIMIT_CHECKBOX:
 					X: 15
 					Y: 125
@@ -192,14 +192,15 @@ Background@SETTINGS_PANEL:
 					X: 150
 					Y: 159
 					Height: 25
-					Text: FPS
+					Text: 帧每秒
 				Checkbox@PLAYER_STANCE_COLORS_CHECKBOX:
 					X: 310
 					Y: 195
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: 敌我颜色模式
+					Text: 敌友颜色模式
+					#Description: 启用后小地图上将只显示绿色、红色和黄色，分别表示玩家自己、全体对手与全体盟友
 				Label@PLAYER:
 					Text: 玩家：
 					X: 15
@@ -442,14 +443,16 @@ Background@SETTINGS_PANEL:
 					Font: Regular
 					Text: 将鼠标锁定在窗口内
 				Label@SCROLL_SPEED_LABEL:
-					X: PARENT_RIGHT - WIDTH - 270
+					# X: PARENT_RIGHT - WIDTH - 270
+					X: PARENT_RIGHT - WIDTH - 120
 					Y: 129
 					Width: 95
 					Height: 25
 					Text: 滚屏速度：
 					Align: Right
 				Slider@SCROLLSPEED_SLIDER:
-					X: PARENT_RIGHT - WIDTH - 170
+					# X: PARENT_RIGHT - WIDTH - 170
+					X: PARENT_RIGHT - WIDTH - 20
 					Y: 133
 					Width: 100
 					Height: 20
@@ -457,15 +460,19 @@ Background@SETTINGS_PANEL:
 					MinimumValue: 10
 					MaximumValue: 50
 				Label@UI_SCROLL_SPEED_LABEL:
-					X: PARENT_RIGHT - WIDTH - 106
-					Y: 129
+					# X: PARENT_RIGHT - WIDTH - 106
+					# Y: 129
+					X: PARENT_RIGHT - WIDTH - 120
+					Y: 159
 					Width: 95
 					Height: 25
-					Text: 界面滚动速度：
+					Text: 面板滚动速度：
 					Align: Right
 				Slider@UI_SCROLLSPEED_SLIDER:
-					X: PARENT_RIGHT - WIDTH - 6
-					Y: 133
+					# X: PARENT_RIGHT - WIDTH - 6
+					# Y: 133
+					X: PARENT_RIGHT - WIDTH - 20
+					Y: 159
 					Width: 100
 					Height: 20
 					Ticks: 5
