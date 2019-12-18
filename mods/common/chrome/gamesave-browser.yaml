@@ -69,21 +69,23 @@ Background@GAMESAVE_BROWSER_PANEL:
 					Type: Filename
 		Button@CANCEL_BUTTON:
 			Key: escape
-			X: 20
+			X: PARENT_RIGHT - 300 - WIDTH/2 - 220
+			# X: 20
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
 			Text: 返回
 			Font: Bold
 		Button@DELETE_ALL_BUTTON:
-			X: PARENT_RIGHT - 350 - WIDTH
+			X: PARENT_RIGHT - 300 - WIDTH/2 - 110
+			# X: PARENT_RIGHT - 350 - WIDTH
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
-			Text: 清空存档文件
+			Text: 删除全部
 			Font: Bold
 		Button@DELETE_BUTTON:
-			X: PARENT_RIGHT - 240 - WIDTH
+			X: PARENT_RIGHT - 300 - WIDTH/2 #- 240
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
@@ -91,7 +93,8 @@ Background@GAMESAVE_BROWSER_PANEL:
 			Font: Bold
 			Key: Delete
 		Button@RENAME_BUTTON:
-			X: PARENT_RIGHT - 130 - WIDTH
+			X: PARENT_RIGHT - 300 - WIDTH/2 + 110
+			# X: PARENT_RIGHT - 130 - WIDTH
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
@@ -100,7 +103,8 @@ Background@GAMESAVE_BROWSER_PANEL:
 			Key: F2
 		Button@LOAD_BUTTON:
 			Key: return
-			X: PARENT_RIGHT - WIDTH - 20
+			X: PARENT_RIGHT - 300 - WIDTH/2 + 220
+			# X: PARENT_RIGHT - WIDTH - 20
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
@@ -109,7 +113,8 @@ Background@GAMESAVE_BROWSER_PANEL:
 			Visible: False
 		Button@SAVE_BUTTON:
 			Key: return
-			X: PARENT_RIGHT - WIDTH - 20
+			X: PARENT_RIGHT - 300 - WIDTH/2 + 220
+			# X: PARENT_RIGHT - WIDTH - 20
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25

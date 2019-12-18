@@ -291,7 +291,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 总消灭价值
+									Text: 消灭价值
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -527,7 +527,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 90
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 消灭的单位
+									Text: 消灭单位
 									Align: Right
 									Shadow: True
 								Label@UNITS_DEAD_HEADER:
@@ -536,7 +536,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 损失的单位
+									Text: 损失单位
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_KILLED_HEADER:
@@ -545,7 +545,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 85
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 摧毁的建筑
+									Text: 摧毁建筑
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_DEAD_HEADER:
@@ -554,7 +554,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 损失的建筑
+									Text: 损失建筑
 									Align: Right
 									Shadow: True
 								Label@ARMY_VALUE_HEADER:
