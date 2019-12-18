@@ -83,7 +83,8 @@ Background@MAPCHOOSER_PANEL:
 					Align: Center
 					Font: Tiny
 		Label@FILTER_DESC:
-			X: PARENT_RIGHT - 467
+			X: PARENT_RIGHT - 460
+			# X: PARENT_RIGHT - 467
 			Y: 50
 			Width: 60
 			Height: 24
@@ -91,22 +92,27 @@ Background@MAPCHOOSER_PANEL:
 			Align: Right
 			Text: 筛选：
 		TextField@MAPFILTER_INPUT:
-			X: PARENT_RIGHT - 401
+			X: PARENT_RIGHT - 403
+			# X: PARENT_RIGHT - 401
 			Y: 48
-			Width: 150
+			# Width: 150
+			Width: 140
 			Height: 25
 		Label@FILTER_DESC_JOINER:
 			X: PARENT_RIGHT - 250
-			Y: 48
+			Y: 50
+			# Y: 48
 			Width: 30
 			Height: 24
 			Font: Bold
 			Align: Center
 			Text: 类别：
 		DropDownButton@GAMEMODE_FILTER:
-			X: PARENT_RIGHT - 220
+			X: PARENT_RIGHT - 210
+			# X: PARENT_RIGHT - 220
 			Y: 48
-			Width: 200
+			Width: 170
+			# Width: 200
 			Height: 25
 		Button@RANDOMMAP_BUTTON:
 			X: 20

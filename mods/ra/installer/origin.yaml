@@ -1,4 +1,5 @@
-ra-origin: C&C The Ultimate Collection (Origin version, English)
+# ra-origin: C&C The Ultimate Collection (Origin version, English)
+ra-origin: 命令与征服终极收藏版（Origin英文版）
 	Type: Install
 	RegistryPrefixes: HKEY_LOCAL_MACHINE\Software\, HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\
 	RegistryKey: EA Games\Command and Conquer Red Alert
@@ -456,7 +457,8 @@ ra-origin: C&C The Ultimate Collection (Origin version, English)
 				Offset: 844509702
 				Length: 9073
 
-cnc-origin: Command & Conquer (Origin version, English)
+# cnc-origin: Command & Conquer (Origin version, English)
+cnc-origin: 命令与征服原版（英文）
 	Type: Install
 	RegistryPrefixes: HKEY_LOCAL_MACHINE\Software\, HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\
 	RegistryKey: EA Games\CNC and The Covert Operations

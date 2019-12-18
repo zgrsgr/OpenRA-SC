@@ -507,7 +507,8 @@ namespace OpenRA.Traits
 
 		public virtual string ValueChangedMessage(string playerName, string newValue)
 		{
-			return playerName + " changed " + Name + " to " + Values[newValue] + ".";
+			// return playerName + " changed " + Name + " to " + Values[newValue] + ".";
+			return playerName + "将" + Name + "改为" + Values[newValue] + "。";
 		}
 	}
 
@@ -515,8 +516,8 @@ namespace OpenRA.Traits
 	{
 		static readonly Dictionary<string, string> BoolValues = new Dictionary<string, string>()
 		{
-			{ true.ToString(), "enabled" },
-			{ false.ToString(), "disabled" }
+			{ true.ToString(), "启用了" },
+			{ false.ToString(), "禁用了" }
 		};
 
 		public LobbyBooleanOption(string id, string name, string description, bool visible, int displayorder, bool defaultValue, bool locked)
@@ -524,7 +525,7 @@ namespace OpenRA.Traits
 
 		public override string ValueChangedMessage(string playerName, string newValue)
 		{
-			return playerName + " " + BoolValues[newValue] + " " + Name + ".";
+			return playerName + BoolValues[newValue] + Name + "。";
 		}
 	}
 

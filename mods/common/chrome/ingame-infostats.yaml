@@ -7,7 +7,8 @@ Container@SKIRMISH_STATS:
 			Height: 75
 			Children:
 				Label@MISSION:
-					X: 20
+					X: 40
+					# X: 20
 					Y: 22
 					Width: 482
 					Height: 25
@@ -15,13 +16,15 @@ Container@SKIRMISH_STATS:
 					# Text: Mission:
 					Text: 任务:
 				Label@STATS_STATUS:
-					X: 100
+					X: 90
+					# X: 100
 					Y: 22
 					Width: PARENT_RIGHT - 10
 					Height: 25
 					Font: MediumBold
 				Checkbox@STATS_CHECKBOX:
-					X: 20
+					X: 60
+					# X: 20
 					Y: 55
 					Width: 482
 					Height: 20

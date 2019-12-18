@@ -30,7 +30,7 @@ RemoveFromControlGroup:
 
 Pause: PAUSE
 	# Description: Pause / Unpause
-	Description: 暂停 / 取消暂停
+	Description: 暂停 / 继续
 	Types: World, Player, Spectator
 
 Sell: Z

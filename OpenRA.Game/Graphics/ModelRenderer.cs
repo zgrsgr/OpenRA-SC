@@ -78,6 +78,7 @@ namespace OpenRA.Graphics
 			shader.SetMatrix("View", view);
 		}
 
+		//TODO:模型渲染
 		public ModelRenderProxy RenderAsync(
 			WorldRenderer wr, IEnumerable<ModelAnimation> models, WRot camera, float scale,
 			float[] groundNormal, WRot lightSource, float[] lightAmbientColor, float[] lightDiffuseColor,
@@ -87,9 +88,12 @@ namespace OpenRA.Graphics
 				throw new InvalidOperationException("BeginFrame has not been called. You cannot render until a frame has been started.");
 
 			// Correct for inverted y-axis
+			// 正确的y轴倒置
+			// 比例转换
 			var scaleTransform = Util.ScaleMatrix(scale, scale, scale);
 
 			// Correct for bogus light source definition
+			// 纠正假光源定义
 			var lightYaw = Util.MakeFloatMatrix(new WRot(WAngle.Zero, WAngle.Zero, -lightSource.Yaw).AsMatrix());
 			var lightPitch = Util.MakeFloatMatrix(new WRot(WAngle.Zero, -lightSource.Pitch, WAngle.Zero).AsMatrix());
 			var shadowTransform = Util.MatrixMultiply(lightPitch, lightYaw);

@@ -4,7 +4,8 @@ Container@MISSION_OBJECTIVES:
 	Logic: GameInfoObjectivesLogic
 	Children:
 		Label@MISSION:
-			X: 20
+			X: 40
+			# X: 20
 			Y: 21
 			Width: 80
 			Height: 25
@@ -12,7 +13,8 @@ Container@MISSION_OBJECTIVES:
 			# Text: Mission:
 			Text: 任务:
 		Label@MISSION_STATUS:
-			X: 100
+			X: 90
+			# X: 100
 			Y: 21
 			Width: PARENT_RIGHT - 120
 			Height: 25

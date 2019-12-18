@@ -109,14 +109,16 @@ Container@LOBBY_MUSIC_BIN:
 									ImageCollection: music
 									ImageName: next
 				Checkbox@SHUFFLE:
-					X: 25
+					X: 35
+					# X: 25
 					Y: 150
 					Width: 85
 					Height: 20
 					Font: Regular
-					Text: 随机播
+					Text: 随机播放
 				Checkbox@REPEAT:
-					X: PARENT_RIGHT - 15 - WIDTH
+					X: PARENT_RIGHT - 55 - WIDTH
+					# X: PARENT_RIGHT - 15 - WIDTH
 					Y: 150
 					Width: 70
 					Height: 20

@@ -1,4 +1,5 @@
-counterstrike: Counterstrike Expansion Disc (English)
+# counterstrike: Counterstrike Expansion Disc (English)
+counterstrike: 反戈一击资料碟（英文）
 	IDFiles:
 		README.TXT: 0efe8087383f0b159a9633f891fb5f53c6097cd4
 		SETUP/INSTALL/CSTRIKE.RTP: fae8ba82db71574f6ecd8fb4ff4026fcb65d2adc
@@ -28,7 +29,8 @@ counterstrike: Counterstrike Expansion Disc (English)
 			^Content/ra/v2/expand/vr2.aud:
 				Offset: 229462230
 				Length: 2920396
-counterstrike-linux: Counterstrike Expansion Disc (English)
+# counterstrike-linux: Counterstrike Expansion Disc (English)
+counterstrike-linux: 反戈一击资料碟（英文）
 	IDFiles:
 		readme.txt: 0efe8087383f0b159a9633f891fb5f53c6097cd4
 		setup/install/cstrike.rtp: fae8ba82db71574f6ecd8fb4ff4026fcb65d2adc

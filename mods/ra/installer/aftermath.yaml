@@ -1,4 +1,5 @@
-aftermath: Aftermath Expansion Disc (English)
+# aftermath: Aftermath Expansion Disc (English)
+aftermath: 劫后余生资料碟（英文）
 	IDFiles:
 		README.TXT: 9902fb74c019df1b76ff5634e68f0371d790b5e0
 		SETUP/INSTALL/PATCH.RTP: 5bce93f834f9322ddaa7233242e5b6c7fea0bf17
@@ -113,7 +114,8 @@ aftermath: Aftermath Expansion Disc (English)
 			^Content/ra/v2/expand/myes1.aud:
 				Offset: 268608163
 				Length: 9073
-aftermath-linux: Aftermath Expansion Disc (English)
+# aftermath-linux: Aftermath Expansion Disc (English)
+aftermath-linux: 劫后余生资料碟（英文）
 	IDFiles:
 		readme.txt: 9902fb74c019df1b76ff5634e68f0371d790b5e0
 		setup/install/patch.rtp: 5bce93f834f9322ddaa7233242e5b6c7fea0bf17

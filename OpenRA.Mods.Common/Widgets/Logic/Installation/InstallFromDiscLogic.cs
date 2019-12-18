@@ -169,7 +169,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 				var options = new Dictionary<string, IEnumerable<string>>()
 				{
-					{ "Game Discs", discs },
+					// { "Game Discs", discs },
+					{ "游戏光盘", discs },
 				};
 
 				if (Platform.CurrentPlatform == PlatformType.Windows)
@@ -179,7 +180,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						.Select(s => s.Title)
 						.Distinct();
 
-					options.Add("Digital Installs", installations);
+					// options.Add("Digital Installs", installations);
+					options.Add("导入数字版", installations);
 				}
 
 				Game.RunAfterTick(() =>
@@ -654,11 +656,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		void ShowBackRetry(Action retryAction)
 		{
 			primaryButton.OnClick = retryAction;
-			primaryButton.Text = "Retry";
+			primaryButton.Text = "重试";
+			// primaryButton.Text = "Retry";
 			primaryButton.Visible = true;
 
 			secondaryButton.OnClick = Ui.CloseWindow;
-			secondaryButton.Text = "Back";
+			// secondaryButton.Text = "Back";
+			secondaryButton.Text = "返回";
 			secondaryButton.Visible = true;
 			secondaryButton.Disabled = false;
 			Game.RunAfterTick(Ui.ResetTooltips);

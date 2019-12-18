@@ -50,7 +50,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var status = new CachedTransform<string, string>(s => WidgetUtils.TruncateText(s, statusLabel.Bounds.Width, statusFont));
 			statusLabel.GetText = () => status.Update(getStatusText());
 
-			var text = "已下载 {0}".F(download.Title);
+			var text = "正在下载{0}".F(download.Title);
 			panel.Get<LabelWidget>("TITLE").Text = text;
 
 			ShowDownloadDialog();

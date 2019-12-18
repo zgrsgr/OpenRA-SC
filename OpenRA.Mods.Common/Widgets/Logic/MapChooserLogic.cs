@@ -207,7 +207,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					var item = categories.FirstOrDefault(m => m.First == category);
 					if (item == default(Pair<string, int>))
-						item.First = "未找到匹配的地图";
+						item.First = "空";
 
 					return showItem(item);
 				};

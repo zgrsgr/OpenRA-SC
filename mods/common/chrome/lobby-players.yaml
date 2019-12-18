@@ -36,14 +36,16 @@ Container@LOBBY_PLAYER_BIN:
 					Align: Center
 					Font: Bold
 				Label@LABEL_LOBBY_SPAWN:
-					X: 468
+					# X: 468
+					X: 467
 					Width: 48
 					Height: 25
-					Text: 起始位置
+					Text: 出生点
 					Align: Center
 					Font: Bold
 				Label@LABEL_LOBBY_STATUS:
-					X: 525
+					X: 520
+					# X: 525
 					Width: 20
 					Height: 25
 					Text: 就绪
@@ -143,7 +145,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 468
 							Width: 48
 							Height: 25
-							Text: 起始位置
+							Text: 出生点
 						Checkbox@STATUS_CHECKBOX:
 							X: 525
 							Y: 2
