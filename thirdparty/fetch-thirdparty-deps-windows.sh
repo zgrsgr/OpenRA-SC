@@ -4,6 +4,16 @@
 
 set -e
 
+if [ $# -ne "1" ]; then
+	echo "Usage: $(basename "$0") (32|64)"
+	exit 1
+fi
+
+if [ "$1" != "x86" ] && [ "$1" != "x64" ]; then
+	echo "Usage: $(basename "$0") (32|64)"
+	exit 1
+fi
+
 cd "${0%/*}" || exit 1
 
 if [ -d "./download" ]; then
@@ -21,6 +31,14 @@ fi
 
 unzip -o -qq "deps.zip" 
 
-mv "./OpenRA_thirdparty_deps/windows" "./download"
+if [ "$1" = "x86" ]; then
+	cp -r "./OpenRA_thirdparty_deps/win32" "windws"
+else
+	cp -r "./OpenRA_thirdparty_deps/win64" "windws"
+fi
+
+mv "windws" "./download"
+rm -rf "windws"
+
 
 rm -rf "./OpenRA_thirdparty_deps"
