@@ -32,13 +32,11 @@ fi
 unzip -o -qq "deps.zip" 
 
 if [ "$1" = "x86" ]; then
-	cp -r "./OpenRA_thirdparty_deps/win32" "windws"
+	cp -r "./OpenRA_thirdparty_deps/win32" "windows"
 else
-	cp -r "./OpenRA_thirdparty_deps/win64" "windws"
+	cp -r "./OpenRA_thirdparty_deps/win64" "windows"
 fi
 
-mv "windws" "./download"
-rm -rf "windws"
-
+mv "windows" "download"
 
 rm -rf "./OpenRA_thirdparty_deps"
