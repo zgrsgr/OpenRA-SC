@@ -77,10 +77,9 @@ namespace OpenRA
 		public WAngle Pitch
 		{
 			get
-			{	
+			{
 				if (LengthSquared == 0)
 					return WAngle.Zero;
-
 				return WAngle.ArcTan(Z, HorizontalLength);
 			}
 		}

@@ -344,7 +344,6 @@ namespace OpenRA.Traits
 		int Facing { get; set; }
 	}
 
-
 	public interface IFacingInfo : ITraitInfoInterface { int GetInitialFacing(); }
 
 	public interface ITraitInfoInterface { }

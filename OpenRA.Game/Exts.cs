@@ -116,10 +116,7 @@ namespace OpenRA
 		public static V GetOrAdd<K, V>(this Dictionary<K, V> d, K k, Func<K, V> createFn)
 		{
 			V ret;
-			if (!d.TryGetValue(k, out ret))
-			{
-				d.Add(k, ret = createFn(k));
-			}
+			if (!d.TryGetValue(k, out ret)) d.Add(k, ret = createFn(k));
 			return ret;
 		}
 

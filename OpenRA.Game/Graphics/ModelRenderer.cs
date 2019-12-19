@@ -78,7 +78,7 @@ namespace OpenRA.Graphics
 			shader.SetMatrix("View", view);
 		}
 
-		//TODO:模型渲染
+        // TODO:模型渲染
 		public ModelRenderProxy RenderAsync(
 			WorldRenderer wr, IEnumerable<ModelAnimation> models, WRot camera, float scale,
 			float[] groundNormal, WRot lightSource, float[] lightAmbientColor, float[] lightDiffuseColor,

@@ -388,7 +388,6 @@ namespace OpenRA.Server
 				if (bans.Contains(client.IpAddress))
 				{
 					Log.Write("server", "Rejected connection from {0}; Banned.", newConn.Socket.RemoteEndPoint);
-					// SendOrderTo(newConn, "ServerError", "You have been {0} from the server".F(Settings.Ban.Contains(client.IpAddress) ? "banned" : "temporarily banned"));
 					SendOrderTo(newConn, "ServerError", "该服务器已{0}你加入".F(Settings.Ban.Contains(client.IpAddress) ? "禁止" : "暂时禁止"));
 					DropClient(newConn);
 					return;
@@ -448,7 +447,6 @@ namespace OpenRA.Server
 						// var motdFile = Platform.ResolvePath(Platform.SupportDirPrefix, "motd.txt");
 						var motdFile = Platform.ResolvePath(Platform.SupportDirPrefix, "motdsc.txt");
 						if (!File.Exists(motdFile))
-							// File.WriteAllText(motdFile, "Welcome, have fun and good luck!");
 							File.WriteAllText(motdFile, "欢迎归队，指挥官！");
 
 						var motd = File.ReadAllText(motdFile);
@@ -457,13 +455,10 @@ namespace OpenRA.Server
 					}
 
 					if (Map.DefinesUnsafeCustomRules)
-						// SendOrderTo(newConn, "Message", "This map contains custom rules. Game experience may change.");
 						SendOrderTo(newConn, "Message", "该地图包含自定义的规则，游戏规则可能与往常不同。");
-
 					if (!LobbyInfo.GlobalSettings.EnableSingleplayer)
 						SendOrderTo(newConn, "Message", TwoHumansRequiredText);
 					else if (Map.Players.Players.Where(p => p.Value.Playable).All(p => !p.Value.AllowBots))
-						// SendOrderTo(newConn, "Message", "Bots have been disabled on this map.");
 						SendOrderTo(newConn, "Message", "该地图禁用了电脑玩家。");
 				};
 
@@ -523,7 +518,6 @@ namespace OpenRA.Server
 							if (notAuthenticated)
 							{
 								Log.Write("server", "Rejected connection from {0}; Not authenticated.", newConn.Socket.RemoteEndPoint);
-								// SendOrderTo(newConn, "ServerError", "Server requires players to have an OpenRA forum account");
 								SendOrderTo(newConn, "ServerError", "该服务器需要玩家拥有OpenRA社区账户");
 								DropClient(newConn);
 							}
@@ -552,7 +546,6 @@ namespace OpenRA.Server
 					if (Dedicated && (Settings.RequireAuthentication || Settings.ProfileIDWhitelist.Any()))
 					{
 						Log.Write("server", "Rejected connection from {0}; Not authenticated.", newConn.Socket.RemoteEndPoint);
-						// SendOrderTo(newConn, "ServerError", "Server requires players to have an OpenRA forum account");
 						SendOrderTo(newConn, "ServerError", "该服务器需要玩家拥有OpenRA社区账户");
 						DropClient(newConn);
 					}
@@ -665,7 +658,6 @@ namespace OpenRA.Server
 						if (handledBy == null)
 						{
 							Log.Write("server", "Unknown server command: {0}", o.TargetString);
-							// SendOrderTo(conn, "Message", "Unknown server command: {0}".F(o.TargetString));
 							SendOrderTo(conn, "Message", "未知服务器命令: {0}".F(o.TargetString));
 						}
 
@@ -840,12 +832,9 @@ namespace OpenRA.Server
 
 				var suffix = "";
 				if (State == ServerState.GameStarted)
-					// suffix = dropClient.IsObserver ? " (Spectator)" : dropClient.Team != 0 ? " (Team {0})".F(dropClient.Team) : "";
 					suffix = dropClient.IsObserver ? " (观众)" : dropClient.Team != 0 ? " (队伍 {0})".F(dropClient.Team) : "";
-				// SendMessage("{0}{1} has disconnected.".F(dropClient.Name, suffix));
 				SendMessage("{0}{1}已断开连接。".F(dropClient.Name, suffix));
 
-				// Send disconnected order, even if still in the lobby
 				DispatchOrdersToClients(toDrop, 0, Order.FromTargetString("Disconnected", "", true).Serialize());
 
 				LobbyInfo.Clients.RemoveAll(c => c.Index == toDrop.PlayerIndex);
@@ -864,7 +853,6 @@ namespace OpenRA.Server
 					if (nextAdmin != null)
 					{
 						nextAdmin.IsAdmin = true;
-						// SendMessage("{0} is now the admin.".F(nextAdmin.Name));
 						SendMessage("{0}成为了管理员。".F(nextAdmin.Name));
 					}
 				}

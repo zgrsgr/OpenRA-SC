@@ -59,7 +59,8 @@ namespace OpenRA
 		public CPos Location { get { return OccupiesSpace.TopLeft; } }
 		public WPos CenterPosition { get { return OccupiesSpace.CenterPosition; } }
 
-		public WRot Posture { get; private set; } 
+		public WRot Posture { get; private set; }
+
 		public int Facing { get { return facing.Facing; } }
 		public WRot Orientation
 		{

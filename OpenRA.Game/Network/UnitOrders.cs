@@ -21,7 +21,6 @@ namespace OpenRA.Network
 	public static class UnitOrders
 	{
 		public const int ChatMessageMaxLength = 2500;
-		// const string ServerChatName = "Battlefield Control";
 		const string ServerChatName = "战场控制";
 
 		static Player FindPlayerByClient(this World world, Session.Client c)
@@ -69,15 +68,15 @@ namespace OpenRA.Network
 						if (order.ExtraData == 0)
 						{
 							var p = world != null ? world.FindPlayerByClient(client) : null;
+
 							// var suffix = (p != null && p.WinState == WinState.Lost) ? " (Dead)" : "";
 							var suffix = (p != null && p.WinState == WinState.Lost) ? " (失败)" : "";
+
 							// suffix = client.IsObserver ? " (Spectator)" : suffix;
 							suffix = client.IsObserver ? " (观众)" : suffix;
 
 							if (orderManager.LocalClient != null && client != orderManager.LocalClient && client.Team > 0 && client.Team == orderManager.LocalClient.Team)
-								// suffix += " (Ally)";
 								suffix += " (友军))";
-
 							Game.AddChatLine(client.Name + suffix, client.Color, message);
 							break;
 						}
@@ -104,9 +103,7 @@ namespace OpenRA.Network
 						{
 							// Validate before adding the line
 							if (client.IsObserver || (player != null && player.WinState != WinState.Undefined))
-								// Game.AddChatLine("[Spectators] " + client.Name, client.Color, message);
 								Game.AddChatLine("[观众] " + client.Name, client.Color, message);
-
 							break;
 						}
 
@@ -115,9 +112,7 @@ namespace OpenRA.Network
 							&& world.LocalPlayer.WinState == WinState.Undefined;
 
 						if (valid && (isSameTeam || world.IsReplay))
-							// Game.AddChatLine("[Team" + (world.IsReplay ? " " + order.ExtraData : "") + "] " + client.Name, client.Color, message);
 							Game.AddChatLine("[队伍" + (world.IsReplay ? " " + order.ExtraData : "") + "] " + client.Name, client.Color, message);
-
 						break;
 					}
 
@@ -146,7 +141,6 @@ namespace OpenRA.Network
 									FieldLoader.GetValue<int>("SaveSyncFrame", saveSyncFrame.Value.Value);
 						}
 						else
-							// Game.AddSystemLine(ServerChatName, "The game has started.");
 							Game.AddSystemLine(ServerChatName, "游戏开始了。");
 
 						Game.StartGame(orderManager.LobbyInfo.GlobalSettings.Map, WorldType.Regular);
@@ -166,9 +160,7 @@ namespace OpenRA.Network
 
 				case "GameSaved":
 					if (!orderManager.World.IsReplay)
-						// Game.AddSystemLine(ServerChatName, "Game saved");
 						Game.AddSystemLine(ServerChatName, "游戏已保存。");
-
 					foreach (var nsr in orderManager.World.WorldActor.TraitsImplementing<INotifyGameSaved>())
 						nsr.GameSaved(orderManager.World);
 					break;
