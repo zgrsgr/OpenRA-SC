@@ -38,7 +38,7 @@ namespace OpenRA.Mods.Common.Traits
 
 		[Translate]
 		[Desc("Prefix to display in the tooltip for allied units.")]
-		public readonly string AllyPrefix = "Allied";
+		public readonly string AllyPrefix = "友军";
 
 		[Translate]
 		[Desc("Prefix to display in the tooltip for neutral units.")]
@@ -46,7 +46,7 @@ namespace OpenRA.Mods.Common.Traits
 
 		[Translate]
 		[Desc("Prefix to display in the tooltip for enemy units.")]
-		public readonly string EnemyPrefix = "Enemy";
+		public readonly string EnemyPrefix = "敌军";
 
 		[Desc("Player stances that the generic name should be shown to.")]
 		public readonly Stance GenericVisibility = Stance.None;
@@ -62,13 +62,13 @@ namespace OpenRA.Mods.Common.Traits
 				return Name;
 
 			if (GenericStancePrefix && !string.IsNullOrEmpty(AllyPrefix) && stance == Stance.Ally)
-				return AllyPrefix + " " + GenericName;
+				return AllyPrefix  + GenericName;
 
 			if (GenericStancePrefix && !string.IsNullOrEmpty(NeutralPrefix) && stance == Stance.Neutral)
-				return NeutralPrefix + " " + GenericName;
+				return NeutralPrefix + GenericName;
 
 			if (GenericStancePrefix && !string.IsNullOrEmpty(EnemyPrefix) && stance == Stance.Enemy)
-				return EnemyPrefix + " " + GenericName;
+				return EnemyPrefix  + GenericName;
 
 			return GenericName;
 		}

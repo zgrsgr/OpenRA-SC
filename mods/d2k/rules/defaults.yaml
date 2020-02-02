@@ -176,7 +176,7 @@
 	Inherits@2: ^SpriteActor
 	Inherits@SELECTION_MODE: ^FlatSelectionMode
 	Tooltip:
-		GenericName: Unit
+		GenericName: 载具
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -241,7 +241,7 @@
 		Type: CenterPosition
 		AlwaysVisibleStances: None
 	Tooltip:
-		GenericName: Destroyed Unit
+		GenericName: 载具残骸
 	ScriptTriggers:
 	WithFacingSpriteBody:
 	HitShape:
@@ -267,7 +267,7 @@
 ^AircraftHusk:
 	Inherits: ^Husk
 	Tooltip:
-		GenericName: Unit
+		GenericName: 飞行器
 	WithShadow:
 	FallsToEarth:
 		Spins: False
@@ -281,7 +281,7 @@
 	Inherits@3: ^SpriteActor
 	Inherits@SELECTION_MODE: ^FlatSelectionMode
 	Tooltip:
-		GenericName: Unit
+		GenericName: 步兵
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -353,7 +353,7 @@
 	Inherits@2: ^SpriteActor
 	Interactable:
 	Tooltip:
-		GenericName: Unit
+		GenericName: 飞行器
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -375,7 +375,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Tooltip:
-		GenericName: Structure
+		GenericName: 建筑
 	Huntable:
 	OwnerLostAction:
 		Action: Kill

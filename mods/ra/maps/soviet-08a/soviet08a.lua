@@ -128,8 +128,8 @@ WorldLoaded = function()
 	-- DestroyVillageObjective = ussr.AddSecondaryObjective("Destroy the village of Allied sympathizers.")
 	-- BeatUSSR = greece.AddPrimaryObjective("Defeat the Soviet forces.")
 	
-	KillAll = ussr.AddPrimaryObjective("摧毁盟军所有建筑和单位。")
-	DestroyVillageObjective = ussr.AddSecondaryObjective("摧毁盟军的支持者所在的村庄。")
+	KillAll = ussr.AddPrimaryObjective("肃清所有盟军武装力量。")
+	DestroyVillageObjective = ussr.AddSecondaryObjective("摧毁盟军支持者所在的村庄。")
 	BeatUSSR = greece.AddPrimaryObjective("消灭苏军。")
 
 	Trigger.OnObjectiveCompleted(ussr, function(p, id)

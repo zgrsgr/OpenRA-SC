@@ -243,7 +243,7 @@ WorldLoaded = function()
 	-- ussrObj = ussr.AddPrimaryObjective("Deny the allies!")
 
 	SecureObjective = player.AddPrimaryObjective("保护车队的运输路线。")
-	ConquestObjective = player.AddPrimaryObjective("消灭这一地区的苏军势力。")
+	ConquestObjective = player.AddPrimaryObjective("肃清所有苏联军事力量。")
 	-- SecureObjective = player.AddPrimaryObjective("Secure the convoy's path.")
 	-- ConquestObjective = player.AddPrimaryObjective("Eliminate the entire soviet presence in this area.")
 

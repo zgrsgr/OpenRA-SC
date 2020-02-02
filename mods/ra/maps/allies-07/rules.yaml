@@ -6,8 +6,7 @@ World:
 	LuaScript:
 		Scripts: allies07.lua, allies07-AI.lua
 	MissionData:
-		Briefing: 陆军司令部第十六指挥中心\n最高机密\n致：战地指挥官A9\n\n我军截获的情报显示，\n苏军的铁幕计划因我军的破坏而陷入僵局。\n大功一件，指挥官！\n\n被我军截获的信号来自于博恩霍姆，\n这一地区显然与铁幕研究有强烈的联系。\n你的任务是：\n占领当地的苏军雷达站，\n并彻底摧毁其潜艇生产能力。\n\n\n\n确认代码1138\n\n传输结束\n
-		# Briefing: LANDCOM 16 HQS.\nTOP SECRET.\nTO: FIELD COMMANDER A9\n\nINTERCEPTION OF SOVIET COMMUNIQUE INDICATES THEIR IRON CURTAIN RESEARCH WAS SET BACK BY ESPIONAGE. EXCELLENT WORK, COMMANDER!\n\nCOMMUNIQUE WAS TRACED BACK TO SECRET SOVIET BASE IN BORNHOLM. INVESTIGATE POSSIBLE CONNECTION WITH IRON CURTAIN RESEARCH. CAPTURE RADAR CENTER AND DESTROY SUB PRODUCTION CAPABILITY.\n\nCONFIRMATION CODE 1138.\n\nTRANSMISSION ENDS.\n
+		Briefing: 陆军司令部第十六指挥中心\n最高机密\n致：战地指挥官A9\n\n我军截获的情报显示，\n苏联的铁幕计划因我军的破坏而陷入僵局。\n大功一件，指挥官！\n\n我们截获了一段博恩霍姆的敌方通信，\n这一地区显然与铁幕研究有强烈的联系。\n你的任务是：\n占领当地的敌方雷达站，\n并彻底摧毁其潜艇生产能力。\n\n\n\n确认代码1138\n\n传输结束\n
 		StartVideo: shorbom1.vqa
 		WinVideo: shorbom2.vqa
 		LossVideo: shipsink.vqa

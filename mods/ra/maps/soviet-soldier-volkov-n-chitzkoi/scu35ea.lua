@@ -81,9 +81,9 @@ WorldLoaded = function()
 	-- KeepChitzkoiAlive = player.AddSecondaryObjective("Keep Chitzkoi Alive.")
 	
 	DestroyControlCenter = player.AddPrimaryObjective("摧毁控制中心。")
-	KeepTanksAlive = player.AddPrimaryObjective("在破坏合金加工设施之前，你的坦克军团\n不能被歼灭。")
+	KeepTanksAlive = player.AddPrimaryObjective("在破坏合金加工设施之前，\n苏联装甲师不得被歼灭。")
 	KeepVolkovAlive = player.AddPrimaryObjective("沃尔科夫必须存活。")
-	KeepChitzkoiAlive = player.AddSecondaryObjective("保证契琴科伊存活。")
+	KeepChitzkoiAlive = player.AddSecondaryObjective("确保契琴科伊存活。")
 
 	Trigger.OnPlayerWon(player, function()
 		Media.PlaySpeechNotification(player, "MissionAccomplished")

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 04a: Mao Civil War
+Title: 04a: 内斗内行
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 11,6,46,34
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 04c: Take Białystok
+Title: 04c: 领先一步
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 14,14,48,44
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

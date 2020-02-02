@@ -832,8 +832,7 @@ Rules:
 		ObjectivesPanel:
 			PanelName: MISSION_OBJECTIVES
 		MissionData:
-			Briefing: 苏俄试图大举入侵法国，\n他们正在诺曼底进行大规模登陆。\n\n尽快修复我们的前线阵地，\n并抵挡苏军的强大攻势。\n\n我们的援军正从法国腹地向诺曼底进发，\n请务必妥善利用你手边的一切资源，\n并提防那些热衷于扫荡和突袭的苏联伞兵。\n\n情报显示，\n苏军将会测试他们的新式米格战机，\n抬头时记得小心，\n祝你好运，指挥官！\n\n\n\n此战役剧本由 Umair Azfar 制作，\nOpenRA汉化组代为收录至RASC。\n
-			#Russia has been trying to invade Normandy which has left it desolated. Repair the structures in the forward outpost and hold out against the Russian invasion. Reinforcements are on their way; make use of any resources you can find.\n\nBe wary of Russian paratroopers as they will try to destroy any target of opportunity.\n\nGood Luck Commander!
+			Briefing: 苏俄正试图大举入侵法国，\n并准备在诺曼底进行大规模登陆。\n\n尽快修复我们的前线阵地，\n抵挡苏军的强大攻势。\n\n我们的援军正从法国腹地向诺曼底进发，\n请务必妥善利用你手边的一切资源，\n并提防那些热衷于扫荡和突袭的苏联伞兵。\n\n情报显示，\n苏军将会测试他们的新式米格战机，\n抬头时记得小心，\n祝你好运，指挥官！\n\n\n\n此战役剧本由 Umair Azfar 制作，\nOpenRA汉化组代为收录至RASC。\n
 		MapBuildRadius:
 			AllyBuildRadiusLocked: True
 			AllyBuildRadiusEnabled: False

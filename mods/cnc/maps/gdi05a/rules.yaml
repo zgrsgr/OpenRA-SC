@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: rain
 	MissionData:
-		Briefing: A GDI field base is under attack. They have fended off one attack but will not survive another.\n\nMove to the base, repair the structures and then launch a strike force to destroy the Nod base in the area.\n\nDestroy all Nod units and structures.
+		Briefing: 我军一处基地正遭到攻击！\n虽然他们已经顽强地击退了一波冲锋，\n但显然无力抵御Nod的轮番冲击。\n\n趁一切为时未晚，\n立刻前去支援他们！\n一旦危险解除，\n抓紧修复这座基地，\n并着手对Nod发起反攻，\n彻底肃清本地区所有的Nod武装力量。\n
 		BackgroundVideo: podium.vqa
 		BriefingVideo: gdi5.vqa
 		StartVideo: seige.vqa

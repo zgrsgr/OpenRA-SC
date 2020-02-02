@@ -3,7 +3,7 @@ carryall.reinforce:
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Carryall
+		Name: 运输机
 	Health:
 		HP: 48000
 	Armor:
@@ -45,7 +45,7 @@ carryall.reinforce:
 	Buildable:
 		BuildDuration: 648
 		BuildDurationModifier: 40
-		Description: Large winged, planet-bound ship\n  Automatically lifts harvesters from and to Spice.\n  Lifts vehicles to Repair Pads when ordered.
+		Description: 专用于运输载具的大型飞行器\n自动在基地与矿区间运输香料采集车\n可以手动操作以将受损载具运送至维修平台进行维修
 
 carryall:
 	Inherits: carryall.reinforce

@@ -41,7 +41,7 @@ FinishTimer = function()
 		if i % 2 == 0 then
 			c = HSLColor.White
 		end
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("友军部队到达！", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("援军抵达！", c) end)
 		-- Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("Allied forces have arrived!", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(10), function() UserInterface.SetMissionText("") end)

@@ -6,8 +6,7 @@ World:
 	LuaScript:
 		Scripts: allies02.lua
 	MissionData:
-		Briefing: 运载重要物资的补给车队将在10分钟后通过\n本区域，\n但是如你所见，\n此处已经被苏军完全封锁。\n为了确保物资能够按时抵达前线，\n我们认为，\n彻底肃清本地的苏军是唯一的选择。\n\n补给车队将从西北方向进入战区，\n时间有限，务必迅速完成任务。\n
-		# Briefing: A critical supply convoy is due through this area in 10 minutes, but Soviet forces have blocked the road in several places.\n\nUnless you can clear them out, those supplies will never make it to the front.\n\nThe convoy will come from the northwest, and time is short so work quickly.
+		Briefing: 10分钟后，\n运载我军重要物资的车队将通过本区域。\n但是如你所见，\n此处已经被苏联军队完全封锁。\n为了确保物资能够按时抵达前线，\n我们认为，\n彻底肃清本地的苏联军事力量是唯一的选择。\n\n补给车队将从西北方向进入战区，\n时间有限，务必迅速完成任务。\n
 		BriefingVideo: ally2.vqa
 		StartVideo: mcv.vqa
 		WinVideo: montpass.vqa
@@ -26,8 +25,8 @@ World:
 		Default: easy
 	TimeLimitManager:
 		CountdownLabel: MISSION_TEXT
-		CountdownText: The convoy will arrive in {0}
-		Notification: {0} minute{1} remaining
+		CountdownText: 车队还有{0}到达
+		Notification: 倒计时还有{0}分钟
 		SkipTimerExpiredNotification: True
 
 APWR:

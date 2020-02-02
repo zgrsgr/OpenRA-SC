@@ -22,7 +22,7 @@ SendInsertionHelicopter = function()
 	local tanya = passengers[1]
 	Trigger.OnKilled(tanya, TanyaKilledInAction)
 	Trigger.AfterDelay(DateTime.Seconds(4), function()
-		Media.DisplayMessage("根据参加这场行动的合约，我必须接到你的明确命令之后\n才会开火，指挥官！", "谭雅")
+		Media.DisplayMessage("指挥官，根据参加这场行动的合约，\n没有你的命令我不会贸然开火！", "谭雅")
 		-- Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
 	end)
 end
@@ -130,7 +130,7 @@ CreateEinstein = function()
 	einstein = Actor.Create(EinsteinType, true, { Location = EinsteinSpawnPoint.Location, Owner = player })
 	einstein.Scatter()
 	Trigger.OnKilled(einstein, RescueFailed)
-	ExtractObjective = player.AddPrimaryObjective("等待直升机抵达并解救爱因斯坦。")
+	ExtractObjective = player.AddPrimaryObjective("等待直升机抵达并撤离爱因斯坦。")
 	-- ExtractObjective = player.AddPrimaryObjective("Wait for the helicopter and extract Einstein.")
 	Trigger.AfterDelay(DateTime.Seconds(1), function() Media.PlaySpeechNotification(player, "TargetFreed") end)
 end

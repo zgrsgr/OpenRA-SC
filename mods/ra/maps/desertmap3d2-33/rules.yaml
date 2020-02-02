@@ -16,8 +16,6 @@ World:
 		Scripts: desert-zjordyedit.lua
 	MissionData:
 		Briefing: 由Zjordy制作的多人在线合作对抗地图。\n本地图以OpenRA主界面背景图为蓝本，\n由OpenRA汉化组代为收录。\n --------------- \n小队1和小队2固定为苏联与盟军。\n与传统对抗地图不同，\n盟军玩家必须涉水才能抵达正面战场。\n双方小队都有一名已处于战争状态的AI队友。\n工具箱内可以获得本地图的独特单位——战地机甲！\n-------------\n究竟谁能为这场永无止境的战斗划上句点？\n那位英雄会是你吗？
-		#This is the shellmap made into an online conquest by Zjordy. \n --- \n Team 1 Soviet vs Team 2 Allies. \n This map is just like a normal conquest but Allies start in the water with a transport ship carrying a MCV. \n Both teams have an AI friend that are already in battle. \n Crates can contain a bonus Mech Robot unit \n --- \n Who will win this everlasting battle? You decide!
-
 
 SHARP:
 	Inherits: ^Soldier

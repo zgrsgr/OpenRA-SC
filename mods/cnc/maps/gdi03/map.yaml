@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 03:   Destroy the SAM Sites
+Title: 03:   开路先锋
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 1,25,45,37
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

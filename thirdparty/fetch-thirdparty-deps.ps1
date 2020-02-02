@@ -17,5 +17,12 @@ $shellApp = New-Object -ComObject Shell.Application
 $files = $shellApp.NameSpace("$CurrentyDir.\deps.zip").Items()
 $shellApp.NameSpace("$CurrentyDir").CopyHere($files)
 
-mv "$CurrentyDir\OpenRA_thirdparty_deps\windows" "$CurrentyDir\download"
+if ([IntPtr]::Size -eq 8)
+{
+	mv "$CurrentyDir\OpenRA_thirdparty_deps\win64" "$CurrentyDir\download"
+}
+else
+{
+	mv "$CurrentyDir\OpenRA_thirdparty_deps\win32" "$CurrentyDir\download"
+} 
 rm -path "$CurrentyDir\OpenRA_thirdparty_deps" -Recurse

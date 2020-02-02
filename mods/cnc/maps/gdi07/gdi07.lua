@@ -164,15 +164,15 @@ WorldLoaded = function()
 	Camera.Position = spawnpoint2.CenterPosition
 
 	Trigger.OnObjectiveAdded(GDI, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
 	Trigger.OnObjectiveCompleted(GDI, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 
 	Trigger.OnObjectiveFailed(GDI, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerWon(GDI, function()

@@ -73,7 +73,7 @@ SetupAlliedUnits = function()
 	if TanyaType == "e7.noautotarget" then
 		Trigger.AfterDelay(DateTime.Seconds(2), function()
 			-- Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
-			Media.DisplayMessage("根据参加这场行动的合约，我必须接到你明确的命令之后\n才会开火，指挥官！", "谭雅")
+			Media.DisplayMessage("指挥官，根据参加这场行动的合约，\n没有你的命令我不会贸然开火！", "谭雅")
 		end)
 	end
 

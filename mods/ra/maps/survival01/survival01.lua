@@ -178,7 +178,7 @@ FinishTimer = function()
 			c = HSLColor.White
 		end
 
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("我们的法国友军抵达了！", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("援军抵达！", c) end)
 		-- Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("Our french allies have arrived!", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(10), function() UserInterface.SetMissionText("") end)
@@ -274,10 +274,10 @@ TimerExpired = function()
 	Reinforcements.Reinforce(allies, FrenchReinforcements, { SovietEntryPoint7.Location, Alliesbase.Location })
 
 	if DestroyObj then
-		KillObj = allies.AddPrimaryObjective("接过法国增援部队的控制权并消灭所有剩余的苏\n军部队。")
+		KillObj = allies.AddPrimaryObjective("接过法国增援部队的指挥权，\n并肃清所有苏联军事力量。")
 		-- KillObj = allies.AddPrimaryObjective("Take control of French reinforcements and\nkill all remaining Soviet forces.")
 	else
-		DestroyObj = allies.AddPrimaryObjective("接过法国增援部队的控制权并摧毁附近的苏\n军建筑。")
+		DestroyObj = allies.AddPrimaryObjective("接过法国增援部队的指挥权，\n并摧毁所有苏联建筑。")
 		-- DestroyObj = allies.AddPrimaryObjective("Take control of French reinforcements and\ndismantle the nearby Soviet base.")
 	end
 
@@ -316,10 +316,10 @@ InitObjectives = function()
 	-- CaptureAirfields = allies.AddSecondaryObjective("Capture and hold the Soviet airbase\nin the northeast.")
 	-- SovietObj = soviets.AddPrimaryObjective("Eliminate all Allied forces.")
 
-	SurviveObj = allies.AddPrimaryObjective("在援军到达之前守住你的位置并将敌军阻挡\n在外。")
+	SurviveObj = allies.AddPrimaryObjective("在援军到达之前坚守阵地。")
 	KillSams = allies.AddSecondaryObjective("在援军到达之前摧毁两座地对空导弹阵地。")
-	Media.DisplayMessage("苏军干扰了我们和全球定位系统的通讯，我们需\n要调查他们的新技术。", "战场控制")
-	CaptureAirfields = allies.AddSecondaryObjective("占领东北部的苏军空军基地并守住它。")
+	Media.DisplayMessage("苏军干扰了我们和全球定位系统的通讯，\n我们需要调查他们的新技术。", "战场控制")
+	CaptureAirfields = allies.AddSecondaryObjective("占领并坚守东北部的苏联空军基地。")
 	SovietObj = soviets.AddPrimaryObjective("消灭所有盟军部队。")
 	Trigger.OnObjectiveCompleted(allies, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
@@ -335,7 +335,7 @@ InitObjectives = function()
 	end)
 	Trigger.OnPlayerWon(allies, function()
 		Media.PlaySpeechNotification(allies, "MissionAccomplished")
-		Media.DisplayMessage("在法国的部队幸存了下来并且消灭了该地区\n的苏军！", "战场控制")
+		Media.DisplayMessage("我们成功了！", "战场控制")
 		-- Media.DisplayMessage("The French forces have survived and dismantled the Soviet presence in the area!")
 	end)
 end
@@ -375,12 +375,12 @@ InitMission = function()
 	Trigger.OnAllKilledOrCaptured(SovietBuildings, function()
 		if DestroyObj then
 			if not soviets.HasNoRequiredUnits() then
-				KillObj = allies.AddPrimaryObjective("消灭剩余的苏军部队。")
+				KillObj = allies.AddPrimaryObjective("肃清所有苏联武装力量。")
 				-- KillObj = allies.AddPrimaryObjective("Kill all remaining Soviet forces.")
 			end
 			allies.MarkCompletedObjective(DestroyObj)
 		else
-			DestroyObj = allies.AddPrimaryObjective("摧毁附近的苏军建筑。")
+			DestroyObj = allies.AddPrimaryObjective("摧毁所有苏联建筑。")
 			-- DestroyObj = allies.AddPrimaryObjective("Dismantle the nearby Soviet base.")
 			allies.MarkCompletedObjective(DestroyObj)
 		end

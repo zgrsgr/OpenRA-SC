@@ -212,7 +212,6 @@ World:
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
 	MPStartLocations:
-	MPStartLocations:
 		SeparateTeamSpawnsCheckboxLabel: 远离敌军出生点
 		SeparateTeamSpawnsCheckboxDescription: 启用后所有随机出生的玩家将被分配到尽可能远离对手的位置
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6

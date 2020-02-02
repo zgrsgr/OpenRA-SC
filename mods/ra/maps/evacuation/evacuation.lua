@@ -235,7 +235,7 @@ SetupTriggers = function()
 
 	Trigger.OnAllKilledOrCaptured(Sams, function()
 		allies1.MarkCompletedObjective(objDestroySamSites)
-		objExtractEinstein = allies1.AddPrimaryObjective("在撤离点等待直升机然后撤离爱因斯坦。")
+		objExtractEinstein = allies1.AddPrimaryObjective("等待直升机抵达并撤离爱因斯坦。")
 		-- objExtractEinstein = allies1.AddPrimaryObjective("Wait for a helicopter at the LZ and extract Einstein.")
 		Actor.Create("flare", true, { Owner = allies1, Location = ExtractionLZ.Location + CVec.New(1, -1) })
 		Beacon.New(allies1, ExtractionLZ.CenterPosition)
@@ -295,7 +295,7 @@ SpawnTanya = function()
 
 	if Map.LobbyOption("difficulty") ~= "easy" and allies1.IsLocalPlayer then
 		Trigger.AfterDelay(DateTime.Seconds(2), function()
-			Media.DisplayMessage("根据参加这场行动的合约，我必须接到你的明确命令之后\n才会开火，指挥官！", "谭雅")
+			Media.DisplayMessage("指挥官，根据参加这场行动的合约，\n没有你的命令我不会贸然开火！", "谭雅")
 			-- Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
 		end)
 	end
@@ -379,7 +379,7 @@ WorldLoaded = function()
 
 	objHoldPosition = allies2.AddPrimaryObjective("坚守你的基地。")
 	objLimitLosses = allies2.AddSecondaryObjective("不要损失超过" .. DeathThreshold[Map.LobbyOption("difficulty")] .. "个的单位。")
-	objCutSovietPower = allies2.AddSecondaryObjective("摧毁苏军的电力供应。")
+	objCutSovietPower = allies2.AddSecondaryObjective("摧毁苏联所有供电设施。")
 
 	SetupTriggers()
 	SetupSoviets()

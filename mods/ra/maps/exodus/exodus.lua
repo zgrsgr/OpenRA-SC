@@ -347,8 +347,8 @@ WorldLoaded = function()
 			-- destroyAirbases = player.AddSecondaryObjective("Destroy the nearby Soviet airbases.")
 			-- evacuateMgg = player.AddSecondaryObjective("Evacuate at least one mobile gap generator.")
 			evacuateUnits = player.AddPrimaryObjective("至少撤离" .. unitsEvacuatedThreshold .. "单位。")
-			destroyAirbases = player.AddSecondaryObjective("摧毁附近的苏军空军基地。")
-			evacuateMgg = player.AddSecondaryObjective("撤离一辆机动裂缝产生器。")
+			destroyAirbases = player.AddSecondaryObjective("摧毁附近的苏联空军基地。")
+			evacuateMgg = player.AddSecondaryObjective("撤离一台机动裂缝产生器。")
 		end
 	end)
 

@@ -165,7 +165,7 @@ Tick = function()
 
 	if StartTimer then
 		if ticked > 0 then
-			UserInterface.SetMissionText("苏军装甲部队将在" .. Utils.FormatTime(ticked) .. "抵达战场", TimerColor)
+			UserInterface.SetMissionText("苏联装甲部队将在" .. Utils.FormatTime(ticked) .. "抵达战场", TimerColor)
 			-- UserInterface.SetMissionText("Soviet armored battalion arrives in " .. Utils.FormatTime(ticked), TimerColor)
 			ticked = ticked - 1
 		elseif ticked == 0 then
@@ -198,7 +198,7 @@ WorldLoaded = function()
 	-- BeatAllies = ussr.AddPrimaryObjective("Defeat the Allied forces.")
 
 	CaptureRadarDomeObj = greece.AddPrimaryObjective("占领雷达站。")
-	DestroySubPens = greece.AddPrimaryObjective("摧毁苏军的所有潜艇母港。")
+	DestroySubPens = greece.AddPrimaryObjective("摧毁所有苏联潜艇母港。")
 	ClearSubActivity = greece.AddSecondaryObjective("清除这个区域的所有潜艇。")
 	BeatAllies = ussr.AddPrimaryObjective("击败盟军的部队。")
 

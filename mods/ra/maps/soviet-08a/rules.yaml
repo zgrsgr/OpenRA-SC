@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: soviet08a.lua, soviet08a-AI.lua
 	MissionData:
-		Briefing: 厄尔巴岛上出现了盟军活动。\n显然盟军试图以此为跳板，\n向苏联本土发动突袭。\n\n以下是你的任务目标：\n击溃所有盟军舰队，\n肃清岛上盟军，\n为苏联重新获取该岛的控制权。\n\n岛上的居民也已背叛我们，\n反革命和叛徒的下场只有一个，\n你清楚该怎么做。\n
+		Briefing: 厄尔巴岛上出现了盟军活动，\n岛上的居民也已投靠盟军。\n\n显然盟军试图以此为跳板，\n向苏联本土发动突袭。\n\n以下是你的任务目标：\n击溃所有盟军舰队，\n肃清岛上盟军，\n为苏联重新获取该岛的控制权。\n\n一切反革命和叛徒行径的下场只有一个，\n你清楚该怎么做。\n
 		BriefingVideo: soviet8.vqa
 		StartVideo: slntsrvc.vqa
 		WinVideo: bombrun.vqa

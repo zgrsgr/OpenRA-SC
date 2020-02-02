@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: allies01.lua
 	MissionData:
-		Briefing: 爱因斯坦博士被俘了。\n幸运的是，\n我军情报人员已经定位了关押他的苏军基地，\n现在由谭雅带领的营救小队已经就绪，\n请在行动中确保爱因斯坦博士和谭雅的安全。\n\n\n提示：\n磁暴线圈虽然强大，\n但可以通过破坏发电厂使其停止工作。\n
+		Briefing: 爱因斯坦博士被俘了。\n幸运的是，\n我军情报人员已经定位了关押他的苏联基地，\n现在由谭雅带领的营救小队已经就绪，\n请在行动中确保爱因斯坦博士和谭雅的安全。\n\n提示：\n磁暴线圈虽然强大，\n但可以通过破坏发电厂使其停止工作。\n
 		BackgroundVideo: prolog.vqa
 		BriefingVideo: ally1.vqa
 		StartVideo: landing.vqa

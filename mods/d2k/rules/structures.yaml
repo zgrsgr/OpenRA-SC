@@ -13,7 +13,7 @@
 		Template: 88
 		TerrainTypes: Rock
 	Tooltip:
-		Name: Concrete
+		Name: 混凝土地基
 		GenericName: Structure
 	RenderSprites:
 	KillsSelf:
@@ -21,7 +21,7 @@
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
-		Description: Provides a strong foundation that prevents\ndamage from the terrain.
+		Description: 使建筑免疫沙土地形的侵蚀
 
 concretea:
 	Inherits: ^concrete
@@ -29,7 +29,7 @@ concretea:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Concrete Slab
+		Name: 混凝土地基
 	Valued:
 		Cost: 20
 	Buildable:
@@ -43,7 +43,7 @@ concreteb:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Tooltip:
-		Name: Large Concrete Slab
+		Name: 大型混凝土地基
 	Valued:
 		Cost: 50
 	Buildable:
@@ -55,7 +55,7 @@ concreteb:
 construction_yard:
 	Inherits: ^Building
 	Buildable:
-		Description: Produces structures.
+		Description: 建造各类建筑
 	-DamagedByTerrain:
 	Building:
 		Footprint: xxx xxx ===
@@ -82,7 +82,7 @@ construction_yard:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Construction Yard
+		Name: 建筑工厂
 	CustomSellValue:
 		Value: 2000
 	SpawnActorsOnSell:
@@ -133,13 +133,13 @@ wind_trap:
 		BuildPaletteOrder: 20
 		BuildDuration: 180
 		BuildDurationModifier: 40
-		Description: Provides power for other structures.
+		Description: 为基地其他建筑提供电力
 	Selectable:
 		Bounds: 64,64
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: Wind Trap
+		Name: 风力发电机
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -180,13 +180,13 @@ barracks:
 		BuildPaletteOrder: 50
 		BuildDuration: 231
 		BuildDurationModifier: 40
-		Description: Trains infantry.
+		Description: 训练步兵
 	Selectable:
 		Bounds: 64,64
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: Barracks
+		Name: 兵营
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -264,13 +264,13 @@ refinery:
 		BuildPaletteOrder: 30
 		BuildDuration: 540
 		BuildDurationModifier: 40
-		Description: Harvesters unload Spice here for processing.
+		Description: 精炼香料资源\n为战斗提供经济支持
 	Selectable:
 		Bounds: 96,64
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Spice Refinery
+		Name: 香料精炼厂
 	Building:
 		Footprint: =xx xx= ===
 		Dimensions: 3,3
@@ -330,13 +330,13 @@ silo:
 		BuildPaletteOrder: 120
 		BuildDuration: 135
 		BuildDurationModifier: 40
-		Description: Stores excess harvested Spice.
+		Description: 储存富余的香料
 	Selectable:
 		Bounds: 32,32
 	Valued:
 		Cost: 120
 	Tooltip:
-		Name: Silo
+		Name: 仓库
 	RequiresBuildableArea:
 		Adjacent: 4
 	-GivesBuildableArea:
@@ -380,13 +380,13 @@ light_factory:
 		BuildPaletteOrder: 60
 		BuildDuration: 277
 		BuildDurationModifier: 40
-		Description: Produces light vehicles.
+		Description: 制造轻型载具
 	Selectable:
 		Bounds: 96,64
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Light Factory
+		Name: 轻型战车工厂
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
@@ -473,13 +473,13 @@ heavy_factory:
 		BuildPaletteOrder: 90
 		BuildDuration: 648
 		BuildDurationModifier: 40
-		Description: Produces heavy vehicles.
+		Description: 制造大型载具
 	Selectable:
 		Bounds: 96,96
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Heavy Factory
+		Name: 战车工厂
 	Building:
 		Footprint: _x_ xxx =xX ===
 		Dimensions: 3,4
@@ -578,13 +578,13 @@ outpost:
 		BuildPaletteOrder: 80
 		BuildDuration: 270
 		BuildDurationModifier: 40
-		Description: Provides a radar map of the battlefield.\n  Requires power to operate.
+		Description: 提供战场视野\n提供战术地图\n需要电力才能运转
 	Selectable:
 		Bounds: 96,64
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Outpost
+		Name: 前哨站
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -622,14 +622,14 @@ outpost:
 starport:
 	Inherits: ^Building
 	Tooltip:
-		Name: Starport
+		Name: 星港
 	Buildable:
 		Prerequisites: heavy_factory, outpost, ~techlevel.high
 		Queue: Building
 		BuildPaletteOrder: 70
 		BuildDuration: 540
 		BuildDurationModifier: 40
-		Description: Dropzone for quick reinforcements, at a price.
+		Description: 高价购买援军的场所\n购买的单位将会着陆于此
 	Valued:
 		Cost: 1500
 	Building:
@@ -721,13 +721,13 @@ wall:
 		BuildPaletteOrder: 130
 		BuildDuration: 54
 		BuildDurationModifier: 40
-		Description: Stop units and blocks enemy fire.
+		Description: 阻止步兵与载具通过\n并可以阻挡枪炮类型的火力
 	Valued:
 		Cost: 20
 	CustomSellValue:
 		Value: 0
 	Tooltip:
-		Name: Concrete Wall
+		Name: 混凝土围墙
 		GenericName: Structure
 	AppearsOnRadar:
 	Building:
@@ -785,11 +785,11 @@ medium_gun_turret:
 		BuildPaletteOrder: 100
 		BuildDuration: 231
 		BuildDurationModifier: 40
-		Description: Defensive structure.\n  Strong vs Tanks\n  Weak vs Infantry, Aircraft
+		Description: 反装甲防御设施\n\n·强势对抗：载具\n·弱势对抗：步兵
 	Valued:
 		Cost: 550
 	Tooltip:
-		Name: Gun Turret
+		Name: 反坦克炮塔
 	Building:
 		BuildSounds: CHUNG.WAV
 	RequiresBuildableArea:
@@ -833,11 +833,11 @@ large_gun_turret:
 		BuildPaletteOrder: 110
 		BuildDuration: 270
 		BuildDurationModifier: 40
-		Description: Defensive structure.\n  Strong vs Infantry, Aircraft\n  Weak vs Tanks\n\n  Requires power to operate.
+		Description: 防空设施\n\n·强势对抗：步兵、飞行器\n·弱势对抗：载具\n需要电力才能运转
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Rocket Turret
+		Name: 高爆火箭发射台
 	Building:
 		BuildSounds: CHUNG.WAV
 	RequiresBuildableArea:
@@ -877,11 +877,11 @@ repair_pad:
 		BuildPaletteOrder: 150
 		BuildDuration: 324
 		BuildDurationModifier: 40
-		Description: Repairs vehicles.\n Allows construction of MCVs
+		Description: 消耗一定资源高效修复载具
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Repair Pad
+		Name: 维修平台
 	Building:
 		Footprint: =x= xxx =x=
 		Dimensions: 3,3
@@ -932,13 +932,13 @@ high_tech_factory:
 		BuildPaletteOrder: 140
 		BuildDuration: 405
 		BuildDurationModifier: 40
-		Description: Unlocks advanced technology.
+		Description: 解锁先进科技
 	Selectable:
 		Bounds: 96,96
 	Valued:
 		Cost: 1150
 	Tooltip:
-		Name: High Tech Factory
+		Name: 科技中心
 	ProductionFromMapEdge:
 		Produces: Aircraft, Upgrade
 	ProductionBar:
@@ -988,12 +988,12 @@ high_tech_factory:
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: ornistrike
-		Description: Air Strike
+		Description: 神鹰空袭
 		Prerequisites: ~techlevel.superweapons, upgrade.hightech
 		ChargeInterval: 7500
 		SquadSize: 3
 		SquadOffset: -1536, 1024, 0
-		LongDesc: Ornithopters hit the target with bombs
+		LongDesc: 神鹰战机将在目标区域执行轰炸
 		UnitType: ornithopter
 		DisplayBeacon: True
 		CameraActor: camera
@@ -1027,13 +1027,13 @@ research_centre:
 		BuildPaletteOrder: 160
 		BuildDuration: 270
 		BuildDurationModifier: 40
-		Description: Unlocks advanced tanks.
+		Description: 解锁高级载具
 	Selectable:
 		Bounds: 96,96
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: IX Research Center
+		Name: 第九科研中心
 	Building:
 		Footprint: _X_ xxx XXX ===
 		Dimensions: 3,4
@@ -1078,13 +1078,13 @@ palace:
 		BuildPaletteOrder: 170
 		BuildDuration: 810
 		BuildDurationModifier: 40
-		Description: Unlocks elite infantry and weapons.
+		Description: 解锁精英步兵与超级武器
 	Selectable:
 		Bounds: 96,96
 	Valued:
 		Cost: 1600
 	Tooltip:
-		Name: Palace
+		Name: 宫殿
 	Building:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
@@ -1150,8 +1150,8 @@ palace:
 		RequiresCondition: harkonnen
 		Prerequisites: ~techlevel.superweapons, ~palace.nuke
 		ChargeInterval: 7500
-		Description: Death Hand
-		LongDesc: Launches an atomic missile at a target location
+		Description: 死亡之手
+		LongDesc: 向目标区域发射一枚核弹
 		BeginChargeSpeechNotification: DeathHandMissilePrepping
 		EndChargeSpeechNotification: DeathHandMissileReady
 		LaunchSpeechNotification: MissileLaunchDetected
@@ -1171,8 +1171,8 @@ palace:
 		TrailSequences: idle
 		SupportPowerPaletteOrder: 40
 	ProduceActorPower@fremen:
-		Description: Recruit Fremen
-		LongDesc: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery\n  Special Ability: Invisibility
+		Description: 弗里曼死士
+		LongDesc: 装备突击步枪与火箭筒的精英步兵\n\n·强势对抗：步兵、载具\n·弱势对抗：炮兵\n·特殊能力：隐形
 		Icon: fremen
 		PauseOnCondition: disabled
 		RequiresCondition: atreides
@@ -1185,8 +1185,9 @@ palace:
 		OrderName: ProduceActorPower.Fremen
 		SupportPowerPaletteOrder: 20
 	ProduceActorPower@saboteur:
-		Description: Recruit Saboteur
-		LongDesc: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
+		Description: 破坏者敢死队
+		LongDesc: 狡诈的步兵，携带大量炸药以爆破建筑\n\n·强势对抗：建筑\n·弱势对抗：步兵、载具\n·特殊能力：爆破建筑
+		#Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
 		Icon: saboteur
 		PauseOnCondition: disabled
 		RequiresCondition: ordos

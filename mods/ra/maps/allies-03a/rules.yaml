@@ -2,8 +2,7 @@ World:
 	LuaScript:
 		Scripts: allies03a.lua
 	MissionData:
-		Briefing: 陆军司令部第十六指挥中心\n最高机密\n致：战地指挥官A9\n\n情报显示有大量苏军在你区活跃，\n并依靠桥梁实现串联。\n请即刻在谭雅的协助下，\n尽速摧毁你区全部桥梁，\n务必确保这位特种兵的存活。\n\n\n\n确认代码1612\n\n传输结束\n
-		# Briefing: LANDCOM 16 HQS.\nTOP SECRET.\nTO: FIELD COMMANDER A9\n\nINTELLIGENCE RECON SHOWS HEAVY\nSOVIET MOVEMENT IN YOUR AREA.\nNEARBY BRIDGES ARE KEY TO SOVIET\nADVANCEMENT. DESTROY ALL BRIDGES\nASAP. TANYA WILL ASSIST. KEEP HER\nALIVE AT ALL COSTS.\n\nCONFIRMATION CODE 1612.\n\nTRANSMISSION ENDS.\n
+		Briefing: 陆军司令部第十六指挥中心\n最高机密\n致：战地指挥官A9\n\n情报显示有大量苏联军队在你区活跃，\n并依靠桥梁实现串联。\n请即刻在谭雅的协助下，\n尽速摧毁你区全部桥梁，\n务必确保这位特种兵的存活。\n\n\n\n确认代码1612\n\n传输结束\n
 		StartVideo: brdgtilt.vqa
 		WinVideo: toofar.vqa
 		LossVideo: sovtstar.vqa

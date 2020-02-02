@@ -198,7 +198,7 @@ Background@MULTIPLAYER_CREATESERVER_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 您可以在OpenRA设置菜单中禁用UPnP。
+					Text: - 您可以在OpenRA设置菜单中启用UPnP。
 		Background@MAP_BG:
 			X: PARENT_RIGHT - 194
 			Y: 45

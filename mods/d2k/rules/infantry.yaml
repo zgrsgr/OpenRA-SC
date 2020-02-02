@@ -6,11 +6,11 @@ light_inf:
 		BuildPaletteOrder: 10
 		BuildDuration: 54
 		BuildDurationModifier: 40
-		Description: General-purpose infantry\n  Strong vs Infantry\n  Weak vs Vehicles, Artillery
+		Description: 泛用型步兵\n\n·强势对抗：Strong vs Infantry\n  Weak vs Vehicles, Artillery
 	Valued:
 		Cost: 50
 	Tooltip:
-		Name: Light Infantry
+		Name: 步枪兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -30,11 +30,11 @@ engineer:
 		Prerequisites: upgrade.barracks, ~techlevel.medium
 		BuildDuration: 108
 		BuildDurationModifier: 40
-		Description: Infiltrates and captures enemy structures\n  Strong vs Buildings\n  Weak vs Everything
+		Description: 功能型步兵\n可维修友军建筑或占领中立、敌方建筑\n\n·无武装
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Engineer
+		Name: 工程师
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -62,11 +62,11 @@ trooper:
 		Prerequisites: upgrade.barracks, ~techlevel.medium
 		BuildDuration: 73
 		BuildDurationModifier: 40
-		Description: Anti-tank infantry\n  Strong vs Tanks\n  Weak vs Infantry, Artillery
+		Description: 反装甲防空步兵\n\n·强势对抗：载具、飞行器 \n·弱势对抗：步兵、炮兵
 	Valued:
 		Cost: 90
 	Tooltip:
-		Name: Trooper
+		Name: 导弹兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -92,11 +92,11 @@ thumper:
 		Prerequisites: upgrade.barracks, ~techlevel.high
 		BuildDuration: 108
 		BuildDurationModifier: 40
-		Description: Attracts nearby worms when deployed\n  Unarmed
+		Description: 部署后将吸引附近的沙虫\n\n·无武装
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Thumper Infantry
+		Name: 敲击者
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -135,14 +135,14 @@ fremen:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Tooltip:
-		Name: Fremen
+		Name: 弗里曼死士
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 80
 		Prerequisites: ~disabled
-		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery\n  Special Ability: Invisibility
+		Description: 装备突击步枪与火箭筒的精英步兵\n\n·强势对抗：步兵、载具\n·弱势对抗：炮兵\n·特殊能力：隐形
 	Mobile:
 		Speed: 43
 	Valued:
@@ -183,11 +183,11 @@ grenadier:
 		Prerequisites: ~barracks.atreides, upgrade.barracks, high_tech_factory, ~techlevel.medium
 		BuildDuration: 81 ## Wasn't converted, copied from Sardauker who has same value in TibEd.
 		BuildDurationModifier: 40
-		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+		Description: 装备有手榴弹的专业步兵\n\n·强势对抗：步兵、建筑 \n·弱势对抗：载具
 	Valued:
 		Cost: 80
 	Tooltip:
-		Name: Grenadier
+		Name: 掷弹兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -215,11 +215,11 @@ sardaukar:
 		Prerequisites: ~palace.sardaukar, ~techlevel.high
 		BuildDuration: 81
 		BuildDurationModifier: 40
-		Description: Elite assault infantry of Corrino\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		Description: 萨都卡部落的精英战士\n\n·强势对抗：步兵、载具\n·弱势对抗：炮兵
 	Valued:
 		Cost: 120
 	Tooltip:
-		Name: Sardaukar
+		Name: 皇家萨都卡
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -264,11 +264,11 @@ saboteur:
 		Queue: Infantry
 		BuildPaletteOrder: 100
 		Prerequisites: ~disabled
-		Description: Sneaky infantry, armed with explosives\n  Strong vs Buildings\n  Weak vs Everything\n  Special Ability: destroy buildings
+		Description: 狡诈的步兵，携带大量炸药以爆破建筑\n\n·强势对抗：建筑\n·弱势对抗：步兵、载具\n·特殊能力：爆破建筑
 	Valued:
 		Cost: 300 ## actually 0, but spawns from support power at Palace
 	Tooltip:
-		Name: Saboteur
+		Name: 破坏者敢死队
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -300,7 +300,7 @@ nsfremen:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: ~disabled
-		Description: Elite infantry unit armed with assault rifles and rockets\n  Strong vs Infantry, Vehicles\n  Weak vs Artillery
+		Description: 装备突击步枪与火箭筒的精英步兵\n\n·强势对抗：步兵、载具\n·弱势对抗：炮兵\n·特殊能力：隐形
 	RenderSprites:
 		Image: fremen
 	-Cloak:

@@ -7,8 +7,7 @@ World:
 	LuaScript:
 		Scripts: blackout.lua
 	MissionData:
-		Briefing: 我们的渗透小组已顺利潜入本区域，\n此地是苏联方面在本战区最大的供电中心。\n\n上峰已对本地的苏军发动了电子信号干扰，\n赶在苏军从中恢复之前，\n好好利用这一优势。\n苏联前敌指挥部正在着手重新点亮他们在此地的通讯网络，\n用实际行动告诉他们黑暗的滋味。\n\n另外，\n千万要远离海岸线，\n苏军在沿岸部署了大量防御设施。\n\n\n\n此战役剧本由 Narcoleptic 制作，\nOpenRA汉化组代为收录至RASC。\n
-		#An small team has successfully infiltrated on the sector our intel tells is one of enemy biggest power supply.\n\nCommand has created a gap in enemy communications so move fast and take advantage of enemy disarray and hinder they efforts to restore it. Then proceed with termination of the objective. Most probably they'll try to re-establish they're systems \n\nStay away from the beach at south where enemy defences are the deadliest.\n\n
+		Briefing: 我们的渗透小组已顺利潜入本区域，\n此地是苏联方面在本战区最大的供电中心。\n\n上峰已对本地的敌军发动了电子信号干扰，\n赶在苏联方面从中恢复之前，\n好好利用这一优势。\n苏联前敌指挥部正紧锣密鼓地开展恢复工作，\n试图重新点亮他们在此地的通讯网络。\n\n用实际行动告诉他们黑暗的滋味！\n\n另外，\n千万要远离海岸线，\n苏军在沿岸部署了大量防御设施。\n\n\n此战役剧本由 Narcoleptic 制作，\nOpenRA汉化组代为收录至RASC。\n
 		BriefingVideo: ally2.vqa
 		StartVideo: mcv.vqa
 		WinVideo: montpass.vqa

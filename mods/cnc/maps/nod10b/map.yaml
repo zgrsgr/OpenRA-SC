@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 10b: Destroy the Mammoth Tank Facility
+Title: 10b: 猛犸猎手
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 5,8,56,51
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

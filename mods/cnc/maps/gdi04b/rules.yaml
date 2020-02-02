@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: fist226m
 	MissionData:
-		Briefing: Nod has captured classified GDI property.\n\nYou must find and retrieve the stolen equipment.\n\nIt is being transported in a shipping crate.\n\nUse the new APC to strategically transport infantry through Nod forces.
+		Briefing: 我们的一批物资遭到了Nod掠夺，\n你必须查清这批物资的下落，\n并不惜一切代价将之夺回！\n\n据可靠情报，\nNod已将之装入集装箱准备船运，\n利用我们的新式运兵车，\n打他们一个措手不及！\n
 		BackgroundVideo: bkground.vqa
 		BriefingVideo: gdi4b.vqa
 		StartVideo: nitejump.vqa

@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: j1
 	MissionData:
-		Briefing: There have been some reports of strange animals in this area. \n\nTake your units to investigate, and report back your findings.
+		Briefing: 有情报指出，\n有异常动物出没于此地。\n\n彻底调查这一区域，\n并向我们汇报你的发现。
 		BriefingVideo: generic.vqa
 		StartVideo: dino.vqa
 	MapOptions:

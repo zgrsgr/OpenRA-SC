@@ -241,7 +241,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 40
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 消灭
+									Text: 击杀
 									Align: Right
 									Shadow: True
 								Label@DEATHS_HEADER:
@@ -259,7 +259,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 总消灭价值
+									Text: 消灭
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -268,7 +268,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 阵亡价值
+									Text: 损失
 									Align: Right
 									Shadow: True
 								Label@EXPERIENCE_HEADER:
@@ -336,7 +336,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 总资产
+									Text: 资产
 									Align: Right
 									Shadow: True
 								Label@EARNED_HEADER:
@@ -344,7 +344,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 总收入
+									Text: 收入
 									Align: Right
 									Shadow: True
 								Label@SPENT_HEADER:
@@ -352,7 +352,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 总支出
+									Text: 支出
 									Align: Right
 									Shadow: True
 								Label@HARVESTERS_HEADER:
@@ -469,7 +469,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 摧毁
+									Text: 击杀
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -478,7 +478,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 损失
+									Text: 阵亡
 									Align: Right
 									Shadow: True
 								Label@UNITS_KILLED_HEADER:
@@ -487,7 +487,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 90
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 消灭的单位
+									Text: 消灭
 									Align: Right
 									Shadow: True
 								Label@UNITS_DEAD_HEADER:
@@ -496,7 +496,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 损失的单位
+									Text: 损失
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_KILLED_HEADER:
@@ -505,7 +505,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 85
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 摧毁的建筑
+									Text: 摧毁建筑
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_DEAD_HEADER:
@@ -514,7 +514,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: 损失的建筑
+									Text: 损失建筑
 									Align: Right
 									Shadow: True
 								Label@ARMY_VALUE_HEADER:
@@ -889,8 +889,8 @@ Container@OBSERVER_WIDGETS:
 							YAxisValueFormat: ${0:F0}
 							XAxisSize: 40
 							XAxisTicksPerLabel: 2
-							XAxisLabel: Game Minute
-							YAxisLabel: Earnings
+							XAxisLabel: 游戏时间
+							YAxisLabel: 收入
 							LabelFont: TinyBold
 							AxisFont: TinyBold
 				Container@ARMY_VALUE_GRAPH_CONTAINER:
@@ -915,7 +915,7 @@ Container@OBSERVER_WIDGETS:
 							YAxisValueFormat: ${0:F0}
 							XAxisSize: 40
 							XAxisTicksPerLabel: 2
-							XAxisLabel: Game Minute
-							YAxisLabel: Army Value
+							XAxisLabel: 游戏时间
+							YAxisLabel: 部队价值
 							LabelFont: TinyBold
 							AxisFont: TinyBold

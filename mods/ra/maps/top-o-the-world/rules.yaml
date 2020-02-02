@@ -2,8 +2,7 @@ World:
 	LuaScript:
 		Scripts: scu36ea.lua
 	MissionData:
-		Briefing: 指挥官，\n我们需要你来运输一样非常重要的物资，\n你必须把载有物资的卡车在天明之前护送到山顶的中转站，\n之后货物会有新的去向。\n\n夜幕是一把双刃剑，\n显然你的行动将会变得更为隐蔽；\n但山顶夜晚的严寒也会阻碍你的前进。\n\n盟军已经在此部署了拦截部队，\n决不能让他们拖延你的脚步！\n\n在这样严酷的寒夜，\n我们的载具则可以正常运作约36分钟，\n而即使是我们训练有素的士兵，\n12分钟就是他们能坚持的极限了。\n\n时间有限，\n速战速决！\n
-		#A critical cargo held in this supply truck must reach the waystation atop this mountain. The way is blocked by Allied squads, but do not let that deter you -- the cargo must reach its destination.\n\nIn addition, the onset of nightfall has brought sub-zero temperatures with it. The Allies are prepared for this -- our units are not. The life expectancy of your troops in these extremes is limited. Infantry may last 12 minutes, while vehicles could survive for up to 36 minutes. You have little time. Go.\n
+		Briefing: 指挥官，\n我们需要你来运输一样非常重要的物资，\n你必须把载有物资的卡车，\n在天明之前护送到山顶的中转站，\n之后货物会有新的去向。\n\n夜幕是一把双刃剑，\n显然你的行动将会变得更为隐蔽；\n但山顶夜晚的严寒也会阻碍你的前进。\n\n盟军已经在此部署了拦截部队，\n决不能让他们拖延你的脚步！\n\n在这样严酷的寒夜，\n我们的载具则可以正常运作约36分钟，\n而即使是我们训练有素的士兵，\n12分钟就是他们能坚持的极限了。\n\n时间有限，\n速战速决！\n
 		WinVideo: sovtstar.vqa
 		LossVideo: sovbatl.vqa
 	ScriptLobbyDropdown@difficulty:

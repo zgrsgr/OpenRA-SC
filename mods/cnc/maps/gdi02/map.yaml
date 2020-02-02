@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 02:   Knock out the Refinery
+Title: 02:   割喉之战
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 31,31,31,31
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

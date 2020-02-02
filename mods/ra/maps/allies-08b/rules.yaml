@@ -6,8 +6,7 @@ World:
 	LuaScript:
 		Scripts: allies08b.lua, allies08b-AI.lua
 	MissionData:
-		Briefing: 超时空传送仪作为我军的最新科技，\n目前还处于原型状态。\n\n不幸的是，\n苏军察觉到了一处核心研究所，\n并准备对此发动袭击。 \n\n在我们完成必要的工作之前，\n务必保护超时空传送仪与科技中心，\n另外也必须确保研究所的电力供应！\n\n实验已进入到最后关头，\n我军无法承受如此重大的损失，\n这场战役决不允许失败！\n
-		# Briefing: Our latest technology, the Chronosphere, is housed in this research station. The timer represents the appointed time for the completion of a vital experiment. The Soviets have learned of this and are moving in. \n\nProtect the Chronosphere and the Advanced-Tech research center. Make sure the base is fully powered at the appointed time. If not, all will be lost!
+		Briefing: 超时空传送仪作为我军的最新科技，\n目前还处于原型状态。\n\n不幸的是，\n敌人察觉到了一处核心研究所，\n并准备对此发动袭击。 \n\n在我们完成必要的工作之前，\n务必保护超时空传送仪与科技中心，\n另外也必须确保研究所的电力供应！\n\n实验已进入到最后关头，\n我们无法承受如此重大的损失，\n这场战役决不允许失败！\n
 		BriefingVideo: ally8.vqa
 		WinVideo: crontest.vqa
 		LossVideo: cronfail.vqa

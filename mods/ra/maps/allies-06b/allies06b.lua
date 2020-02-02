@@ -149,7 +149,7 @@ InfiltrateTechCenter = function()
 				return
 			end
 			infiltrated = true
-			DestroySovietsObj = player.AddPrimaryObjective("摧毁该地区苏军的全部建筑和单位。")
+			DestroySovietsObj = player.AddPrimaryObjective("肃清所有苏联军事力量。")
 			-- DestroySovietsObj = player.AddPrimaryObjective("Destroy all Soviet buildings and units in the area.")
 			player.MarkCompletedObjective(InfiltrateTechCenterObj)
 		end)

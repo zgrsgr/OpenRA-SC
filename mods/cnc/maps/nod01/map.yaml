@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 01:   Nikoomba's Demise
+Title: 01:   鲜血之路
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 21,14,37,24
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

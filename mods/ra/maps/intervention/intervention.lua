@@ -284,7 +284,7 @@ WorldLoaded = function()
 			player.MarkCompletedObjective(beachheadObjective)
 
 			-- captureObjective = player.AddPrimaryObjective("Locate and capture the enemy's Air Force HQ.")
-			captureObjective = player.AddPrimaryObjective("找到并占领苏军的空军司令部。")
+			captureObjective = player.AddPrimaryObjective("找到并占领苏联空军司令部。")
 
 			if AirForceHQ.IsDead then
 				player.MarkFailedObjective(captureObjective)

@@ -2,8 +2,7 @@ World:
 	LuaScript:
 		Scripts: soviet07.lua
 	MissionData:
-		Briefing: 紧急警报！\n\n我军一处核电站遭到渗透！\n盟军特务篡改了核心代码，\n不加以干预的话，\n核电站将迅速自毁！\n盟军的企图决不能实现！\n\n我们已经征召了一支敢死队，\n你必须指挥他们，\n找到幸存的技术人员，\n并护送他们前往4个损管控制台，\n之后还要保护他们激活主控计算机，\n如此方能保全这座核电站。\n\n另外，由于特务的干扰，\n核电厂的自卫系统已自动开启，\n请务必小心行事。\n至于那些盟军士兵，\n送他们去见马克思吧。\n
-		# Briefing: The Allies have infiltrated one of our nuclear reactors! They have tampered with the core so that a meltdown is imminent within 30 minutes. They must not succeed!\n\nEnter the base and find any remaining technicians. Guide them to the 4 coolant stations so they can activate them, then activate the main computer. The security systems have been armed so beware.\n\nKill any Allies you find.
+		Briefing: 紧急警报！\n\n我军一处核电站遭到渗透！\n盟军特务篡改了核心代码，\n不加以干预的话，\n核电站将迅速自毁！\n盟军的企图决不能实现！\n\n我们已经征召了一支敢死队，\n你必须指挥他们，\n找到幸存的技术人员，\n并护送他们前往4个损管控制台，\n之后还要保护他们激活主控计算机，\n如此方能保全这座核电站。\n\n另外，由于特务的干扰，\n核电厂的自卫系统已自动开启，\n请务必小心行事。\n至于那些盟军士兵，\n这是马克思的请帖，\n送他们上路。\n
 		BriefingVideo: soviet7.vqa
 		StartVideo: countdwn.vqa
 		WinVideo: averted.vqa

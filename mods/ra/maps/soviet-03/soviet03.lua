@@ -358,7 +358,7 @@ WorldLoaded = function()
 	-- sovietObjective2 = player.AddSecondaryObjective("Clear the nearby farm for reinforcements.")
 	-- sovietObjective3 = player.AddSecondaryObjective("Scavenge the civilian buildings for supplies.")
 	alliedObjective = enemy.AddPrimaryObjective("消灭苏军。")
-	sovietObjective1 = player.AddPrimaryObjective("杀死敌军间谍。")
+	sovietObjective1 = player.AddPrimaryObjective("杀死盟军间谍。")
 	sovietObjective2 = player.AddSecondaryObjective("摧毁附近的农场以获得援军。")
 	sovietObjective3 = player.AddSecondaryObjective("摧毁平民建筑物以获得补给。")
 end

@@ -85,7 +85,7 @@ LabInfiltrated = function()
 			-- secureLab = player.AddPrimaryObjective("Secure the laboratory by eliminating its guards.")
 			-- destroyBase = player.AddPrimaryObjective("Destroy the remaining Soviet presence.")
 			secureLab = player.AddPrimaryObjective("消灭实验室的所有守卫部队。")
-			destroyBase = player.AddPrimaryObjective("摧毁所有剩余的苏军部队。")
+			destroyBase = player.AddPrimaryObjective("肃清所有苏联残兵。")
 			player.MarkCompletedObjective(infiltrateLab)
 			Trigger.ClearAll(Lab)
 			Trigger.AfterDelay(0, function()
@@ -176,7 +176,7 @@ InsertSpies = function()
 	Utils.Do(humans, function(player)
 		if player then
 			-- infiltrateLab = player.AddPrimaryObjective("Get our spy into the laboratory undetected.")
-			infiltrateLab = player.AddPrimaryObjective("让我们的间谍秘密潜入实验室。")
+			infiltrateLab = player.AddPrimaryObjective("引导我们的间谍秘密潜入实验室。")
 		end
 	end)
 

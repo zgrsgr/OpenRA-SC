@@ -57,7 +57,7 @@ Background@KICK_SPECTATORS_DIALOG:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: 将观察者踢出房间
+			Text: 将观战者踢出房间
 		Label@TEXT:
 			Y: 86
 			Width: PARENT_RIGHT
@@ -123,7 +123,7 @@ Background@FORCE_START_DIALOG:
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: 他们将被从服务器踢出。
+					Text: 他们将被踢出游戏。
 		Button@OK_BUTTON:
 			X: (PARENT_RIGHT - WIDTH) / 2 + 75
 			Y: 155

@@ -6,8 +6,7 @@ Player:
 
 World:
 	MissionData:
-		Briefing: 我军的某处哨站正遭到苏军的强势打击！\n幸运的是，\n爱因斯坦博士、谭雅以及我们的大部分军队，\n都借由直升机成功脱险。\n然而据可靠情报，\n直升机队被苏军击落，\n幸存者们在河流对岸的敌占区苦苦挣扎。 \n指挥部现在已经取得了与谭雅的联系，\n我们必须设法营救出所有的幸存者！\n\n指挥部要求你瓦解该地区苏军的防空火力，\n这样我方空中搜救力量将可以协助撤离。\n此外，\n前哨基地绝不能陷入苏军之手！\n
-		#One of our outposts is under heavy attack by a nearby Soviet base. Einstein, Tanya and many of our forces have been evacuated via helicopters, but those were shot down on the other side of the river. Fortunately they survived the crash, but are now in enemy territory. Tanya and the rest of the surviving forces need to fight their way out of there. The air defenses must be eliminated before another Search & Rescue helicopter can arrive.\n\nMeanwhile, the forces remaining at the base need to fend off the Soviet attacks.\n
+		Briefing: 我军的某处哨站正遭到敌人的强势打击！\n幸运的是，\n爱因斯坦博士、谭雅以及我们的大部分军队，\n都借由直升机成功脱险。\n然而据可靠情报，\n直升机队遭到击落，\n幸存者们在河流对岸的敌占区苦苦挣扎。 \n指挥部现在已经取得了与谭雅的联系，\n我们必须设法营救出所有的幸存者！\n\n指挥部要求你瓦解该地区所有苏联防空火力，\n这样我方空中搜救力量将可以协助撤离。\n此外，\n前哨基地绝不能陷入敌手！\n
 	LuaScript:
 		Scripts: evacuation.lua
 	ScriptLobbyDropdown@difficulty:

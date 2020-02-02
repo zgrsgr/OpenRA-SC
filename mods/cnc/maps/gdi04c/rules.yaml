@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: ind
 	MissionData:
-		Briefing: Nod is moving to capture and hold a civilian town.\n\nYour mission is to reach the town first and hold off invading Nod units until GDI reinforcements can arrive.\n\nAll invading Nod units must be destroyed.
+		Briefing: 指挥官，情报显示，\nNod正试图占领一座小镇作为据点。\n\n你必须抢先一步在城镇内设伏，\n在本部的援军抵达之前，\n绝不能让小镇沦陷！\n\n最后，\n肃清所有来犯之敌。\n
 		BackgroundVideo: bkground.vqa
 		BriefingVideo: gdi4a.vqa
 		StartVideo: nodsweep.vqa

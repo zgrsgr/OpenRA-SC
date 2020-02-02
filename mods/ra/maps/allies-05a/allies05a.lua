@@ -186,7 +186,7 @@ FreeTanya = function()
 
 	if TanyaType == "e7.noautotarget" then
 		Trigger.AfterDelay(DateTime.Seconds(1), function()
-			Media.DisplayMessage("根据参加这场行动的合约，我必须接到你的明确命令之后\n才会开火，指挥官！", "谭雅")
+			Media.DisplayMessage("指挥官，根据参加这场行动的合约，\n没有你的命令我不会贸然开火！", "谭雅")
 			-- Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
 		end)
 	end
@@ -194,7 +194,7 @@ FreeTanya = function()
 	Trigger.OnKilled(Tanya, function() ussr.MarkCompletedObjective(ussrObj) end)
 
 	if Map.LobbyOption("difficulty") == "tough" then
-		KillSams = greece.AddPrimaryObjective("必须摧毁威胁着我方救援直升机的四个地对空导弹阵地。")
+		KillSams = greece.AddPrimaryObjective("必须摧毁威胁我方援军的四个地对空导弹阵地。")
 		-- KillSams = greece.AddPrimaryObjective("Destroy all four SAM Sites that block\nour reinforcements' helicopter.")
 
 		greece.MarkCompletedObjective(mainObj)
@@ -202,7 +202,7 @@ FreeTanya = function()
 		-- surviveObj = greece.AddPrimaryObjective("Tanya must not die!")
 		Media.PlaySpeechNotification(greece, "TanyaRescued")
 	else
-		KillSams = greece.AddPrimaryObjective("必须摧毁威胁着我方救援直升机的四个地对空导弹阵地。")
+		KillSams = greece.AddPrimaryObjective("必须摧毁威胁我方救援直升机的四个地对空导弹阵地。")
 		-- KillSams = greece.AddPrimaryObjective("Destroy all four SAM sites that block\nthe extraction helicopter.")
 
 		Media.PlaySpeechNotification(greece, "TargetFreed")
@@ -225,7 +225,7 @@ SendSpy = function()
 	end
 
 	Trigger.AfterDelay(DateTime.Seconds(3), function()
-		Media.DisplayMessage("指挥官！我只有在伪装之后才能突破敌方的巡逻！", "间谍")
+		Media.DisplayMessage("指挥官，我只有在伪装之后才能突破敌方的巡逻！", "间谍")
 		-- Media.DisplayMessage("Commander! You have to disguise me in order to get through the enemy patrols.", "Spy")
 	end)
 end
@@ -269,7 +269,7 @@ InitTriggers = function()
 			return
 		end
 		if not greece.IsObjectiveCompleted(infWarfactory) then
-			Media.DisplayMessage("干得好！ 但下次不要再逞英雄了！", "战场控制")
+			Media.DisplayMessage("干得好！但下次不要再逞英雄了！", "战场控制")
 			-- Media.DisplayMessage("Good work! But next time skip the heroics!", "Battlefield Control")
 			greece.MarkCompletedObjective(infWarfactory)
 		end
@@ -384,7 +384,7 @@ InitObjectives = function()
 
 	ussrObj = ussr.AddPrimaryObjective("消灭盟军。")
 	mainObj = greece.AddPrimaryObjective("营救谭雅。")
-	KillAll = greece.AddPrimaryObjective("消灭该地区的全部苏军单位。")
+	KillAll = greece.AddPrimaryObjective("肃清所有苏联武装力量。")
 	infWarfactory = greece.AddSecondaryObjective("渗透苏军的战车工厂。")
 
 	Trigger.OnObjectiveCompleted(greece, function(p, id)

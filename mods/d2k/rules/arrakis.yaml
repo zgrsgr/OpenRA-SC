@@ -75,7 +75,7 @@ sandworm:
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Sandworm
+		Name: 沙虫
 	Health:
 		HP: 100000
 	HitShape:
@@ -135,7 +135,7 @@ sandworm:
 sietch:
 	Inherits: ^Building
 	Tooltip:
-		Name: Fremen Sietch
+		Name: 弗里曼营地
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2

@@ -118,7 +118,7 @@ CaptureRadarDome = function()
 		Beacon.New(player, TechLab1.CenterPosition)
 		Beacon.New(player, TechLab2.CenterPosition)
 		Beacon.New(player, TechLab3.CenterPosition)
-		Media.DisplayMessage("发现苏军科技中心的位置。")
+		Media.DisplayMessage("确认苏军科技中心的位置。")
 		-- Media.DisplayMessage("Coordinates of the Soviet tech centers discovered.")
 		if Map.LobbyOption("difficulty") ~= "hard" then
 			Utils.Do(TechLabCams, function(a)
@@ -139,7 +139,7 @@ InfiltrateTechCenter = function()
 				return
 			end
 			infiltrated = true
-			DestroySovietsObj = player.AddPrimaryObjective("摧毁该地区苏军的全部建筑和单位。")
+			DestroySovietsObj = player.AddPrimaryObjective("肃清所有苏联军事力量。")
 			-- DestroySovietsObj = player.AddPrimaryObjective("Destroy all Soviet buildings and units in the area.")
 			player.MarkCompletedObjective(InfiltrateTechCenterObj)
 

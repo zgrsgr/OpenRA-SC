@@ -141,8 +141,8 @@ WorldLoaded = function()
 	-- BeatAllies = ussr.AddPrimaryObjective("Defeat the Allied forces.")
 
 	DefendChronosphere = greece.AddPrimaryObjective("不惜一切代价保护超时空传送仪和科技中心。")
-	KeepBasePowered = greece.AddPrimaryObjective("当计时结束时，超时空传送仪必须要有电\n力供应。")
-	EvacuateScientists = greece.AddSecondaryObjective("救援岛上的科学家并将他们护送到东方的\n撤离点。")
+	KeepBasePowered = greece.AddPrimaryObjective("计时结束时，确保超时空传送仪供电稳定。")
+	EvacuateScientists = greece.AddSecondaryObjective("救援并撤离岛上的科学家到指定地点。")
 	BeatAllies = ussr.AddPrimaryObjective("击败盟军的部队。")
 
 	Trigger.OnObjectiveCompleted(greece, function(p, id)

@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: gdi07.lua
 	MissionData:
-		Briefing: Previous mission objective not complete.\nAirfield was to be targeted. \n\nNew objective:  Build up a base and Destroy remaining Nod structures and units.\n\nReinforcements will be provided.
+		Briefing: 很遗憾，\n由于通讯的故障，\n导致我们先前的任务并未取得预期的成果。\n\n你需要率领我们的大军从正面进攻，\n将这个Nod基地彻底一锅端。\n\n如果你需要空中支援，\n记得先摧毁Nod的防空设施。\n
 		BriefingVideo: gdi7.vqa
 		StartVideo: turtkill.vqa
 		WinVideo: pintle.vqa
@@ -123,4 +123,4 @@ HQ:
 	Tooltip:
 	-AirstrikePower:
 	Buildable:
-		Description: Provides an overview of the battlefield.\n  Requires power to operate.
+		Description: 提供战场视野\n提供战术地图\n需要电力才能运转

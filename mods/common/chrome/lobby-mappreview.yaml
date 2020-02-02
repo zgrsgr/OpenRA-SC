@@ -68,15 +68,15 @@ Container@MAP_PREVIEW:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: 此地图在此版本的OpenRa下不被兼容
+					Text: 此地图不被本OpenRA版本兼容
 					IgnoreMouseOver: true
-				Label@MAP_STATUS_B:
-					Y: 201
-					Width: PARENT_RIGHT
-					Height: 25
-					Font: Tiny
-					Align: Center
-					Text: with this version of OpenRA
+				# Label@MAP_STATUS_B:
+				# 	Y: 201
+				# 	Width: PARENT_RIGHT
+				# 	Height: 25
+				# 	Font: Tiny
+				# 	Align: Center
+				# 	Text: with this version of OpenRA
 		Container@MAP_DOWNLOADABLE:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -160,13 +160,13 @@ Container@MAP_PREVIEW:
 							Font: Tiny
 							Align: Center
 							Text: 在OpenRA资源中心找不到此地图
-						Label@b:
-							Y: 171
-							Width: PARENT_RIGHT
-							Height: 25
-							Font: Tiny
-							Align: Center
-							Text: OpenRA Resource Center
+						# Label@b:
+						# 	Y: 171
+						# 	Width: PARENT_RIGHT
+						# 	Height: 25
+						# 	Font: Tiny
+						# 	Align: Center
+						# 	Text: OpenRA Resource Center
 				Label@MAP_STATUS_ERROR:
 					Y: 158
 					Width: PARENT_RIGHT

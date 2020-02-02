@@ -2,8 +2,7 @@ World:
 	LuaScript:
 		Scripts: allies05a.lua, allies05a-AI.lua
 	MissionData:
-		Briefing: 援救谭雅！\n\n首先，\n引导我们的特工潜入苏军的战车工厂，\n他高超的伪装技巧能骗过所有苏联人，\n但切记避开训练有素的苏联军犬。\n\n一旦特工渗透了战车工厂后，\n他将会按计划营救谭雅。\n\n一旦谭雅获救，指挥她摧毁岛上的防空系统，\n支努干运输机将协助她撤离。\n\n最后，\n消灭该地区所有苏军力量。\n
-		# Briefing: Rescue Tanya.\n\nOnce disguised, your spy can move past any enemy unit, except dogs, without being detected. Direct him into the weapons factory located at a nearby Soviet Base where he will hijack a truck and free Tanya.\n\nWith Tanya's help, take out the air defenses on the island and a Chinook will arrive to rescue her.\n\nThen destroy all remaining Soviet buildings and units.
+		Briefing: 援救谭雅！\n\n首先，\n引导我们的特工潜入苏联战车工厂，\n利用他的伪装骗过苏联哨兵，\n但注意避开训练有素的军犬。\n\n我们的特工在渗透了战车工厂之后，\n将会按计划营救谭雅。\n\n一旦谭雅获救，\n请引导她摧毁岛上的防空系统，\n如此她就能搭乘支努干直升机安全撤离。\n\n随后，\n你必须彻底消灭该地区所有敌对力量。\n
 		BriefingVideo: ally5.vqa
 		StartVideo: tanya1.vqa
 		WinVideo: tanya2.vqa

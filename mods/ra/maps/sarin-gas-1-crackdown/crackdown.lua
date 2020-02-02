@@ -149,9 +149,9 @@ WorldLoaded = function()
 	-- objRadarSpy = greece.AddSecondaryObjective("Infiltrate the Soviet Radar Dome to reveal truck \necape routes.")
 	-- ussrObj = ussr.AddPrimaryObjective("Deny the Allies.")
 
-	objDestroyAllTrucks = greece.AddPrimaryObjective("防止运送沙林毒气的苏军车队逃跑。")
-	objKillAll = greece.AddPrimaryObjective("消灭本区域内的所有苏军。")
-	objRadarSpy = greece.AddSecondaryObjective("渗透苏军雷达站以获取车队的逃跑路线。")
+	objDestroyAllTrucks = greece.AddPrimaryObjective("防止运送沙林毒气的苏联车队逃跑。")
+	objKillAll = greece.AddPrimaryObjective("肃清所有苏联军事力量。")
+	objRadarSpy = greece.AddSecondaryObjective("渗透苏联雷达站以获取敌情。")
 	ussrObj = ussr.AddPrimaryObjective("消灭盟军。")
 
 	Trigger.OnObjectiveCompleted(greece, function(p, id)
