@@ -32,6 +32,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		readonly World world;
 		readonly WorldRenderer worldRenderer;
 		readonly MenuPaletteEffect mpe;
+		readonly bool isSinglePlayer;
 		bool hasError;
 		bool leaving;
 		bool hideMenu;
@@ -48,6 +49,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var buttonHandlers = new Dictionary<string, Action>
 			{
 				{ "ABORT_MISSION", CreateAbortMissionButton },
+				{ "RESTART", CreateRestartButton },
 				{ "SURRENDER", CreateSurrenderButton },
 				{ "LOAD_GAME", CreateLoadGameButton },
 				{ "SAVE_GAME", CreateSaveGameButton },
@@ -57,6 +59,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{ "SAVE_MAP", CreateSaveMapButton },
 				{ "EXIT_EDITOR", CreateExitEditorButton }
 			};
+
+			isSinglePlayer = !world.LobbyInfo.GlobalSettings.Dedicated && world.LobbyInfo.NonBotClients.Count() == 1;
 
 			menu = widget.Get("INGAME_MENU");
 			mpe = world.WorldActor.TraitOrDefault<MenuPaletteEffect>();
@@ -190,46 +194,55 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				hideMenu = true;
 
-				if (world.LocalPlayer == null || world.LocalPlayer.WinState != WinState.Won)
+				ConfirmationDialogs.ButtonPrompt(
+					title: "离开游戏",
+					text: "离开游戏并返回菜单?",
+					onConfirm: OnQuit,
+					onCancel: ShowMenu,
+					confirmText: "离开",
+					cancelText: "取消");
+			};
+		}
+
+		void CreateRestartButton()
+		{
+			if (world.Type != WorldType.Regular || !isSinglePlayer)
+				return;
+
+			var iop = world.WorldActor.TraitsImplementing<IObjectivesPanel>().FirstOrDefault();
+			var exitDelay = iop != null ? iop.ExitDelay : 0;
+
+			Action onRestart = () =>
+			{
+				Ui.CloseWindow();
+				if (mpe != null)
 				{
-					Action restartAction = null;
-					var iop = world.WorldActor.TraitsImplementing<IObjectivesPanel>().FirstOrDefault();
-					var exitDelay = iop != null ? iop.ExitDelay : 0;
-
-					if (!world.LobbyInfo.GlobalSettings.Dedicated && world.LobbyInfo.NonBotClients.Count() == 1)
-					{
-						restartAction = () =>
-						{
-							Ui.CloseWindow();
-							if (mpe != null)
-							{
-								if (Game.IsCurrentWorld(world))
-									mpe.Fade(MenuPaletteEffect.EffectType.Black);
-								exitDelay += 40 * mpe.Info.FadeLength;
-							}
-
-							Game.RunAfterDelay(exitDelay, Game.RestartGame);
-						};
-					}
-
-					ConfirmationDialogs.ButtonPrompt(
-						title: "离开游戏",
-						text: "离开游戏并返回菜单？",
-						onConfirm: OnQuit,
-						onCancel: ShowMenu,
-						confirmText: "离开",
-						cancelText: "取消",
-						otherText: "重新开始",
-						onOther: restartAction);
+					if (Game.IsCurrentWorld(world))
+						mpe.Fade(MenuPaletteEffect.EffectType.Black);
+					exitDelay += 40 * mpe.Info.FadeLength;
 				}
-				else
-					OnQuit();
+
+				Game.RunAfterDelay(exitDelay, Game.RestartGame);
+			};
+
+			var button = AddButton("RESTART", "重新开始");
+			button.IsDisabled = () => hasError || leaving;
+			button.OnClick = () =>
+			{
+				hideMenu = true;
+				ConfirmationDialogs.ButtonPrompt(
+					title: "重新开始",
+					text: "重新开始本场游戏?",
+					onConfirm: onRestart,
+					onCancel: ShowMenu,
+					confirmText: "重新开始",
+					cancelText: "取消");
 			};
 		}
 
 		void CreateSurrenderButton()
 		{
-			if (world.Type != WorldType.Regular || world.Map.Visibility.HasFlag(MapVisibility.MissionSelector) || world.LocalPlayer == null)
+			if (world.Type != WorldType.Regular || isSinglePlayer || world.LocalPlayer == null)
 				return;
 
 			Action onSurrender = () =>

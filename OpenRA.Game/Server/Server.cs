@@ -32,6 +32,13 @@ namespace OpenRA.Server
 		ShuttingDown = 3
 	}
 
+	public enum ServerType
+	{
+		Local = 0,
+		Multiplayer = 1,
+		Dedicated = 2
+	}
+
 	public class Server
 	{
 		// public readonly string TwoHumansRequiredText = "This server requires at least two human players to start a match.";
@@ -40,7 +47,7 @@ namespace OpenRA.Server
 		public readonly IPAddress Ip;
 		public readonly int Port;
 		public readonly MersenneTwister Random = new MersenneTwister();
-		public readonly bool Dedicated;
+		public readonly ServerType Type;
 
 		// Valid player connections
 		public List<Connection> Conns = new List<Connection>();
@@ -123,7 +130,7 @@ namespace OpenRA.Server
 				t.GameEnded(this);
 		}
 
-		public Server(IPEndPoint endpoint, ServerSettings settings, ModData modData, bool dedicated)
+		public Server(IPEndPoint endpoint, ServerSettings settings, ModData modData, ServerType type)
 		{
 			Log.AddChannel("server", "server.log", true);
 
@@ -132,7 +139,7 @@ namespace OpenRA.Server
 			var localEndpoint = (IPEndPoint)listener.LocalEndpoint;
 			Ip = localEndpoint.Address;
 			Port = localEndpoint.Port;
-			Dedicated = dedicated;
+			Type = type;
 			Settings = settings;
 
 			Settings.Name = OpenRA.Settings.SanitizedServerName(Settings.Name);
@@ -158,10 +165,10 @@ namespace OpenRA.Server
 					RandomSeed = randomSeed,
 					Map = settings.Map,
 					ServerName = settings.Name,
-					EnableSingleplayer = settings.EnableSingleplayer || !dedicated,
+					EnableSingleplayer = settings.EnableSingleplayer || Type != ServerType.Dedicated,
 					EnableSyncReports = settings.EnableSyncReports,
 					GameUid = Guid.NewGuid().ToString(),
-					Dedicated = dedicated
+					Dedicated = Type == ServerType.Dedicated
 				}
 			};
 
@@ -217,7 +224,7 @@ namespace OpenRA.Server
 					delayedActions.PerformActions(0);
 
 					// PERF: Dedicated servers need to drain the action queue to remove references blocking the GC from cleaning up disposed objects.
-					if (dedicated)
+					if (Type == ServerType.Dedicated)
 						Game.PerformDelayedActions();
 
 					foreach (var t in serverTraits.WithInterface<ITick>())
@@ -442,7 +449,7 @@ namespace OpenRA.Server
 					// Send initial ping
 					SendOrderTo(newConn, "Ping", Game.RunTime.ToString(CultureInfo.InvariantCulture));
 
-					if (Dedicated)
+					if (Type == ServerType.Dedicated)
 					{
 						// var motdFile = Platform.ResolvePath(Platform.SupportDirPrefix, "motd.txt");
 						var motdFile = Platform.ResolvePath(Platform.SupportDirPrefix, "motdsc.txt");
@@ -462,7 +469,13 @@ namespace OpenRA.Server
 						SendOrderTo(newConn, "Message", "该地图禁用了电脑玩家。");
 				};
 
-				if (!string.IsNullOrEmpty(handshake.Fingerprint) && !string.IsNullOrEmpty(handshake.AuthSignature))
+				if (Type == ServerType.Local)
+				{
+					// Local servers can only be joined by the local client, so we can trust their identity without validation
+					client.Fingerprint = handshake.Fingerprint;
+					completeConnection();
+				}
+				else if (!string.IsNullOrEmpty(handshake.Fingerprint) && !string.IsNullOrEmpty(handshake.AuthSignature))
 				{
 					waitingForAuthenticationCallback++;
 
@@ -510,9 +523,9 @@ namespace OpenRA.Server
 
 						delayedActions.Add(() =>
 						{
-							var notAuthenticated = Dedicated && profile == null && (Settings.RequireAuthentication || Settings.ProfileIDWhitelist.Any());
-							var blacklisted = Dedicated && profile != null && Settings.ProfileIDBlacklist.Contains(profile.ProfileID);
-							var notWhitelisted = Dedicated && Settings.ProfileIDWhitelist.Any() &&
+							var notAuthenticated = Type == ServerType.Dedicated && profile == null && (Settings.RequireAuthentication || Settings.ProfileIDWhitelist.Any());
+							var blacklisted = Type == ServerType.Dedicated && profile != null && Settings.ProfileIDBlacklist.Contains(profile.ProfileID);
+							var notWhitelisted = Type == ServerType.Dedicated && Settings.ProfileIDWhitelist.Any() &&
 								(profile == null || !Settings.ProfileIDWhitelist.Contains(profile.ProfileID));
 
 							if (notAuthenticated)
@@ -543,7 +556,7 @@ namespace OpenRA.Server
 				}
 				else
 				{
-					if (Dedicated && (Settings.RequireAuthentication || Settings.ProfileIDWhitelist.Any()))
+					if (Type == ServerType.Dedicated && (Settings.RequireAuthentication || Settings.ProfileIDWhitelist.Any()))
 					{
 						Log.Write("server", "Rejected connection from {0}; Not authenticated.", newConn.Socket.RemoteEndPoint);
 						SendOrderTo(newConn, "ServerError", "该服务器需要玩家拥有OpenRA社区账户");
@@ -625,7 +638,7 @@ namespace OpenRA.Server
 		{
 			DispatchOrdersToClients(conn, 0, Order.FromTargetString("Message", text, true).Serialize());
 
-			if (Dedicated)
+			if (Type == ServerType.Dedicated)
 				Console.WriteLine("[{0}] {1}".F(DateTime.Now.ToString(Settings.TimestampFormat), text));
 		}
 
@@ -740,7 +753,7 @@ namespace OpenRA.Server
 
 				case "LoadGameSave":
 					{
-						if (Dedicated || State >= ServerState.GameStarted)
+						if (Type == ServerType.Dedicated || State >= ServerState.GameStarted)
 							break;
 
 						// Sanitize potentially malicious input
@@ -842,7 +855,7 @@ namespace OpenRA.Server
 
 				// Client was the server admin
 				// TODO: Reassign admin for game in progress via an order
-				if (Dedicated && dropClient.IsAdmin && State == ServerState.WaitingPlayers)
+				if (Type == ServerType.Dedicated && dropClient.IsAdmin && State == ServerState.WaitingPlayers)
 				{
 					// Remove any bots controlled by the admin
 					LobbyInfo.Clients.RemoveAll(c => c.Bot != null && c.BotControllerClientIndex == toDrop.PlayerIndex);
@@ -864,10 +877,10 @@ namespace OpenRA.Server
 					foreach (var t in serverTraits.WithInterface<INotifyServerEmpty>())
 						t.ServerEmpty(this);
 
-				if (Conns.Any() || Dedicated)
+				if (Conns.Any() || Type == ServerType.Dedicated)
 					SyncLobbyClients();
 
-				if (!Dedicated && dropClient.IsAdmin)
+				if (Type != ServerType.Dedicated && dropClient.IsAdmin)
 					Shutdown();
 			}
 
@@ -961,7 +974,7 @@ namespace OpenRA.Server
 
 			// Enable game saves for singleplayer missions only
 			// TODO: Enable for multiplayer (non-dedicated servers only) once the lobby UI has been created
-			LobbyInfo.GlobalSettings.GameSavesEnabled = !Dedicated && LobbyInfo.NonBotClients.Count() == 1;
+			LobbyInfo.GlobalSettings.GameSavesEnabled = Type != ServerType.Dedicated && LobbyInfo.NonBotClients.Count() == 1;
 
 			SyncLobbyInfo();
 			State = ServerState.GameStarted;

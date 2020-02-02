@@ -208,11 +208,9 @@ namespace OpenRA.Mods.Common.Widgets
 			if (keyOverrides != null)
 			{
 				var noShiftButtons = new[] { guardButton, deployButton, attackMoveButton };
+				var keyUpButtons = new[] { guardButton, attackMoveButton };
 				keyOverrides.AddHandler(e =>
 				{
-					if (e.Event != KeyInputEvent.Down)
-						return false;
-
 					// HACK: allow command buttons to be triggered if the shift (queue order modifier) key is held
 					if (e.Modifiers.HasModifier(Modifiers.Shift))
 					{
@@ -221,26 +219,32 @@ namespace OpenRA.Mods.Common.Widgets
 
 						foreach (var b in noShiftButtons)
 						{
-							if (b != null && !b.IsDisabled() && b.Key.IsActivatedBy(eNoShift))
-							{
-								b.OnKeyPress(e);
-								return true;
-							}
+							// Button is not used by this mod
+							if (b == null)
+								continue;
+
+							// Button is not valid for this event
+							if (b.IsDisabled() || !b.Key.IsActivatedBy(eNoShift))
+								continue;
+
+							// Event is not valid for this button
+							if (!(b.DisableKeyRepeat ^ e.IsRepeat) || (e.Event == KeyInputEvent.Up && !keyUpButtons.Contains(b)))
+								continue;
+
+							b.OnKeyPress(e);
+							return true;
 						}
 					}
 
-					// HACK: allow attack move to be triggered if the ctrl (assault move modifier)
-					// or shift (queue order modifier) keys are pressed
-					if (e.Modifiers.HasModifier(Modifiers.Ctrl))
-					{
-						var eNoMods = e;
-						eNoMods.Modifiers &= ~(Modifiers.Ctrl | Modifiers.Shift);
+					// HACK: Attack move can be triggered if the ctrl (assault move modifier)
+					// or shift (queue order modifier) keys are pressed, on both key down and key up
+					var eNoMods = e;
+					eNoMods.Modifiers &= ~(Modifiers.Ctrl | Modifiers.Shift);
 
-						if (attackMoveButton != null && !attackMoveDisabled && attackMoveButton.Key.IsActivatedBy(eNoMods))
-						{
-							attackMoveButton.OnKeyPress(e);
-							return true;
-						}
+					if (attackMoveButton != null && !attackMoveDisabled && attackMoveButton.Key.IsActivatedBy(eNoMods))
+					{
+						attackMoveButton.OnKeyPress(e);
+						return true;
 					}
 
 					return false;

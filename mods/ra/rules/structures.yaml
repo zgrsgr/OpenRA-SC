@@ -22,6 +22,7 @@ MSLO:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RequiresCondition: !disabled
 		RevealGeneratedShroud: False
@@ -87,6 +88,7 @@ GAP:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -141,6 +143,7 @@ SPEN:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -280,6 +283,7 @@ SYRD:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -398,6 +402,7 @@ IRON:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RequiresCondition: !disabled
 		RevealGeneratedShroud: False
@@ -454,6 +459,7 @@ PDOX:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RequiresCondition: !disabled
 		RevealGeneratedShroud: False
@@ -533,6 +539,7 @@ TSLA:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 6c0
 		Range: 8c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -578,6 +585,7 @@ AGUN:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -633,6 +641,7 @@ DOME:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 6c0
 		Range: 10c0
 		RequiresCondition: !disabled
 		RevealGeneratedShroud: False
@@ -673,6 +682,7 @@ PBOX:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -723,6 +733,7 @@ HBOX:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -778,6 +789,7 @@ GUN:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 7c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -821,6 +833,7 @@ FTUR:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -875,6 +888,7 @@ SAM:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
+		MinRange: 5c0
 		Range: 8c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -927,10 +941,11 @@ ATEK:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
-		Range: 6c0
+		Range: 4c0
 	WithBuildingBib:
 	GpsPower:
 		PauseOnCondition: disabled
@@ -971,6 +986,7 @@ WEAP:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1103,6 +1119,7 @@ FACT:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1194,6 +1211,7 @@ PROC:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1312,6 +1330,7 @@ HPAD:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1398,6 +1417,7 @@ AFLD:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1632,6 +1652,7 @@ STEK:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1667,6 +1688,7 @@ BARR:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1799,6 +1821,7 @@ TENT:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -1888,6 +1911,7 @@ FIX:
 	Armor:
 		Type: Wood
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:

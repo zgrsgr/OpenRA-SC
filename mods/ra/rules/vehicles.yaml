@@ -4,7 +4,7 @@ V2RL:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 230
 		Prerequisites: dome, ~vehicles.soviet, ~techlevel.medium
 		Description: 机动型远程火箭发射平台\n\n·强势对抗：步兵、建筑\n·弱势对抗：载具、飞行器
 	Valued:
@@ -20,6 +20,7 @@ V2RL:
 	Mobile:
 		Speed: 85
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -53,7 +54,7 @@ V2RL:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 120
 		Prerequisites: ~vehicles.allies, ~techlevel.low
 		Description: 高机动性侦察用坦克 \n\n·强势对抗：轻型载具\n·弱势对抗：步兵、装甲载具、飞行器
 	Valued:
@@ -70,6 +71,7 @@ V2RL:
 	Mobile:
 		Speed: 118
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -96,7 +98,7 @@ V2RL:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 110
+		BuildPaletteOrder: 220
 		Prerequisites: fix, ~vehicles.allies, ~techlevel.medium
 		Description: 盟军主战坦克\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
 	Valued:
@@ -113,6 +115,7 @@ V2RL:
 	Mobile:
 		Speed: 85
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -142,7 +145,7 @@ V2RL:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 120
+		BuildPaletteOrder: 220
 		Prerequisites: fix, ~vehicles.soviet, ~techlevel.medium
 		Description: 苏军标志性双炮管主战坦克\n\n·强势对抗：载具 \n·弱势对抗：步兵、飞行器
 	Valued:
@@ -159,6 +162,7 @@ V2RL:
 	Mobile:
 		Speed: 71
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -188,7 +192,7 @@ V2RL:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 180
+		BuildPaletteOrder: 320
 		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
 		Description: 具有防空能力的超重型移动堡垒\n可以碾压混凝土围墙\n\n·强势对抗：地面单位\n·弱势对抗：无\n·特殊能力：自动恢复生命值至50%
 	Valued:
@@ -206,6 +210,7 @@ V2RL:
 		Speed: 50
 		Locomotor: heavytracked
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -247,7 +252,7 @@ ARTY:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 230
 		Prerequisites: dome, ~vehicles.allies, ~techlevel.medium
 		Description: 长程轻型火炮\n\n·强势对抗：步兵、建筑\n·弱势对抗：载具、飞行器
 	Valued:
@@ -265,6 +270,7 @@ ARTY:
 		Speed: 85
 		Locomotor: lighttracked
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -286,10 +292,10 @@ ARTY:
 
 HARV:
 	Inherits: ^Vehicle
-	Inherits@SELECTION_MODE: ^LowPrioritySelectionMode
+	Inherits@selection: ^SelectableEconomicUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 110
 		Prerequisites: proc, ~techlevel.infonly
 		Description: 采集矿物以供生产\n\n·无武装
 	Valued:
@@ -298,7 +304,6 @@ HARV:
 		Name: 采矿车
 		GenericName: 采矿车
 	Selectable:
-		Priority: 7
 		DecorationBounds: 42,42
 	SelectionDecorations:
 	Harvester:
@@ -340,10 +345,10 @@ HARV:
 
 MCV:
 	Inherits: ^Vehicle
-	Inherits@SELECTION_MODE: ^LowPrioritySelectionMode
+	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 210
 		Prerequisites: fix, ~techlevel.medium
 		BuildDurationModifier: 50
 		Description: 可部署为建筑工厂\n多个建筑工厂能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n\n·无武装
@@ -352,7 +357,6 @@ MCV:
 	Tooltip:
 		Name: 移动基地车
 	Selectable:
-		Priority: 4
 		DecorationBounds: 42,42
 	SelectionDecorations:
 	Health:
@@ -384,7 +388,7 @@ JEEP:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 130
 		Prerequisites: ~vehicles.allies, ~techlevel.low
 		Description: 高机动性反步兵侦察载具\n可以搭载一名步兵\n搭载的步兵无法从中攻击\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Valued:
@@ -402,6 +406,7 @@ JEEP:
 		Speed: 170
 		PauseOnCondition: notmobile || being-captured
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 8c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -430,7 +435,7 @@ APC:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 120
 		Prerequisites: ~vehicles.soviet, ~techlevel.low
 		Description: 配备重装甲的反步兵运输载具\n可以运送五名步兵\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Valued:
@@ -447,6 +452,7 @@ APC:
 		Speed: 142
 		PauseOnCondition: notmobile || being-captured
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -467,10 +473,10 @@ APC:
 
 MNLY:
 	Inherits: ^TrackedVehicle
-	Inherits@SELECTION_MODE: ^LowPrioritySelectionMode
+	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 310
 		Prerequisites: fix, ~techlevel.medium
 		Description: 部署地雷以伏击敌方地面单位\n可以探测地雷\n\n·无武装
 	Valued:
@@ -479,8 +485,6 @@ MNLY:
 		Name: 布雷车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Selectable:
-		Priority: 5
 	Health:
 		HP: 30000
 	Armor:
@@ -488,6 +492,7 @@ MNLY:
 	Mobile:
 		Speed: 128
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -511,18 +516,16 @@ MNLY:
 
 TRUK:
 	Inherits: ^Vehicle
-	Inherits@SELECTION_MODE: ^LowPrioritySelectionMode
+	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 410
 		Prerequisites: ~techlevel.low
 		Description: 为其他玩家输送资金\n\n·无武装
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: 补给车
-	Selectable:
-		Priority: 6
 	Health:
 		HP: 11000
 	Armor:
@@ -541,7 +544,7 @@ MGG:
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 150
+		BuildPaletteOrder: 330
 		Prerequisites: atek, ~vehicles.england, ~techlevel.high
 		Description: 重置区域的雷达信号\n并屏蔽周围区域\n\n·无武装
 	Valued:
@@ -560,6 +563,7 @@ MGG:
 		Offset: -299,0,171
 		Sequence: spinner
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -580,7 +584,7 @@ MRJ:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 320
 		Prerequisites: atek, ~vehicles.allies, ~techlevel.high
 		Description: 干扰附近的敌方雷达\n并破坏敌方导弹的制导能力\n\n·无武装
 	Health:
@@ -613,7 +617,7 @@ TTNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 170
+		BuildPaletteOrder: 330
 		Prerequisites: tsla, stek, ~vehicles.russia, ~techlevel.high
 		Description: 装备磁暴武器的轻型坦克\n\n·强势对抗：地面单位\n·弱势对抗：飞行器
 	Valued:
@@ -630,6 +634,7 @@ TTNK:
 	Mobile:
 		Speed: 99
 	RevealsShroud:
+		MinRange: 6c0
 		Range: 7c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -653,7 +658,7 @@ FTRK:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 130
 		Prerequisites: ~vehicles.soviet, ~techlevel.low
 		Description: 高速轻型地对空载具\n\n·强势对抗：步兵、轻型载具、飞行器\n·弱势对抗：装甲载具
 	Valued:
@@ -670,6 +675,7 @@ FTRK:
 		TurnSpeed: 10
 		Speed: 118
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -700,7 +706,7 @@ DTRK:
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 160
+		BuildPaletteOrder: 330
 		Prerequisites: stek, ~vehicles.ukraine, ~techlevel.high
 		Description: 装有核子武器的自杀型载具\n几乎没有防护能力\n被作用于铁幕或超时空传送时将立刻自毁\n部署以立即自毁\n破坏力可以影响空中单位
 	Valued:
@@ -741,7 +747,7 @@ CTNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 200
+		BuildPaletteOrder: 330
 		Prerequisites: atek, ~vehicles.germany, ~techlevel.high
 		Description: 装备反装甲导弹的高科技载具\n可以超时空传送至附近的区域\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵、飞行器\n·特殊能力：超时空传送
 	Valued:
@@ -760,6 +766,7 @@ CTNK:
 		Speed: 113
 		Locomotor: heavywheeled
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -784,7 +791,7 @@ QTNK:
 	Inherits: ^TrackedVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 190
+		BuildPaletteOrder: 420
 		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
 		Description: 通过制造地震波破坏周围的建筑和载具的自杀型单位\n·自身无武装，但地震波能造成伤害\n通过部署发动攻击并自毁\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵、飞行器
 	Valued:
@@ -805,6 +812,7 @@ QTNK:
 	Chronoshiftable:
 		RequiresCondition: !deployed && !being-captured
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
@@ -826,7 +834,7 @@ STNK:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 130
+		BuildPaletteOrder: 330
 		Prerequisites: atek, ~vehicles.france, ~techlevel.high
 		Description: 装备微型导弹的高科技运兵车\n非攻击状态时保持隐形\n·强势对抗：轻型载具\n·弱势对抗：步兵、装甲载具、飞行器\n·特殊能力：隐形
 	Valued:
@@ -844,6 +852,7 @@ STNK:
 		Locomotor: heavywheeled
 		PauseOnCondition: notmobile || being-captured
 	RevealsShroud:
+		MinRange: 4c0
 		Range: 7c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:

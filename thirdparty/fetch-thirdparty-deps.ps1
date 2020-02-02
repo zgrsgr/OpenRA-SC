@@ -26,3 +26,4 @@ else
 	mv "$CurrentyDir\OpenRA_thirdparty_deps\win32" "$CurrentyDir\download"
 } 
 rm -path "$CurrentyDir\OpenRA_thirdparty_deps" -Recurse
+
