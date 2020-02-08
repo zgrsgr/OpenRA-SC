@@ -319,62 +319,70 @@ Background@SETTINGS_PANEL:
 					Y: 50
 					Width: PARENT_RIGHT
 					Align: Center
-					Text: Audio controls require an active sound device
+					Text: 音频控件需要有源声音设备
+					# Text: Audio controls require an active sound device
 				Container@AUDIO_CONTROLS:
 					Width: PARENT_RIGHT
 					Height: PARENT_BOTTOM
 					Children:
 						Label@SOUND_LABEL:
-							X: PARENT_RIGHT - WIDTH - 270
-							Y: 39
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 89
 							Width: 95
 							Height: 25
 							Align: Right
-							Text: Sound Volume:
+							Text: 音效音量：
+							# Text: Sound Volume:
 						ExponentialSlider@SOUND_VOLUME:
-							X: PARENT_RIGHT - WIDTH - 15
-							Y: 43
-							Width: 250
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 93
+							Width: 170
 							Height: 20
 							Ticks: 7
 						Checkbox@CASH_TICKS:
-							X: 15
-							Y: 40
+							X: 95
+							Y: 120
 							Width: 200
 							Height: 20
 							Font: Regular
-							Text: Cash Ticks
+							Text: 资金变动音效
+							# Text: Cash Ticks
 						Checkbox@MUTE_SOUND:
-							X: 15
-							Y: 70
+							X: 95
+							Y: 90
 							Width: 200
 							Height: 20
 							Font: Regular
-							Text: Mute Sound
+							Text: 静音
+							# Text: Mute Sound
 						Label@MUSIC_LABEL:
-							X: PARENT_RIGHT - WIDTH - 270
-							Y: 69
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 119
 							Width: 95
 							Height: 25
 							Align: Right
-							Text: Music Volume:
+							Text: 音乐音量：
+							# Text: Music Volume:
 						ExponentialSlider@MUSIC_VOLUME:
-							X: PARENT_RIGHT - WIDTH - 15
-							Y: 73
-							Width: 250
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 123
+							Width: 170
+							# Width: 250
 							Height: 20
 							Ticks: 7
 						Label@VIDEO_LABEL:
-							X: PARENT_RIGHT - WIDTH - 270
-							Y: 99
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 149
 							Width: 95
 							Height: 25
 							Align: Right
-							Text: Video Volume:
+							Text: 视频音量：
+							# Text: Video Volume:
 						ExponentialSlider@VIDEO_VOLUME:
-							X: PARENT_RIGHT - WIDTH - 15
-							Y: 103
-							Width: 250
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 153
+							Width: 170
+							# Width: 250
 							Height: 20
 							Ticks: 7
 				Label@AUDIO_DEVICE_LABEL:
@@ -404,7 +412,6 @@ Background@SETTINGS_PANEL:
 			Children:
 				Checkbox@CLASSICORDERS_CHECKBOX:
 					X: 65
-					# X: 15
 					Y: 40 + 70
 					Width: 250
 					Height: 20

@@ -979,6 +979,6 @@ Container@OBSERVER_WIDGETS:
 							# XAxisLabel: Game Minute
 							# YAxisLabel: Army Value
 							XAxisLabel: 时间 / 分钟
-							YAxisLabel: 军队价值
+							YAxisLabel: 部队价值
 							LabelFont: TinyBold
 							AxisFont: TinyBold
