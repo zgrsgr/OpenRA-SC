@@ -58,6 +58,11 @@ OpenRA的重置包含了对于西木早期RTS游戏的重新思考，现阶段�
 
 * 您可以立即设置[专用](https://gitee.com/CastleJing/OpenRA/wikis/Dedicated)游戏服务器。
 
+## 声明
+OpenRA汉化组不曾也不会授权任何个人、组织，以付费方式或作为条件来传播本游戏，并反对且抵制上述恶劣行径。如果您是以付费方式或条件而获得的本游戏，请及时联系您的卖家与汉化组，从而维护您与汉化组各自的权益；
+
+您可以免费扩散或传播本游戏。
+
 ## 许可证
 
 Copyright 2007-2019 The OpenRA Developers (参看[作者](https://gitee.com/CastleJing/OpenRA/blob/bleed/AUTHORS))
