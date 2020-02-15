@@ -110,7 +110,7 @@ GivePlayerUnits = function()
 	Reinforcements.Reinforce(player, PlayerTroopsInfiltrators, {InfiltrationEntry.Location, InfiltrationDst2.Location}, 10)
 	
 	if Map.LobbyOption("difficulty") ~= "easy" then
-		Media.DisplayMessage("我们只有在收到你的确切指令之后才会开火", "狙击手")
+		Media.DisplayMessage("指挥官，没有你的命令我们不会贸然开火！", "狙击手")
 	end
 	if Map.LobbyOption("difficulty") ~= "hard" then
 		Media.DisplayMessage("这些受过特训的军犬可以帮助我们侦察敌情", "狙击手")
@@ -245,7 +245,7 @@ Trigger.OnEnteredProximityTrigger(CrashSiteLoc.CenterPosition, WDist.FromCells(4
         Trigger.RemoveProximityTrigger(id)
 		Actor.Create("camera", true, { Owner = player, Location = cameraObjective.Location })
         player.MarkCompletedObjective(FindCrashSite)
-		Media.DisplayMessage("已确认目标位置", "Soldier")
+		Media.DisplayMessage("已确认目标位置", "苏联士兵")
     end
 end)
 
@@ -289,7 +289,7 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "任务目标")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
 	KillSpy = player.AddPrimaryObjective("杀死盟军特务")

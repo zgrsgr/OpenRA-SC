@@ -174,7 +174,7 @@ RescueBase = function()
 	
 	Media.PlaySpeechNotification(player, "ObjectiveReached")
 	WaitReinforcements = player.AddPrimaryObjective("在援军到来之前坚守阵地")
-	DestroyJammers = player.AddSecondaryObjective("清除敌军的雷达站与通讯干扰设备以加速援军的抵达")
+	DestroyJammers = player.AddSecondaryObjective("在援军到来之前清除所有苏联雷达站与干扰设备")
 	
 	player.MarkCompletedObjective(ArriveToBase)
 	
@@ -206,7 +206,7 @@ SendReinforcements = function()
 	Trigger.AfterDelay(DateTime.Seconds(1), function() Reinforcements.Reinforce(player, ReinforcingUnits2, ReinforcementPath, 20) end)
 	Trigger.AfterDelay(DateTime.Seconds(1), function() Reinforcements.Reinforce(player, ReinforcingUnits3, ReinforcementPath, 20) end)
 	Trigger.AfterDelay(DateTime.Seconds(2), function()
-		DestroySoviets = player.AddPrimaryObjective("肃清本区域的全部苏军")
+		DestroySoviets = player.AddPrimaryObjective("肃清本区域的全部敌人")
 	end)
 	Trigger.AfterDelay(DateTime.Seconds(3), function()
 		player.MarkCompletedObjective(WaitReinforcements)
@@ -293,7 +293,7 @@ end
 
 InitObjectives = function()
     Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "任务目标")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
 	ArriveToBase = player.AddPrimaryObjective("确认前哨站位置")

@@ -237,7 +237,7 @@ WorldLoaded = function()
 	opponent = Player.GetPlayer("USSR")
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. p.GetObjectiveType(id) .. "任务目标")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. p.GetObjectiveType(id))
 	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id) Media.DisplayMessage(p.GetObjectiveDescription(id), "任务目标已完成")	end)
 	Trigger.OnObjectiveFailed(player, function(p, id) Media.DisplayMessage(p.GetObjectiveDescription(id), "任务目标已失败") end)

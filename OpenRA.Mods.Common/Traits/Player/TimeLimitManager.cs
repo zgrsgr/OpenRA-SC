@@ -55,7 +55,7 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly int TimeLimitDisplayOrder = 0;
 
 		[Desc("Notification text for time limit warnings. The string '{0}' will be replaced by the remaining time in minutes, '{1}' is used for the plural form.")]
-		public readonly string Notification = "{0} minute{1} remaining.";
+		public readonly string Notification = "还剩{0}分钟。";
 
 		[Desc("ID of the LabelWidget used to display a text ingame that will be updated every second.")]
 		public readonly string CountdownLabel = null;

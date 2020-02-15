@@ -30,7 +30,7 @@ CAMERA.medium:
 THF.hijacker:
     Inherits: THF
     Tooltip:
-        Name: Hijacker
+        Name: 劫持者
     Buildable:
         Prerequisites: ~disabled
     RenderSprites:

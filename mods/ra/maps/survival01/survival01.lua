@@ -318,7 +318,7 @@ InitObjectives = function()
 
 	SurviveObj = allies.AddPrimaryObjective("在援军到达之前坚守阵地。")
 	KillSams = allies.AddSecondaryObjective("在援军到达之前摧毁两座地对空导弹阵地。")
-	Media.DisplayMessage("苏军干扰了我们和全球定位系统的通讯，\n我们需要调查他们的新技术。", "战场控制")
+	Media.DisplayMessage("苏联干扰了我们的通讯与定位系统，\n我们需要调查他们的新技术。", "战场控制")
 	CaptureAirfields = allies.AddSecondaryObjective("占领并坚守东北部的苏联空军基地。")
 	SovietObj = soviets.AddPrimaryObjective("消灭所有盟军部队。")
 	Trigger.OnObjectiveCompleted(allies, function(p, id)

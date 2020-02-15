@@ -420,7 +420,7 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)) .. "任务目标")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
 	ussrObj = ussr.AddPrimaryObjective("阻止盟军的行动")

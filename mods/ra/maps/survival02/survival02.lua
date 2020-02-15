@@ -335,7 +335,7 @@ InitMission = function()
 
 	Trigger.AfterDelay(TimerTicks, function()
 		-- Media.DisplayMessage("The Soviet reinforcements are approaching!", "Incoming Report")
-		Media.DisplayMessage("苏军的援军正在接近！", "接到报告")
+		Media.DisplayMessage("苏联援军正在接近！", "接到报告")
 		Media.PlaySpeechNotification(allies, "SovietReinforcementsArrived")
 		SpawnSovietVehicle(NewSovietEntryPoints, NewSovietRallyPoints)
 		FinalAttack()
