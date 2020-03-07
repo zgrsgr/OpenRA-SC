@@ -10,7 +10,7 @@ Container@MAP_PREVIEW:
 				Background@MAP_BG:
 					Width: PARENT_RIGHT
 					Height: 174
-					Background: dialog3
+					Background: panel-gray
 					Children:
 						MapPreview@MAP_PREVIEW:
 							X: 1
@@ -46,7 +46,7 @@ Container@MAP_PREVIEW:
 				Background@MAP_BG:
 					Width: PARENT_RIGHT
 					Height: 174
-					Background: dialog3
+					Background: panel-gray
 					Children:
 						MapPreview@MAP_PREVIEW:
 							X: 1
@@ -70,13 +70,13 @@ Container@MAP_PREVIEW:
 					Align: Center
 					Text: 此地图不被本OpenRA版本兼容
 					IgnoreMouseOver: true
-				# Label@MAP_STATUS_B:
-				# 	Y: 201
-				# 	Width: PARENT_RIGHT
-				# 	Height: 25
-				# 	Font: Tiny
-				# 	Align: Center
-				# 	Text: with this version of OpenRA
+				#Label@MAP_STATUS_B:
+				#	Y: 201
+				#	Width: PARENT_RIGHT
+				#	Height: 25
+				#	Font: Tiny
+				#	Align: Center
+				#	Text: with this version of OpenRA
 		Container@MAP_DOWNLOADABLE:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -84,7 +84,7 @@ Container@MAP_PREVIEW:
 				Background@MAP_BG:
 					Width: PARENT_RIGHT
 					Height: 142
-					Background: dialog3
+					Background: panel-gray
 					Children:
 						MapPreview@MAP_PREVIEW:
 							X: 1
@@ -117,8 +117,7 @@ Container@MAP_PREVIEW:
 					Y: 194
 					Width: PARENT_RIGHT
 					Height: 25
-					Font: Bold
-					Text: 安装地图
+					Text: Install Map
 		Container@MAP_PROGRESS:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -126,7 +125,7 @@ Container@MAP_PREVIEW:
 				Background@MAP_BG:
 					Width: PARENT_RIGHT
 					Height: 142
-					Background: dialog3
+					Background: panel-gray
 					Children:
 						MapPreview@MAP_PREVIEW:
 							X: 1
@@ -160,13 +159,13 @@ Container@MAP_PREVIEW:
 							Font: Tiny
 							Align: Center
 							Text: 在OpenRA资源中心找不到此地图
-						# Label@b:
-						# 	Y: 171
-						# 	Width: PARENT_RIGHT
-						# 	Height: 25
-						# 	Font: Tiny
-						# 	Align: Center
-						# 	Text: OpenRA Resource Center
+					#	Label@b:
+					#		Y: 171
+					#		Width: PARENT_RIGHT
+					#		Height: 25
+					#		Font: Tiny
+					#		Align: Center
+					#		Text: OpenRA Resource Center
 				Label@MAP_STATUS_ERROR:
 					Y: 158
 					Width: PARENT_RIGHT
@@ -189,4 +188,3 @@ Container@MAP_PREVIEW:
 					Y: 194
 					Width: PARENT_RIGHT
 					Height: 25
-					Font: Bold

@@ -11,7 +11,7 @@ Container@CREDITS_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Credits
+			Text: 鸣谢
 		Background@bg:
 			Width: PARENT_RIGHT
 			Height: 400
@@ -48,5 +48,5 @@ Container@CREDITS_PANEL:
 			Y: 399
 			Width: 140
 			Height: 35
-			Text: Back
+			Text: 关闭
 			Key: escape

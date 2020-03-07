@@ -100,7 +100,7 @@ Background@SETTINGS_PANEL:
 					Width: 45
 					Height: 25
 					Align: Right
-					Text: 模式
+					Text: 模式：
 				DropDownButton@MODE_DROPDOWN:
 					X: 160
 					Y: 40
@@ -702,7 +702,7 @@ Background@SETTINGS_PANEL:
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text:  检查更新
+					Text: 检查更新
 				Checkbox@SENDSYSINFO_CHECKBOX:
 					X: 310
 					Y: 100 + 20

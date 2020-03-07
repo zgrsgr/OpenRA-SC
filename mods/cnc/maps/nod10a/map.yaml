@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 10a: Terminate Doctor Wong
+Title: 10a: 斩首行动
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 2,2,60,60
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

@@ -94,21 +94,21 @@ Background@MULTIPLAYER_CREATESERVER_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 该房间将仅能被局域网内的玩家发现。
+					Text: ·该房间将仅能被局域网内的玩家发现。
 				Label@FIREWALL:
 					Y: 12
 					Width: 305
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 您必须手动配置防火墙以允许连接。
+					Text: ·您必须手动配置防火墙以允许连接。
 				Label@PORTFORWARD_A:
 					Y: 24
 					Width: 305
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 如果您在路由器上手动配置端口转发，则其他玩家可以
+					Text: ·如果您在路由器上手动配置端口转发，则其他玩家可以
 				Label@PORTFORWARD_B:
 					X: 7
 					Y: 36
@@ -128,21 +128,21 @@ Background@MULTIPLAYER_CREATESERVER_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 该房间将能被任意在线玩家发现。
+					Text: ·该房间将能被任意在线玩家发现。
 				Label@FIREWALL:
 					Y: 12
 					Width: 305
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 您必须手动配置防火墙以允许连接。
+					Text: ·您必须手动配置防火墙以允许连接。
 				Label@PORTFORWARD_A:
 					Y: 24
 					Width: 305
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 您必须手动配置路由器以允许和转发到本地
+					Text: ·您必须手动配置路由器以允许和转发到本地
 				Label@PORTFORWARD_B:
 					X: 7
 					Y: 36
@@ -177,14 +177,14 @@ Background@MULTIPLAYER_CREATESERVER_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 该房间将能被任意在线玩家发现。
+					Text: ·该房间将能被任意在线玩家发现。
 				Label@FIREWALL:
 					Y: 12
 					Width: 305
 					Height: 25
 					Font: Tiny
 					Align: Left
-					Text: - 您必须手动配置防火墙以允许连接。
+					Text: ·您必须手动配置防火墙以允许连接。
 				Label@PORTFORWARD_A:
 					Y: 24
 					Width: 305
@@ -240,14 +240,14 @@ Background@MULTIPLAYER_CREATESERVER_PANEL:
 			Y: PARENT_BOTTOM - 45
 			Width: 120
 			Height: 25
-			Text: Change Map
+			Text: 选择地图
 			Font: Bold
 		Button@BACK_BUTTON:
 			X: PARENT_RIGHT - WIDTH - 20
 			Y: PARENT_BOTTOM - 45
 			Width: 120
 			Height: 25
-			Text: Back
+			Text: 返回
 			Font: Bold
 			Key: escape
 		Button@CREATE_BUTTON:
@@ -256,6 +256,6 @@ Background@MULTIPLAYER_CREATESERVER_PANEL:
 			Y: PARENT_BOTTOM - 45
 			Width: 120
 			Height: 25
-			Text: Create
+			Text: 创建
 			Font: Bold
 		TooltipContainer@TOOLTIP_CONTAINER:

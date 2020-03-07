@@ -165,7 +165,7 @@ CreateCivilians = function(actor, discoverer)
 		actor.Owner = player
 	end)
 
-	NodObjective2 = player.AddPrimaryObjective("Protect the civilians that support Nod.")
+	NodObjective2 = player.AddPrimaryObjective("保护支持者的村庄")
 	Trigger.OnAllKilled(NodCiviliansActors, function()
 		player.MarkFailedObjective(NodObjective2)
 	end)
@@ -289,8 +289,8 @@ WorldLoaded = function()
 		end
 	end)
 
-	GDIObjective = enemy.AddPrimaryObjective("Eliminate all Nod forces in the area.")
-	NodObjective1 = player.AddPrimaryObjective("Kill all civilian GDI supporters.")
+	GDIObjective = enemy.AddPrimaryObjective("消灭所有敌人")
+	NodObjective1 = player.AddPrimaryObjective("消灭所有GDI支持者")
 
 	InsertNodUnits()
 	Camera.Position = waypoint6.CenterPosition

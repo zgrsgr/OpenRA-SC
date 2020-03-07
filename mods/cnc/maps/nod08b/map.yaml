@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 08b: Battle for Zaire
+Title: 08b: 扎伊尔会战
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 3,2,59,60
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

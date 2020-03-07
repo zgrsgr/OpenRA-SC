@@ -140,9 +140,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	gdiObjective = player.AddPrimaryObjective("Retrieve the crate with the stolen rods.")
-	reinforcementsObjective = player.AddSecondaryObjective("Eliminate " .. KillsUntilReinforcements .. " Nod units for reinforcements.")
-	enemy.AddPrimaryObjective("Defend against the GDI forces.")
+	gdiObjective = player.AddPrimaryObjective("收回装有被盗物资的工具箱")
+	reinforcementsObjective = player.AddSecondaryObjective("消灭 " .. KillsUntilReinforcements .. " 名敌人以获得支援")
+	enemy.AddPrimaryObjective("抵御GDI军队")
 
 	SetupWorld()
 

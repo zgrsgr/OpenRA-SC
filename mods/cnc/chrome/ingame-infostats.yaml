@@ -12,7 +12,7 @@ Container@SKIRMISH_STATS:
 					Width: 85
 					Height: 25
 					Font: MediumBold
-					Text: Mission:
+					Text: 任务：
 				Label@STATS_STATUS:
 					X: 100
 					Y: 12
@@ -25,7 +25,7 @@ Container@SKIRMISH_STATS:
 					Width: 482
 					Height: 20
 					Font: Bold
-					Text: Destroy all opposition!
+					Text: 击败所有敌人！
 					Disabled: yes
 					TextColorDisabled: FFFFFF
 		Container@STATS_HEADERS:
@@ -38,21 +38,21 @@ Container@SKIRMISH_STATS:
 					Y: 1
 					Width: 210
 					Height: 25
-					Text: Player
+					Text: 玩家
 					Font: Bold
 				Label@FACTION:
 					X: 230
 					Y: 1
 					Width: 120
 					Height: 25
-					Text: Faction
+					Text: 阵营
 					Font: Bold
 				Label@SCORE:
 					X: 360
 					Y: 1
 					Width: 75
 					Height: 25
-					Text: Score
+					Text: 分数
 					Font: Bold
 					Align: Right
 		ScrollPanel@PLAYER_LIST:

@@ -11,42 +11,42 @@ Container@LOBBY_PLAYER_BIN:
 				Label@NAME:
 					Width: 200
 					Height: 25
-					Text: Player
+					Text: 名字
 					Align: Center
 					Font: Bold
 				Label@COLOR:
 					X: 210
 					Width: 76
 					Height: 25
-					Text: Color
+					Text: 颜色
 					Align: Center
 					Font: Bold
 				Label@FACTION:
 					X: 291
 					Width: 120
 					Height: 25
-					Text: Faction
+					Text: 阵营
 					Align: Center
 					Font: Bold
 				Label@TEAM:
 					X: 416
 					Width: 50
 					Height: 25
-					Text: Team
+					Text: 小队
 					Align: Center
 					Font: Bold
 				Label@SPAWN:
 					X: 471
 					Width: 50
 					Height: 25
-					Text: Spawn
+					Text: 出生点
 					Align: Left
 					Font: Bold
 				Label@STATUS:
 					X: 527
 					Width: 20
 					Height: 25
-					Text: Ready
+					Text: 就绪
 					Align: Left
 					Font: Bold
 		ScrollPanel@LOBBY_PLAYERS:
@@ -103,7 +103,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 15
 							Width: 190
 							Height: 25
-							Text: Name
+							Text: 名字
 							Font: Regular
 							Visible: false
 						DropDownButton@COLOR:
@@ -136,7 +136,7 @@ Container@LOBBY_PLAYER_BIN:
 									X: 40
 									Width: 60
 									Height: 25
-									Text: Faction
+									Text: 阵营
 						DropDownButton@TEAM_DROPDOWN:
 							X: 416
 							Width: 50
@@ -282,7 +282,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 15
 							Width: 190
 							Height: 25
-							Text: Name
+							Text: 名字
 							Font: Regular
 							Visible: false
 						Label@NAME:
@@ -295,7 +295,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 210
 							Width: 338
 							Height: 25
-							Text: Play in this slot
+							Text: 在此位置进行游戏
 							Font: Regular
 				Container@TEMPLATE_EDITABLE_SPECTATOR:
 					X: 5
@@ -324,7 +324,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 15
 							Width: 190
 							Height: 25
-							Text: Name
+							Text: 名字
 							LeftMargin: 24
 							MaxLength: 16
 							Children:
@@ -344,7 +344,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 210
 							Width: 341
 							Height: 25
-							Text: Spectator
+							Text: 观众席
 							Align: Center
 							Font: Bold
 						Image@STATUS_IMAGE:
@@ -426,7 +426,7 @@ Container@LOBBY_PLAYER_BIN:
 							X: 210
 							Width: 341
 							Height: 25
-							Text: Spectator
+							Text: 观众席
 							Align: Center
 							Font: Bold
 						Image@STATUS_IMAGE:
@@ -448,10 +448,10 @@ Container@LOBBY_PLAYER_BIN:
 							Width: 190
 							Height: 20
 							Font: Regular
-							Text: Allow Spectators?
+							Text: 允许观战？
 						Button@SPECTATE:
 							X: 210
 							Width: 338
 							Height: 25
-							Text: Spectate
+							Text: 观战
 							Font: Regular

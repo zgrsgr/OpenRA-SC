@@ -139,7 +139,7 @@ DiscoverGdiBase = function(actor, discoverer)
 
 	baseDiscovered = true
 
-	gdiObjective3 = player.AddPrimaryObjective("Eliminate all Nod forces in the area.")
+	gdiObjective3 = player.AddPrimaryObjective("肃清所有Nod武装力量")
 	player.MarkCompletedObjective(gdiObjective1)
 
 	Attack()
@@ -213,9 +213,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Win")
 	end)
 
-	nodObjective = enemy.AddPrimaryObjective("Destroy all GDI troops.")
-	gdiObjective1 = player.AddPrimaryObjective("Find the GDI base.")
-	gdiObjective2 = player.AddSecondaryObjective("Destroy all SAM sites to receive air support.")
+	nodObjective = enemy.AddPrimaryObjective("消灭所有GDI")
+	gdiObjective1 = player.AddPrimaryObjective("确认友方基地位置")
+	gdiObjective2 = player.AddSecondaryObjective("摧毁Nod防空设施以获取空中支援")
 
 	SetupWorld()
 

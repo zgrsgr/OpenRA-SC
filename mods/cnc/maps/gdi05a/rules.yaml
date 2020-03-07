@@ -30,9 +30,9 @@ World:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单
+			normal: 正常
+			hard: 困难
 		Default: easy
 
 Player:

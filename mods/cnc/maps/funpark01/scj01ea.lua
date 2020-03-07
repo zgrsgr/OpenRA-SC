@@ -45,7 +45,7 @@ WorldLoaded = function()
 	dinosaur = Player.GetPlayer("Dinosaur")
 	civilian = Player.GetPlayer("Civilian")
 
-	InvestigateObj = player.AddPrimaryObjective("Investigate the nearby village for reports of \nstrange activity.")
+	InvestigateObj = player.AddPrimaryObjective("调查情报指出的怪异设施")
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
@@ -67,12 +67,12 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	ReachVillageObj = player.AddPrimaryObjective("Reach the village.")
+	ReachVillageObj = player.AddPrimaryObjective("抵达目的村庄")
 
 	Trigger.OnPlayerDiscovered(civilian, function(_, discoverer)
 		if discoverer == player and not player.IsObjectiveCompleted(ReachVillageObj) then
 			if not dinosaur.HasNoRequiredUnits() then
-				KillDinos = player.AddPrimaryObjective("Kill all creatures in the area.")
+				KillDinos = player.AddPrimaryObjective("消灭本地区所有生物")
 			end
 
 			player.MarkCompletedObjective(ReachVillageObj)

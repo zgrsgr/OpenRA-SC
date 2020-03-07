@@ -71,7 +71,7 @@ GAP:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: 裂缝产生器
+		Name: 电磁干扰仪
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 110
@@ -1316,7 +1316,7 @@ HPAD:
 		Queue: Building
 		BuildPaletteOrder: 120
 		Prerequisites: dome, ~structures.allies, ~techlevel.medium
-		Description: 制造和维护直升机\n多个停机坪能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升苏军战机的生产效率
+		Description: 制造和维护直升机\n多个停机坪能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升苏联战机的生产效率
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1636,7 +1636,7 @@ STEK:
 		Queue: Building
 		BuildPaletteOrder: 150
 		Prerequisites: weap, dome, ~structures.soviet, ~techlevel.high
-		Description: 解锁苏军高级科技
+		Description: 解锁苏联高级科技
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1757,7 +1757,7 @@ KENN:
 		Queue: Building
 		BuildPaletteOrder: 175
 		Prerequisites: anypower, ~structures.soviet, ~techlevel.infonly
-		Description: 训练警犬\n多个狗窝能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升步兵的生产效率
+		Description: 训练军犬\n多个狗窝能提高生产效率\n在7个及以上时到达最高从而缩短50%的生产时间\n无法提升步兵的生产效率
 	Valued:
 		Cost: 200
 	Tooltip:

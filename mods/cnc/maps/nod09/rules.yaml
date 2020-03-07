@@ -5,7 +5,7 @@ World:
 		StartingMusic: march
 		VictoryMusic: nod_win1
 	MissionData:
-		Briefing: GDI is attempting to retake Egypt.\n\nUse every available resource in your efforts to stop them.\n\nThe populace has once again swayed in support of GDI forces, so show no mercy in dealing with the villagers.
+		Briefing: GDI正试图重新夺回北非，\n你必须即刻启程回援埃及！\n\n当地人又一次倒向了GDI，\n不用留情，\n用行动告诉他们，\nGDI的天下撑不过第三个晚上。\n
 		LossVideo: banner.vqa
 		BriefingVideo: nod9.vqa
 	SmudgeLayer@SCORCH:
@@ -31,9 +31,9 @@ World:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单
+			normal: 正常
+			hard: 困难
 		Default: easy
 
 Player:

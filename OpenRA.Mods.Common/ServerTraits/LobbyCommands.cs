@@ -542,7 +542,7 @@ namespace OpenRA.Mods.Common.Server
 			if (!client.IsAdmin)
 			{
 				// server.SendOrderTo(conn, "Message", "Only the host can set that option.");
-				server.SendOrderTo(conn, "Message", "自有房主才能更改这个选项。");
+				server.SendOrderTo(conn, "Message", "只有房主才能更改这个选项。");
 				return true;
 			}
 
@@ -584,7 +584,7 @@ namespace OpenRA.Mods.Common.Server
 		{
 			if (!client.IsAdmin)
 			{
-				server.SendOrderTo(conn, "Message", "自有房主才可以踢人。");
+				server.SendOrderTo(conn, "Message", "只有房主才可以踢人。");
 				// server.SendOrderTo(conn, "Message", "Only the host can kick players.");
 				return true;
 			}
@@ -858,7 +858,7 @@ namespace OpenRA.Mods.Common.Server
 			if (!client.IsAdmin)
 			{
 				// server.SendOrderTo(conn, "Message", "Only the host can set lobby info");
-				server.SendOrderTo(conn, "Message", "自有房主才能设置大厅信息。");
+				server.SendOrderTo(conn, "Message", "只有房主才能设置大厅信息。");
 				return true;
 			}
 

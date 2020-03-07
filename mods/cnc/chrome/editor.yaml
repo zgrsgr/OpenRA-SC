@@ -6,7 +6,7 @@ Container@NEW_MAP_BG:
 	Height: 125
 	Children:
 		Label@TITLE:
-			Text: New Map
+			Text: 新地图
 			Width: PARENT_RIGHT
 			Y: 0 - 22
 			Font: BigBold
@@ -23,7 +23,7 @@ Container@NEW_MAP_BG:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Tileset:
+					Text: 地貌：
 				DropDownButton@TILESET:
 					X: 125
 					Y: 15
@@ -35,7 +35,7 @@ Container@NEW_MAP_BG:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Width:
+					Text: 宽度：
 				TextField@WIDTH:
 					X: 125
 					Y: 50
@@ -50,7 +50,7 @@ Container@NEW_MAP_BG:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Height:
+					Text: 高度：
 				TextField@HEIGHT:
 					X: 235
 					Y: 50
@@ -63,7 +63,7 @@ Container@NEW_MAP_BG:
 			Y: 89
 			Width: 140
 			Height: 35
-			Text: Cancel
+			Text: 取消
 			Font: Bold
 			Key: escape
 		Button@CREATE_BUTTON:
@@ -71,7 +71,7 @@ Container@NEW_MAP_BG:
 			Y: 89
 			Width: 140
 			Height: 35
-			Text: Create
+			Text: 创建
 			Font: Bold
 			Key: return
 
@@ -83,7 +83,7 @@ Container@SAVE_MAP_PANEL:
 	Height: 229
 	Children:
 		Label@LABEL_TITLE:
-			Text: Save Map
+			Text: 保存地图
 			Width: PARENT_RIGHT
 			Y: 0 - 22
 			Font: BigBold
@@ -100,7 +100,7 @@ Container@SAVE_MAP_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Title:
+					Text: 标题：
 				TextField@TITLE:
 					X: 110
 					Y: 15
@@ -113,7 +113,7 @@ Container@SAVE_MAP_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Author:
+					Text: 作者：
 				TextField@AUTHOR:
 					X: 110
 					Y: 50
@@ -126,7 +126,7 @@ Container@SAVE_MAP_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Visibility:
+					Text: 类型：
 				DropDownButton@VISIBILITY_DROPDOWN:
 					X: 110
 					Y: 85
@@ -140,7 +140,7 @@ Container@SAVE_MAP_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Directory:
+					Text: 目录：
 				DropDownButton@DIRECTORY_DROPDOWN:
 					X: 110
 					Y: 120
@@ -153,7 +153,7 @@ Container@SAVE_MAP_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Filename:
+					Text: 文件名：
 				TextField@FILENAME:
 					X: 110
 					Y: 155
@@ -170,7 +170,7 @@ Container@SAVE_MAP_PANEL:
 			Y: PARENT_BOTTOM - 35
 			Width: 140
 			Height: 35
-			Text: Cancel
+			Text: 取消
 			Font: Bold
 			Key: escape
 		Button@SAVE_BUTTON:
@@ -178,7 +178,7 @@ Container@SAVE_MAP_PANEL:
 			Y: PARENT_BOTTOM - 35
 			Width: 140
 			Height: 35
-			Text: Save
+			Text: 保存
 			Font: Bold
 
 ScrollPanel@MAP_SAVE_VISIBILITY_PANEL:
@@ -294,13 +294,13 @@ Container@EDITOR_WORLD_ROOT:
 									X: 4
 									Width: 85
 									Height: 25
-									Text: Delete
+									Text: 删除
 									Font: Bold
 								Button@CLOSE_BUTTON:
 									X: 180
 									Width: 85
 									Height: 25
-									Text: Close
+									Text: 关闭
 									Font: Bold
 		ViewportController:
 			Width: WINDOW_RIGHT
@@ -365,14 +365,14 @@ Container@EDITOR_WORLD_ROOT:
 									Y: 1
 									Width: PARENT_RIGHT - 5
 									Height: 25
-									Text: Search:
+									Text: 搜索：
 									Align: Right
 									Font: TinyBold
 								Label@CATEGORIES_LABEL:
 									Y: 25
 									Width: PARENT_RIGHT - 5
 									Height: 25
-									Text: Filter:
+									Text: 筛选：
 									Align: Right
 									Font: TinyBold
 						TextField@SEARCH_TEXTFIELD:
@@ -448,21 +448,21 @@ Container@EDITOR_WORLD_ROOT:
 									Y: 1
 									Width: PARENT_RIGHT - 5
 									Height: 25
-									Text: Search:
+									Text: 搜索：
 									Align: Right
 									Font: TinyBold
 								Label@CATEGORIES_LABEL:
 									Y: 25
 									Width: PARENT_RIGHT - 5
 									Height: 25
-									Text: Filter:
+									Text: 筛选：
 									Align: Right
 									Font: TinyBold
 								Label@OWNERS_LABEL:
 									Y: 49
 									Width: PARENT_RIGHT - 5
 									Height: 25
-									Text: Owner:
+									Text: 所有者：
 									Align: Right
 									Font: TinyBold
 						TextField@SEARCH_TEXTFIELD:
@@ -510,37 +510,37 @@ Container@EDITOR_WORLD_ROOT:
 				Button@TILES_TAB:
 					Width: 81
 					Height: 25
-					Text: Tiles
+					Text: 地貌
 					Font: Bold
 				Button@OVERLAYS_TAB:
 					X: 80
 					Width: 90
 					Height: 25
-					Text: Overlays
+					Text: 覆盖物
 					Font: Bold
 				Button@ACTORS_TAB:
 					X: 169
 					Width: 81
 					Height: 25
-					Text: Actors
+					Text: 单位
 					Font: Bold
 		Button@GRID_BUTTON:
 			X: WINDOW_RIGHT - 650
 			Y: 5
 			Width: 100
 			Height: 25
-			Text: Grid
+			Text: 网格
 			Font: Bold
 			Key: f1
 			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Toggle the terrain grid
+			TooltipText: 切换网格显示
 			TooltipContainer: TOOLTIP_CONTAINER
 		Label@ZOOM_LABEL:
 			X: WINDOW_RIGHT - 730 - 55
 			Y: 5
 			Width: 50
 			Height: 25
-			Text: Zoom:
+			Text: 缩放：
 			Align: Right
 			Font: Bold
 			Contrast: true
@@ -552,24 +552,24 @@ Container@EDITOR_WORLD_ROOT:
 			Font: Bold
 			Key: TogglePixelDouble
 			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Zoom
+			TooltipText: 缩放
 			TooltipContainer: TOOLTIP_CONTAINER
 		Button@COPYPASTE_BUTTON:
 			X: WINDOW_RIGHT - 540
 			Y: 5
 			Width: 96
 			Height: 25
-			Text: Copy/Paste
+			Text: 复制/粘贴
 			Key: c ctrl
 			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Copy
+			TooltipText: 复制
 			TooltipContainer: TOOLTIP_CONTAINER
 		DropDownButton@COPYFILTER_BUTTON:
 			X: WINDOW_RIGHT - 435
 			Y: 5
 			Width: 140
 			Height: 25
-			Text: Copy Filters
+			Text: 复制（筛选）
 			Font: Bold
 		Label@COORDINATE_LABEL:
 			X: 10
@@ -598,13 +598,13 @@ ScrollPanel@CATEGORY_FILTER_PANEL:
 					Y: 2
 					Width: 60
 					Height: 25
-					Text: All
+					Text: 全部
 				Button@SELECT_NONE:
 					X: PARENT_RIGHT - WIDTH - 34
 					Y: 2
 					Width: 60
 					Height: 25
-					Text: None
+					Text: 无
 		Checkbox@CATEGORY_TEMPLATE:
 			X: 5
 			Y: 5

@@ -1,4 +1,4 @@
---[[
+	--[[
    Copyright 2007-2019 The OpenRA Developers (see AUTHORS)
    This file is part of OpenRA, which is free software. It is made
    available to you under the terms of the GNU General Public License
@@ -86,9 +86,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	nodObjective = enemy.AddPrimaryObjective("Destroy all GDI troops.")
-	gdiObjective1 = player.AddPrimaryObjective("Eliminate all Nod forces in the area.")
-	gdiObjective2 = player.AddSecondaryObjective("Capture the Tiberium refinery.")
+	nodObjective = enemy.AddPrimaryObjective("消灭所有GDI单位")
+	gdiObjective1 = player.AddPrimaryObjective("肃清所有Nod武装力量")
+	gdiObjective2 = player.AddSecondaryObjective("占领泰伯利亚精炼厂")
 
 	Trigger.OnCapture(NodRefinery, function() player.MarkCompletedObjective(gdiObjective2) end)
 	Trigger.OnKilled(NodRefinery, function() player.MarkFailedObjective(gdiObjective2) end)

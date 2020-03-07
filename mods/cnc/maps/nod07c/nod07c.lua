@@ -179,11 +179,11 @@ WorldLoaded = function()
 	Trigger.OnDiscovered(GDIBuilding10, DiscoveredMainEntrance)
 	Trigger.OnDiscovered(GDIBuilding11, DiscoveredSideEntrance)
 
-	NodObjective1 = player.AddPrimaryObjective("Capture the GDI helipad.")
-	NodObjective2 = player.AddPrimaryObjective("Don't capture or destroy any other\nGDI main building.")
-	NodObjective3 = player.AddPrimaryObjective("Use the GDI orca to wreak havoc at the village.")
-	NodObjective4 = player.AddSecondaryObjective("Distract the guards by attacking the\nmain entrance with your vehicles.")
-	GDIObjective = enemy.AddPrimaryObjective("Kill all enemies.")
+	NodObjective1 = player.AddPrimaryObjective("占领GDI停机坪")
+	NodObjective2 = player.AddPrimaryObjective("不得占领或摧毁其他GDI基础建筑")
+	NodObjective3 = player.AddPrimaryObjective("出动奥卡战机破坏村庄")
+	NodObjective4 = player.AddSecondaryObjective("通过正面佯攻吸引GDI守军注意")
+	GDIObjective = enemy.AddPrimaryObjective("消灭所有敌人")
 end
 
 Tick = function()

@@ -108,7 +108,7 @@ WorldLoaded = function()
 		KillCounterHuntThreshold = 20
 	end
 
-	destroyObjective = player.AddPrimaryObjective("Destroy the Nod ********.")
+	destroyObjective = player.AddPrimaryObjective("摧毁Nod****")
 
 	Trigger.OnKilled(Airfield, function()
 		player.MarkCompletedObjective(destroyObjective)

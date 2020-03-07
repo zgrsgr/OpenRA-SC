@@ -70,7 +70,7 @@ Background@MULTIPLAYER_PANEL:
 					Width: PARENT_RIGHT-10
 					Height: 20
 					Align: Center
-					Text: 可以使用下一个OpenRA版本的预览进行测试，请从下载测试版本
+					Text: 可以使用下一个OpenRA版本的预览进行测试，可以下载测试版本
 					Font: TinyBold
 		ScrollPanel@SERVER_LIST:
 			X: 20

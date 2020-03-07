@@ -57,7 +57,7 @@ Container@LOBBY_SERVERS_BIN:
 					Width: PARENT_RIGHT-10
 					Height: 20
 					Align: Center
-					Text: 可以使用下一个OpenRA版本的预览进行测试，请从官网下载测试版本
+					Text: 可以使用下一个OpenRA版本的预览进行测试，可从官网下载测试版本
 					Font: TinyBold
 		ScrollPanel@SERVER_LIST:
 			Width: PARENT_RIGHT

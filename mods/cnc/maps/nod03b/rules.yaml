@@ -5,7 +5,7 @@ World:
 		StartingMusic: chrg226m
 		VictoryMusic: nod_win1
 	MissionData:
-		Briefing: GDI集结了一批政治犯，\n并将他们集中到苏丹某处集中关押。\n\n先知凯恩希望能将这些桎梏全部打破，\n突袭这座监狱，\n占领它并释放其中遭受迫害的人们。
+		Briefing: GDI集结了一批政治犯，\n并将他们集中到苏丹某处集中关押。\n\n先知凯恩希望能将这些桎梏全部打破，\n突袭这座监狱，\n占领它并释放那些遭受迫害的人们。
 		BriefingVideo: nod3.vqa
 		StartVideo: dessweep.vqa
 		WinVideo: desflees.vqa

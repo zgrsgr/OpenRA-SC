@@ -49,7 +49,7 @@ ScrollPanel@MULTIPLAYER_FILTER_PANEL:
 			Y: 5
 			Width: PARENT_RIGHT - 29
 			Height: 20
-			Text: Waiting
+			Text: 等待中
 			TextColor: 32CD32
 			Font: Regular
 		Checkbox@EMPTY:
@@ -57,14 +57,14 @@ ScrollPanel@MULTIPLAYER_FILTER_PANEL:
 			Y: 30
 			Width: PARENT_RIGHT - 29
 			Height: 20
-			Text: Empty
+			Text: 空闲
 			Font: Regular
 		Checkbox@PASSWORD_PROTECTED:
 			X: 5
 			Y: 55
 			Width: PARENT_RIGHT - 29
 			Height: 20
-			Text: Protected
+			Text: 受保护
 			TextColor: FF0000
 			Font: Regular
 		Checkbox@ALREADY_STARTED:
@@ -72,7 +72,7 @@ ScrollPanel@MULTIPLAYER_FILTER_PANEL:
 			Y: 80
 			Width: PARENT_RIGHT - 29
 			Height: 20
-			Text: Started
+			Text: 已开始
 			TextColor: FFA500
 			Font: Regular
 		Checkbox@INCOMPATIBLE_VERSION:
@@ -80,6 +80,6 @@ ScrollPanel@MULTIPLAYER_FILTER_PANEL:
 			Y: 105
 			Width: PARENT_RIGHT - 29
 			Height: 20
-			Text: Incompatible
+			Text: 不兼容
 			TextColor: BEBEBE
 			Font: Regular

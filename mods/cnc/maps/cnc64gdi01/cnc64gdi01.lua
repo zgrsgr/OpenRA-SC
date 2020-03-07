@@ -57,9 +57,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	destroySAMsCenterObjective = player.AddPrimaryObjective("Destroy the SAM sites protecting the Obelisk.")
-	destroyObeliskObjective = player.AddPrimaryObjective("Destroy the Obelisk.")
-	destroyBiotechCenterObjective = player.AddPrimaryObjective("Destroy the biotech facility.")
+	destroySAMsCenterObjective = player.AddPrimaryObjective("摧毁Nod防空设施")
+	destroyObeliskObjective = player.AddPrimaryObjective("摧毁光明石碑")
+	destroyBiotechCenterObjective = player.AddPrimaryObjective("摧毁Nod生化实验室")
 
 	Trigger.OnAllKilled(SamSites, function()
 		AirSupport = Actor.Create("airstrike.proxy", true, { Owner = player })

@@ -104,7 +104,7 @@
 		Name: 英国
 		InternalName: england
 		Side: 盟军
-		Description: 情报与反情报\n·独有单位：皇家特工\n·独有单位：机动裂缝产生器
+		Description: 情报与反情报\n·独有单位：皇家特工\n·独有单位：机动电磁干扰车
 	Faction@2:
 		Name: 法国
 		InternalName: france
@@ -124,7 +124,7 @@
 		Name: 苏俄
 		InternalName: russia
 		Side: 苏联
-		Description: 磁能武器\n·独有单位：磁能坦克\n·独有单位：磁爆步兵
+		Description: 电磁武器\n·独有单位：磁能坦克\n·独有单位：震电突击队
 	Faction@6:
 		Name: 乌克兰
 		InternalName: ukraine

@@ -163,7 +163,7 @@ Background@REPLAYBROWSER_PANEL:
 					Y: 1
 					Width: PARENT_RIGHT
 					Height: 25
-					Text:选择录像
+					Text: 选择录像
 					Align: Center
 					Font: Bold
 				ScrollPanel@REPLAY_LIST:

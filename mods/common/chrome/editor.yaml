@@ -348,7 +348,7 @@ Container@EDITOR_WORLD_ROOT:
 							Y: 36
 							Width: 55
 							Height: 25
-							Text: 过滤：
+							Text: 筛选：
 							Align: Right
 							Font: TinyBold
 						DropDownButton@CATEGORIES_DROPDOWN:
@@ -426,7 +426,7 @@ Container@EDITOR_WORLD_ROOT:
 							Y: 36
 							Width: 55
 							Height: 25
-							Text: 过滤：
+							Text: 筛选：
 							Align: Right
 							Font: TinyBold
 						DropDownButton@CATEGORIES_DROPDOWN:
@@ -518,7 +518,7 @@ Container@EDITOR_WORLD_ROOT:
 			X: 270
 			Width: 140
 			Height: 25
-			Text: 复制（过滤）
+			Text: 复制（筛选）
 			Font: Bold
 		Button@GRID_BUTTON:
 			X: 420

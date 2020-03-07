@@ -257,10 +257,10 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	NodObjective1 = player.AddPrimaryObjective("Find the Nod base.")
-	NodObjective2 = player.AddPrimaryObjective("Eliminate all GDI forces in the area.")
-	NodObjective3 = player.AddSecondaryObjective("Build 3 SAMs to fend off the GDI bombers.")
-	GDIObjective = enemy.AddPrimaryObjective("Eliminate all Nod forces in the area.")
+	NodObjective1 = player.AddPrimaryObjective("确认Nod基地的位置")
+	NodObjective2 = player.AddPrimaryObjective("肃清所有GDI武装力量")
+	NodObjective3 = player.AddSecondaryObjective("建造三座防空导弹平台以抵御GDI空袭")
+	GDIObjective = enemy.AddPrimaryObjective("消灭所有敌人")
 end
 
 Tick = function()

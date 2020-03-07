@@ -550,7 +550,7 @@ MGG:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: 机动裂缝产生器
+		Name: 机动电磁干扰车
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

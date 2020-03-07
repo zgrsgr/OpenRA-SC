@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 06a: Steal the Detonator
+Title: 06a: 巧取豪夺
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 16,17,46,45
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

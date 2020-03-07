@@ -608,11 +608,11 @@ SHOK:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 130
 		Prerequisites: ~barr, stek, tsla, ~infantry.russia, ~techlevel.high
-		Description: 装备便携式磁能武器的精英部队\n\n·强势对抗：地面单位\n·弱势对抗：飞行器 
+		Description: 装备便携式电磁武器的精英部队\n\n·强势对抗：地面单位\n·弱势对抗：飞行器 
 	Valued:
 		Cost: 350
 	Tooltip:
-		Name: 磁暴步兵
+		Name: 震电突击队
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

@@ -5,7 +5,7 @@ World:
 		StartingMusic: justdoit
 		VictoryMusic: nod_win1
 	MissionData:
-		Briefing: GDI has left themselves open to the deadliest weapon of all, information.\n\nOur spies tell us the GDI base in your area contains an advanced attack helicopter, the Orca.\n\nSteal this weapon, then fly to the nearby village and destroy it.\n\nThe attack will be blamed on GDI.
+		Briefing: GDI将自己置于了最为危险的境地，\n他们既不知己也不知彼。\n\n情报显示，\nGDI已在本区域部署了最新的武装飞行器，\n以虎鲸为名的奥卡战机。\n\n窃取这一高科技战机，\n用它们摧毁一个附近的村庄，\n将祸水引到GDI的头上，\n看他们如何收场。\n
 		BriefingVideo: nod7b.vqa
 		StartVideo: bcanyon.vqa
 		LossVideo: flag.vqa

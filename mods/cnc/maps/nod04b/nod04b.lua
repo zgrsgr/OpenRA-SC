@@ -147,9 +147,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	GDIObjective = enemy.AddPrimaryObjective("Kill all enemies.")
-	NodObjective1 = player.AddPrimaryObjective("Destroy the village and kill all civilians.")
-	NodObjective2 = player.AddSecondaryObjective("Kill all GDI units in the area.")
+	GDIObjective = enemy.AddPrimaryObjective("消灭所有敌人")
+	NodObjective1 = player.AddPrimaryObjective("消灭全部反对派的村民并摧毁村庄")
+	NodObjective2 = player.AddSecondaryObjective("彻底清除GDI势力")
 
 	InsertNodUnits()
 end

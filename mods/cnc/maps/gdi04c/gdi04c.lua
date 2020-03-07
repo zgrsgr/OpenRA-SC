@@ -95,9 +95,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	nodObjective = enemy.AddPrimaryObjective("Destroy all GDI troops.")
-	gdiObjective1 = player.AddPrimaryObjective("Defend the town of Białystok.")
-	gdiObjective2 = player.AddPrimaryObjective("Eliminate all Nod forces in the area.")
+	nodObjective = enemy.AddPrimaryObjective("清除所有GDI武装力量")
+	gdiObjective1 = player.AddPrimaryObjective("坚守城镇")
+	gdiObjective2 = player.AddPrimaryObjective("肃清本地区所有Nod武装力量")
 
 	townAttackTrigger = false
 	Trigger.OnExitedFootprint(TownAttackTrigger, function(a, id)

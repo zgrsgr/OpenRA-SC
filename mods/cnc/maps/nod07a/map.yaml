@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 07a: Sick and Dying
+Title: 07a: 病入膏肓
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 2,6,58,55
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

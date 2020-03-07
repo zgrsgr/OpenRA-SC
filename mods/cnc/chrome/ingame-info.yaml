@@ -9,14 +9,14 @@ Container@GAME_INFO_PANEL:
 		Label@TITLE:
 			Width: PARENT_RIGHT
 			Y: 0 - 17
-			Text: Game Information
+			Text: 游戏信息
 			Align: Center
 			Font: BigBold
 			Contrast: true
 		Label@TITLE_NO_TABS:
 			Width: PARENT_RIGHT
 			Y: 18
-			Text: Game Information
+			Text: 游戏信息
 			Align: Center
 			Font: BigBold
 			Contrast: true

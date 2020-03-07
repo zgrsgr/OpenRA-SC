@@ -7,7 +7,7 @@ Container@OBSERVER_WIDGETS:
 			Y: 5
 			Width: 160
 			Height: 25
-			Text: Options (Esc)
+			Text: 选项（Esc）
 			Font: Bold
 			Key: escape
 			DisableWorldSounds: true
@@ -158,7 +158,7 @@ Container@OBSERVER_WIDGETS:
 					Key: ReplaySpeedMax
 					TooltipText: 最快
 					TooltipContainer: TOOLTIP_CONTAINER
-					Text: MAX
+					Text: 最快
 					Font: TinyBold
 		Container@INGAME_OBSERVERSTATS_BG:
 			Logic: ObserverStatsLogic

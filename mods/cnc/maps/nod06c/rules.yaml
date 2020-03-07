@@ -5,7 +5,7 @@ World:
 		StartingMusic: rout
 		VictoryMusic: nod_win1
 	MissionData:
-		Briefing: GDI has imported a Nuclear Detonator in an attempt to sway a few local political leaders. Penetrate the base and steal the detonator. A chopper will be sent to meet you at a designated landing zone. Look for the landing flare once you have stolen the device.
+		Briefing: GDI最近将一个核爆装置引入了该地区，\n使得我们的部分支持者倒向了他们。\n\n冲入GDI基地，\n夺取核爆装置，\n随后会有直升机协助你们撤离。\n\n记得第一时间寻找狼烟信号。\n
 		BriefingVideo: nod6.vqa
 		StartVideo: sundial.vqa
 		LossVideo: banner.vqa

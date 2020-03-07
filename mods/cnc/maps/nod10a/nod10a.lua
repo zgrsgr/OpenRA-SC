@@ -81,8 +81,8 @@ function WorldLoaded()
 		Trigger.OnDamaged(building, RepairBuilding)
 	end)
 
-	gdiObjective = enemy.AddPrimaryObjective("Eliminate all Nod forces in the area.")
-	destroyTechCenterObjective = player.AddPrimaryObjective("Destroy the GDI R&D center.")
+	gdiObjective = enemy.AddPrimaryObjective("消灭所有敌人")
+	destroyTechCenterObjective = player.AddPrimaryObjective("捣毁GDI科研设施并狙杀王博士")
 
 	Actor.Create(Rambo, true, { Owner = player, Location = RamboLocation.Location })
 

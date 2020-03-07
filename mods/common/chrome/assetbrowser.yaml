@@ -77,7 +77,7 @@ Background@ASSETBROWSER_PANEL:
 			Font: Bold
 			Align: Right
 			# Text: Palette:
-			Text: 色盘:
+			Text: 色盘：
 		DropDownButton@PALETTE_SELECTOR:
 			X: PARENT_RIGHT - WIDTH - 110
 			Y: 60

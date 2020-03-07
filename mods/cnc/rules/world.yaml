@@ -281,6 +281,8 @@ World:
 		ShellmapRoot: MENU_BACKGROUND
 	ScriptTriggers:
 	TimeLimitManager:
+		TimeLimitLabel: 时限作战
+		TimeLimitDescription: 游戏进行到选定时刻时，得分最高的玩家或小队将会立即获得胜利
 
 EditorWorld:
 	Inherits: ^BaseWorld

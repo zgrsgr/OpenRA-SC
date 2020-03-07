@@ -124,7 +124,7 @@ TRAN.Husk:
 TRAN.Husk1:
 	Inherits: ^Husk
 	Tooltip:
-		Name: 支努干运输机残骸
+		Name: 支努干运输机
 	RenderSprites:
 		Image: tran1husk
 	-Capturable:
@@ -134,7 +134,7 @@ TRAN.Husk1:
 TRAN.Husk2:
 	Inherits: ^Husk
 	Tooltip:
-		Name: 支努干运输机残骸
+		Name: 支努干运输机
 	RenderSprites:
 		Image: tran2husk
 	-Capturable:
@@ -260,7 +260,7 @@ HIND.Husk:
 U2.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: 侦察机残骸
+		Name: 侦察机
 	Aircraft:
 		TurnSpeed: 7
 		Speed: 373

@@ -86,8 +86,8 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "Lose")
 	end)
 
-	secureAreaObjective = player.AddPrimaryObjective("Eliminate all Nod forces in the area.")
-	beachheadObjective = player.AddSecondaryObjective("Establish a beachhead.")
+	secureAreaObjective = player.AddPrimaryObjective("肃清所有Nod武装力量")
+	beachheadObjective = player.AddSecondaryObjective("建立滩头阵地")
 
 	ReinforceWithLandingCraft(MCVReinforcements, lstStart.Location + CVec.New(2, 0), lstEnd.Location + CVec.New(2, 0), mcvTarget.Location)
 	Reinforce(InfantryReinforcements)

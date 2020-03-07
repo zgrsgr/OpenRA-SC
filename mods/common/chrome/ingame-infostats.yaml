@@ -14,7 +14,7 @@ Container@SKIRMISH_STATS:
 					Height: 25
 					Font: MediumBold
 					# Text: Mission:
-					Text: 任务:
+					Text: 任务：
 				Label@STATS_STATUS:
 					X: 90
 					# X: 100

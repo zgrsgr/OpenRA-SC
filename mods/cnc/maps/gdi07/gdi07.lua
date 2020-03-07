@@ -183,13 +183,13 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(Nod, "Lose")
 	end)
 
-	gdiMainObjective = GDI.AddPrimaryObjective("Destroy remaining Nod structures and units.")
-	gdiBaseObjective = GDI.AddSecondaryObjective("Construct all available buildings.")
-	nodObjective = Nod.AddPrimaryObjective("Kill all enemies!")
+	gdiMainObjective = GDI.AddPrimaryObjective("肃清所有Nod武装力量")
+	gdiBaseObjective = GDI.AddSecondaryObjective("建造所有可用建筑")
+	nodObjective = Nod.AddPrimaryObjective("消灭所有敌人")
 
 	SendReinforcements()
 
-	gdiAirSupportObjective = GDI.AddSecondaryObjective("Destroy the SAM sites to receive air support.")
+	gdiAirSupportObjective = GDI.AddSecondaryObjective("摧毁Nod防空设施以获取空中支援")
 	Trigger.OnAllKilled(SamSites, function()
 		GDI.MarkCompletedObjective(gdiAirSupportObjective)
 		Actor.Create("airstrike.proxy", true, { Owner = GDI })

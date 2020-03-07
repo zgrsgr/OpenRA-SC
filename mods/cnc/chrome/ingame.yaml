@@ -116,7 +116,7 @@ Container@OBSERVER_WIDGETS:
 			Y: 5
 			Width: 30
 			Height: 25
-			TooltipText: Menu
+			TooltipText: 选项
 			TooltipContainer: TOOLTIP_CONTAINER
 			DisableWorldSounds: true
 			Children:
@@ -158,7 +158,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 26
 					Height: 26
 					Key: Pause
-					TooltipText: Pause
+					TooltipText: 暂停
 					TooltipContainer: TOOLTIP_CONTAINER
 					IgnoreChildMouseOver: true
 					Children:
@@ -175,7 +175,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 26
 					Height: 26
 					Key: Pause
-					TooltipText: Play
+					TooltipText: 继续
 					TooltipContainer: TOOLTIP_CONTAINER
 					IgnoreChildMouseOver: true
 					Children:
@@ -192,7 +192,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 36
 					Height: 20
 					Key: ReplaySpeedSlow
-					TooltipText: Slow speed
+					TooltipText: 慢速
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
 					Text: 50%
@@ -203,7 +203,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedRegular
-					TooltipText: Regular speed
+					TooltipText: 常速
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
 					Text: 100%
@@ -214,7 +214,7 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedFast
-					TooltipText: Fast speed
+					TooltipText: 快速
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
 					Text: 200%
@@ -225,10 +225,10 @@ Container@OBSERVER_WIDGETS:
 					Width: 38
 					Height: 20
 					Key: ReplaySpeedMax
-					TooltipText: Maximum speed
+					TooltipText: 最快
 					TooltipContainer: TOOLTIP_CONTAINER
 					VisualHeight: 0
-					Text: MAX
+					Text: 最快
 					Font: TinyBold
 		DropDownButton@SHROUD_SELECTOR:
 			Logic: ObserverShroudSelectorLogic
@@ -310,7 +310,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Player
+									Text: 玩家
 									Align: Left
 									Shadow: True
 								Label@CASH_HEADER:
@@ -319,7 +319,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Cash
+									Text: 存款
 									Align: Right
 									Shadow: True
 								Label@POWER_HEADER:
@@ -328,7 +328,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Power
+									Text: 电力
 									Align: Center
 									Shadow: True
 								Label@KILLS_HEADER:
@@ -337,7 +337,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 40
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Kills
+									Text: 击杀
 									Align: Right
 									Shadow: True
 								Label@DEATHS_HEADER:
@@ -346,7 +346,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Deaths
+									Text: 阵亡
 									Align: Right
 									Shadow: True
 								Label@ASSETS_DESTROYED_HEADER:
@@ -355,7 +355,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Destroyed
+									Text: 消灭
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -364,7 +364,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Lost
+									Text: 损失
 									Align: Right
 									Shadow: True
 								Label@EXPERIENCE_HEADER:
@@ -373,7 +373,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Score
+									Text: 分数
 									Align: Right
 									Shadow: True
 								Label@ACTIONS_MIN_HEADER:
@@ -409,14 +409,14 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Player
+									Text: 玩家
 									Shadow: True
 								Label@CASH_HEADER:
 									X: 160
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Cash
+									Text: 存款
 									Align: Right
 									Shadow: True
 								Label@INCOME_HEADER:
@@ -424,7 +424,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Income
+									Text: 净收入
 									Align: Right
 									Shadow: True
 								Label@ASSETS_HEADER:
@@ -432,7 +432,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Assets
+									Text: 资产
 									Align: Right
 									Shadow: True
 								Label@EARNED_HEADER:
@@ -440,7 +440,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Earned
+									Text: 收入
 									Align: Right
 									Shadow: True
 								Label@SPENT_HEADER:
@@ -448,7 +448,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Spent
+									Text: 支出
 									Align: Right
 									Shadow: True
 								Label@HARVESTERS_HEADER:
@@ -456,7 +456,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Harvesters
+									Text: 矿车
 									Align: Right
 									Shadow: True
 								Label@DERRICKS_HEADER:
@@ -464,7 +464,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Oil Derricks
+									Text: 油井
 									Align: Right
 									Shadow: True
 						Container@PRODUCTION_STATS_HEADERS:
@@ -492,7 +492,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Player
+									Text: 玩家
 									Align: Left
 									Shadow: True
 								Label@PRODUCTION_HEADER:
@@ -501,7 +501,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 100
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Production
+									Text: 生产排程
 									Shadow: True
 						Container@SUPPORT_POWERS_HEADERS:
 							X: 0
@@ -528,7 +528,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Player
+									Text: 玩家
 									Align: Left
 									Shadow: True
 								Label@SUPPORT_POWERS_HEADER:
@@ -537,7 +537,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 100
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Support Powers
+									Text: 支援能力
 									Shadow: True
 						Container@COMBAT_STATS_HEADERS:
 							X: 0
@@ -564,7 +564,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Player
+									Text: 玩家
 									Align: Left
 									Shadow: True
 								Label@ASSETS_DESTROYED_HEADER:
@@ -573,7 +573,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Destroyed
+									Text: 击杀
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -582,7 +582,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Lost
+									Text: 阵亡
 									Align: Right
 									Shadow: True
 								Label@UNITS_KILLED_HEADER:
@@ -591,7 +591,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 90
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Units Killed
+									Text: 消灭
 									Align: Right
 									Shadow: True
 								Label@UNITS_DEAD_HEADER:
@@ -609,7 +609,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 85
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Bldg Killed
+									Text: 损失
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_DEAD_HEADER:
@@ -618,7 +618,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Bldg Lost
+									Text: 损失建筑
 									Align: Right
 									Shadow: True
 								Label@ARMY_VALUE_HEADER:
@@ -627,7 +627,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 85
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Army Value
+									Text: 部队价值
 									Align: Right
 									Shadow: True
 				ScrollPanel@PLAYER_STATS_PANEL:
@@ -1080,8 +1080,8 @@ Container@PLAYER_WIDGETS:
 					Y: 1
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: SUPPORT_POWER_TOOLTIP_FACTIONSUFFIX
-					ReadyText: Ready
-					HoldText: On Hold
+					ReadyText: 就 绪
+					HoldText: 等 待
 					HotkeyPrefix: SupportPower
 					HotkeyCount: 6
 		Image@COMMAND_BAR_BACKGROUND:
@@ -1110,8 +1110,8 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					Key: AttackMove
 					DisableKeySound: true
-					TooltipText: Attack Move
-					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nHold {(Ctrl)} while targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
+					TooltipText: 移动攻击
+					TooltipDesc: 选定的单位将移动到目标位置并攻击他们在途中遇到的任何敌方单位与基地防御 \n\n在选择目标位置时按住{(Ctrl)}来执行扫荡任务\n执行扫荡任务的单位将攻击途经的一切敌方单位与建筑
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1134,8 +1134,8 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Force Move
-					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n - Helicopters will land at the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
+					TooltipText: 强制移动
+					TooltipDesc: 选定的单位将移动到目标位置 \n-该命令的优先级高于选中单位的姿态设置 \n-载具将试图辗毙目标位置的敌方步兵 \n-直升机将降落在目标位置 \n\n在命令单位时按住{(Alt)}暂时激活
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1158,8 +1158,8 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Force Attack
-					TooltipDesc: Selected units will attack the targeted unit or location\n - Default activity for the target is suppressed\n - Allows targeting of own or ally forces\n - Long-range artillery units will always target the\n   location, ignoring units and buildings\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
+					TooltipText: 强制攻击
+					TooltipDesc: 选定的单位将优先攻击目标单位或位置 \n-该命令的优先级高于选中单位的姿态设置 \n-允许将友军作为攻击目标\n在命令单位时按住{(Ctrl)}暂时激活
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1183,8 +1183,8 @@ Container@PLAYER_WIDGETS:
 					Background: chrome-button-background
 					Key: Guard
 					DisableKeySound: true
-					TooltipText: Guard
-					TooltipDesc: Selected units will follow the targeted unit.\n\nLeft-click icon then right-click on target unit.
+					TooltipText: 守卫
+					TooltipDesc: 选中的单位将跟随并保护目标单位
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1209,8 +1209,8 @@ Container@PLAYER_WIDGETS:
 					Key: Deploy
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Deploy
-					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n\nActs immediately on selected units.
+					TooltipText: 部署
+					TooltipDesc: 选定的单位将进行部署作业\n-移动基地车将部署为建筑工厂\n-建筑工厂将重新打包为移动基地车\n-运输类载具将卸载他们的乘客\n\n上述指令均立即生效
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1235,8 +1235,8 @@ Container@PLAYER_WIDGETS:
 					Key: Scatter
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Scatter
-					TooltipDesc: Selected units will stop their current activity\nand move to a nearby location.\n\nActs immediately on selected units.
+					TooltipText: 分散
+					TooltipDesc: 选定的单位将停止他们当前的活动并移动到附近的位置 \n\n该指令立即生效
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1261,8 +1261,8 @@ Container@PLAYER_WIDGETS:
 					Key: Stop
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Stop
-					TooltipDesc: Selected units will stop their current activity.\n\nActs immediately on selected units.
+					TooltipText: 停止
+					TooltipDesc: 选定的单位将停止他们当前的活动 \n\n该指令立即生效
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1285,8 +1285,8 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					Background: chrome-button-background
 					DisableKeySound: true
-					TooltipText: Waypoint Mode
-					TooltipDesc: Use Waypoint Mode to give multiple linking commands\nto the selected units. Units will execute the commands\nimmediately upon receiving them.\n\nLeft-click icon then give commands in the game world.\nHold {(Shift)} to activate temporarily while commanding units.
+					TooltipText: 路径点模式
+					TooltipDesc: 使用路径点模式为所选单位下达多个连续的命令  \n单位将在收到命令后立即按顺序执行 \n\n在命令单位时按住{(Shift)}暂时激活
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1312,8 +1312,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceAttackAnything
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Attack Anything Stance
-					TooltipDesc: Set the selected units to Attack Anything stance:\n - Units will attack enemy units and structures on sight\n - Units will pursue attackers across the battlefield
+					TooltipText: 侵略姿态
+					TooltipDesc: 将所选单位设置为侵略姿态： \n-部队将攻击视野内的所有敌方单位或建筑物 \n-被攻击部队持续追击攻击者
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1338,8 +1338,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceDefend
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Defend Stance
-					TooltipDesc: Set the selected units to Defend stance:\n - Units will attack enemy units on sight\n - Units will not move or pursue enemies
+					TooltipText: 防御姿态
+					TooltipDesc: 将所选单位设置为防御姿态：\n-部队将攻击视野内的敌方单位与基地防御 \n-单位不会移动或追击敌人
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1364,8 +1364,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceReturnFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Return Fire Stance
-					TooltipDesc: Set the selected units to Return Fire stance:\n - Units will retaliate against enemies that attack them\n - Units will not move or pursue enemies
+					TooltipText: 固守姿态
+					TooltipDesc: 将所选单位设置为固守模式：\n-单位将只对攻击他们的敌人进行反击\n-单位不会移动或追击敌人
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1390,8 +1390,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceHoldFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Hold Fire Stance
-					TooltipDesc: Set the selected units to Hold Fire stance:\n - Units will not fire upon enemies\n - Units will not move or pursue enemies
+					TooltipText: 停火姿态
+					TooltipDesc: 将所选单位设置为停火姿态：\n-单位不会主动攻击任何敌人\n-单位不会移动或追击敌人
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 					Children:
@@ -1421,7 +1421,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: Sell
-							TooltipText: Sell
+							TooltipText: 出售
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1443,7 +1443,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: Repair
-							TooltipText: Repair
+							TooltipText: 维修
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1465,7 +1465,7 @@ Container@PLAYER_WIDGETS:
 							Height: 26
 							Background: chrome-button-background
 							Key: PlaceBeacon
-							TooltipText: Place Beacon
+							TooltipText: 放置信标
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							VisualHeight: 0
@@ -1481,7 +1481,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Options
+							TooltipText: 设置
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							DisableWorldSounds: true
@@ -1601,7 +1601,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Buildings
+							TooltipText: 基础建筑
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Building
@@ -1623,7 +1623,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Support
+							TooltipText: 基地防御
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Defence
@@ -1645,7 +1645,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Infantry
+							TooltipText: 步兵
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Infantry
@@ -1667,7 +1667,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Vehicles
+							TooltipText: 载具
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Vehicle
@@ -1689,7 +1689,7 @@ Container@PLAYER_WIDGETS:
 							Width: 38
 							Height: 26
 							Background: chrome-button-background
-							TooltipText: Aircraft
+							TooltipText: 飞行器
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: BUTTON_TOOLTIP_FACTIONSUFFIX
 							ProductionGroup: Aircraft
@@ -1714,8 +1714,8 @@ Container@PLAYER_WIDGETS:
 			Width: 192
 			TooltipContainer: TOOLTIP_CONTAINER
 			TooltipTemplate: PRODUCTION_TOOLTIP_FACTIONSUFFIX
-			ReadyText: Ready
-			HoldText: On Hold
+			ReadyText: 就 绪
+			HoldText: 等 待
 			HotkeyPrefix: Production
 			HotkeyCount: 24
 		ProductionTabs@PRODUCTION_TABS:
