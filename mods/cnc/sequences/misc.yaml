@@ -295,9 +295,9 @@ poweroff:
 icon:
 	Defaults:
 		AddExtension: False
-	airstrike: bombicnh.tem
-	ioncannon: ionicnh.tem
-	abomb: atomicnh.tem
+	airstrike: bombicnh.shp
+	ioncannon: ionicnh.shp
+	abomb: atomicnh.shp
 
 moveflsh:
 	idle:

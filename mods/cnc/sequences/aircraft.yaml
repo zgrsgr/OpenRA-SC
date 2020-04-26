@@ -23,7 +23,7 @@ tran:
 		Length: 4
 	unload:
 		Start: 35
-	icon: tranicnh.tem
+	icon: tranicnh.shp
 		AddExtension: False
 
 heli:
@@ -38,7 +38,7 @@ heli:
 	muzzle: minigun
 		Length: 6
 		Facings: 8
-	icon: heliicnh.tem
+	icon: heliicnh.shp
 		AddExtension: False
 
 orca:
@@ -48,7 +48,7 @@ orca:
 	move:
 		Start: 32
 		Facings: 32
-	icon: orcaicnh.tem
+	icon: orcaicnh.shp
 		AddExtension: False
 
 a10:
@@ -58,5 +58,5 @@ a10:
 	muzzle: minigun
 		Length: 6
 		Facings: 8
-	icon: a10icnh.tem
+	icon: a10icnh.shp
 		AddExtension: False

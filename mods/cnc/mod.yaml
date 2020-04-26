@@ -30,6 +30,7 @@ Packages:
 	cnc|bits/desert
 	cnc|bits/ss
 	cnc|uibits
+	cnc|content/icons
 
 MapFolders:
 	cnc|maps: System

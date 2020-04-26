@@ -42,7 +42,7 @@ nuke:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: nukeicnh.tem
+	icon: nukeicnh.shp
 		AddExtension: False
 
 proc:
@@ -73,7 +73,7 @@ proc:
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-	icon: procicnh.tem
+	icon: procicnh.shp
 		AddExtension: False
 
 silo:
@@ -105,7 +105,7 @@ silo:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: 0,1
-	icon: siloicnh.tem
+	icon: siloicnh.shp
 		AddExtension: False
 
 hand:
@@ -124,7 +124,7 @@ hand:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: handicnh.tem
+	icon: handicnh.shp
 		AddExtension: False
 		Offset: 0,0
 
@@ -145,7 +145,7 @@ pyle:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: pyleicnh.tem
+	icon: pyleicnh.shp
 		AddExtension: False
 
 weap:
@@ -175,7 +175,7 @@ weap:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: weapicnh.tem
+	icon: weapicnh.shp
 		AddExtension: False
 		Offset: 0,0
 
@@ -213,7 +213,7 @@ afld:
 	bib: bib1
 		UseTilesetExtension: true
 		Length: *
-	icon: afldicnh.tem
+	icon: afldicnh.shp
 		AddExtension: False
 
 hq:
@@ -233,7 +233,7 @@ hq:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: hqicnh.tem
+	icon: hqicnh.shp
 		AddExtension: False
 
 nuk2:
@@ -253,7 +253,7 @@ nuk2:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: nuk2icnh.tem
+	icon: nuk2icnh.shp
 		AddExtension: False
 
 hpad:
@@ -279,7 +279,7 @@ hpad:
 	make: hpadmake
 		Length: *
 		Tick: 80
-	icon: hpadicnh.tem
+	icon: hpadicnh.shp
 		AddExtension: False
 
 fix:
@@ -310,7 +310,7 @@ fix:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: 0,-9
-	icon: fixicnh.tem
+	icon: fixicnh.shp
 		AddExtension: False
 
 eye:
@@ -330,7 +330,7 @@ eye:
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: eyeicnh.tem
+	icon: eyeicnh.shp
 		AddExtension: False
 
 tmpl:
@@ -358,7 +358,7 @@ tmpl:
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,0
-	icon: tmplicnh.tem
+	icon: tmplicnh.shp
 		AddExtension: False
 		Offset: 0,0
 
@@ -389,7 +389,7 @@ obli:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: -1,-3
-	icon: obliicnh.tem
+	icon: obliicnh.shp
 		AddExtension: False
 		Offset: 0,0
 
@@ -402,13 +402,13 @@ brik:
 	damaged-idle:
 		Start: 32
 		Length: 16
-	icon: brikicnh.tem
+	icon: brikicnh.shp
 		AddExtension: False
 
 sbag:
 	idle:
 		Length: 16
-	icon: sbagicnh.tem
+	icon: sbagicnh.shp
 		AddExtension: False
 
 cycl:
@@ -417,7 +417,7 @@ cycl:
 	damaged-idle:
 		Start: 16
 		Length: 16
-	icon: cyclicnh.tem
+	icon: cyclicnh.shp
 		AddExtension: False
 
 barb:
@@ -463,7 +463,7 @@ gun:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: -1,-1
-	icon: gunicnh.tem
+	icon: gunicnh.shp
 		AddExtension: False
 
 sam:
@@ -506,7 +506,7 @@ sam:
 	muzzle: samfire
 		Length: 18
 		Facings: 8
-	icon: samicnh.tem
+	icon: samicnh.shp
 		AddExtension: False
 
 gtwr:
@@ -535,7 +535,7 @@ gtwr:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: 0,-2
-	icon: gtwricnh.tem
+	icon: gtwricnh.shp
 		AddExtension: False
 
 atwr:
@@ -560,7 +560,7 @@ atwr:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: -3,0
-	icon: atwricnh.tem
+	icon: atwricnh.shp
 		AddExtension: False
 		Offset: 0,0
 
