@@ -52,6 +52,7 @@ namespace OpenRA.Mods.Common.Widgets
 		public readonly string IconTextFont = "TinyBold";
 		public readonly Color IconTextColor = Color.White;
 		public readonly TextAlign IconTextAlign = TextAlign.Center;
+		public readonly float2 IconTextOffset = float2.Zero;
 
 		public readonly string ClickSound = ChromeMetrics.Get<string>("ClickSound");
 		public readonly string ClickDisabledSound = ChromeMetrics.Get<string>("ClickDisabledSound");
@@ -451,16 +452,16 @@ namespace OpenRA.Mods.Common.Widgets
 		{
 			var tOffset = iconFont.Measure(text);
 			float xOffset = 0;
-			float yOffset = IconSize.Y - index * tOffset.Y - 2;
+			float yOffset = IconSize.Y - index * tOffset.Y;
 			switch(IconTextAlign)
 			{
 				case TextAlign.Center:
 					xOffset = (IconSize.X - tOffset.X) / 2;
 					return new float2(xOffset, yOffset);
 				case TextAlign.Left:
-					return new float2(2, yOffset);
+					return new float2(0, yOffset);
 				case TextAlign.Right:
-					xOffset = (IconSize.X - tOffset.X - 2);
+					xOffset = (IconSize.X - tOffset.X);
 					return new float2(xOffset, yOffset);
 				default:
 					return new float2(0, 0);
@@ -514,7 +515,7 @@ namespace OpenRA.Mods.Common.Widgets
 
 				if(ShowIconText)
 					for(int i = 0; i < icon.IconTexts.Length; ++i)
-						iconFont.DrawTextWithContrast(icon.IconTexts[i], icon.Pos + GetIconTextOffset(icon.IconTexts.Length - i, icon.IconTexts[i]) + IconSpriteOffset, IconTextColor, Color.Black, 1);
+						iconFont.DrawTextWithContrast(icon.IconTexts[i], icon.Pos + GetIconTextOffset(icon.IconTexts.Length - i, icon.IconTexts[i]) + IconSpriteOffset + IconTextOffset, IconTextColor, Color.Black, 1);
 			}
 
 			// Overlays
