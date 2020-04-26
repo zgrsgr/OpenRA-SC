@@ -35,31 +35,31 @@ ChromeMetrics:
 
 Fonts:
 	Tiny:
-		Font: common|FZHTK.TTF
+		Font: common|SourceHanSansK-Medium.ttf
 		Size: 12
 		Ascender: 8
 	TinyBold:
-		Font: common|FZHTK.TTF
+		Font: common|SourceHanSansK-Medium.ttf
 		Size: 12
 		Ascender: 8
 	Small:
-		Font: common|FZHTK.TTF
+		Font: common|SourceHanSansK-Medium.ttf
 		Size: 14
 		Ascender: 9
 	Regular:
-		Font: common|FZHTK.TTF
+		Font: common|SourceHanSansK-Medium.ttf
 		Size: 16
 		Ascender: 11
 	Bold:
-		Font: common|FZHTK.TTF
+		Font: common|SourceHanSansK-Medium.ttf
 		Size: 17
 		Ascender: 11
 	MediumBold:
-		Font: common|FZHTK.TTF
+		Font: common|SourceHanSansK-Medium.ttf
 		Size: 20
 		Ascender: 14
 	BigBold:
-		Font: common|FZHTK.TTF
+		Font: common|SourceHanSansK-Medium.ttf
 		Size: 26
 		Ascender: 18
 

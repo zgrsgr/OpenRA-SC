@@ -35,6 +35,11 @@ namespace OpenRA.Mods.Common.Widgets
 		public readonly string TooltipContainer;
 		public readonly string TooltipTemplate = "SUPPORT_POWER_TOOLTIP";
 
+		public readonly bool ShowIconText = false;
+		public readonly string IconTextFont = "TinyBold";
+		public readonly Color IconTextColor = Color.White;
+		public readonly TextAlign IconTextAlign = TextAlign.Center;
+
 		// Note: LinterHotkeyNames assumes that these are disabled by default
 		public readonly string HotkeyPrefix = null;
 		public readonly int HotkeyCount = 0;
@@ -63,7 +68,7 @@ namespace OpenRA.Mods.Common.Widgets
 
 		Rectangle eventBounds;
 		public override Rectangle EventBounds { get { return eventBounds; } }
-		SpriteFont overlayFont;
+		SpriteFont overlayFont, iconFont;
 		float2 holdOffset, readyOffset, timeOffset;
 
 		[CustomLintableHotkeyNames]
@@ -106,6 +111,8 @@ namespace OpenRA.Mods.Common.Widgets
 		{
 			base.Initialize(args);
 
+			iconFont = Game.Renderer.Fonts[IconTextFont];
+
 			hotkeys = Exts.MakeArray(HotkeyCount,
 				i => modData.Hotkeys[HotkeyPrefix + (i + 1).ToString("D2")]);
 		}
@@ -115,6 +122,7 @@ namespace OpenRA.Mods.Common.Widgets
 			public SupportPowerInstance Power;
 			public float2 Pos;
 			public Sprite Sprite;
+			public string[] IconTexts;
 			public PaletteReference Palette;
 			public PaletteReference IconClockPalette;
 			public HotkeyReference Hotkey;
@@ -145,6 +153,7 @@ namespace OpenRA.Mods.Common.Widgets
 					Power = p,
 					Pos = new float2(rect.Location),
 					Sprite = icon.Image,
+					IconTexts = p.Info.IconTexts.Length == 0 ? new string[]{p.Info.Description} : p.Info.IconTexts,
 					Palette = worldRenderer.Palette(p.Info.IconPalette),
 					IconClockPalette = worldRenderer.Palette(ClockPalette),
 					Hotkey = IconCount < HotkeyCount ? hotkeys[IconCount] : null,
@@ -188,6 +197,26 @@ namespace OpenRA.Mods.Common.Widgets
 			return false;
 		}
 
+		private float2 GetIconTextOffset(int index, string text)
+		{
+			var tOffset = iconFont.Measure(text);
+			float xOffset = 0;
+			float yOffset = IconSize.Y - index * tOffset.Y - 2;
+			switch(IconTextAlign)
+			{
+				case TextAlign.Center:
+					xOffset = (IconSize.X - tOffset.X) / 2;
+					return new float2(xOffset, yOffset);
+				case TextAlign.Left:
+					return new float2(2, yOffset);
+				case TextAlign.Right:
+					xOffset = (IconSize.X - tOffset.X - 2);
+					return new float2(xOffset, yOffset);
+				default:
+					return new float2(0, 0);
+			}
+		}
+
 		public override void Draw()
 		{
 			var iconOffset = 0.5f * IconSize.ToFloat2() + IconSpriteOffset;
@@ -210,6 +239,10 @@ namespace OpenRA.Mods.Common.Widgets
 
 				clock.Tick();
 				WidgetUtils.DrawSHPCentered(clock.Image, p.Pos + iconOffset, p.IconClockPalette);
+
+				if(ShowIconText)
+					for(int i = 0; i < p.IconTexts.Length; ++i)
+						iconFont.DrawTextWithContrast(p.IconTexts[i], p.Pos + GetIconTextOffset(p.IconTexts.Length - i, p.IconTexts[i]) + IconSpriteOffset, IconTextColor, Color.Black, 1);
 			}
 
 			// Overlay
