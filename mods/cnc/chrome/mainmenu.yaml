@@ -42,9 +42,9 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_RIGHT
 							Height: 20
-							Text: OpenRA
+							Text: OpenRA - 泰伯利亚黎明
 							Align: Center
-							Font: Bold
+							Font: MediumBold
 							Contrast: True
 						Button@SINGLEPLAYER_BUTTON:
 							X: 0
