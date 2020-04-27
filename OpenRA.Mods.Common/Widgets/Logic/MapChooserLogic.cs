@@ -277,7 +277,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				if (authorWidget != null)
 				{
 					var font = Game.Renderer.Fonts[authorWidget.Font];
-					var author = WidgetUtils.TruncateText("由 {0} 创建".F(preview.Author), authorWidget.Bounds.Width, font);
+					var author = WidgetUtils.TruncateText("由 {0} 创作".F(preview.Author), authorWidget.Bounds.Width, font);
 					authorWidget.GetText = () => author;
 				}
 
