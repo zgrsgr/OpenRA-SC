@@ -91,6 +91,7 @@ Container@OBSERVER_WIDGETS:
 		Container@GAME_TIMER_BLOCK:
 			Logic: GameTimerLogic
 			X: WINDOW_RIGHT / 2 - WIDTH
+			Y: 50
 			Width: 100
 			Height: 55
 			Children:
