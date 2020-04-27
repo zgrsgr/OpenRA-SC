@@ -98,7 +98,7 @@ ChromeLayout:
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
-	common|chrome/mainmenu.yaml
+	ra|chrome/mainmenu.yaml
 	common|chrome/settings.yaml
 	common|chrome/credits.yaml
 	common|chrome/lobby.yaml
