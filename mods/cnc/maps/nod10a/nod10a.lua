@@ -43,7 +43,7 @@ end
 
 function CreateScientist()
 	scientist = Actor.Create('CHAN', true, { Owner = enemy, Location = ScientistLocation.Location })
-	killScientistObjective = player.AddPrimaryObjective("Kill the GDI scientist.")
+	killScientistObjective = player.AddPrimaryObjective("杀死GDI的科学家。")
 	Trigger.OnKilled(scientist, function()
 		player.MarkCompletedObjective(killScientistObjective)
 	end)
@@ -82,7 +82,7 @@ function WorldLoaded()
 	end)
 
 	gdiObjective = enemy.AddPrimaryObjective("消灭所有敌人")
-	destroyTechCenterObjective = player.AddPrimaryObjective("捣毁GDI科研设施并狙杀王博士")
+	destroyTechCenterObjective = player.AddPrimaryObjective("捣毁GDI的 R&D 研究中心。")
 
 	Actor.Create(Rambo, true, { Owner = player, Location = RamboLocation.Location })
 
