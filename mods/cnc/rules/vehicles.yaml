@@ -105,7 +105,7 @@ APC:
 		Queue: Vehicle.GDI
 		BuildDuration: 938
 		BuildDurationModifier: 40
-		Description: 配备重装甲的防空反装甲运输载具\n\n·强势对抗：载具、飞行器\n·弱势对抗：步兵
+		Description: 配备重装甲的防空运输载具\n\n·强势对抗：轻型载具、飞行器\n·弱势对抗：步兵
 	Mobile:
 		TurnSpeed: 5
 		Speed: 132
@@ -372,7 +372,7 @@ LTNK:
 		Queue: Vehicle.Nod
 		BuildDuration: 1020
 		BuildDurationModifier: 40
-		Description: NOD高机动轻装甲主战坦克\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
+		Description: Nod高机动轻装甲主战坦克\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
 	Mobile:
 		TurnSpeed: 7
 		Speed: 110
@@ -415,7 +415,7 @@ MTNK:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.GDI
-		Description: GDI泛用性主战坦克\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
+		Description: GDI主战坦克\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
 	Mobile:
 		Speed: 85
 	Health:
@@ -453,14 +453,14 @@ HTNK:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: 猛犸
+		Name: 猛犸坦克
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: eye, ~techlevel.high
 		Queue: Vehicle.GDI
-		Description: GDI重装甲巨型坦克\n可以对空\n\n·强势对抗：一切\n·弱势对抗：无
+		Description: GDI重型反装甲坦克\n可以对空\n\n·强势对抗：一切\n·弱势对抗：无
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 56
@@ -567,7 +567,7 @@ MLRS:
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Nod
-		Description: 强大的专业型防空载具\n无法攻击地面目标\n\n·强势对抗：飞行器\n·弱势对抗：地面单位
+		Description: 强大的专业防空载具\n无法攻击地面目标\n\n·强势对抗：飞行器\n·弱势对抗：地面单位
 	Mobile:
 		Speed: 99
 		TurnSpeed: 7
@@ -624,8 +624,7 @@ STNK:
 		BuildPaletteOrder: 90
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Vehicle.Nod
-		Description: 装备长程反装甲导弹与匿踪立场发生器的高科技坦克\n可以对空\n防护能力较差\n会被基地防御与步兵侦测到\n\n·强势对抗：载具、飞行器\n·弱势对抗：步兵
-		#Long-range missile tank that can cloak.\nCan attack Aircraft.\nHas weak armor. Can be spotted by infantry and defense structures.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry.
+		Description: 装备长程反装甲导弹与隐形立场发生器的高科技坦克\n可以对空\n\n·强势对抗：载具、飞行器\n·弱势对抗：步兵
 	Mobile:
 		Locomotor: heavywheeled
 		TurnSpeed: 10

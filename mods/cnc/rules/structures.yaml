@@ -143,7 +143,7 @@ NUKE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: 核电厂
+		Name: 发电厂
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
@@ -175,7 +175,7 @@ NUK2:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: 大型核电厂
+		Name: 大型发电厂
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
@@ -302,7 +302,7 @@ PYLE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: 兵营
+		Name: GDI兵营
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
@@ -675,7 +675,7 @@ FIX:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction
 		Queue: Building.GDI, Building.Nod
-		Description: 以消耗资源为代价\n高效修复载具和飞行器
+		Description: 以消耗资源为代价高效修复载具和飞行器
 	Building:
 		Footprint: _X_ xxx _X_
 		Dimensions: 3,3
@@ -848,7 +848,7 @@ GUN:
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 1440
 		BuildDurationModifier: 40
-		Description: 反装甲防御设施\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
+		Description: 反装甲防御设施\n可以侦测隐形单位\n\n·强势对抗：载具\n·弱势对抗：步兵、飞行器
 	Building:
 	Health:
 		HP: 41000
@@ -899,7 +899,7 @@ SAM:
 		Queue: Defence.Nod
 		BuildDuration: 1700
 		BuildDurationModifier: 40
-		Description: 基地防空设施\n无法攻击地面单位\n\n·强势对抗：飞行器\n·弱势对抗：地面单位
+		Description: 基地防空设施\n无法攻击地面单位\n需要电力才能运转\n\n·强势对抗：飞行器\n·弱势对抗：地面单位
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -946,7 +946,7 @@ OBLI:
 		Queue: Defence.Nod
 		BuildDuration: 3120
 		BuildDurationModifier: 40
-		Description: 先进对地防御设施\n需要电力才能运转\n\n·强势对抗：地面单位\n·弱势对抗：飞行器
+		Description: 先进对地防御设施\n可以侦测隐形单位\n需要电力才能运转\n\n·强势对抗：地面单位\n·弱势对抗：飞行器
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 22,44,0,-10
@@ -996,7 +996,7 @@ GTWR:
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 1440
 		BuildDurationModifier: 40
-		Description: 反步兵哨塔\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
+		Description: 反步兵哨塔\n可以侦测隐形单位\n\n·强势对抗：步兵、轻型载具\n·弱势对抗：装甲载具、飞行器
 	Building:
 	Health:
 		HP: 40000
@@ -1034,8 +1034,7 @@ ATWR:
 		Queue: Defence.GDI
 		BuildDuration: 2880
 		BuildDurationModifier: 40
-		Description: 泛用型先进基地防御\n\n·强势对抗：载具、飞行器\n·弱势对抗：步兵
-		#All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: 泛用型先进基地防御\n可以侦测隐形单位\n需要电力才能运转\n\n·强势对抗：步兵、轻型载具、飞行器\n·弱势对抗：装甲载具
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 22,48,0,-12
@@ -1128,7 +1127,7 @@ BRIK:
 		Queue: Defence.GDI, Defence.Nod
 		BuildDuration: 500
 		BuildDurationModifier: 40
-		Description: 阻止步兵与载具通过\n并可以阻挡枪炮类型的火力
+		Description: 阻止步兵与载具\n并可以阻挡枪炮类型的火力
 	Health:
 		HP: 25000
 	Armor:
@@ -1150,7 +1149,7 @@ BARRACKS:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: 兵营或Nod之手
+		Name: GDI兵营或Nod之手
 	Buildable:
 		Description: 步兵生产
 

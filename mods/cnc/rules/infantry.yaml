@@ -140,7 +140,7 @@ E5:
 		BuildPaletteOrder: 50
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Infantry.Nod
-		Description: 装备先进泰伯利亚武器的强大泛用型步兵\n免疫泰伯利亚\n\n·强势对抗：地面目标
+		Description: 装备先进泰伯利亚武器的精英步兵\n免疫泰伯利亚\n\n·强势对抗：地面目标
 	Mobile:
 		Speed: 56
 		Locomotor: chem
@@ -280,7 +280,7 @@ TREX:
 		DecorationBounds: 52,38
 	SelectionDecorations:
 	Buildable:
-		Description: 	双足行走的大型食肉动物\n脑袋很大
+		Description: 双足行走的大型食肉动物\n脑袋很大
 
 TRIC:
 	Inherits: ^DINO
