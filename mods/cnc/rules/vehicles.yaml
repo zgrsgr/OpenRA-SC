@@ -568,6 +568,7 @@ MLRS:
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Vehicle.Nod
 		Description: 强大的专业防空载具\n无法攻击地面目标\n\n·强势对抗：飞行器\n·弱势对抗：地面单位
+		IconTexts: 机动防空导弹
 	Mobile:
 		Speed: 99
 		TurnSpeed: 7

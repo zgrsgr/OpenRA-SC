@@ -65,6 +65,7 @@ HELI:
 		Prerequisites: hpad, anyhq, ~techlevel.medium
 		Queue: Aircraft.Nod
 		Description: Nod反步兵武装直升机\n\n·强势对抗：步兵、轻型载具、飞行器\n·弱势对抗：装甲载具
+		IconTexts: 武装直升机
 	Aircraft:
 		TurnSpeed: 7
 		Speed: 180

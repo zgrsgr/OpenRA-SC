@@ -169,7 +169,7 @@ Fonts:
 	Mini:
 		Font: common|wqy-microhei-mono.ttf
 		Size: 10
-		Ascender: 8
+		Ascender: 7
 	Tiny:
 		Font: common|SourceHanSansK-Medium.ttf
 		Size: 12

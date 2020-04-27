@@ -1087,7 +1087,7 @@ Container@PLAYER_WIDGETS:
 					ShowIconText: true #是否开启用引擎绘制建造栏图标文字
 					IconTextAlign: Left #对齐方式, Left左对齐, Center居中, Right右对齐
 					IconTextFont: Mini #所用字体, 见mod.yaml, font
-					IconTextColor: ffffff #文字颜色rgb
+					IconTextColor: ffffffff #文字颜色rgb
 					IconTextOffset: 2,-4
 		Image@COMMAND_BAR_BACKGROUND:
 			X: 5
@@ -1726,7 +1726,7 @@ Container@PLAYER_WIDGETS:
 			ShowIconText: true #是否开启用引擎绘制建造栏图标文字
 			IconTextAlign: Left #对齐方式, Left左对齐, Center居中, Right右对齐
 			IconTextFont: Mini #所用字体, 见mod.yaml, font
-			IconTextColor: ffffff #文字颜色rgb
+			IconTextColor: ffffffff #文字颜色rgb
 			IconTextOffset: 2,-4
 		ProductionTabs@PRODUCTION_TABS:
 			Logic: AddFactionSuffixLogic, ProductionTabsLogic

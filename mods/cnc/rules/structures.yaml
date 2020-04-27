@@ -215,6 +215,7 @@ PROC:
 		Prerequisites: anypower
 		Queue: Building.GDI, Building.Nod
 		Description: 将泰伯利亚晶矿转化为战争资金\n\n·可以储存$1000
+		IconTexts: 精炼厂
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -263,9 +264,11 @@ SILO:
 		Prerequisites: proc
 		Queue: Defence.GDI, Defence.Nod
 		Description: 储存富余的泰伯利亚
+		IconTexts: 矿仓
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
+		IconTexts: 矿仓
 	-GivesBuildableArea:
 	Health:
 		HP: 50000
@@ -900,6 +903,7 @@ SAM:
 		BuildDuration: 1700
 		BuildDurationModifier: 40
 		Description: 基地防空设施\n无法攻击地面单位\n需要电力才能运转\n\n·强势对抗：飞行器\n·弱势对抗：地面单位
+		IconTexts: 防空导弹
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -1128,6 +1132,7 @@ BRIK:
 		BuildDuration: 500
 		BuildDurationModifier: 40
 		Description: 阻止步兵与载具\n并可以阻挡枪炮类型的火力
+		IconTexts: 围墙
 	Health:
 		HP: 25000
 	Armor:
