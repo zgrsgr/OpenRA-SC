@@ -167,7 +167,7 @@ ChromeMetrics:
 
 Fonts:
 	Mini:
-		Font: common|wqy-microhei-mono.ttf
+		Font: common|Zfull-GB.ttf
 		Size: 10
 		Ascender: 7
 	Tiny:
