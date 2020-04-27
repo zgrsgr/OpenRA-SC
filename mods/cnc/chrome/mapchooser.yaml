@@ -135,7 +135,7 @@ Container@MAPCHOOSER_PANEL:
 					Y: 539
 					Width: 140
 					Height: 35
-					Text: Delete All Maps
+					Text: 删除全部地图
 				Button@BUTTON_OK:
 					Key: return
 					X: PARENT_RIGHT - WIDTH
