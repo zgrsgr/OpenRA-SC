@@ -478,7 +478,7 @@ MNLY:
 		Queue: Vehicle
 		BuildPaletteOrder: 310
 		Prerequisites: fix, ~techlevel.medium
-		Description: 部署地雷以伏击敌方地面单位\n可以探测地雷\n\n·无武装
+		Description: 部署地雷以伏击敌方地面单位\n可以探测地雷\n按住Ctrl以范围布雷\n\n·无武装
 	Valued:
 		Cost: 800
 	Tooltip:

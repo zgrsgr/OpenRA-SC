@@ -293,7 +293,7 @@ SPY:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 90
 		Prerequisites: ~!infantry.england, dome, ~tent, ~techlevel.medium
-		Description: 渗透敌方建筑进行破坏\n破坏效果视目标建筑而异\n可以伪装成敌方步兵\n在攻击时会失去伪装\n可以侦测伪装单位\n\n·强势对抗：步兵、建筑\n·特殊能力：伪装 
+		Description: 渗透敌方建筑进行破坏\n破坏效果视目标建筑而异\n可以伪装成敌方步兵\n按住Ctrl以攻击敌方步兵\n在攻击时会失去伪装\n可以侦测伪装单位\n\n·强势对抗：步兵、建筑\n·特殊能力：伪装
 	Valued:
 		Cost: 500
 	-Tooltip:
