@@ -1,55 +1,67 @@
 # OpenRA
 
-A Libre/Free Real Time Strategy game engine supporting early Westwood classics.
+OpenRA是一款专注于西木早期RTS游戏的开源即时战略游戏引擎。
 
-* Website: [http://www.openra.net](http://www.openra.net)
+* 官方网站: [http://www.openra.net](http://www.openra.net)
 * IRC: \#openra on irc.freenode.net
-* Repository: [https://github.com/OpenRA/OpenRA](https://github.com/OpenRA/OpenRA) [![Travis CI build status](https://travis-ci.org/OpenRA/OpenRA.svg?branch=bleed)](https://travis-ci.org/OpenRA/OpenRA) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/axc9k6jd25ej2o4w?svg=true)](https://ci.appveyor.com/project/OpenRA/openra) [![Coverity Scan Build Status](https://scan.coverity.com/projects/3650/badge.svg)](https://scan.coverity.com/projects/3650)
+* 官方仓库: [https://github.com/OpenRA/OpenRA](https://github.com/OpenRA/OpenRA) [![Travis CI build status](https://travis-ci.org/OpenRA/OpenRA.svg?branch=bleed)](https://travis-ci.org/OpenRA/OpenRA) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/axc9k6jd25ej2o4w?svg=true)](https://ci.appveyor.com/project/OpenRA/openra) [![Coverity Scan Build Status](https://scan.coverity.com/projects/3650/badge.svg)](https://scan.coverity.com/projects/3650)
+* 中文仓库: [https://gitee.com/CastleJing/OpenRA](https://gitee.com/CastleJing/OpenRA)
+* QQ群: [742982428](https://jq.qq.com/?_wv=1027&k=5oAfBQu)
 
-Please read the [FAQ](http://wiki.openra.net/FAQ) in our [Wiki](http://wiki.openra.net) and report problems at [http://bugs.openra.net](http://bugs.openra.net).
+如有疑惑请在我们的[百科](https://gitee.com/CastleJing/OpenRA/wikis/Home)页面查看[常见问题](https://gitee.com/CastleJing/OpenRA/wikis/FAQ)来获取更多帮助，如果遇到程序的漏洞请到 [http://bugs.openra.net](http://bugs.openra.net)反馈您发现的问题。
 
-Join the [Forums](https://forum.openra.net/) for discussion.
+加入官方讨论[社区](https://forum.openra.net/)
 
-## Play
+## 开始游戏
 
-Distributed mods include a reimagining of
+OpenRA的重置包含了对于西木早期RTS游戏的重新思考，现阶段基本完成的mod包括
 
-* Command & Conquer: Red Alert
-* Command & Conquer: Tiberian Dawn
-* Dune 2000
+* 命令与征服：红色警戒
+* 命令与征服：泰伯利亚的黎明
+* 沙丘2000
 
-Check our [Playing the Game](https://github.com/OpenRA/OpenRA/wiki/Playing-the-game) Guide to win multiplayer matches.
+您可以查看[玩法说明](https://gitee.com/CastleJing/OpenRA/wikis/Playing-the-game)来了解如何在游戏中取得胜利。
 
-## Contribute
+## 贡献
 
-* Please read [INSTALL.md](https://github.com/OpenRA/OpenRA/blob/bleed/INSTALL.md) and [Compiling](http://wiki.openra.net/Compiling) on how to set up an OpenRA development environment.
-* See [Hacking](http://wiki.openra.net/Hacking) for a (now very outdated) overview of the engine.
-* Read and follow our [Code of Conduct](https://github.com/OpenRA/OpenRA/blob/bleed/CODE_OF_CONDUCT.md).
-* To get your patches merged, please adhere to the [Contributing](https://github.com/OpenRA/OpenRA/blob/bleed/CONTRIBUTING.md) guidelines.
+* 阅读[INSTALL.md](https://gitee.com/CastleJing/OpenRA/blob/bleed/INSTALL.md)文档和[编译](https://gitee.com/CastleJing/OpenRA/wikis/Compiling)页面来了解如何部署OpenRA的开发环境。
 
-## Mapping
+* 阅读[Hacking](https://gitee.com/CastleJing/OpenRA/wikis/Hacking)页面来大致了解引擎（已经过时）。
 
-* We offer a [Mapping](http://wiki.openra.net/Mapping) Tutorial as you can change gameplay drastically with custom rules.
-* For scripted mission have a look at the [Lua API](http://wiki.openra.net/Lua-API).
-* If you want to share your maps with the community, upload them at the [OpenRA Resource Center](http://resource.openra.net).
+* 阅读并遵守我们的[代码规范](https://gitee.com/CastleJing/OpenRA/blob/bleed/CODE_OF_CONDUCT.md)。
 
-## Modding
+* 如果想要合并你的补丁，请参看[贡献](https://gitee.com/CastleJing/OpenRA/blob/bleed/CONTRIBUTING.md)指南。
 
-* Download a copy of the [OpenRA Mod SDK](https://github.com/OpenRA/OpenRAModSDK/) to start your own mod.
-* Check the [Modding Guide](http://wiki.openra.net/Modding-Guide) to create your own classic RTS.
-* There exists an auto-generated [Trait documentation](http://wiki.openra.net/Traits) to get started with yaml files.
-* Some hints on how to create new OpenRA compatible [Pixelart](http://wiki.openra.net/Pixelart).
-* Upload total conversions at [our ModDB profile](http://www.moddb.com/games/openra/mods).
+## 地图制作
 
-## Support
+* 我们提供了一个[地图制作](http://wiki.openra.net/Mapping)教程，你可以通过自定义规则彻底改变游戏玩法。
 
-* Sponsor a [mirror server](https://github.com/OpenRA/OpenRAWeb/tree/master/content/packages) if you have some bandwidth to spare.
-* You can immediately set up a [Dedicated](http://wiki.openra.net/Dedicated) Game Server.
+* 对于拥有脚本的任务地图，请参考[Lua API](https://gitee.com/CastleJing/OpenRA/wikis/Lua-API)页面。
 
-## License
-Copyright 2007-2020 The OpenRA Developers (see [AUTHORS](https://github.com/OpenRA/OpenRA/blob/bleed/AUTHORS))
-This file is part of OpenRA, which is free software. It is made 
-available to you under the terms of the GNU General Public License
-as published by the Free Software Foundation, either version 3 of
-the License, or (at your option) any later version. For more
-information, see [COPYING](https://github.com/OpenRA/OpenRA/blob/bleed/COPYING).
+* 如果你想要与社区共享你的地图，请将他们上传到[OpenRA资源中心](http://resource.openra.net)。
+
+## Mod开发
+
+* 下载[OpenRA Mod SDK](https://gitee.com/CastleJing/OpenRAModSDK/)来开始你的Mod开发之旅
+
+* 阅读[Mod开发指南](https://gitee.com/CastleJing/OpenRA/wikis/Modding-Guide)来开发你自己的Mod。
+
+* 自动生成的[Trait文档](https://gitee.com/CastleJing/OpenRA/wikis/Traits)可以帮助你书写自己的Yaml配置文件。
+
+* 一些有关如何创建OpenRA兼容的[素材](https://gitee.com/CastleJing/OpenRA/wikis/Pixelart)的提示。
+
+* 在[OpenRA ModDB 资料](http://www.moddb.com/games/openra/mods)页面上增加Mod总数。
+
+## 支持
+
+* 如果你有多余的带宽，可以赞助一个[镜像服务器](https://github.com/OpenRA/OpenRAWeb/tree/master/content/packages)。
+
+* 您可以立即设置[专用](https://gitee.com/CastleJing/OpenRA/wikis/Dedicated)游戏服务器。
+
+## 许可证
+
+Copyright 2007-2019 The OpenRA Developers (参看[作者](https://gitee.com/CastleJing/OpenRA/blob/bleed/AUTHORS))
+这个文件是OpenRA的一部分，OpenRA是一个自由软件。它是根据自由软件基金会发布的GNU通用公共许可证第三版条款提供给您的，或者(根据您的选择)任何更新的版本。有关更多信息，请参见[COPYING](https://github.com/OpenRA/OpenRA/blob/bleed/COPYING)。
+
+## 原文
+您可以访问[原文](https://gitee.com/CastleJing/OpenRA/blob/bleed/README_en.md)页面来了解该仓库的README.md的原文是什么样的。
