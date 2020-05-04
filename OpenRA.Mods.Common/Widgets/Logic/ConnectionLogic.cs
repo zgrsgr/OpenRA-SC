@@ -61,7 +61,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			panel.Get<ButtonWidget>("ABORT_BUTTON").OnClick = () => { CloseWindow(); onAbort(); };
 
 			widget.Get<LabelWidget>("CONNECTING_DESC").GetText = () =>
-				"Connecting to {0}:{1}...".F(host, port);
+				"正在连接到 {0}:{1}...".F(host, port);
 		}
 
 		public static void Connect(string host, int port, string password, Action onConnect, Action onAbort)
@@ -105,13 +105,13 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			};
 
 			widget.Get<LabelWidget>("CONNECTING_DESC").GetText = () =>
-				"Could not connect to {0}:{1}".F(orderManager.Host, orderManager.Port);
+				"不能连接到 {0}:{1}".F(orderManager.Host, orderManager.Port);
 
 			var connectionError = widget.Get<LabelWidget>("CONNECTION_ERROR");
 			connectionError.GetText = () => orderManager.ServerError;
 
 			var panelTitle = widget.Get<LabelWidget>("TITLE");
-			panelTitle.GetText = () => orderManager.AuthenticationFailed ? "Password Required" : "Connection Failed";
+			panelTitle.GetText = () => orderManager.AuthenticationFailed ? "需要密码" : "连接失败";
 
 			passwordField = panel.GetOrNull<PasswordFieldWidget>("PASSWORD");
 			if (passwordField != null)
@@ -168,7 +168,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var launchCommand = "Launch.Connect=" + orderManager.Host + ":" + orderManager.Port;
 				Game.SwitchToExternalMod(orderManager.ServerExternalMod, new[] { launchCommand }, () =>
 				{
-					orderManager.ServerError = "Failed to switch mod.";
+					orderManager.ServerError = "切换mod失败。";
 					Ui.CloseWindow();
 					Ui.OpenWindow("CONNECTIONFAILED_PANEL", new WidgetArgs()
 					{

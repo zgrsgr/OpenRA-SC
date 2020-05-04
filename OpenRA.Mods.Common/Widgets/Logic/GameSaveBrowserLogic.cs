@@ -101,12 +101,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var invalidChars = Path.GetInvalidFileNameChars();
 
 				ConfirmationDialogs.TextInputPrompt(
-					"Rename Save",
-					"Enter a new file name:",
+					"重命名存档？",
+					"请输入一个新的文件名:",
 					initialName,
 					onAccept: newName => Rename(initialName, newName),
 					onCancel: null,
-					acceptText: "Rename",
+					acceptText: "重命名",
 					cancelText: null,
 					inputValidator: newName =>
 					{
@@ -131,8 +131,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			deleteButton.OnClick = () =>
 			{
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Delete selected game save?",
-					text: "Delete '{0}'?".F(Path.GetFileNameWithoutExtension(selectedSave)),
+					title: "删除所选的游戏存档？",
+					text: "删除'{0}'？".F(Path.GetFileNameWithoutExtension(selectedSave)),
 					onConfirm: () =>
 					{
 						Delete(selectedSave);
@@ -145,7 +145,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						else
 							SelectFirstVisible();
 					},
-					confirmText: "Delete",
+					confirmText: "删除",
 					onCancel: () => { });
 			};
 
@@ -154,8 +154,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			deleteAllButton.OnClick = () =>
 			{
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Delete all game saves?",
-					text: "Delete {0} game saves?".F(games.Count),
+					title: "删除全部游戏存档？",
+					text: "删除{0}游戏存档？".F(games.Count),
 					onConfirm: () =>
 					{
 						foreach (var s in games.ToList())
@@ -164,7 +164,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						Ui.CloseWindow();
 						onExit();
 					},
-					confirmText: "Delete All",
+					confirmText: "删除全部",
 					onCancel: () => { });
 			};
 
@@ -321,10 +321,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (selectedSave != null || File.Exists(testPath))
 			{
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Overwrite save game?",
-					text: "Overwrite {0}?".F(saveTextField.Text),
+					title: "覆盖游戏存档？",
+					text: "覆盖{0}?".F(saveTextField.Text),
 					onConfirm: inner,
-					confirmText: "Overwrite",
+					confirmText: "覆盖",
 					onCancel: () => { });
 			}
 			else

@@ -39,7 +39,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				numTabs++;
 				var objectivesTabButton = widget.Get<ButtonWidget>(string.Concat("BUTTON", numTabs.ToString()));
-				objectivesTabButton.GetText = () => "Objectives";
+				objectivesTabButton.GetText = () => "目标";
 				objectivesTabButton.IsVisible = () => numTabs > 1 && !hasError;
 				objectivesTabButton.OnClick = () => activePanel = IngameInfoPanel.Objectives;
 				objectivesTabButton.IsHighlighted = () => activePanel == IngameInfoPanel.Objectives;
@@ -63,7 +63,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				numTabs++;
 				var mapTabButton = widget.Get<ButtonWidget>(string.Concat("BUTTON", numTabs.ToString()));
-				mapTabButton.Text = "Briefing";
+				mapTabButton.Text = "简报";
 				mapTabButton.IsVisible = () => numTabs > 1 && !hasError;
 				mapTabButton.OnClick = () => activePanel = IngameInfoPanel.Map;
 				mapTabButton.IsHighlighted = () => activePanel == IngameInfoPanel.Map;
@@ -107,7 +107,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				numTabs++;
 				var chatPanelContainer = widget.Get<ContainerWidget>("CHAT_PANEL");
 				var chatTabButton = widget.Get<ButtonWidget>(string.Concat("BUTTON", numTabs.ToString()));
-				chatTabButton.Text = "Chat";
+				chatTabButton.Text = "聊天";
 				chatTabButton.IsVisible = () => numTabs > 1 && !hasError;
 				chatTabButton.IsHighlighted = () => activePanel == IngameInfoPanel.Chat;
 				chatTabButton.OnClick = () =>

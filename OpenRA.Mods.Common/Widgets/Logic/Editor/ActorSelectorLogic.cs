@@ -112,7 +112,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				if (tooltip != null)
 					searchTerms.Add(tooltip.Name);
 
-				var tooltipText = (tooltip == null ? "Type: " : tooltip.Name + "\nType: ") + a.Name;
+				var tooltipText = (tooltip == null ? "类型: " : tooltip.Name + "\n类型: ") + a.Name;
 				allActorsTemp.Add(new ActorSelectorActor(a, editorData.Categories, searchTerms.ToArray(), tooltipText));
 			}
 

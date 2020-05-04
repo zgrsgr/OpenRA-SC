@@ -860,7 +860,7 @@ namespace OpenRA
 
 		public static void AddSystemLine(string text)
 		{
-			AddSystemLine("Battlefield Control", text);
+			AddSystemLine("战场控制", text);
 		}
 
 		public static void AddSystemLine(string name, string text)
@@ -908,7 +908,7 @@ namespace OpenRA
 		{
 			var settings = new ServerSettings()
 			{
-				Name = "Skirmish Game",
+				Name = "遭遇战",
 				Map = map,
 				AdvertiseOnline = false
 			};

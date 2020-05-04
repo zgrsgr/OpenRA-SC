@@ -206,10 +206,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					Log.Write("debug", "{0}", e.StackTrace);
 
 					ConfirmationDialogs.ButtonPrompt(
-						title: "Failed to save map",
-						text: "See debug.log for details.",
+						title: "保存地图失败",
+						text: "查看debug.log获得更多细节。",
 						onConfirm: () => { },
-						confirmText: "Ok");
+						confirmText: "确定");
 				}
 			};
 		}

@@ -199,7 +199,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				newsPanel.RemoveChild(newsTemplate);
 
 				newsStatus = newsPanel.Get<LabelWidget>("NEWS_STATUS");
-				SetNewsStatus("Loading news");
+				SetNewsStatus("载入新闻");
 			}
 
 			Game.OnRemoteDirectConnect += OnRemoteDirectConnect;
@@ -356,7 +356,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 			catch (Exception ex)
 			{
-				SetNewsStatus("Failed to parse news: {0}".F(ex.Message));
+				SetNewsStatus("解析新闻失败: {0}".F(ex.Message));
 			}
 
 			return null;
@@ -368,7 +368,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				if (e.Error != null)
 				{
-					SetNewsStatus("Failed to retrieve news: {0}".F(Download.FormatErrorMessage(e.Error)));
+					SetNewsStatus("取回新闻失败: {0}".F(Download.FormatErrorMessage(e.Error)));
 					return;
 				}
 

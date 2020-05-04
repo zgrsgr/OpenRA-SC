@@ -205,7 +205,7 @@ namespace OpenRA.Network
 					if (guessMod != null)
 						ModTitle = "{0}".F(guessMod.Title);
 					else
-						ModTitle = "Unknown mod: {0}".F(Mod);
+						ModTitle = "未知mod: {0}".F(Mod);
 				}
 			}
 

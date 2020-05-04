@@ -52,7 +52,7 @@ namespace OpenRA.Mods.Common.Traits
 				return;
 
 			if (objectiveID < 0)
-				objectiveID = mo.Add(self.Owner, info.Objective, "Primary", inhibitAnnouncement: true);
+				objectiveID = mo.Add(self.Owner, info.Objective, "主要目标", inhibitAnnouncement: true);
 
 			if (!self.Owner.NonCombatant && self.Owner.HasNoRequiredUnits(shortGame))
 				mo.MarkFailed(self.Owner, objectiveID);
@@ -100,7 +100,7 @@ namespace OpenRA.Mods.Common.Traits
 			if (info.SuppressNotifications)
 				return;
 
-			Game.AddSystemLine(player.PlayerName + " is defeated.");
+			Game.AddSystemLine(player.PlayerName + "被击败了。");
 			Game.RunAfterDelay(info.NotificationDelay, () =>
 			{
 				if (Game.IsCurrentWorld(player.World) && player == player.World.LocalPlayer)
@@ -113,7 +113,7 @@ namespace OpenRA.Mods.Common.Traits
 			if (info.SuppressNotifications)
 				return;
 
-			Game.AddSystemLine(player.PlayerName + " is victorious.");
+			Game.AddSystemLine(player.PlayerName + "获胜。");
 			Game.RunAfterDelay(info.NotificationDelay, () =>
 			{
 				if (Game.IsCurrentWorld(player.World) && player == player.World.LocalPlayer)

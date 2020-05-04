@@ -25,36 +25,36 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			if (replayMeta == null)
 			{
-				ConfirmationDialogs.ButtonPrompt("Incompatible Replay", "Replay metadata could not be read.", onCancel: onCancel);
+				ConfirmationDialogs.ButtonPrompt("不兼容的录像", "无法读取录像元数据。", onCancel: onCancel);
 				return false;
 			}
 
 			var version = replayMeta.GameInfo.Version;
 			if (version == null)
-				return IncompatibleReplayDialog("unknown version", version, onCancel);
+				return IncompatibleReplayDialog("未知版本", version, onCancel);
 
 			var mod = replayMeta.GameInfo.Mod;
 			if (mod == null)
-				return IncompatibleReplayDialog("unknown mod", mod, onCancel);
+				return IncompatibleReplayDialog("未知mod", mod, onCancel);
 
 			if (!Game.Mods.ContainsKey(mod))
-				return IncompatibleReplayDialog("unavailable mod", mod, onCancel);
+				return IncompatibleReplayDialog("不可用的mod", mod, onCancel);
 
 			if (Game.Mods[mod].Metadata.Version != version)
-				return IncompatibleReplayDialog("incompatible version", version, onCancel);
+				return IncompatibleReplayDialog("不兼容的版本", version, onCancel);
 
 			if (replayMeta.GameInfo.MapPreview.Status != MapStatus.Available)
-				return IncompatibleReplayDialog("unavailable map", replayMeta.GameInfo.MapUid,  onCancel);
+				return IncompatibleReplayDialog("不可用的地图", replayMeta.GameInfo.MapUid,  onCancel);
 
 			return true;
 		}
 
 		static bool IncompatibleReplayDialog(string type, string name, Action onCancel)
 		{
-			var error = "It was recorded with an " + type;
-			error += string.IsNullOrEmpty(name) ? "." : ":\n{0}".F(name);
+			var error = "这个录像有一个问题， " + type;
+			error += string.IsNullOrEmpty(name) ? "。" : ":\n{0}".F(name);
 
-			ConfirmationDialogs.ButtonPrompt("Incompatible Replay", error, onCancel: onCancel);
+			ConfirmationDialogs.ButtonPrompt("不兼容的录像", error, onCancel: onCancel);
 
 			return false;
 		}

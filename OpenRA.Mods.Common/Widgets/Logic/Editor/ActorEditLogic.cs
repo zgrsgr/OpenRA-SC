@@ -104,7 +104,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			actorIDErrorLabel = actorEditPanel.Get<LabelWidget>("ACTOR_ID_ERROR_LABEL");
 			actorIDErrorLabel.IsVisible = () => actorIDStatus != ActorIDStatus.Normal;
 			actorIDErrorLabel.GetText = () => actorIDStatus == ActorIDStatus.Duplicate ?
-				"Duplicate Actor ID" : "Enter an Actor ID";
+				"Duplicate演员ID" : "输入一个演员ID";
 
 			MiniYaml yaml;
 			if (logicArgs.TryGetValue("EditPanelPadding", out yaml))
@@ -221,7 +221,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 					// Add owner dropdown
 					var ownerContainer = dropdownOptionTemplate.Clone();
-					ownerContainer.Get<LabelWidget>("LABEL").GetText = () => "Owner";
+					ownerContainer.Get<LabelWidget>("LABEL").GetText = () => "所属方";
 					var ownerDropdown = ownerContainer.Get<DropDownButtonWidget>("OPTION");
 					var selectedOwner = actor.Owner;
 

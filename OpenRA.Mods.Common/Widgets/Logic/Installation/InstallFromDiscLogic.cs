@@ -108,8 +108,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 		void DetectContentDisks()
 		{
-			var message = "Detecting drives";
-			ShowProgressbar("Checking Discs", () => message);
+			var message = "正在检测设备";
+			ShowProgressbar("检查光盘", () => message);
 			ShowBackRetry(DetectContentDisks);
 
 			new Task(() =>
@@ -132,7 +132,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 				foreach (var kv in sources)
 				{
-					message = "Searching for " + kv.Value.Title;
+					message = "正在查找" + kv.Value.Title;
 
 					var path = FindSourcePath(kv.Value, volumes);
 					if (path != null)
@@ -148,7 +148,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						{
 							Game.RunAfterTick(() =>
 							{
-								ShowList(kv.Value.Title, "The following content packages will be installed:", packages);
+								ShowList(kv.Value.Title, "将会安装如下资源包:", packages);
 								ShowContinueCancel(() => InstallFromDisc(path, kv.Value));
 							});
 
@@ -169,7 +169,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 				var options = new Dictionary<string, IEnumerable<string>>()
 				{
-					{ "Game Discs", discs },
+					{ "游戏光盘", discs },
 				};
 
 				if (Platform.CurrentPlatform == PlatformType.Windows)
@@ -179,12 +179,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						.Select(s => s.Title)
 						.Distinct();
 
-					options.Add("Digital Installs", installations);
+					options.Add("导入数字版", installations);
 				}
 
 				Game.RunAfterTick(() =>
 				{
-					ShowList("Game Content Not Found", "Please insert or install one of the following content sources:", options);
+					ShowList("游戏资源未找到", "请插入或安装如下资源来源之一:", options);
 					ShowBackRetry(DetectContentDisks);
 				});
 			}).Start();
@@ -193,7 +193,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		void InstallFromDisc(string path, ModContent.ModSource modSource)
 		{
 			var message = "";
-			ShowProgressbar("Installing Content", () => message);
+			ShowProgressbar("安装资源", () => message);
 			ShowDisabledCancel();
 
 			new Task(() =>
@@ -231,9 +231,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 										Action<long> onProgress = null;
 										if (length < ShowPercentageThreshold)
-											message = "Copying " + displayFilename;
+											message = "正在复制 " + displayFilename;
 										else
-											onProgress = b => message = "Copying " + displayFilename + " ({0}%)".F(100 * b / length);
+											onProgress = b => message = "正在复制 " + displayFilename + " ({0}%)".F(100 * b / length);
 
 										CopyStream(source, target, length, onProgress);
 									}
@@ -299,7 +299,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 					Game.RunAfterTick(() =>
 					{
-						ShowMessage("Installation Failed", "Refer to install.log in the logs directory for details.");
+						ShowMessage("安装失败", "查看install.log以获得更多细节。");
 						ShowBackRetry(() => InstallFromDisc(path, modSource));
 					});
 				}
@@ -367,9 +367,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 					Action<long> onProgress = null;
 					if (length < ShowPercentageThreshold)
-						updateMessage("Extracting " + displayFilename);
+						updateMessage("正在提取 " + displayFilename);
 					else
-						onProgress = b => updateMessage("Extracting " + displayFilename + " ({0}%)".F(100 * b / length));
+						onProgress = b => updateMessage("正在提取 " + displayFilename + " ({0}%)".F(100 * b / length));
 
 					using (var target = File.OpenWrite(targetPath))
 					{
@@ -418,7 +418,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					{
 						Log.Write("install", "Extracting {0} -> {1}".F(sourcePath, targetPath));
 						var displayFilename = Path.GetFileName(Path.GetFileName(targetPath));
-						Action<int> onProgress = percent => updateMessage("Extracting {0} ({1}%)".F(displayFilename, percent));
+						Action<int> onProgress = percent => updateMessage("正在提取 {0} ({1}%)".F(displayFilename, percent));
 						reader.ExtractFile(node.Value.Value, target, onProgress);
 					}
 				}
@@ -470,7 +470,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						{
 							Log.Write("install", "Extracting {0} -> {1}".F(sourcePath, targetPath));
 							var displayFilename = Path.GetFileName(Path.GetFileName(targetPath));
-							Action<int> onProgress = percent => updateMessage("Extracting {0} ({1}%)".F(displayFilename, percent));
+							Action<int> onProgress = percent => updateMessage("正在提取 {0} ({1}%)".F(displayFilename, percent));
 							reader.ExtractFile(node.Value.Value, target, onProgress);
 						}
 					}
@@ -654,11 +654,11 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		void ShowBackRetry(Action retryAction)
 		{
 			primaryButton.OnClick = retryAction;
-			primaryButton.Text = "Retry";
+			primaryButton.Text = "重试";
 			primaryButton.Visible = true;
 
 			secondaryButton.OnClick = Ui.CloseWindow;
-			secondaryButton.Text = "Back";
+			secondaryButton.Text = "返回";
 			secondaryButton.Visible = true;
 			secondaryButton.Disabled = false;
 			Game.RunAfterTick(Ui.ResetTooltips);

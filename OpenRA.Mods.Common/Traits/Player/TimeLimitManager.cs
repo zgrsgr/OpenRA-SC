@@ -55,7 +55,7 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly int TimeLimitDisplayOrder = 0;
 
 		[Desc("Notification text for time limit warnings. The string '{0}' will be replaced by the remaining time in minutes, '{1}' is used for the plural form.")]
-		public readonly string Notification = "{0} minute{1} remaining.";
+		public readonly string Notification = "还剩{0}分钟。";
 
 		[Desc("ID of the LabelWidget used to display a text ingame that will be updated every second.")]
 		public readonly string CountdownLabel = null;
@@ -80,9 +80,9 @@ namespace OpenRA.Mods.Common.Traits
 			var timelimits = TimeLimitOptions.ToDictionary(c => c.ToString(), c =>
 			{
 				if (c == 0)
-					return "No limit";
+					return "不限时";
 				else
-					return c.ToString() + " minute{0}".F(c > 1 ? "s" : null);
+					return c.ToString() + "分钟";
 			});
 
 			yield return new LobbyOption("timelimit", TimeLimitLabel, TimeLimitDescription, TimeLimitDropdownVisible, TimeLimitDisplayOrder,
@@ -158,7 +158,7 @@ namespace OpenRA.Mods.Common.Traits
 			{
 				if (ticksRemaining == m * 60 * ticksPerSecond)
 				{
-					Game.AddSystemLine(Notification.F(m, m > 1 ? "s" : null));
+					Game.AddSystemLine(Notification.F(m));
 
 					var faction = self.World.LocalPlayer == null ? null : self.World.LocalPlayer.Faction.InternalName;
 					Game.Sound.PlayNotification(self.World.Map.Rules, self.World.LocalPlayer, "Speech", info.TimeLimitWarnings[m], faction);
@@ -172,7 +172,7 @@ namespace OpenRA.Mods.Common.Traits
 				countdownLabel.GetText = () => null;
 
 			if (!info.SkipTimerExpiredNotification)
-				Game.AddSystemLine("Time limit has expired.");
+				Game.AddSystemLine("时间到了。");
 		}
 	}
 }

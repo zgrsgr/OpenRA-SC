@@ -214,7 +214,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						{
 							new DropDownOption()
 							{
-								Title = "Add",
+								Title = "添加",
 								IsSelected = () => false,
 								OnClick = () =>
 								{
@@ -233,7 +233,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						{
 							botOptions.Add(new DropDownOption()
 							{
-								Title = "Remove",
+								Title = "移除",
 								IsSelected = () => false,
 								OnClick = () =>
 								{
@@ -247,7 +247,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 							});
 						}
 
-						options.Add("Configure Bots", botOptions);
+						options.Add("配置电脑玩家", botOptions);
 					}
 
 					var teamCount = (orderManager.LobbyInfo.Slots.Count(s => !s.Value.LockTeam && orderManager.LobbyInfo.ClientInSlot(s.Key) != null) + 1) / 2;
@@ -255,7 +255,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					{
 						var teamOptions = Enumerable.Range(2, teamCount - 1).Reverse().Select(d => new DropDownOption
 						{
-							Title = "{0} Teams".F(d),
+							Title = "{0}个小队".F(d),
 							IsSelected = () => false,
 							OnClick = () => orderManager.IssueOrder(Order.Command("assignteams {0}".F(d.ToString())))
 						}).ToList();
@@ -264,7 +264,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 						{
 							teamOptions.Add(new DropDownOption
 							{
-								Title = "Humans vs Bots",
+								Title = "人类 vs 电脑",
 								IsSelected = () => false,
 								OnClick = () => orderManager.IssueOrder(Order.Command("assignteams 1"))
 							});
@@ -272,12 +272,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 						teamOptions.Add(new DropDownOption
 						{
-							Title = "Free for all",
+							Title = "自由作战",
 							IsSelected = () => false,
 							OnClick = () => orderManager.IssueOrder(Order.Command("assignteams 0"))
 						});
 
-						options.Add("Configure Teams", teamOptions);
+						options.Add("配置队伍", teamOptions);
 					}
 
 					Func<DropDownOption, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
@@ -327,7 +327,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			optionsTab.IsHighlighted = () => panel == PanelType.Options;
 			optionsTab.IsDisabled = OptionsTabDisabled;
 			optionsTab.OnClick = () => panel = PanelType.Options;
-			optionsTab.GetText = () => !map.RulesLoaded ? "Loading..." : optionsTab.Text;
+			optionsTab.GetText = () => !map.RulesLoaded ? "加载中..." : optionsTab.Text;
 
 			var playersTab = tabContainer.Get<ButtonWidget>("PLAYERS_TAB");
 			playersTab.IsHighlighted = () => panel == PanelType.Players;
@@ -388,10 +388,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			disconnectButton.OnClick = () => { Ui.CloseWindow(); onExit(); };
 
 			if (skirmishMode)
-				disconnectButton.Text = "Back";
+				disconnectButton.Text = "返回";
 
 			var chatMode = lobby.Get<ButtonWidget>("CHAT_MODE");
-			chatMode.GetText = () => teamChat ? "Team" : "All";
+			chatMode.GetText = () => teamChat ? "小队" : "全部";
 			chatMode.OnClick = () => teamChat ^= true;
 			chatMode.IsDisabled = () => disableTeamChat;
 
@@ -599,6 +599,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					join.IsVisible = () => !slot.Closed;
 					join.IsDisabled = () => orderManager.LocalClient.IsReady;
 					join.OnClick = () => orderManager.IssueOrder(Order.Command("slot " + key));
+					join.GetText = () => "加入";
 				}
 				else if ((client.Index == orderManager.LocalClient.Index) ||
 						 (client.Bot != null && isHost))

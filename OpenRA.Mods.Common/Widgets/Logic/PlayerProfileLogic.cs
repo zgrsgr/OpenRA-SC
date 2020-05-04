@@ -154,7 +154,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var profileWidth = 0;
 			var maxProfileWidth = widget.Bounds.Width;
-			var messageText = "Loading player profile...";
+			var messageText = "加载玩家信息中...";
 			var messageWidth = messageFont.Measure(messageText).X + 2 * message.Bounds.Left;
 
 			Action<DownloadDataCompletedEventArgs> onQueryComplete = i =>
@@ -240,7 +240,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					if (profile == null)
 					{
-						messageText = "Failed to load player profile.";
+						messageText = "加载玩家信息失败。";
 						messageWidth = messageFont.Measure(messageText).X + 2 * message.Bounds.Left;
 						header.Bounds.Width = widget.Bounds.Width = messageWidth;
 					}

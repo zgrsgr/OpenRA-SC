@@ -41,7 +41,7 @@ namespace OpenRA.Server
 
 	public class Server
 	{
-		public readonly string TwoHumansRequiredText = "This server requires at least two human players to start a match.";
+		public readonly string TwoHumansRequiredText = "该服务器要求至少两名人类玩家才能开始游戏。";
 
 		public readonly IPAddress Ip;
 		public readonly int Port;
@@ -329,7 +329,7 @@ namespace OpenRA.Server
 					Log.Write("server", "Rejected connection from {0}; game is already started.",
 						newConn.Socket.RemoteEndPoint);
 
-					SendOrderTo(newConn, "ServerError", "The game has already started");
+					SendOrderTo(newConn, "ServerError", "游戏已经开始了");
 					DropClient(newConn);
 					return;
 				}
@@ -338,7 +338,7 @@ namespace OpenRA.Server
 
 				if (!string.IsNullOrEmpty(Settings.Password) && handshake.Password != Settings.Password)
 				{
-					var message = string.IsNullOrEmpty(handshake.Password) ? "Server requires a password" : "Incorrect password";
+					var message = string.IsNullOrEmpty(handshake.Password) ? "该服务器需要密码" : "密码错误";
 					SendOrderTo(newConn, "AuthenticationError", message);
 					DropClient(newConn);
 					return;
@@ -365,7 +365,7 @@ namespace OpenRA.Server
 					Log.Write("server", "Rejected connection from {0}; mods do not match.",
 						newConn.Socket.RemoteEndPoint);
 
-					SendOrderTo(newConn, "ServerError", "Server is running an incompatible mod");
+					SendOrderTo(newConn, "ServerError", "该服务器运行着一个不被兼容的mod");
 					DropClient(newConn);
 					return;
 				}
@@ -375,7 +375,7 @@ namespace OpenRA.Server
 					Log.Write("server", "Rejected connection from {0}; Not running the same version.",
 						newConn.Socket.RemoteEndPoint);
 
-					SendOrderTo(newConn, "ServerError", "Server is running an incompatible version");
+					SendOrderTo(newConn, "ServerError", "该服务器运行着一个不被兼容的版本");
 					DropClient(newConn);
 					return;
 				}
@@ -385,7 +385,7 @@ namespace OpenRA.Server
 					Log.Write("server", "Rejected connection from {0}; incompatible Orders protocol version {1}.",
 						newConn.Socket.RemoteEndPoint, handshake.OrdersProtocol);
 
-					SendOrderTo(newConn, "ServerError", "Server is running an incompatible protocol");
+					SendOrderTo(newConn, "ServerError", "该服务器运行着一个不被兼容的协议");
 					DropClient(newConn);
 					return;
 				}
@@ -395,7 +395,7 @@ namespace OpenRA.Server
 				if (bans.Contains(client.IPAddress))
 				{
 					Log.Write("server", "Rejected connection from {0}; Banned.", newConn.Socket.RemoteEndPoint);
-					SendOrderTo(newConn, "ServerError", "You have been {0} from the server".F(Settings.Ban.Contains(client.IPAddress) ? "banned" : "temporarily banned"));
+					SendOrderTo(newConn, "ServerError", "该服务器已{0}你加入".F(Settings.Ban.Contains(client.IPAddress) ? "禁止" : "暂时禁止"));
 					DropClient(newConn);
 					return;
 				}
@@ -407,7 +407,7 @@ namespace OpenRA.Server
 
 					if (client.IsObserver && !LobbyInfo.GlobalSettings.AllowSpectators)
 					{
-						SendOrderTo(newConn, "ServerError", "The game is full");
+						SendOrderTo(newConn, "ServerError", "游戏人数已满");
 						DropClient(newConn);
 						return;
 					}
@@ -442,16 +442,16 @@ namespace OpenRA.Server
 						client.Name, newConn.Socket.RemoteEndPoint);
 
 					// Report to all other players
-					SendMessage("{0} has joined the game.".F(client.Name), newConn);
+					SendMessage("{0}加入了游戏".F(client.Name), newConn);
 
 					// Send initial ping
 					SendOrderTo(newConn, "Ping", Game.RunTime.ToString(CultureInfo.InvariantCulture));
 
 					if (Type == ServerType.Dedicated)
 					{
-						var motdFile = Platform.ResolvePath(Platform.SupportDirPrefix, "motd.txt");
+						var motdFile = Platform.ResolvePath(Platform.SupportDirPrefix, "motdsc.txt");
 						if (!File.Exists(motdFile))
-							File.WriteAllText(motdFile, "Welcome, have fun and good luck!");
+							File.WriteAllText(motdFile, "欢迎归队，指挥官！");
 
 						var motd = File.ReadAllText(motdFile);
 						if (!string.IsNullOrEmpty(motd))
@@ -459,12 +459,12 @@ namespace OpenRA.Server
 					}
 
 					if (Map.DefinesUnsafeCustomRules)
-						SendOrderTo(newConn, "Message", "This map contains custom rules. Game experience may change.");
+						SendOrderTo(newConn, "Message", "该地图包含自定义的规则，游戏规则可能与往常不同。");
 
 					if (!LobbyInfo.GlobalSettings.EnableSingleplayer)
 						SendOrderTo(newConn, "Message", TwoHumansRequiredText);
 					else if (Map.Players.Players.Where(p => p.Value.Playable).All(p => !p.Value.AllowBots))
-						SendOrderTo(newConn, "Message", "Bots have been disabled on this map.");
+						SendOrderTo(newConn, "Message", "该地图禁用了电脑玩家。");
 				};
 
 				if (Type == ServerType.Local)
@@ -535,7 +535,7 @@ namespace OpenRA.Server
 							if (notAuthenticated)
 							{
 								Log.Write("server", "Rejected connection from {0}; Not authenticated.", newConn.Socket.RemoteEndPoint);
-								SendOrderTo(newConn, "ServerError", "Server requires players to have an OpenRA forum account");
+								SendOrderTo(newConn, "ServerError", "该服务器需要玩家拥有OpenRA社区账户");
 								DropClient(newConn);
 							}
 							else if (blacklisted || notWhitelisted)
@@ -545,7 +545,7 @@ namespace OpenRA.Server
 								else
 									Log.Write("server", "Rejected connection from {0}; Not in server whitelist.", newConn.Socket.RemoteEndPoint);
 
-								SendOrderTo(newConn, "ServerError", "You do not have permission to join this server");
+								SendOrderTo(newConn, "ServerError", "你没有加入该服务器的权限");
 								DropClient(newConn);
 							}
 							else
@@ -562,7 +562,7 @@ namespace OpenRA.Server
 					if (Type == ServerType.Dedicated && (Settings.RequireAuthentication || Settings.ProfileIDWhitelist.Any()))
 					{
 						Log.Write("server", "Rejected connection from {0}; Not authenticated.", newConn.Socket.RemoteEndPoint);
-						SendOrderTo(newConn, "ServerError", "Server requires players to have an OpenRA forum account");
+						SendOrderTo(newConn, "ServerError", "该服务器需要玩家拥有OpenRA社区账户");
 						DropClient(newConn);
 					}
 					else
@@ -674,7 +674,7 @@ namespace OpenRA.Server
 						if (handledBy == null)
 						{
 							Log.Write("server", "Unknown server command: {0}", o.TargetString);
-							SendOrderTo(conn, "Message", "Unknown server command: {0}".F(o.TargetString));
+							SendOrderTo(conn, "Message", "未知服务器命令: {0}".F(o.TargetString));
 						}
 
 						break;
@@ -848,8 +848,8 @@ namespace OpenRA.Server
 
 				var suffix = "";
 				if (State == ServerState.GameStarted)
-					suffix = dropClient.IsObserver ? " (Spectator)" : dropClient.Team != 0 ? " (Team {0})".F(dropClient.Team) : "";
-				SendMessage("{0}{1} has disconnected.".F(dropClient.Name, suffix));
+					suffix = dropClient.IsObserver ? " (观众)" : dropClient.Team != 0 ? " (队伍 {0})".F(dropClient.Team) : "";
+				SendMessage("{0}{1}已断开连接。".F(dropClient.Name, suffix));
 
 				// Send disconnected order, even if still in the lobby
 				DispatchOrdersToClients(toDrop, 0, Order.FromTargetString("Disconnected", "", true).Serialize());
@@ -870,7 +870,7 @@ namespace OpenRA.Server
 					if (nextAdmin != null)
 					{
 						nextAdmin.IsAdmin = true;
-						SendMessage("{0} is now the admin.".F(nextAdmin.Name));
+						SendMessage("{0}成为了管理员。".F(nextAdmin.Name));
 					}
 				}
 
@@ -967,7 +967,7 @@ namespace OpenRA.Server
 			// Drop any players who are not ready
 			foreach (var c in Conns.Where(c => GetClient(c).IsInvalid).ToArray())
 			{
-				SendOrderTo(c, "ServerError", "You have been kicked from the server!");
+				SendOrderTo(c, "ServerError", "你已被踢出该服务器。");
 				DropClient(c);
 			}
 

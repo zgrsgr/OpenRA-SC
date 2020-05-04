@@ -134,24 +134,24 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				new StatsDropDownOption
 				{
-					Title = "Information: None",
+					Title = "信息: 无",
 					IsSelected = () => activePanel == ObserverStatsPanel.None,
 					OnClick = () =>
 					{
-						statsDropDown.GetText = () => "Information: None";
+						statsDropDown.GetText = () => "信息: 无";
 						playerStatsPanel.Visible = false;
 						ClearStats();
 						activePanel = ObserverStatsPanel.None;
 					}
 				},
-				createStatsOption("Basic", ObserverStatsPanel.Basic, basicPlayerTemplate, () => DisplayStats(BasicStats)),
-				createStatsOption("Economy", ObserverStatsPanel.Economy, economyPlayerTemplate, () => DisplayStats(EconomyStats)),
-				createStatsOption("Production", ObserverStatsPanel.Production, productionPlayerTemplate, () => DisplayStats(ProductionStats)),
-				createStatsOption("Support Powers", ObserverStatsPanel.SupportPowers, supportPowersPlayerTemplate, () => DisplayStats(SupportPowerStats)),
-				createStatsOption("Combat", ObserverStatsPanel.Combat, combatPlayerTemplate, () => DisplayStats(CombatStats)),
-				createStatsOption("Army", ObserverStatsPanel.Army, armyPlayerTemplate, () => DisplayStats(ArmyStats)),
-				createStatsOption("Earnings (graph)", ObserverStatsPanel.Graph, null, () => IncomeGraph()),
-				createStatsOption("Army (graph)", ObserverStatsPanel.ArmyGraph, null, () => ArmyValueGraph()),
+				createStatsOption("基础数据", ObserverStatsPanel.Basic, basicPlayerTemplate, () => DisplayStats(BasicStats)),
+				createStatsOption("经济", ObserverStatsPanel.Economy, economyPlayerTemplate, () => DisplayStats(EconomyStats)),
+				createStatsOption("生产", ObserverStatsPanel.Production, productionPlayerTemplate, () => DisplayStats(ProductionStats)),
+				createStatsOption("支援能力", ObserverStatsPanel.SupportPowers, supportPowersPlayerTemplate, () => DisplayStats(SupportPowerStats)),
+				createStatsOption("战斗", ObserverStatsPanel.Combat, combatPlayerTemplate, () => DisplayStats(CombatStats)),
+				createStatsOption("军队", ObserverStatsPanel.Army, armyPlayerTemplate, () => DisplayStats(ArmyStats)),
+				createStatsOption("收入图表", ObserverStatsPanel.Graph, null, () => IncomeGraph()),
+				createStatsOption("军队图表", ObserverStatsPanel.ArmyGraph, null, () => ArmyValueGraph()),
 			};
 
 			Func<StatsDropDownOption, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
@@ -240,7 +240,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					tt.IgnoreMouseOver = true;
 
 					var teamLabel = tt.Get<LabelWidget>("TEAM");
-					var teamText = team.Key == 0 ? "No Team" : "Team " + team.Key;
+					var teamText = team.Key == 0 ? "无队伍" : "队伍" + team.Key;
 					teamLabel.GetText = () => teamText;
 					tt.Bounds.Width = teamLabel.Bounds.Width = Game.Renderer.Fonts[tt.Font].Measure(tt.Get<LabelWidget>("TEAM").GetText()).X;
 
@@ -536,7 +536,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			{
 				var suffix = player.WinState == WinState.Undefined ? "" : " (" + player.WinState + ")";
 				if (client != null && client.State == Session.ClientState.Disconnected)
-					suffix = " (Gone)";
+					suffix = " (已离开)";
 
 				var sl = suffixLength.Update(suffix);
 				return name.Update(Pair.New(player.PlayerName, sl)) + suffix;

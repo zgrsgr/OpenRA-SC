@@ -131,7 +131,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			if (loosePreviews.Any())
 			{
-				CreateMissionGroup("Missions", loosePreviews);
+				CreateMissionGroup("任务", loosePreviews);
 				allPreviews.AddRange(loosePreviews);
 			}
 
@@ -199,6 +199,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 		}
 
+		static bool fontCacheLocker = false;
 		void SelectMap(MapPreview preview)
 		{
 			selectedMap = preview;
@@ -233,8 +234,17 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 					infoVideo = missionData.BackgroundVideo;
 					infoVideoVisible = infoVideo != null;
+					string briefing;
 
-					var briefing = WidgetUtils.WrapText(missionData.Briefing.Replace("\\n", "\n"), description.Bounds.Width, descriptionFont);
+					if (fontCacheLocker)
+					{
+						return;
+					}
+
+					fontCacheLocker = true;
+
+					briefing = WidgetUtils.WrapText(missionData.Briefing.Replace("\\n", "\n"), description.Bounds.Width, descriptionFont);
+					
 					var height = descriptionFont.Measure(briefing).Y;
 					Game.RunAfterTick(() =>
 					{
@@ -245,6 +255,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 							descriptionPanel.Layout.AdjustChildren();
 						}
 					});
+					fontCacheLocker = false;
 				}
 			}).Start();
 
@@ -258,7 +269,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			if (difficultyButton != null)
 			{
-				var difficultyName = new CachedTransform<string, string>(id => id == null || !difficulties.ContainsKey(id) ? "Normal" : difficulties[id]);
+				var difficultyName = new CachedTransform<string, string>(id => id == null || !difficulties.ContainsKey(id) ? "正常" : difficulties[id]);
 				difficultyButton.IsDisabled = () => difficultyDisabled;
 				difficultyButton.GetText = () => difficultyName.Update(difficulty);
 				difficultyButton.OnMouseDown = _ =>
@@ -331,9 +342,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			if (!modData.DefaultFileSystem.Exists(video))
 			{
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Video not installed",
-					text: "The game videos can be installed from the\n\"Manage Content\" menu in the mod chooser.",
-					cancelText: "Back",
+					title: "视频未安装",
+					text: "视频可以在主菜单资源管理中安装。",
+					cancelText: "返回",
 					onCancel: () => { });
 			}
 			else

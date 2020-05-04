@@ -110,12 +110,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					};
 
 					ConfirmationDialogs.ButtonPrompt(
-						title: "Restart Now?",
-						text: "Some changes will not be applied until\nthe game is restarted. Restart now?",
+						title: "现在重启？",
+						text: "某些设置将会在下一次启动时\n生效，现在重启？",
 						onConfirm: restart,
 						onCancel: closeAndExit,
-						confirmText: "Restart Now",
-						cancelText: "Restart Later");
+						confirmText: "立即重启",
+						cancelText: "稍后重启");
 				}
 				else
 					closeAndExit();
@@ -227,10 +227,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 		public static readonly Dictionary<WorldViewport, string> ViewportSizeNames = new Dictionary<WorldViewport, string>()
 		{
-			{ WorldViewport.Close, "Close" },
-			{ WorldViewport.Medium, "Medium" },
-			{ WorldViewport.Far, "Far" },
-			{ WorldViewport.Native, "Furthest" }
+			{ WorldViewport.Close, "近距离" },
+			{ WorldViewport.Medium, "中等距离" },
+			{ WorldViewport.Far, "远距离" },
+			{ WorldViewport.Native, "最远距离" }
 		};
 
 		Action InitDisplayPanel(Widget panel)
@@ -254,7 +254,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var windowModeDropdown = panel.Get<DropDownButtonWidget>("MODE_DROPDOWN");
 			windowModeDropdown.OnMouseDown = _ => ShowWindowModeDropdown(windowModeDropdown, ds);
 			windowModeDropdown.GetText = () => ds.Mode == WindowMode.Windowed ?
-				"Windowed" : ds.Mode == WindowMode.Fullscreen ? "Fullscreen (Legacy)" : "Fullscreen";
+				"窗口化" : ds.Mode == WindowMode.Fullscreen ? "全屏化（旧方法）" : "全屏化";
 
 			var displaySelectionDropDown = panel.Get<DropDownButtonWidget>("DISPLAY_SELECTION_DROPDOWN");
 			displaySelectionDropDown.OnMouseDown = _ => ShowDisplaySelectionDropdown(displaySelectionDropDown, ds);
@@ -271,12 +271,12 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var statusBarsDropDown = panel.Get<DropDownButtonWidget>("STATUS_BAR_DROPDOWN");
 			statusBarsDropDown.OnMouseDown = _ => ShowStatusBarsDropdown(statusBarsDropDown, gs);
 			statusBarsDropDown.GetText = () => gs.StatusBars == StatusBarsType.Standard ?
-				"Standard" : gs.StatusBars == StatusBarsType.DamageShow ? "Show On Damage" : "Always Show";
+				"标准" : gs.StatusBars == StatusBarsType.DamageShow ? "受损时显示" : "一直显示";
 
 			var targetLinesDropDown = panel.Get<DropDownButtonWidget>("TARGET_LINES_DROPDOWN");
 			targetLinesDropDown.OnMouseDown = _ => ShowTargetLinesDropdown(targetLinesDropDown, gs);
 			targetLinesDropDown.GetText = () => gs.TargetLines == TargetLinesType.Automatic ?
-				"Automatic" : gs.TargetLines == TargetLinesType.Manual ? "Manual" : "Disabled";
+				"自动" : gs.TargetLines == TargetLinesType.Manual ? "手动" : "禁用";
 
 			var battlefieldCameraDropDown = panel.Get<DropDownButtonWidget>("BATTLEFIELD_CAMERA_DROPDOWN");
 			var battlefieldCameraLabel = new CachedTransform<WorldViewport, string>(vs => ViewportSizeNames[vs]);
@@ -525,7 +525,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var mouseScrollDropdown = panel.Get<DropDownButtonWidget>("MOUSE_SCROLL_TYPE_DROPDOWN");
 			mouseScrollDropdown.OnMouseDown = _ => ShowMouseScrollDropdown(mouseScrollDropdown, gs);
-			mouseScrollDropdown.GetText = () => gs.MouseScroll.ToString();
+			mouseScrollDropdown.GetText = () => gs.MouseScroll.ToString() == "Disabled" ? "禁用" :
+												gs.MouseScroll.ToString() == "Standard" ? "标准" :
+												gs.MouseScroll.ToString() == "Inverted" ? "反向" : "摇杆";
 
 			var mouseControlDescClassic = panel.Get("MOUSE_CONTROL_DESC_CLASSIC");
 			mouseControlDescClassic.IsVisible = () => gs.UseClassicMouseStyle;
@@ -570,7 +572,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var zoomModifierDropdown = panel.Get<DropDownButtonWidget>("ZOOM_MODIFIER");
 			zoomModifierDropdown.OnMouseDown = _ => ShowZoomModifierDropdown(zoomModifierDropdown, gs);
-			zoomModifierDropdown.GetText = () => gs.ZoomModifier.ToString();
+			zoomModifierDropdown.GetText = () => gs.ZoomModifier.ToString() == "None" ? "无" : gs.ZoomModifier.ToString();
 
 			return () => { };
 		}
@@ -742,10 +744,10 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, MouseScrollType>()
 			{
-				{ "Disabled", MouseScrollType.Disabled },
-				{ "Standard", MouseScrollType.Standard },
-				{ "Inverted", MouseScrollType.Inverted },
-				{ "Joystick", MouseScrollType.Joystick },
+				{ "禁用", MouseScrollType.Disabled },
+				{ "标准", MouseScrollType.Standard },
+				{ "反向", MouseScrollType.Inverted },
+				{ "摇杆", MouseScrollType.Joystick },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -768,7 +770,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{ "Ctrl", Modifiers.Ctrl },
 				{ "Meta", Modifiers.Meta },
 				{ "Shift", Modifiers.Shift },
-				{ "None", Modifiers.None }
+				{ "无", Modifiers.None }
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -808,9 +810,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, WindowMode>()
 			{
-				{ "Fullscreen", WindowMode.PseudoFullscreen },
-				{ "Fullscreen (Legacy)", WindowMode.Fullscreen },
-				{ "Windowed", WindowMode.Windowed },
+				{ "全屏化", WindowMode.PseudoFullscreen },
+				{ "全屏化 (旧方法)", WindowMode.Fullscreen },
+				{ "窗口化", WindowMode.Windowed },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -845,9 +847,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, StatusBarsType>()
 			{
-				{ "Standard", StatusBarsType.Standard },
-				{ "Show On Damage", StatusBarsType.DamageShow },
-				{ "Always Show", StatusBarsType.AlwaysShow },
+				{ "标准", StatusBarsType.Standard },
+				{ "受损时显示", StatusBarsType.DamageShow },
+				{ "一直显示", StatusBarsType.AlwaysShow },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -899,9 +901,9 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, TargetLinesType>()
 			{
-				{ "Automatic", TargetLinesType.Automatic },
-				{ "Manual", TargetLinesType.Manual },
-				{ "Disabled", TargetLinesType.Disabled },
+				{ "自动", TargetLinesType.Automatic },
+				{ "手动", TargetLinesType.Manual },
+				{ "禁用", TargetLinesType.Disabled },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>

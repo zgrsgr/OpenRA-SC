@@ -258,12 +258,12 @@ namespace OpenRA
 	{
 		static readonly Dictionary<Keycode, string> KeyNames = new Dictionary<Keycode, string>
 		{
-			{ Keycode.UNKNOWN, "Undefined" },
-			{ Keycode.RETURN, "Return" },
-			{ Keycode.ESCAPE, "Escape" },
-			{ Keycode.BACKSPACE, "Backspace" },
+			{ Keycode.UNKNOWN, "未定义" },
+			{ Keycode.RETURN, "回车" },
+			{ Keycode.ESCAPE, "Esc" },
+			{ Keycode.BACKSPACE, "删除键" },
 			{ Keycode.TAB, "Tab" },
-			{ Keycode.SPACE, "Space" },
+			{ Keycode.SPACE, "空格" },
 			{ Keycode.EXCLAIM, "!" },
 			{ Keycode.QUOTEDBL, "\"" },
 			{ Keycode.HASH, "#" },

@@ -25,7 +25,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			powerBar.GetProvided = () => powerManager.PowerProvided;
 			powerBar.GetUsed = () => powerManager.PowerDrained;
-			powerBar.TooltipFormat = "Power Usage: {0}/{1}";
+			powerBar.TooltipFormat = "电力已使用: {0}/{1}";
 			powerBar.GetBarColor = () =>
 			{
 				if (powerManager.PowerState == PowerState.Critical)
