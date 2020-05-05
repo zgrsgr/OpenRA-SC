@@ -1,5 +1,5 @@
 Metadata:
-	Title: Red Alert
+	Title: Red Alert 中文版
 	Version: {DEV_VERSION}
 	Website: https://www.openra.net
 	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
@@ -33,10 +33,12 @@ Packages:
 	ra|bits
 	ra|bits/desert
 	ra|uibits
+	ra|icons
 
 MapFolders:
 	ra|maps: System
 	~^maps/ra/{DEV_VERSION}: User
+	~^maps/ra/common: User
 
 Rules:
 	ra|rules/misc.yaml
@@ -158,7 +160,7 @@ LoadScreen: LogoStripeLoadScreen
 	Image: ra|uibits/loadscreen.png
 	Image2x: ra|uibits/loadscreen-2x.png
 	Image3x: ra|uibits/loadscreen-3x.png
-	Text: Filling Crates..., Charging Capacitors..., Reticulating Splines..., Planting Trees..., Building Bridges..., Aging Empires..., Compiling EVA..., Constructing Pylons..., Activating Skynet..., Splitting Atoms...
+	Text: 悄悄取走工具箱里的现金..., 为发电厂的机组上发条..., 擦掉地图上的网格线..., 种下一颗快乐的小树苗..., 从桥墩里抽走一块砖头..., 帮助拿破仑建立法兰西第一帝国..., 重新编写EVA的程序..., 试图让磁暴线圈对空..., 仰望天上的云朵..., 将铀原子核一分为二..., 给铁幕除锈..., 确保猛犸坦克没有超重..., 为机枪碉堡涂抹迷彩..., 疏散战场附近的平民..., 往你的炮弹里掺沙子..., 用炸鸡引诱军犬..., 从狗窝里抢回炸鸡..., 阻止炸鸡修复bug..., 从四面八方包围猫猫..., 把炸鸡和猫猫绑上轰炸机..., 强迫猫猫投降..., 抢走猫猫的鼠标..., 把猫猫扔到水里..., 为谭雅启用无限子弹模式..., 没收雌鹿的使用权..., 签发空头支票..., 堵上矿井..., 将石油替换为墨汁..., 抠掉基地车的部署键..., 给民用建筑上锁...
 
 ServerTraits:
 	LobbyCommands
@@ -173,31 +175,31 @@ ChromeMetrics:
 Fonts:
 	Tiny:
 		Font: common|SourceHanSansK-Medium.ttf
-		Size: 10
+		Size: 12
 		Ascender: 8
 	TinyBold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 10
+		Size: 12
 		Ascender: 8
 	Small:
 		Font: common|SourceHanSansK-Medium.ttf
-		Size: 12
+		Size: 14
 		Ascender: 9
 	Regular:
 		Font: common|SourceHanSansK-Medium.ttf
-		Size: 14
+		Size: 16
 		Ascender: 11
 	Bold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 14
+		Size: 17
 		Ascender: 11
 	MediumBold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 18
+		Size: 20
 		Ascender: 14
 	BigBold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 24
+		Size: 26
 		Ascender: 18
 	Title:
 		Font: ra|ZoodRangmah.ttf
@@ -231,27 +233,27 @@ AssetBrowser:
 
 GameSpeeds:
 	slowest:
-		Name: Slowest
+		Name: 最慢
 		Timestep: 80
 		OrderLatency: 2
 	slower:
-		Name: Slower
+		Name: 较慢
 		Timestep: 50
 		OrderLatency: 3
 	default:
-		Name: Normal
+		Name: 默认
 		Timestep: 40
 		OrderLatency: 3
 	fast:
-		Name: Fast
+		Name: 较快
 		Timestep: 35
 		OrderLatency: 4
 	faster:
-		Name: Faster
+		Name: 很快
 		Timestep: 30
 		OrderLatency: 4
 	fastest:
-		Name: Fastest
+		Name: 最快
 		Timestep: 20
 		OrderLatency: 6
 
@@ -259,41 +261,44 @@ ColorValidator:
 	TeamColorPresets: f7b3b3, f50606, 98331f, f57606, f7bb06, f861a4, da06f3, ddb8ff, 06f739, cef7b2, 200738, 280df6, 2f86f2, 76d2f8, 34ba93, 391d1d
 
 ModContent:
-	InstallPromptMessage: Red Alert requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2008 Red Alert freeware release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
+	InstallPromptMessage: 本模组需要从官方游戏中读取音频与图像文件；\n\n快速安装模式将直接从服务器下载红色警戒2008年免费版的内容，\n但不包括游戏原声音乐与过场电影；\n\n如您希望从正版游戏目录或正版光碟中导入其他附加内容，\n请选择自定义导入模式。
 	QuickDownload: quickinstall
-	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the 2008 freeware release of RA.
+	HeaderMessage: 本模组可以从已安装的正版红色警戒中读取必要文件，\n例如正版红色警戒游戏光碟或红色警戒官方数字版；\nOpenRA也可以从服务器下载红色警戒2008年免费版的相关内容。
 	Packages:
-		base: Base Game Files
+		base: 基础文件包
 			TestFiles: ^Content/ra/v2/allies.mix, ^Content/ra/v2/conquer.mix, ^Content/ra/v2/interior.mix, ^Content/ra/v2/hires.mix, ^Content/ra/v2/lores.mix, ^Content/ra/v2/local.mix, ^Content/ra/v2/speech.mix, ^Content/ra/v2/russian.mix, ^Content/ra/v2/snow.mix, ^Content/ra/v2/sounds.mix, ^Content/ra/v2/temperat.mix
 			Sources: allied, allied-linux, soviet, soviet-linux, tfd, ra-origin
 			Required: true
 			Download: basefiles
-		aftermathbase: Aftermath Expansion Files
+		aftermathbase: 劫后余生资料片
 			TestFiles: ^Content/ra/v2/expand/expand2.mix, ^Content/ra/v2/expand/hires1.mix, ^Content/ra/v2/expand/lores1.mix, ^Content/ra/v2/expand/chrotnk1.aud, ^Content/ra/v2/expand/fixit1.aud, ^Content/ra/v2/expand/jburn1.aud, ^Content/ra/v2/expand/jchrge1.aud, ^Content/ra/v2/expand/jcrisp1.aud, ^Content/ra/v2/expand/jdance1.aud, ^Content/ra/v2/expand/jjuice1.aud, ^Content/ra/v2/expand/jjump1.aud, ^Content/ra/v2/expand/jlight1.aud, ^Content/ra/v2/expand/jpower1.aud, ^Content/ra/v2/expand/jshock1.aud, ^Content/ra/v2/expand/jyes1.aud, ^Content/ra/v2/expand/madchrg2.aud, ^Content/ra/v2/expand/madexplo.aud, ^Content/ra/v2/expand/mboss1.aud, ^Content/ra/v2/expand/mhear1.aud, ^Content/ra/v2/expand/mhotdig1.aud, ^Content/ra/v2/expand/mhowdy1.aud, ^Content/ra/v2/expand/mhuh1.aud, ^Content/ra/v2/expand/mlaff1.aud, ^Content/ra/v2/expand/mrise1.aud, ^Content/ra/v2/expand/mwrench1.aud, ^Content/ra/v2/expand/myeehaw1.aud, ^Content/ra/v2/expand/myes1.aud
 			Sources: aftermath, aftermath-linux, tfd, ra-origin
 			Required: true
 			Download: aftermath
-		cncdesert: C&C Desert Tileset
+		cncdesert: 沙地素材包
 			TestFiles: ^Content/ra/v2/cnc/desert.mix
 			Sources: tfd, cnc-origin, cnc95, cnc95-linux
 			Required: true
 			Download: cncdesert
-		music: Base Game Music
+		music: 基础音乐包
 			TestFiles: ^Content/ra/v2/scores.mix
 			Sources: allied, allied-linux, soviet, soviet-linux, tfd, ra-origin
 			Download: music
-		movies-allied: Allied Campaign Briefings
+		movies-allied: 盟军过场电影
 			TestFiles: ^Content/ra/v2/movies/aagun.vqa, ^Content/ra/v2/movies/aftrmath.vqa, ^Content/ra/v2/movies/ally1.vqa, ^Content/ra/v2/movies/ally10.vqa, ^Content/ra/v2/movies/ally10b.vqa, ^Content/ra/v2/movies/ally11.vqa, ^Content/ra/v2/movies/ally12.vqa, ^Content/ra/v2/movies/ally14.vqa, ^Content/ra/v2/movies/ally2.vqa, ^Content/ra/v2/movies/ally4.vqa, ^Content/ra/v2/movies/ally5.vqa, ^Content/ra/v2/movies/ally6.vqa, ^Content/ra/v2/movies/ally8.vqa, ^Content/ra/v2/movies/ally9.vqa, ^Content/ra/v2/movies/allyend.vqa, ^Content/ra/v2/movies/allymorf.vqa, ^Content/ra/v2/movies/apcescpe.vqa, ^Content/ra/v2/movies/assess.vqa, ^Content/ra/v2/movies/battle.vqa, ^Content/ra/v2/movies/binoc.vqa, ^Content/ra/v2/movies/bmap.vqa, ^Content/ra/v2/movies/brdgtilt.vqa, ^Content/ra/v2/movies/crontest.vqa, ^Content/ra/v2/movies/cronfail.vqa, ^Content/ra/v2/movies/destroyr.vqa, ^Content/ra/v2/movies/dud.vqa, ^Content/ra/v2/movies/elevator.vqa, ^Content/ra/v2/movies/flare.vqa, ^Content/ra/v2/movies/frozen.vqa, ^Content/ra/v2/movies/grvestne.vqa, ^Content/ra/v2/movies/landing.vqa, ^Content/ra/v2/movies/masasslt.vqa, ^Content/ra/v2/movies/mcv.vqa, ^Content/ra/v2/movies/mcv_land.vqa, ^Content/ra/v2/movies/montpass.vqa, ^Content/ra/v2/movies/oildrum.vqa, ^Content/ra/v2/movies/overrun.vqa, ^Content/ra/v2/movies/prolog.vqa, ^Content/ra/v2/movies/redintro.vqa, ^Content/ra/v2/movies/shipsink.vqa, ^Content/ra/v2/movies/shorbom1.vqa, ^Content/ra/v2/movies/shorbom2.vqa, ^Content/ra/v2/movies/shorbomb.vqa, ^Content/ra/v2/movies/snowbomb.vqa, ^Content/ra/v2/movies/soviet1.vqa, ^Content/ra/v2/movies/sovtstar.vqa, ^Content/ra/v2/movies/spy.vqa, ^Content/ra/v2/movies/tanya1.vqa, ^Content/ra/v2/movies/tanya2.vqa, ^Content/ra/v2/movies/toofar.vqa, ^Content/ra/v2/movies/trinity.vqa
 			Sources: allied, allied-linux, tfd, ra-origin
-		movies-soviet: Soviet Campaign Briefings
+		movies-soviet: 苏联过场电影
 			TestFiles: ^Content/ra/v2/movies/aagun.vqa, ^Content/ra/v2/movies/cronfail.vqa, ^Content/ra/v2/movies/airfield.vqa, ^Content/ra/v2/movies/ally1.vqa, ^Content/ra/v2/movies/allymorf.vqa, ^Content/ra/v2/movies/averted.vqa, ^Content/ra/v2/movies/beachead.vqa, ^Content/ra/v2/movies/bmap.vqa, ^Content/ra/v2/movies/bombrun.vqa, ^Content/ra/v2/movies/countdwn.vqa, ^Content/ra/v2/movies/double.vqa, ^Content/ra/v2/movies/dpthchrg.vqa, ^Content/ra/v2/movies/execute.vqa, ^Content/ra/v2/movies/flare.vqa, ^Content/ra/v2/movies/landing.vqa, ^Content/ra/v2/movies/mcvbrdge.vqa, ^Content/ra/v2/movies/mig.vqa, ^Content/ra/v2/movies/movingin.vqa, ^Content/ra/v2/movies/mtnkfact.vqa, ^Content/ra/v2/movies/nukestok.vqa, ^Content/ra/v2/movies/onthprwl.vqa, ^Content/ra/v2/movies/periscop.vqa, ^Content/ra/v2/movies/prolog.vqa, ^Content/ra/v2/movies/radrraid.vqa, ^Content/ra/v2/movies/redintro.vqa, ^Content/ra/v2/movies/search.vqa, ^Content/ra/v2/movies/sfrozen.vqa, ^Content/ra/v2/movies/sitduck.vqa, ^Content/ra/v2/movies/slntsrvc.vqa, ^Content/ra/v2/movies/snowbomb.vqa, ^Content/ra/v2/movies/snstrafe.vqa, ^Content/ra/v2/movies/sovbatl.vqa, ^Content/ra/v2/movies/sovcemet.vqa, ^Content/ra/v2/movies/sovfinal.vqa, ^Content/ra/v2/movies/soviet1.vqa, ^Content/ra/v2/movies/soviet10.vqa, ^Content/ra/v2/movies/soviet11.vqa, ^Content/ra/v2/movies/soviet12.vqa, ^Content/ra/v2/movies/soviet13.vqa, ^Content/ra/v2/movies/soviet14.vqa, ^Content/ra/v2/movies/soviet2.vqa, ^Content/ra/v2/movies/soviet3.vqa, ^Content/ra/v2/movies/soviet4.vqa, ^Content/ra/v2/movies/soviet5.vqa, ^Content/ra/v2/movies/soviet6.vqa, ^Content/ra/v2/movies/soviet7.vqa, ^Content/ra/v2/movies/soviet8.vqa, ^Content/ra/v2/movies/soviet9.vqa, ^Content/ra/v2/movies/sovmcv.vqa, ^Content/ra/v2/movies/sovtstar.vqa, ^Content/ra/v2/movies/spotter.vqa, ^Content/ra/v2/movies/strafe.vqa, ^Content/ra/v2/movies/take_off.vqa, ^Content/ra/v2/movies/tesla.vqa, ^Content/ra/v2/movies/v2rocket.vqa
 			Sources: soviet, soviet-linux, tfd, ra-origin
-		music-counterstrike: Counterstrike Music
+		music-counterstrike: 反戈一击音乐包
 			TestFiles: ^Content/ra/v2/expand/araziod.aud, ^Content/ra/v2/expand/backstab.aud, ^Content/ra/v2/expand/chaos2.aud, ^Content/ra/v2/expand/shut_it.aud, ^Content/ra/v2/expand/2nd_hand.aud, ^Content/ra/v2/expand/twinmix1.aud, ^Content/ra/v2/expand/under3.aud, ^Content/ra/v2/expand/vr2.aud, 
 			Sources: counterstrike, counterstrike-linux, ra-origin
-		music-aftermath: Aftermath Music
+		music-aftermath: 劫后余生音乐包
 			TestFiles: ^Content/ra/v2/expand/await.aud, ^Content/ra/v2/expand/bog.aud, ^Content/ra/v2/expand/float_v2.aud, ^Content/ra/v2/expand/gloom.aud, ^Content/ra/v2/expand/grndwire.aud, ^Content/ra/v2/expand/rpt.aud, ^Content/ra/v2/expand/search.aud, ^Content/ra/v2/expand/traction.aud, ^Content/ra/v2/expand/wastelnd.aud
 			Sources: aftermath, aftermath-linux, ra-origin
+		ar-maps: AR地图包
+			TestFiles: ^maps/ra/common/Agenda[AR].oramap, ^maps/ra/common/Aqueducts[AR].oramap, ^maps/ra/common/Archipelago[AR].oramap, ^maps/ra/common/Arid[AR].oramap, ^maps/ra/common/Ascent[AR].oramap, ^maps/ra/common/Badger-Hills[AR].oramap, ^maps/ra/common/Behind-the-Veil[AR].oramap, ^maps/ra/common/Beyond-Destruction[AR].oramap, ^maps/ra/common/Blitz[AR].oramap, ^maps/ra/common/Borrowed-Time[AR].oramap, ^maps/ra/common/Burning-Plain-3[AR].oramap, ^maps/ra/common/Climate-Crisis[AR].oramap, ^maps/ra/common/Climax[AR].oramap, ^maps/ra/common/Dalmatia[AR].oramap, ^maps/ra/common/Decrepit-Isles[AR].oramap, ^maps/ra/common/Desert-Rats[AR].oramap, ^maps/ra/common/Devils-Marsh[AR].oramap, ^maps/ra/common/Doublestep[AR].oramap, ^maps/ra/common/Dual-Cold-Front[AR].oramap, ^maps/ra/common/Dusttown-Battle[AR].oramap, ^maps/ra/common/El-Azahar[AR].oramap, ^maps/ra/common/Europe[AR].oramap, ^maps/ra/common/Face-Off[AR].oramap, ^maps/ra/common/Forgotten-Plains[AR].oramap, ^maps/ra/common/Forward-Progress[AR].oramap, ^maps/ra/common/Frostmourne[AR].oramap, ^maps/ra/common/Frozen-Headland[AR].oramap, ^maps/ra/common/Fury-Sands[AR].oramap, ^maps/ra/common/Great-Sahara[AR].oramap, ^maps/ra/common/Green-Belt[AR].oramap, ^maps/ra/common/Hourglass[AR].oramap, ^maps/ra/common/Jungle-Law[AR].oramap, ^maps/ra/common/Keep-Off-the-Grass[AR].oramap, ^maps/ra/common/Ksodi[AR].oramap, ^maps/ra/common/Lacetown[AR].oramap, ^maps/ra/common/Maelstrom[AR].oramap, ^maps/ra/common/Map-X[AR].oramap, ^maps/ra/common/Marigold-Town[AR].oramap, ^maps/ra/common/Merciless[AR].oramap, ^maps/ra/common/Minor-Pressure[AR].oramap, ^maps/ra/common/Mountain-Ridge-Redux[AR].oramap, ^maps/ra/common/Northwest-Passage[AR].oramap, ^maps/ra/common/Oil-Sand[AR].oramap, ^maps/ra/common/Onyx[AR].oramap, ^maps/ra/common/Open-Hostility[AR].oramap, ^maps/ra/common/Operation-Goldmine[AR].oramap, ^maps/ra/common/Ore-Gardens[AR].oramap, ^maps/ra/common/Ore-Lord[AR].oramap, ^maps/ra/common/Outdoor-Trails[AR].oramap, ^maps/ra/common/Outdoor-Trails-3v3[AR].oramap, ^maps/ra/common/Patches[AR].oramap, ^maps/ra/common/Pitfight[AR].oramap, ^maps/ra/common/Race-Tracks[AR].oramap, ^maps/ra/common/Ritual-Circle[AR].oramap, ^maps/ra/common/River-Borealis[AR].oramap, ^maps/ra/common/River-Crossing[AR].oramap, ^maps/ra/common/River-Crossing-II[AR].oramap, ^maps/ra/common/River-of-Gold[AR].oramap, ^maps/ra/common/River-Zeta[AR].oramap, ^maps/ra/common/Rocky-Ravine[AR].oramap, ^maps/ra/common/Sands-of-Time-[AR].oramap, ^maps/ra/common/Serengeti[AR].oramap, ^maps/ra/common/Shadowfiend-II[AR].oramap, ^maps/ra/common/Shards[AR].oramap, ^maps/ra/common/Shared-Responsibility[AR].oramap, ^maps/ra/common/Siberian-Summer[AR].oramap, ^maps/ra/common/Sidestep[AR].oramap, ^maps/ra/common/Simple-Frontline[AR].oramap, ^maps/ra/common/Snakes-and-Ladders[AR].oramap, ^maps/ra/common/Stanitsa[AR].oramap, ^maps/ra/common/Temptation[AR].oramap, ^maps/ra/common/The-Great-Divide[AR].oramap, ^maps/ra/common/Trapped[AR].oramap, ^maps/ra/common/Tyrants[AR].oramap, ^maps/ra/common/Union-Sacree[AR].oramap, ^maps/ra/common/Uzala[AR].oramap, ^maps/ra/common/Wartorn[AR].oramap, ^maps/ra/common/Warwind[AR].oramap, ^maps/ra/common/WindigeGasse[AR].oramap, ^maps/ra/common/Winter-Storm[AR].oramap, ^maps/ra/common/Ysmir[AR].oramap
+			Download: ar_map
 	Downloads:
 		ra|installer/downloads.yaml
 	Sources:

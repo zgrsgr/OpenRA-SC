@@ -1,4 +1,4 @@
-allied: Red Alert 95 (Allied Disc, English)
+allied: 红色警戒盟军资料碟（英文）
 	IDFiles:
 		MAIN.MIX: 20ebe16f91ff79be2d672f1db5bae9048ff9357c
 			Length: 4096
@@ -196,7 +196,7 @@ allied: Red Alert 95 (Allied Disc, English)
 				Offset: 453566435
 				Length: 1038859
 
-allied-linux: Red Alert 95 (Allied Disc, English)
+allied-linux: 红色警戒盟军资料碟（英文）
 	IDFiles:
 		eahelp.gid: 13a8a4a1e7d9d6d893c38df5a39262c4689aeba5
 		install/redalert.mix: 0e58f4b54f44f6cd29fecf8cf379d33cf2d4caef
