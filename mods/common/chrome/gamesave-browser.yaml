@@ -11,7 +11,7 @@ Background@GAMESAVE_BROWSER_PANEL:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: Load game
+			Text: 载入进度
 			Visible: False
 		Label@SAVE_TITLE:
 			Width: PARENT_RIGHT
@@ -19,7 +19,7 @@ Background@GAMESAVE_BROWSER_PANEL:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: Save game
+			Text: 保存进度
 			Visible: False
 		ScrollPanel@GAME_LIST:
 			X: 20
@@ -37,7 +37,7 @@ Background@GAMESAVE_BROWSER_PANEL:
 							Width: PARENT_RIGHT
 							Height: PARENT_BOTTOM
 							Align: Center
-							Text: [CREATE NEW FILE]
+							Text: [新建存档文件]
 				ScrollItem@GAME_TEMPLATE:
 					Width: PARENT_RIGHT - 27
 					Height: 25
@@ -69,51 +69,51 @@ Background@GAMESAVE_BROWSER_PANEL:
 					Type: Filename
 		Button@CANCEL_BUTTON:
 			Key: escape
-			X: 20
+			X: PARENT_RIGHT - 300 - WIDTH/2 - 220
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
-			Text: Back
+			Text: 返回
 			Font: Bold
 		Button@DELETE_ALL_BUTTON:
-			X: PARENT_RIGHT - 350 - WIDTH
+			X: PARENT_RIGHT - 300 - WIDTH/2 - 110
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
-			Text: Delete All
+			Text: 删除全部
 			Font: Bold
 		Button@DELETE_BUTTON:
-			X: PARENT_RIGHT - 240 - WIDTH
+			X: PARENT_RIGHT - 300 - WIDTH/2
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
-			Text: Delete
+			Text: 删除
 			Font: Bold
 			Key: Delete
 		Button@RENAME_BUTTON:
-			X: PARENT_RIGHT - 130 - WIDTH
+			X: PARENT_RIGHT - 300 - WIDTH/2 + 110
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
-			Text: Rename
+			Text: 重命名
 			Font: Bold
 			Key: F2
 		Button@LOAD_BUTTON:
 			Key: return
-			X: PARENT_RIGHT - WIDTH - 20
+			X: PARENT_RIGHT - 300 - WIDTH/2 + 220
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
-			Text: Load
+			Text: 载入
 			Font: Bold
 			Visible: False
 		Button@SAVE_BUTTON:
 			Key: return
-			X: PARENT_RIGHT - WIDTH - 20
+			X: PARENT_RIGHT - 300 - WIDTH/2 + 220
 			Y: PARENT_BOTTOM - 45
 			Width: 100
 			Height: 25
-			Text: Save
+			Text: 保存
 			Font: Bold
 			Visible: False
 		TooltipContainer@GAMESAVE_TOOLTIP_CONTAINER:

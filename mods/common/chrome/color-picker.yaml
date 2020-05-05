@@ -13,14 +13,14 @@ Background@COLOR_CHOOSER:
 			Y: 95
 			Width: 76
 			Height: 25
-			Text: Random
+			Text: 随机
 			Font: Bold
 		Button@STORE_BUTTON:
 			X: 245
 			Y: 124
 			Width: 76
 			Height: 25
-			Text: Store
+			Text: 存储
 			Font: Bold
 		ActorPreview@PREVIEW:
 			X: 245
@@ -32,14 +32,14 @@ Background@COLOR_CHOOSER:
 			Y: PARENT_BOTTOM - 30
 			Height: 25
 			Width: 80
-			Text: Mixer
+			Text: 调色板
 			Font: Bold
 		Button@PALETTE_TAB_BUTTON:
 			X: 85
 			Y: PARENT_BOTTOM - 30
 			Height: 25
 			Width: 80
-			Text: Palette
+			Text: 选色盘
 			Font: Bold
 		Container@MIXER_TAB:
 			X: 5
@@ -98,7 +98,7 @@ Background@COLOR_CHOOSER:
 									Width: PARENT_RIGHT
 									Height: 13
 									Align: Center
-									Text: Preset Colors
+									Text: 预设颜色
 						Container@PRESET_AREA:
 							Width: PARENT_RIGHT - 4
 							Height: 58
@@ -123,7 +123,7 @@ Background@COLOR_CHOOSER:
 									Width: PARENT_RIGHT
 									Height: 13
 									Align: Center
-									Text: Custom Colors
+									Text: 自定义颜色
 						Container@CUSTOM_AREA:
 							Width: PARENT_RIGHT - 4
 							Height: 31

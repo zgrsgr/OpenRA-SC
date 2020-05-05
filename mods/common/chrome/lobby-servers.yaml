@@ -11,26 +11,26 @@ Container@LOBBY_SERVERS_BIN:
 					X: 5
 					Width: 255
 					Height: 25
-					Text: Server
+					Text: 房间
 					Align: Center
 					Font: Bold
 				Label@PLAYERS:
 					X: 290
 					Width: 85
 					Height: 25
-					Text: Players
+					Text: 玩家
 					Font: Bold
 				Label@LOCATION:
 					X: 380
 					Width: 110
 					Height: 25
-					Text: Location
+					Text: 位置
 					Font: Bold
 				Label@STATUS:
 					X: 495
 					Width: 50
 					Height: 25
-					Text: Status
+					Text: 状态
 					Font: Bold
 		LogicTicker@NOTICE_WATCHER:
 		Background@NOTICE_CONTAINER:
@@ -43,21 +43,21 @@ Container@LOBBY_SERVERS_BIN:
 					Width: PARENT_RIGHT-10
 					Height: 20
 					Align: Center
-					Text: You are running an outdated version of OpenRA. Download the latest version from www.openra.net
+					Text: 您正在运行过时的OpenRA版本，请从官网下载最新版本
 					Font: TinyBold
 				Label@UNKNOWN_VERSION_LABEL:
 					X: 5
 					Width: PARENT_RIGHT-10
 					Height: 20
 					Align: Center
-					Text: You are running an unrecognized version of OpenRA. Download the latest version from www.openra.net
+					Text: 您正在运行无法识别的OpenRA版本，请从官网下载最新版本
 					Font: TinyBold
 				Label@PLAYTEST_AVAILABLE_LABEL:
 					X: 5
 					Width: PARENT_RIGHT-10
 					Height: 20
 					Align: Center
-					Text: A preview of the next OpenRA release is available for testing. Download the playtest from www.openra.net
+					Text: 可以使用下一个OpenRA版本的预览进行测试，可从官网下载测试版本
 					Font: TinyBold
 		ScrollPanel@SERVER_LIST:
 			Width: PARENT_RIGHT
@@ -95,7 +95,7 @@ Container@LOBBY_SERVERS_BIN:
 							ImageCollection: lobby-bits
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
-							TooltipText: Requires Password
+							TooltipText: 本房间需要密码
 						Image@REQUIRES_AUTHENTICATION:
 							X: 272
 							Y: 6
@@ -104,7 +104,7 @@ Container@LOBBY_SERVERS_BIN:
 							ImageCollection: lobby-bits
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
-							TooltipText: Requires OpenRA forum account
+							TooltipText: 本房间要求玩家已绑定OpenRA论坛帐户
 						LabelWithTooltip@PLAYERS:
 							X: 290
 							Width: 85
@@ -130,7 +130,7 @@ Container@LOBBY_SERVERS_BIN:
 			Y: PARENT_BOTTOM + 5
 			Width: 147
 			Height: 25
-			Text: Filter Games
+			Text: 筛选游戏
 			Font: Bold
 		Button@RELOAD_BUTTON:
 			X: 152

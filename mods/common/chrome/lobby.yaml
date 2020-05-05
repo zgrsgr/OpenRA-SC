@@ -23,7 +23,7 @@ Background@SERVER_LOBBY:
 			Width: 178
 			Height: 25
 			Font: Bold
-			Text: Slot Admin
+			Text: 玩家管理
 		Container@SKIRMISH_TABS:
 			Visible: False
 			Children:
@@ -33,21 +33,21 @@ Background@SERVER_LOBBY:
 					Width: 134
 					Height: 31
 					Font: Bold
-					Text: Players
+					Text: 玩家
 				Button@OPTIONS_TAB:
 					X: 337
 					Y: 285
 					Width: 133
 					Height: 31
 					Font: Bold
-					Text: Options
+					Text: 选项
 				Button@MUSIC_TAB:
 					X: 470
 					Y: 285
 					Width: 133
 					Height: 31
 					Font: Bold
-					Text: Music
+					Text: 音乐
 		Container@MULTIPLAYER_TABS:
 			Visible: False
 			Children:
@@ -57,28 +57,28 @@ Background@SERVER_LOBBY:
 					Width: 100
 					Height: 31
 					Font: Bold
-					Text: Players
+					Text: 玩家
 				Button@OPTIONS_TAB:
 					X: 303
 					Y: 285
 					Width: 100
 					Height: 31
 					Font: Bold
-					Text: Options
+					Text: 选项
 				Button@MUSIC_TAB:
 					X: 403
 					Y: 285
 					Width: 100
 					Height: 31
 					Font: Bold
-					Text: Music
+					Text: 音乐
 				Button@SERVERS_TAB:
 					X: 503
 					Y: 285
 					Width: 100
 					Height: 31
 					Font: Bold
-					Text: Servers
+					Text: 服务器
 		Container@TOP_PANELS_ROOT:
 			X: 20
 			Y: 67
@@ -89,7 +89,7 @@ Background@SERVER_LOBBY:
 			Y: 291
 			Width: 174
 			Height: 25
-			Text: Change Map
+			Text: 地图选择
 			Font: Bold
 		Container@LOBBYCHAT:
 			X: 20
@@ -128,7 +128,7 @@ Background@SERVER_LOBBY:
 					Y: PARENT_BOTTOM - HEIGHT
 					Width: 50
 					Height: 25
-					Text: Team
+					Text: 小队
 					Font: Bold
 				TextField@CHAT_TEXTFIELD:
 					X: 55
@@ -140,14 +140,14 @@ Background@SERVER_LOBBY:
 			Y: PARENT_BOTTOM - HEIGHT - 20
 			Width: 120
 			Height: 25
-			Text: Start Game
+			Text: 开始游戏
 			Font: Bold
 		Button@DISCONNECT_BUTTON:
 			X: PARENT_RIGHT - WIDTH - 20
 			Y: PARENT_BOTTOM - HEIGHT - 20
 			Width: 120
 			Height: 25
-			Text: Leave Game
+			Text: 离开游戏
 			Font: Bold
 		Container@FACTION_DROPDOWN_PANEL_ROOT:
 		TooltipContainer@TOOLTIP_CONTAINER:

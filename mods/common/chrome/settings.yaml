@@ -34,7 +34,7 @@ Background@SETTINGS_PANEL:
 			Y: 20
 			Width: PARENT_RIGHT
 			Height: 25
-			Text: Settings
+			Text: 设置
 			Align: Center
 			Font: Bold
 		Button@RESET_BUTTON:
@@ -42,7 +42,7 @@ Background@SETTINGS_PANEL:
 			Y: PARENT_BOTTOM - 45
 			Width: 160
 			Height: 25
-			Text: Reset
+			Text: 重置
 			Font: Bold
 		Button@BACK_BUTTON:
 			Key: escape
@@ -50,7 +50,7 @@ Background@SETTINGS_PANEL:
 			Y: PARENT_BOTTOM - 45 
 			Width: 160
 			Height: 25
-			Text: Back
+			Text: 返回
 			Font: Bold
 		Container@TAB_CONTAINER:
 			Y: 50
@@ -61,31 +61,31 @@ Background@SETTINGS_PANEL:
 					X: 70
 					Width: 90
 					Height: 25
-					Text: Display
+					Text: 显示
 					Font: Bold
 				Button@AUDIO_TAB:
 					X: 70 + WIDTH
 					Width: 90
 					Height: 25
-					Text: Audio
+					Text: 音频
 					Font: Bold
 				Button@INPUT_TAB:
 					X: 70 + 2 * WIDTH
 					Width: 90
 					Height: 25
-					Text: Input
+					Text: 输入
 					Font: Bold
 				Button@HOTKEYS_TAB:
 					X: 70 + 3 * WIDTH
 					Width: 90
 					Height: 25
-					Text: Hotkeys
+					Text: 快捷键
 					Font: Bold
 				Button@ADVANCED_TAB:
 					X: 70 + 4 * WIDTH
 					Width: 90
 					Height: 25
-					Text: Advanced
+					Text: 高级
 					Font: Bold
 		Container@DISPLAY_PANEL:
 			X: 5
@@ -94,14 +94,14 @@ Background@SETTINGS_PANEL:
 			Height: PARENT_BOTTOM - 50
 			Children:
 				Label@PLAYER:
-					Text: Player Name:
+					Text: 玩家名：
 					X: 15
 					Y: 40
 					Width: 120
 					Height: 25
 					Align: Right
 				TextField@PLAYERNAME:
-					Text: Name
+					Text: 名字
 					X: 140
 					Y: 40
 					Width: 160
@@ -112,7 +112,7 @@ Background@SETTINGS_PANEL:
 					Y: 40
 					Width: 145
 					Height: 25
-					Text: Preferred Color:
+					Text: 玩家颜色：
 					Align: Right
 				ColorPreviewManager@COLOR_MANAGER:
 				DropDownButton@PLAYERCOLOR:
@@ -133,7 +133,7 @@ Background@SETTINGS_PANEL:
 					Y: 70
 					Width: 120
 					Height: 25
-					Text: Battlefield Camera:
+					Text: 战场相机：
 					Align: Right
 				DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
 					X: 140
@@ -146,7 +146,7 @@ Background@SETTINGS_PANEL:
 					Y: 70
 					Width: 145
 					Height: 25
-					Text: Target Lines:
+					Text: 目标线：
 					Align: Right
 				DropDownButton@TARGET_LINES_DROPDOWN:
 					X: 415
@@ -159,7 +159,7 @@ Background@SETTINGS_PANEL:
 					Y: 100
 					Width: 120
 					Height: 25
-					Text: UI Scale:
+					Text: UI缩放：
 					Align: Right
 				DropDownButton@UI_SCALE_DROPDOWN:
 					X: 140
@@ -172,7 +172,7 @@ Background@SETTINGS_PANEL:
 					Y: 100
 					Width: 145
 					Height: 25
-					Text: Status Bars:
+					Text: 血量条：
 					Align: Right
 				DropDownButton@STATUS_BAR_DROPDOWN:
 					X: 415
@@ -186,19 +186,22 @@ Background@SETTINGS_PANEL:
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Increase Cursor Size
+					Text: 增大光标
 				Checkbox@PLAYER_STANCE_COLORS_CHECKBOX:
 					X: 310
 					Y: 133
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Player Stance Colors
+					Text: 敌友颜色模式
+					TooltipText: 启用后小地图上将以绿色、红色和黄色表示玩家自己、全体对手与全体盟友
+					TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
 				Label@VIDEO_TITLE:
 					Y: 190
 					Width: PARENT_RIGHT
 					Font: Bold
-					Text: Video
+					Text: 视频
 					Align: Center
 				Label@VIDEO_MODE:
 					X: 15
@@ -206,21 +209,21 @@ Background@SETTINGS_PANEL:
 					Width: 120
 					Height: 25
 					Align: Right
-					Text: Video Mode:
+					Text: 视频模式：
 				DropDownButton@MODE_DROPDOWN:
 					X: 140
 					Y: 210
 					Width: 160
 					Height: 25
 					Font: Regular
-					Text: Windowed
+					Text: 窗口化
 				Checkbox@VSYNC_CHECKBOX:
 					X: 310
 					Y: 213
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Enable VSync
+					Text: 启用 VSync
 				Container@WINDOW_RESOLUTION:
 					Y: 240
 					Children:
@@ -229,7 +232,7 @@ Background@SETTINGS_PANEL:
 							Height: 25
 							Width: 120
 							Align: Right
-							Text: Window Size:
+							Text: 窗口大小：
 						TextField@WINDOW_WIDTH:
 							X: 140
 							Width: 55
@@ -257,20 +260,20 @@ Background@SETTINGS_PANEL:
 							Height: 25
 							Width: 120
 							Align: Right
-							Text: Select Display:
+							Text: 选择显示：
 						DropDownButton@DISPLAY_SELECTION_DROPDOWN:
 							X: 140
 							Width: 160
 							Height: 25
 							Font: Regular
-							Text: Standard
+							Text: 标准
 				Checkbox@FRAME_LIMIT_CHECKBOX:
 					X: 310
 					Y: 243
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Enable Frame Limiter
+					Text: 限制帧率
 				Slider@FRAME_LIMIT_SLIDER:
 					X: 340
 					Y: 265
@@ -285,7 +288,7 @@ Background@SETTINGS_PANEL:
 					Width: 120
 					Height: 25
 					Align: Right
-					Text: OpenGL Profile:
+					Text: OpenGL配置：
 				DropDownButton@GL_PROFILE_DROPDOWN:
 					X: 140
 					Y: 270
@@ -297,7 +300,7 @@ Background@SETTINGS_PANEL:
 					Width: PARENT_RIGHT
 					Height: 15
 					Font: Tiny
-					Text: Display and OpenGL changes require restart
+					Text: 显示和OpenGL设置将在重启后生效
 					Align: Center
 		Container@AUDIO_PANEL:
 			X: 5
@@ -309,69 +312,69 @@ Background@SETTINGS_PANEL:
 					Y: 50
 					Width: PARENT_RIGHT
 					Align: Center
-					Text: Audio controls require an active sound device
+					Text: 音频设置需要可用的音频设备
 				Container@AUDIO_CONTROLS:
 					Width: PARENT_RIGHT
 					Height: PARENT_BOTTOM
 					Children:
 						Checkbox@CASH_TICKS:
-							X: 15
-							Y: 43
+							X: 95
+							Y: 150
 							Width: 200
 							Height: 20
 							Font: Regular
-							Text: Cash Ticks
+							Text: 资金变动音效
 						Checkbox@MUTE_SOUND:
-							X: 15
-							Y: 73
+							X: 95
+							Y: 90
 							Width: 200
 							Height: 20
 							Font: Regular
-							Text: Mute Sound
+							Text: 静音
 						Checkbox@MUTE_BACKGROUND_MUSIC:
-							X: 15
-							Y: 103
+							X: 95
+							Y: 120
 							Width: 200
 							Height: 20
 							Font: Regular
-							Text: Mute Background Music
+							Text: 静音背景音乐
 						Label@SOUND_LABEL:
-							X: PARENT_RIGHT - WIDTH - 270
-							Y: 40
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 89
 							Width: 95
 							Height: 25
 							Align: Right
-							Text: Sound Volume:
+							Text: 音效音量：
 						ExponentialSlider@SOUND_VOLUME:
-							X: PARENT_RIGHT - WIDTH - 15
-							Y: 45
-							Width: 250
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 93
+							Width: 170
 							Height: 20
 							Ticks: 7
 						Label@MUSIC_LABEL:
-							X: PARENT_RIGHT - WIDTH - 270
-							Y: 70
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 119
 							Width: 95
 							Height: 25
 							Align: Right
-							Text: Music Volume:
+							Text: 音乐音量：
 						ExponentialSlider@MUSIC_VOLUME:
-							X: PARENT_RIGHT - WIDTH - 15
-							Y: 75
-							Width: 250
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 123
+							Width: 170
 							Height: 20
 							Ticks: 7
 						Label@VIDEO_LABEL:
-							X: PARENT_RIGHT - WIDTH - 270
-							Y: 100
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 149
 							Width: 95
 							Height: 25
 							Align: Right
-							Text: Video Volume:
+							Text: 视频音量：
 						ExponentialSlider@VIDEO_VOLUME:
-							X: PARENT_RIGHT - WIDTH - 15
-							Y: 105
-							Width: 250
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 153
+							Width: 170
 							Height: 20
 							Ticks: 7
 				Label@AUDIO_DEVICE_LABEL:
@@ -380,7 +383,7 @@ Background@SETTINGS_PANEL:
 					Width: 75
 					Height: 25
 					Align: Right
-					Text: Audio Device:
+					Text: 音频设备：
 				DropDownButton@AUDIO_DEVICE:
 					X: 190
 					Y: 240
@@ -392,7 +395,7 @@ Background@SETTINGS_PANEL:
 					Height: 25
 					Font: Tiny
 					Align: Center
-					Text: Device changes will be applied after the game is restarted
+					Text: 设备改变将在重启后生效
 		Container@INPUT_PANEL:
 			X: 5
 			Y: 50
@@ -405,7 +408,7 @@ Background@SETTINGS_PANEL:
 					Width: 110
 					Height: 25
 					Font: Regular
-					Text: Control Scheme:
+					Text: 控制方案：
 					Align: Right
 				DropDownButton@MOUSE_CONTROL_DROPDOWN:
 					X: 130
@@ -421,48 +424,48 @@ Background@SETTINGS_PANEL:
 						LabelWithHighlight@DESC_SELECTION:
 							Height: 16
 							Font: Small
-							Text: - Select units using the {Left} mouse button
+							Text: - 使用{鼠标左键}选择单位
 						LabelWithHighlight@DESC_COMMANDS:
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Command units using the {Left} mouse button
+							Text: - 使用{鼠标左键}下达命令
 						LabelWithHighlight@DESC_BUILDIGS:
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Place structures using the {Left} mouse button
+							Text: - 使用{鼠标左键}放置建筑
 						LabelWithHighlight@DESC_SUPPORT:
 							Y: 51
 							Height: 16
 							Font: Small
-							Text: - Target support powers using the {Left} mouse button
+							Text: - 使用{鼠标左键}释放支援技能
 						LabelWithHighlight@DESC_ZOOM:
 							Y: 68
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using the {Scroll Wheel}
+							Text: - 使用{鼠标滚轮}缩放战场
 						LabelWithHighlight@DESC_ZOOM_MODIFIER:
 							Y: 68
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using {MODIFIER + Scroll Wheel}
+							Text: - 使用{MODIFIER + 鼠标滚轮}来缩放战场
 						LabelWithHighlight@DESC_SCROLL_RIGHT:
 							Y: 85
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Right} mouse button
+							Text: - 使用{鼠标右键}来滚动屏幕
 						LabelWithHighlight@DESC_SCROLL_MIDDLE:
 							Y: 85
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Middle} mouse button
+							Text: - 使用{鼠标中键}来滚动屏幕
 						Label@DESC_EDGESCROLL:
 							X: 9
 							Y: 102
 							Height: 16
 							Font: Small
-							Text: or by moving the cursor to the edge of the screen
+							Text: 或将光标移动到屏幕边缘来滚动屏幕
 				Container@MOUSE_CONTROL_DESC_MODERN:
 					X: 25
 					Y: 70
@@ -471,55 +474,55 @@ Background@SETTINGS_PANEL:
 						LabelWithHighlight@DESC_SELECTION:
 							Height: 16
 							Font: Small
-							Text: - Select units using the {Left} mouse button
+							Text: - 使用{鼠标左键}选择单位
 						LabelWithHighlight@DESC_COMMANDS:
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Command units using the {Right} mouse button
+							Text: - 使用{鼠标右键}下达命令
 						LabelWithHighlight@DESC_BUILDIGS:
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Place structures using the {Left} mouse button
+							Text: - 使用{鼠标左键}放置建筑
 						LabelWithHighlight@DESC_SUPPORT:
 							Y: 51
 							Height: 16
 							Font: Small
-							Text: - Target support powers using the {Left} mouse button
+							Text: - 使用{鼠标左键}释放支援技能
 						LabelWithHighlight@DESC_ZOOM:
 							Y: 68
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using the {Scroll Wheel}
+							Text: - 使用{鼠标滚轮}缩放战场
 						LabelWithHighlight@DESC_ZOOM_MODIFIER:
 							Y: 68
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using {MODIFIER + Scroll Wheel}
+							Text: - 使用{MODIFIER + 鼠标滚轮}来缩放战场
 						LabelWithHighlight@DESC_SCROLL_RIGHT:
 							Y: 85
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Right} mouse button
+							Text: - 使用{鼠标右键}来滚动屏幕
 						LabelWithHighlight@DESC_SCROLL_MIDDLE:
 							Y: 85
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Middle} mouse button
+							Text: - 使用{鼠标中键}来滚动屏幕
 						Label@DESC_EDGESCROLL:
 							X: 9
 							Y: 102
 							Height: 16
 							Font: Small
-							Text: or by moving the cursor to the edge of the screen
+							Text: 或将光标移动到屏幕边缘来滚动屏幕
 				Label@MOUSE_SCROLL_TYPE_LABEL:
 					X: 15
 					Y: 210
 					Width: 110
 					Height: 25
 					Font: Regular
-					Text: Pan Behaviour:
+					Text: 屏幕滚动：
 					Align: Right
 				DropDownButton@MOUSE_SCROLL_TYPE_DROPDOWN:
 					X: 130
@@ -533,14 +536,14 @@ Background@SETTINGS_PANEL:
 					Width: 190
 					Height: 20
 					Font: Regular
-					Text: Lock Mouse to Window
+					Text: 将鼠标锁定在窗口内
 				Label@ZOOM_MODIFIER_LABEL:
 					X: 350
 					Y: 70
 					Width: 70
 					Height: 25
 					Font: Regular
-					Text: Zoom Modifier:
+					Text: 缩放控制键：
 					Align: Right
 				DropDownButton@ZOOM_MODIFIER:
 					X: 425
@@ -554,7 +557,7 @@ Background@SETTINGS_PANEL:
 					Width: 180
 					Height: 20
 					Font: Regular
-					Text: Screen Edge Panning
+					Text: 屏幕边缘滚动
 				Checkbox@ALTERNATE_SCROLL_CHECKBOX:
 					X: 360
 					Y: 133
@@ -567,7 +570,7 @@ Background@SETTINGS_PANEL:
 					Y: 210
 					Width: 100
 					Height: 25
-					Text: Pan Speed:
+					Text: 屏幕滚动速度：
 					Align: Right
 				Slider@SCROLLSPEED_SLIDER:
 					X: 410
@@ -582,7 +585,7 @@ Background@SETTINGS_PANEL:
 					Y: 240
 					Width: 100
 					Height: 25
-					Text: Zoom Speed:
+					Text: 缩放速度：
 					Align: Right
 				ExponentialSlider@ZOOMSPEED_SLIDER:
 					X: 410
@@ -597,7 +600,7 @@ Background@SETTINGS_PANEL:
 					Y: 270
 					Width: 100
 					Height: 25
-					Text: UI Scroll Speed:
+					Text: UI滚动速度：
 					Align: Right
 				Slider@UI_SCROLLSPEED_SLIDER:
 					X: 410
@@ -706,27 +709,27 @@ Background@SETTINGS_PANEL:
 									Height: PARENT_BOTTOM
 									Font: Tiny
 									Align: Left
-									Text: This is the default
+									Text: 这是默认快捷键
 								Label@ORIGINAL_NOTICE:
 									Width: PARENT_RIGHT
 									Height: PARENT_BOTTOM
 									Font: Tiny
 									Align: Left
-									Text: The default is "{0}"
+									Text: 默认快捷键是 "{0}"
 								Label@DUPLICATE_NOTICE:
 									Width: PARENT_RIGHT
 									Height: PARENT_BOTTOM
 									Font: Tiny
 									Align: Left
-									Text: This is already used for "{0}"
+									Text: 该按键已被设置于 "{0}"
 						Button@CLEAR_HOTKEY_BUTTON:
 							X: PARENT_RIGHT - 2 * WIDTH - 30
 							Y: 20
 							Width: 65
 							Height: 25
-							Text: Clear
+							Text: 清除
 							Font: Bold
-							TooltipText: Unbind the hotkey
+							TooltipText: 不设置快捷键
 							TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
 						Button@RESET_HOTKEY_BUTTON:
@@ -734,9 +737,9 @@ Background@SETTINGS_PANEL:
 							Y: 20
 							Width: 65
 							Height: 25
-							Text: Reset
+							Text: 重置
 							Font: Bold
-							TooltipText: Reset to default
+							TooltipText: 还原为默认快捷键
 							TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
 		Container@ADVANCED_PANEL:
@@ -746,115 +749,123 @@ Background@SETTINGS_PANEL:
 			Height: PARENT_BOTTOM
 			Children:
 				Checkbox@NAT_DISCOVERY:
-					X: 15
-					Y: 43
+					X: 15 + 45
+					Y: 40 + 20
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Enable Network Discovery (UPnP)
+					Text: 启用网络发现 (UPnP)
 				Checkbox@PERFTEXT_CHECKBOX:
-					X: 15
-					Y: 73
+					X: 15 + 45
+					Y: 70 + 20
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Show Performance Text
+					Text: 显示性能文本
 				Checkbox@PERFGRAPH_CHECKBOX:
-					X: 15
-					Y: 103
+					X: 15 + 45
+					Y: 100 + 20
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Show Performance Graph
+					Text: 显示性能图表
 				Checkbox@FETCH_NEWS_CHECKBOX:
 					X: 310
-					Y: 43
+					Y: 40 + 20
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Fetch Community News
+					Text: 获取社区新闻
 				Checkbox@CHECK_VERSION_CHECKBOX:
 					X: 310
-					Y: 73
+					Y: 70 + 20
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Check for Updates
+					Text: 检查更新
 				Checkbox@SENDSYSINFO_CHECKBOX:
 					X: 310
-					Y: 103
+					Y: 100 + 20
 					Width: 300
 					Height: 20
 					Font: Regular
-					Text: Send System Information
+					Text: 发送系统信息
 				Label@SENDSYSINFO_DESC:
 					X: 310
-					Y: 118
-					Width: 255
+					Y: 115 + 20
+					Width: 250
 					Height: 30
 					Font: Tiny
 					WordWrap: True
-					Text: Your Operating System, OpenGL and .NET runtime versions, and language settings will be sent along with an anonymous ID to help prioritize future development.
+					Text: 您的部分系统信息将匿名反馈给OpenRA开
+				Label@SENDSYSINFO_DESC2:
+					X: 310
+					Y: 130 + 20
+					Width: 250
+					Height: 30
+					Font: Tiny
+					WordWrap: True
+					Text: 发组，促进研发与优化。
 				Label@DEBUG_TITLE:
-					Y: 190
+					Y: 200
 					Width: PARENT_RIGHT
 					Font: Bold
-					Text: Developer
+					Text: 开发者
 					Align: Center
 				Container@DEBUG_HIDDEN_LABEL:
-					Y: 245
+					Y: 250
 					Width: PARENT_RIGHT
 					Children:
 						Label@A:
 							Width: PARENT_RIGHT
 							Height: 20
 							Font: Regular
-							Text: Additional developer-specific options can be enabled via the
+							Text: 可通过以下方式启用其他特定于开发人员的选项
 							Align: Center
 						Label@B:
 							Y: 20
 							Width: PARENT_RIGHT
 							Height: 20
 							Font: Regular
-							Text: Debug.DisplayDeveloperSettings setting or launch flag
+							Text: Debug.DisplayDeveloperSettings设置或启动项
 							Align: Center
 				Container@DEBUG_OPTIONS:
 					Width: PARENT_RIGHT
 					Height: PARENT_BOTTOM
 					Children:
 						Checkbox@BOTDEBUG_CHECKBOX:
-							X: 15
-							Y: 213
+							X: 15 + 45
+							Y: 220
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Show Bot Debug Messages
+							Text: 显示AI调试消息
 						Checkbox@CHECKUNSYNCED_CHECKBOX:
-							X: 15
-							Y: 243
+							X: 15 + 45
+							Y: 250
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Check Sync around Unsynced Code
+							Text: 检查未同步代码周围的同步
 						Checkbox@CHECKBOTSYNC_CHECKBOX:
-							X: 15
-							Y: 273
+							X: 15 + 45
+							Y: 280
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Check Sync around BotModule Code
+							Text: 检查BotModule代码周围的同步
 						Checkbox@LUADEBUG_CHECKBOX:
 							X: 310
-							Y: 213
+							Y: 220
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Show Map Debug Messages
+							Text: 显示地图调试消息
 						Checkbox@REPLAY_COMMANDS_CHECKBOX:
 							X: 310
-							Y: 243
+							Y: 250
 							Width: 300
 							Height: 20
 							Font: Regular
-							Text: Enable Debug Commands in Replays
+							Text: 在重播中启用调试命令
 		TooltipContainer@SETTINGS_TOOLTIP_CONTAINER:
