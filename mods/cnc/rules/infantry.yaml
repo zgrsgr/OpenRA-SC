@@ -6,14 +6,14 @@ E1:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Minigunner
+		Name: 步枪兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Description: 泛用型步兵\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Mobile:
 		Speed: 56
 	Health:
@@ -34,14 +34,14 @@ E2:
 	Valued:
 		Cost: 160
 	Tooltip:
-		Name: Grenadier
+		Name: 掷弹兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Infantry.GDI
-		Description: Fast infantry armed with grenades. \n  Strong vs Buildings, slow-moving targets
+		Description: 装备有手榴弹的专业步兵\n\n·强势对抗：步兵、建筑\n·弱势对抗：载具、飞行器
 	Mobile:
 		Speed: 71
 	Health:
@@ -69,14 +69,14 @@ E3:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Rocket Soldier
+		Name: 导弹兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Description: 反装甲防空步兵\n\n·强势对抗：载具、飞行器 \n·弱势对抗：步兵
 	Mobile:
 		Speed: 42
 	Health:
@@ -100,14 +100,14 @@ E4:
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Flamethrower
+		Name: 火焰兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: Infantry.Nod
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+		Description: 装备火焰喷射器的特种部队\n\n·强势对抗：步兵、建筑 \n·弱势对抗：载具、飞行器
 	Mobile:
 		Speed: 56
 	Health:
@@ -133,14 +133,14 @@ E5:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Chemical Warrior
+		Name: 化武军团
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: tmpl, ~techlevel.high
 		Queue: Infantry.Nod
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
+		Description: 装备先进泰伯利亚武器的精英步兵\n免疫泰伯利亚\n\n·强势对抗：地面目标\n·弱势对抗：飞行器
 	Mobile:
 		Speed: 56
 		Locomotor: chem
@@ -166,14 +166,14 @@ E6:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Engineer
+		Name: 工程师
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
 		Queue: Infantry.GDI, Infantry.Nod
-		Description: Damages and captures enemy structures.\n  Repairs destroyed vehicles\n  Unarmed
+		Description: 功能型步兵\n可维修友军建筑或占领中立、敌方建筑\n\n·无武装
 	Mobile:
 		Speed: 48
 	Health:
@@ -200,7 +200,7 @@ RMBO:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Commando
+		Name: 突击队员
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -209,7 +209,7 @@ RMBO:
 		Queue: Infantry.GDI
 		BuildDuration: 2000
 		BuildDurationModifier: 40
-		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Description: 精英步兵\n能轻易消灭敌方步兵并使用C4爆破建筑\n\n·强势对抗：步兵、建筑\n·弱势对抗：载具、飞行器\n·特殊能力：爆破建筑
 	Mobile:
 		Speed: 71
 		Voice: Move
@@ -250,8 +250,9 @@ PVICE:
 	Buildable:
 		Queue: Biolab
 		BuildPaletteOrder: 40
-		Description: Mutated abomination that spits liquid Tiberium.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft
+		Description: 能够喷射液态泰伯利亚的可怕突变生物\n\n·强势对抗：步兵、建筑\n弱势对抗：载具、飞行器
 	Tooltip:
+		Name: 器官兽
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	ActorLostNotification:
@@ -259,19 +260,19 @@ PVICE:
 STEG:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Stegosaurus
+		Name: 剑龙
 	Armament:
 		Weapon: tail
 	WithDeathAnimation:
 		DeathSequencePalette: terrain
 		DeathPaletteIsPlayerPalette: false
 	Buildable:
-		Description: A large, heavily built, herbivorous quadruped
+		Description: 一种体型庞大身体结实的食草四足动物
 
 TREX:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Tyrannosaurus rex
+		Name: 霸王龙
 	Armament:
 		Weapon: teeth
 	Selectable:
@@ -279,25 +280,25 @@ TREX:
 		DecorationBounds: 52,38
 	SelectionDecorations:
 	Buildable:
-		Description: Bipedal carnivore with a massive skull
+		Description: 双足行走的大型食肉动物\n脑袋很大
 
 TRIC:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Triceratops
+		Name: 三角龙
 	Armament:
 		Weapon: horn
 	SelectionDecorations:
 	Buildable:
-		Description: Quadruped with large bony frill and three horns
+		Description: 一眼就能认出的四足庞然大物\n头顶有三只角
 	Selectable:
 		DecorationBounds: 34,24,0,2
 
 RAPT:
 	Inherits: ^DINO
 	Tooltip:
-		Name: Velociraptor
+		Name: 迅猛龙
 	Armament:
 		Weapon: claw
 	Buildable:
-		Description: Bipedal with enlarged sickle-shaped claw on each hindfoot
+		Description: 双足食肉动物\n拥有锐利的脚爪

@@ -5,7 +5,7 @@ BOAT:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Gunboat
+		Name: 炮艇
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -54,7 +54,7 @@ LST:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Landing Craft
+		Name: 登陆艇
 	Buildable:
 		Queue: Vehicle.GDI
 		BuildPaletteOrder: 1000

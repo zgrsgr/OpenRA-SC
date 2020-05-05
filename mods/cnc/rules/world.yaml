@@ -125,21 +125,21 @@
 			BlueTiberium: 70
 			Beach: 80
 	Faction@Random:
-		Name: Any
+		Name: 随机
 		InternalName: Random
 		RandomFactionMembers: gdi, nod
-		Description: Random Faction\nA random faction will be chosen when the game starts.
+		Description: 随机阵营\n系统将会为玩家分配一个随机的阵营
 	Faction@gdi:
 		Name: GDI
 		InternalName: gdi
-		Description: Global Defense Initiative\nThe GDI is an international military branch of the United Nations tasked\nwith keeping world peace. Commanding the combined forces of the world's\nmost powerful nations, they possess an unmatched arsenal of high-tech weaponry.
+		Description: 全球防御组织\n作为联合国下属的全球性军事盟约，\n全球防御组织旨在守护世界和平。\n全球科技领先的大国们，\n都无私地将最先进的军备贡献出来，\n推动GDI成为世上一支无可匹敌的军事力量。
 	Faction@nod:
 		Name: Nod
 		InternalName: nod
-		Description: Brotherhood of Nod\nThe Brotherhood is a religious cult centered around their leader Kane\nand the alien substance Tiberium. They utilize stealth technology\nand guerilla tactics to defeat those who oppose them.
+		Description: Nod兄弟会\n兄弟会狂热地崇拜着他们的伟大先知凯恩，\n以及泰伯利亚这一神奇而独特的外星存在。\n作为神秘的政教合一的军阀组织，\n兄弟会借由隐形与匿踪科技，\n通过多种多样的游击战法惩戒那些胆敢反抗他们的异教徒。
 	ResourceType@green-tib:
 		Type: Tiberium
-		Name: Tiberium
+		Name: 绿色泰伯利亚晶体
 		PipColor: Green
 		ResourceType: 1
 		Palette: staticterrain
@@ -151,7 +151,7 @@
 		AllowUnderActors: true
 	ResourceType@blue-tib:
 		Type: BlueTiberium
-		Name: Tiberium
+		Name: 蓝色泰伯利亚晶体
 		PipColor: Blue
 		ResourceType: 2
 		Palette: bluetiberium
@@ -193,60 +193,77 @@ World:
 		CheckboxVisible: False
 	SpawnMapActors:
 	MapBuildRadius:
+		BuildRadiusCheckboxLabel: 有限的建筑范围
+		BuildRadiusCheckboxEnabled: True
+		BuildRadiusCheckboxDescription: 启用后建筑只能放置在建筑工厂的一定范围之内
+		AllyBuildRadiusCheckboxLabel: 协助建设
+		AllyBuildRadiusCheckboxDescription: 启用后可以在盟友附近建设且与盟友共享建筑范围
 		AllyBuildRadiusCheckboxDisplayOrder: 4
 		BuildRadiusCheckboxDisplayOrder: 5
 	MapOptions:
+		ShortGameCheckboxLabel: 快速游戏
+		ShortGameCheckboxDescription: 消灭敌方所有基础建筑与移动基地车即可获胜
+		TechLevelDropdownLabel: 科技等级限制
+		TechLevelDropdownDescription: 限制玩家最高能使用的科技技术
+		GameSpeedDropdownLabel: 游戏速度
+		GameSpeedDropdownDescription: 调整游戏内时间的变化倍率
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
 	MPStartLocations:
+		SeparateTeamSpawnsCheckboxLabel: 远离敌军出生点
+		SeparateTeamSpawnsCheckboxDescription: 启用后所有随机出生的玩家将被分配到尽可能远离对手的位置
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	CreateMPPlayers:
 	MPStartUnits@mcvonly:
 		Class: none
-		ClassName: MCV Only
+		ClassName: 仅基地车
 		Factions: gdi, nod
 		BaseActor: mcv
 	MPStartUnits@defaultgdia:
 		Class: light
-		ClassName: Light Support
+		ClassName: 少量援军
 		Factions: gdi
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e1,e1,e3,e3,jeep
 	MPStartUnits@defaultnoda:
 		Class: light
-		ClassName: Light Support
+		ClassName: 少量援军
 		Factions: nod
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e1,e1,e1,e3,e3,bggy
 	MPStartUnits@heavynoda:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 大量援军
 		Factions: nod
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e1,e3,e3,ltnk,ltnk,ftnk
 	MPStartUnits@heavynodb:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 大量援军
 		Factions: nod
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e1,e1,e3,e3,e3,ftnk,ftnk
 	MPStartUnits@heavygdia:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 大量援军
 		Factions: gdi
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e1,e3,e3,jeep,mtnk,mtnk
 	MPStartUnits@heavygdib:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 大量援军
 		Factions: gdi
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e1,e1,e2,e2,e2,e3,e3,apc,mtnk
 	SpawnMPUnits:
+		DropdownLabel: 初始部队
+		DropdownDescription: 调整玩家初始部队的规模
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
 	CrateSpawner:
+		CheckboxLabel: 随机工具箱
+		CheckboxDescription: 启用后地图上随机出现奖惩效果不一的工具箱
 		Minimum: 1
 		Maximum: 6
 		SpawnInterval: 3000
@@ -263,6 +280,8 @@ World:
 		ShellmapRoot: MENU_BACKGROUND
 	ScriptTriggers:
 	TimeLimitManager:
+		TimeLimitLabel: 时限作战
+		TimeLimitDescription: 游戏进行到选定时刻时，得分最高的玩家或小队将会立即获得胜利
 
 EditorWorld:
 	Inherits: ^BaseWorld

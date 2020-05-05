@@ -38,17 +38,17 @@ CRATE:
 WCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Wooden Crate
+		Name: 木质工具箱
 
 SCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Steel Crate
+		Name: 铁制工具箱
 
 mpspawn:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (multiplayer player starting point)
+		Name: （玩家出生点）
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -64,7 +64,7 @@ mpspawn:
 waypoint:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (waypoint for scripted behavior)
+		Name: （脚本动作路径点）
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -86,7 +86,7 @@ fact.colorpicker:
 CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (reveals area to owner)
+		Name: （向所有者显示区域）
 	AlwaysVisible:
 	WithSpriteBody:
 	RenderSpritesEditorOnly:
@@ -103,7 +103,7 @@ CAMERA:
 CAMERA.small:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (reveals small area to owner)
+		Name: （向所有者显示小范围区域）
 	AlwaysVisible:
 	WithSpriteBody:
 	RenderSpritesEditorOnly:
@@ -135,7 +135,7 @@ FLARE:
 	HiddenUnderFog:
 		Type: CenterPosition
 	Tooltip:
-		Name: Flare
+		Name: 狼烟
 		ShowOwnerRow: false
 	BodyOrientation:
 		QuantizedFacings: 1

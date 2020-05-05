@@ -274,7 +274,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Vehicle
+		GenericName: 载具
 	MustBeDestroyed:
 	Voiced:
 		VoiceSet: VehicleVoice
@@ -290,7 +290,7 @@
 		Locomotor: tracked
 		TurnSpeed: 5
 	Tooltip:
-		GenericName: Tank
+		GenericName: 坦克
 
 ^Helicopter:
 	Inherits@1: ^ExistsInWorld
@@ -334,7 +334,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Helicopter
+		GenericName: 直升机
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -468,7 +468,7 @@
 	Inherits: ^Infantry
 	MustBeDestroyed:
 	Tooltip:
-		GenericName: Soldier
+		GenericName: 步兵
 	Guard:
 	TakeCover:
 		SpeedModifier: 60
@@ -487,7 +487,7 @@
 	Valued:
 		Cost: 10
 	Tooltip:
-		Name: Civilian
+		Name: 平民
 		GenericVisibility: None
 	Mobile:
 		Speed: 56
@@ -537,7 +537,7 @@
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Dinosaur
+		Name: 恐龙
 	RevealsShroud:
 		Range: 6c0
 	Mobile:
@@ -606,7 +606,7 @@
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Visceroid
+		Name: 器官兽
 	Armament:
 		Weapon: Chemspray
 		LocalOffset: 384,0,0
@@ -680,7 +680,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Ship
+		GenericName: 舰艇
 	Voiced:
 		VoiceSet: VehicleVoice
 	HitShape:
@@ -725,7 +725,7 @@
 	Guardable:
 		Range: 3c0
 	Tooltip:
-		GenericName: Structure
+		GenericName: 建筑
 	FrozenUnderFog:
 	Demolishable:
 	MapEditorData:
@@ -780,7 +780,7 @@
 	Inherits: ^Building
 	-ConditionManager:
 	Tooltip:
-		GenericName: Civilian Building
+		GenericName: 民用建筑
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
@@ -796,7 +796,7 @@
 		Footprint: x
 	WithSpriteBody:
 	Tooltip:
-		GenericName: Civilian Building (Destroyed)
+		GenericName: 民用建筑废墟
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
@@ -839,7 +839,7 @@
 	-SelectionDecorations:
 	Interactable:
 	Tooltip:
-		GenericName: Field
+		GenericName: 农田
 	-Explodes:
 	-ShakeOnDeath:
 	-SoundOnDamageTransition:
@@ -855,7 +855,7 @@
 		Dimensions: 1,1
 		Footprint: =
 	Tooltip:
-		Name: Field (Destroyed)
+		Name: 被糟蹋的农田
 		GenericVisibility: None
 		ShowOwnerRow: false
 	RenderSprites:
@@ -917,7 +917,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Tree
+		Name: 树
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -972,7 +972,7 @@
 		Dimensions: 2,2
 	WithSpriteBody:
 	Tooltip:
-		Name: Tree (Burnt)
+		Name: 烧焦的树
 		ShowOwnerRow: false
 	HiddenUnderShroud:
 	ScriptTriggers:
@@ -985,7 +985,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Blossom Tree
+		Name: 绿色晶化孢子树
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1009,7 +1009,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Rock
+		Name: 石头
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: staticterrain
@@ -1062,7 +1062,7 @@
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 	Tooltip:
-		GenericName: Destroyed Vehicle
+		GenericName: 载具残骸
 	WithColoredOverlay@IDISABLE:
 		Palette: disabled
 	ScriptTriggers:
@@ -1090,7 +1090,7 @@
 		Moves: False
 		Explosion: HeliCrash
 	Tooltip:
-		GenericName: Destroyed Helicopter
+		GenericName: 直升机残骸
 	BodyOrientation:
 		UseClassicFacingFudge: True
 	-MapEditorData:
@@ -1099,7 +1099,7 @@
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
 	Tooltip:
-		Name: Bridge
+		Name: 桥梁
 		ShowOwnerRow: false
 	Targetable:
 		RequiresForceFire: true
@@ -1125,8 +1125,8 @@
 	Interactable:
 	HiddenUnderFog:
 	Tooltip:
-		Name: Crate
-		GenericName: Crate
+		Name: 工具箱
+		GenericName: 工具箱
 		ShowOwnerRow: false
 	Crate:
 		TerrainTypes: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
