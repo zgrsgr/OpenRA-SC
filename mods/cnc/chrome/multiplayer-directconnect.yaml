@@ -11,7 +11,7 @@ Container@DIRECTCONNECT_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Connect to Server
+			Text: 连接到服务器
 		Background@bg:
 			Width: 370
 			Height: 90
@@ -23,7 +23,7 @@ Container@DIRECTCONNECT_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Address:
+					Text: 服务器地址：
 				TextField@IP:
 					X: 150
 					Y: 15
@@ -35,7 +35,7 @@ Container@DIRECTCONNECT_PANEL:
 					Width: 95
 					Height: 25
 					Align: Right
-					Text: Port:
+					Text: 端口：
 				TextField@PORT:
 					X: 150
 					Y: 50
@@ -48,11 +48,11 @@ Container@DIRECTCONNECT_PANEL:
 			Y: 89
 			Width: 140
 			Height: 35
-			Text: Back
+			Text: 取消
 		Button@JOIN_BUTTON:
 			Key: return
 			X: 230
 			Y: 89
 			Width: 140
 			Height: 35
-			Text: Join
+			Text: 连接

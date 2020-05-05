@@ -6,7 +6,7 @@ Container@MULTIPLAYER_PANEL:
 	Height: 575
 	Children:
 		Label@TITLE:
-			Text: Multiplayer
+			Text: 多人游戏
 			Width: PARENT_RIGHT
 			Y: 0 - 22
 			Font: BigBold
@@ -27,26 +27,26 @@ Container@MULTIPLAYER_PANEL:
 							X: 5
 							Width: 255
 							Height: 25
-							Text: Server
+							Text: 房间
 							Align: Center
 							Font: Bold
 						Label@PLAYERS:
 							X: 290
 							Width: 85
 							Height: 25
-							Text: Players
+							Text: 玩家
 							Font: Bold
 						Label@LOCATION:
 							X: 380
 							Width: 110
 							Height: 25
-							Text: Location
+							Text: 位置
 							Font: Bold
 						Label@STATUS:
 							X: 495
 							Width: 50
 							Height: 25
-							Text: Status
+							Text: 状态
 							Font: Bold
 				LogicTicker@NOTICE_WATCHER:
 				Container@NOTICE_CONTAINER:
@@ -65,21 +65,21 @@ Container@MULTIPLAYER_PANEL:
 									Width: PARENT_RIGHT-10
 									Height: 20
 									Align: Center
-									Text: You are running an outdated version of OpenRA. Download the latest version from www.openra.net
+									Text: 您正在运行过时的OpenRA版本，请从官网下载最新版本
 									Font: TinyBold
 								Label@UNKNOWN_VERSION_LABEL:
 									X: 5
 									Width: PARENT_RIGHT-10
 									Height: 20
 									Align: Center
-									Text: You are running an unrecognized version of OpenRA. Download the latest version from www.openra.net
+									Text: 您正在运行无法识别的OpenRA版本，请从官网下载最新版本
 									Font: TinyBold
 								Label@PLAYTEST_AVAILABLE_LABEL:
 									X: 5
 									Width: PARENT_RIGHT-10
 									Height: 20
 									Align: Center
-									Text: A preview of the next OpenRA release is available for testing. Download the playtest from www.openra.net
+									Text: 可以使用下一个OpenRA版本的预览进行测试，可以下载测试版本
 									Font: TinyBold
 				ScrollPanel@SERVER_LIST:
 					X: 15
@@ -119,7 +119,7 @@ Container@MULTIPLAYER_PANEL:
 									ImageCollection: lobby-bits
 									TooltipContainer: TOOLTIP_CONTAINER
 									TooltipTemplate: SIMPLE_TOOLTIP
-									TooltipText: Requires Password
+									TooltipText: 本房间需要密码
 								Image@REQUIRES_AUTHENTICATION:
 									X: 272
 									Y: 6
@@ -128,7 +128,7 @@ Container@MULTIPLAYER_PANEL:
 									ImageCollection: lobby-bits
 									TooltipContainer: TOOLTIP_CONTAINER
 									TooltipTemplate: SIMPLE_TOOLTIP
-									TooltipText: Requires OpenRA forum account
+									TooltipText: 本房间要求玩家绑定OpenRA论坛帐户
 								LabelWithTooltip@PLAYERS:
 									X: 290
 									Width: 85
@@ -213,7 +213,7 @@ Container@MULTIPLAYER_PANEL:
 					Y: PARENT_BOTTOM - 40
 					Width: 152
 					Height: 25
-					Text: Filter Games
+					Text: 筛选游戏
 				Button@RELOAD_BUTTON:
 					X: 172
 					Y: PARENT_BOTTOM - 40
@@ -242,18 +242,18 @@ Container@MULTIPLAYER_PANEL:
 					Y: PARENT_BOTTOM - 40
 					Width: 100
 					Height: 25
-					Text: Direct IP
+					Text: IP直连
 				Button@CREATE_BUTTON:
 					X: 492
 					Y: PARENT_BOTTOM - 40
 					Width: 105
 					Height: 25
-					Text: Create
+					Text: 创建游戏
 		Button@BACK_BUTTON:
 			Key: escape
 			X: 0
 			Y: PARENT_BOTTOM - 36
 			Width: 140
 			Height: 35
-			Text: Back
+			Text: 返回
 		TooltipContainer@TOOLTIP_CONTAINER:

@@ -176,7 +176,7 @@ Background@THREEBUTTON_PROMPT:
 			Y: 40
 			Width: 140
 			Height: 35
-			Text: Confirm
+			Text: 确认
 			Visible: false
 		Button@OTHER_BUTTON:
 			Key: r
@@ -184,14 +184,14 @@ Background@THREEBUTTON_PROMPT:
 			Y: 40
 			Width: 140
 			Height: 35
-			Text: Restart
+			Text: 重新开始
 			Visible: false
 		Button@CANCEL_BUTTON:
 			Key: escape
 			Y: 40
 			Width: 140
 			Height: 35
-			Text: Cancel
+			Text: 取消
 			Visible: false
 
 Background@TWOBUTTON_PROMPT:
@@ -218,7 +218,7 @@ Background@TWOBUTTON_PROMPT:
 			Y: 30
 			Width: 140
 			Height: 35
-			Text: Cancel
+			Text: 取消
 			Visible: false
 		Button@CONFIRM_BUTTON:
 			Key: return
@@ -226,7 +226,7 @@ Background@TWOBUTTON_PROMPT:
 			Y: 30
 			Width: 140
 			Height: 35
-			Text: Confirm
+			Text: 确认
 			Visible: false
 
 Container@TEXT_INPUT_PROMPT:
@@ -263,7 +263,7 @@ Container@TEXT_INPUT_PROMPT:
 			Y: PARENT_BOTTOM - 1
 			Width: 160
 			Height: 34
-			Text: OK
+			Text: 确认
 			Font: Bold
 			Key: return
 		Button@CANCEL_BUTTON:
@@ -271,7 +271,7 @@ Container@TEXT_INPUT_PROMPT:
 			Y: PARENT_BOTTOM - 1
 			Width: 160
 			Height: 35
-			Text: Cancel
+			Text: 取消
 			Font: Bold
 			Key: escape
 
@@ -299,7 +299,7 @@ ScrollPanel@NEWS_PANEL:
 					Width: PARENT_RIGHT
 					Height: 15
 					Align: Center
-					Text: by {0} at {1}
+					Text: {0} 发布于 {1}
 					Font: TinyBold
 				Label@CONTENT:
 					Y: 46

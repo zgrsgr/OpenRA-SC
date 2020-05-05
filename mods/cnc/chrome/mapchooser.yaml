@@ -11,50 +11,50 @@ Container@MAPCHOOSER_PANEL:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Select Map
+			Text: 选择地图
 		Background@bg:
 			Width: PARENT_RIGHT
 			Height: 540
 			Background: panel-black
 			Children:
 				Label@FILTER_DESC:
-					X: PARENT_RIGHT - WIDTH - 401
+					X: PARENT_RIGHT - WIDTH - 373
 					Y: 16
-					Width: 60
+					Width: 30
 					Height: 25
 					Font: Bold
 					Align: Right
-					Text: Filter:
+					Text: 筛选：
 				TextField@MAPFILTER_INPUT:
-					X: PARENT_RIGHT - WIDTH - 245
+					X: PARENT_RIGHT - WIDTH - 225
 					Y: 15
 					Width: 150
 					Height: 25
 				Label@FILTER_DESC_JOINER:
-					X: PARENT_RIGHT - WIDTH - 215
+					X: PARENT_RIGHT - WIDTH - 173
 					Y: 16
 					Width: 30
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: in
+					Text: 类型：
 				DropDownButton@GAMEMODE_FILTER:
 					X: PARENT_RIGHT - WIDTH - 15
 					Y: 15
-					Width: 200
+					Width: 150
 					Height: 25
 				Button@SYSTEM_MAPS_TAB_BUTTON:
 					X: 15
 					Y: 15
 					Height: 31
 					Width: 135
-					Text: Official Maps
+					Text: 官方地图
 				Button@USER_MAPS_TAB_BUTTON:
 					X: 155
 					Y: 15
 					Height: 31
 					Width: 135
-					Text: Custom Maps
+					Text: 自定义地图
 				Container@SYSTEM_MAPS_TAB:
 					X: 15
 					Y: 45
@@ -116,30 +116,30 @@ Container@MAPCHOOSER_PANEL:
 					Y: 539
 					Width: 140
 					Height: 35
-					Text: Back
+					Text: 返回
 				Button@RANDOMMAP_BUTTON:
 					Key: space
 					X: PARENT_RIGHT - 150 - WIDTH
 					Y: 539
 					Width: 140
 					Height: 35
-					Text: Random
+					Text: 随机选择
 				Button@DELETE_MAP_BUTTON:
 					X: PARENT_RIGHT - 300 - WIDTH
 					Y: 539
 					Width: 140
 					Height: 35
-					Text: Delete Map
+					Text: 删除地图
 				Button@DELETE_ALL_MAPS_BUTTON:
 					X: PARENT_RIGHT - 450 - WIDTH
 					Y: 539
 					Width: 140
 					Height: 35
-					Text: Delete All Maps
+					Text: 删除全部地图
 				Button@BUTTON_OK:
 					Key: return
 					X: PARENT_RIGHT - WIDTH
 					Y: 539
 					Width: 140
 					Height: 35
-					Text: Ok
+					Text: 确认

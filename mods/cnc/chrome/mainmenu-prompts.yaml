@@ -11,7 +11,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Establishing Battlefield Control
+			Text: 正在建立战场控制
 		Background@bg:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -23,23 +23,23 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 					Height: 16
 					Font: Regular
 					Align: Center
-					Text: Welcome back Commander! Initialize combat parameters using the options below.
+					Text: 欢迎回来，指挥官！您可以使用以下选项来配置您的战斗参数。
 				Label@DESC_B:
 					Width: PARENT_RIGHT
 					Y: 33
 					Height: 16
 					Font: Regular
 					Align: Center
-					Text: Additional options can be configured later from the Settings menu.
+					Text: 之后您可以在“设置”中对这些参数进行设置。
 				Label@PROFILE_TITLE:
 					Width: PARENT_RIGHT
 					Y: 60
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: Profile
+					Text: 玩家
 				Label@PLAYER:
-					Text: Player Name:
+					Text: 玩家名：
 					X: 15
 					Y: 90
 					Width: 120
@@ -56,7 +56,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 					Y: 90
 					Width: 145
 					Height: 25
-					Text: Preferred Color:
+					Text: 玩家颜色：
 					Align: Right
 				ColorPreviewManager@COLOR_MANAGER:
 				DropDownButton@PLAYERCOLOR:
@@ -78,14 +78,14 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: Input
+					Text: 输入
 				Label@MOUSE_CONTROL_LABEL:
 					X: 15
 					Y: 150
 					Width: 120
 					Height: 25
 					Font: Regular
-					Text: Control Scheme:
+					Text: 控制方案：
 					Align: Right
 				DropDownButton@MOUSE_CONTROL_DROPDOWN:
 					X: 140
@@ -99,7 +99,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 					Width: 180
 					Height: 20
 					Font: Regular
-					Text: Screen Edge Panning
+					Text: 屏幕边缘滚动
 				Container@MOUSE_CONTROL_DESC_CLASSIC:
 					X: 25
 					Y: 180
@@ -108,52 +108,52 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 						LabelWithHighlight@DESC_SELECTION:
 							Height: 16
 							Font: Small
-							Text: - Select units using the {Left} mouse button
+							Text: - 使用{鼠标左键}选择单位
 						LabelWithHighlight@DESC_COMMANDS:
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Command units using the {Left} mouse button
+							Text: - 使用{鼠标左键}下达命令
 						LabelWithHighlight@DESC_BUILDIGS:
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Place structures using the {Left} mouse button
+							Text: - 使用{鼠标左键}放置建筑
 						LabelWithHighlight@DESC_SUPPORT:
 							X: 265
 							Height: 16
 							Font: Small
-							Text: - Target support powers using the {Left} mouse button
+							Text: - 使用{鼠标左键}释放支援技能
 						LabelWithHighlight@DESC_ZOOM:
 							X: 265
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using the {Scroll Wheel}
+							Text: - 使用{鼠标滚轮}缩放战场
 						LabelWithHighlight@DESC_ZOOM_MODIFIER:
 							X: 265
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using {MODIFIER + Scroll Wheel}
+							Text: - 使用{MODIFIER + 鼠标滚轮}来缩放战场
 						LabelWithHighlight@DESC_SCROLL_RIGHT:
 							X: 265
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Right} mouse button
+							Text: - 使用{鼠标右键}来滚动屏幕
 						LabelWithHighlight@DESC_SCROLL_MIDDLE:
 							X: 265
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Middle} mouse button
+							Text: - 使用{鼠标中键}来滚动屏幕
 						Label@DESC_EDGESCROLL:
 							X: 274
 							Y: 51
 							Height: 16
 							Font: Small
-							Text: or by moving the cursor to the edge of the screen
+							Text: 或将光标移动到屏幕边缘来滚动屏幕
 				Container@MOUSE_CONTROL_DESC_MODERN:
 					X: 25
 					Y: 180
@@ -162,65 +162,65 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 						LabelWithHighlight@DESC_SELECTION:
 							Height: 16
 							Font: Small
-							Text: - Select units using the {Left} mouse button
+							Text: - 使用{鼠标左键}选择单位
 						LabelWithHighlight@DESC_COMMANDS:
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Command units using the {Right} mouse button
+							Text: - 使用{鼠标右键}下达命令
 						LabelWithHighlight@DESC_BUILDIGS:
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Place structures using the {Left} mouse button
+							Text: - 使用{鼠标左键}放置建筑
 						LabelWithHighlight@DESC_SUPPORT:
 							X: 265
 							Height: 16
 							Font: Small
-							Text: - Target support powers using the {Left} mouse button
+							Text: - 使用{鼠标左键}释放支援技能
 						LabelWithHighlight@DESC_ZOOM:
 							X: 265
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using the {Scroll Wheel}
+							Text: - 使用{鼠标滚轮}缩放战场
 						LabelWithHighlight@DESC_ZOOM_MODIFIER:
 							X: 265
 							Y: 17
 							Height: 16
 							Font: Small
-							Text: - Zoom the battlefield using {MODIFIER + Scroll Wheel}
+							Text: - 使用{MODIFIER + 鼠标滚轮}来缩放战场
 						LabelWithHighlight@DESC_SCROLL_RIGHT:
 							X: 265
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Right} mouse button
+							Text: - 使用{鼠标右键}来滚动屏幕
 						LabelWithHighlight@DESC_SCROLL_MIDDLE:
 							X: 265
 							Y: 34
 							Height: 16
 							Font: Small
-							Text: - Pan the battlefield using the {Middle} mouse button
+							Text: - 使用{鼠标中键}来滚动屏幕
 						Label@DESC_EDGESCROLL:
 							X: 274
 							Y: 51
 							Height: 16
 							Font: Small
-							Text: or by moving the cursor to the edge of the screen
+							Text: 或将光标移动到屏幕边缘来滚动屏幕
 				Label@INPUT_TITLE:
 					Width: PARENT_RIGHT
 					Y: 250
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: Display
+					Text: 显示
 				Label@BATTLEFIELD_CAMERA:
 					X: 15
 					Y: 280
 					Width: 120
 					Height: 25
-					Text: Battlefield Camera:
+					Text: 战场相机：
 					Align: Right
 				DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
 					X: 140
@@ -233,7 +233,7 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 					Y: 280
 					Width: 145
 					Height: 25
-					Text: UI Scale:
+					Text: UI缩放：
 					Align: Right
 				DropDownButton@UI_SCALE_DROPDOWN:
 					X: 425
@@ -247,13 +247,13 @@ Container@MAINMENU_INTRODUCTION_PROMPT:
 					Width: 200
 					Height: 20
 					Font: Regular
-					Text: Increase Cursor Size
+					Text: 增大光标
 		Button@CONTINUE_BUTTON:
 			X: PARENT_RIGHT - WIDTH
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Continue
+			Text: 继续
 			Font: Bold
 			Key: return
 
@@ -270,7 +270,7 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 			Font: BigBold
 			Contrast: true
 			Align: Center
-			Text: Establishing Battlefield Control
+			Text: 正在建立战场控制
 		Background@bg:
 			Width: PARENT_RIGHT
 			Height: PARENT_BOTTOM
@@ -282,14 +282,14 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 					Width: PARENT_RIGHT - 30
 					Height: 16
 					Align: Center
-					Text: We would like to collect some details that will help us optimize OpenRA.
+					Text: 我们想收集一些系统细节，以帮助我们优化OpenRA。
 				Label@PROMPT_TEXT_B:
 					X: 15
 					Y: 33
 					Width: PARENT_RIGHT - 30
 					Height: 16
 					Align: Center
-					Text: With your permission, the following anonymous system data will be sent:
+					Text: 在您允许的情况下，每次游戏启动时都会匿名发送以下数据：
 				ScrollPanel@SYSINFO_DATA:
 					X: 15
 					Y: 63
@@ -309,12 +309,12 @@ Container@MAINMENU_SYSTEM_INFO_PROMPT:
 					Width: 190
 					Height: 20
 					Font: Regular
-					Text: Send System Information
+					Text: 发送系统信息
 		Button@CONTINUE_BUTTON:
 			X: PARENT_RIGHT - WIDTH
 			Y: PARENT_BOTTOM - 1
 			Width: 140
 			Height: 35
-			Text: Continue
+			Text: 继续
 			Font: Bold
 			Key: return

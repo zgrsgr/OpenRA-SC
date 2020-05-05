@@ -54,46 +54,46 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_RIGHT
 							Height: 20
-							Text: Main Menu
+							Text: OpenRA - 泰伯利亚黎明
 							Align: Center
-							Font: Bold
+							Font: MediumBold
 							Contrast: True
 						Button@SINGLEPLAYER_BUTTON:
 							X: 0
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Singleplayer
+							Text: 单人游戏
 						Button@MULTIPLAYER_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Multiplayer
+							Text: 多人游戏
 						Button@SETTINGS_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Settings
+							Text: 设置
 						Button@EXTRAS_BUTTON:
 							X: 450
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Extras
+							Text: 附加功能
 						Button@CONTENT_BUTTON:
 							X: 600
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Manage Content
+							Text: 资源管理
 						Button@QUIT_BUTTON:
 							X: 750
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Quit
+							Text: 退出
 				Container@SINGLEPLAYER_MENU:
 					Width: PARENT_RIGHT
 					Visible: False
@@ -103,7 +103,7 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_RIGHT
 							Height: 20
-							Text: Singleplayer
+							Text: 单人游戏
 							Align: Center
 							Font: Bold
 							Contrast: True
@@ -112,26 +112,26 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Skirmish
+							Text: 遭遇战
 						Button@MISSIONS_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Missions
+							Text: 战役任务
 						Button@LOAD_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Load
+							Text: 载入游戏
 						Button@BACK_BUTTON:
 							Key: escape
 							X: 450
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Back
+							Text: 返回
 				Container@EXTRAS_MENU:
 					Width: PARENT_RIGHT
 					Visible: False
@@ -141,7 +141,7 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_RIGHT
 							Height: 20
-							Text: Extras
+							Text: 附加功能
 							Align: Center
 							Font: Bold
 							Contrast: True
@@ -150,39 +150,39 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Replays
+							Text: 录像回放
 						Button@MUSIC_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Music
+							Text: 音乐
 						Button@MAP_EDITOR_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Map Editor
+							Text: 地图编辑器
 							Font: Bold
 						Button@ASSETBROWSER_BUTTON:
 							X: 450
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Asset Browser
+							Text: 资源浏览器
 						Button@CREDITS_BUTTON:
 							X: 600
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Credits
+							Text: 鸣谢
 						Button@BACK_BUTTON:
 							Key: escape
 							X: 750
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Back
+							Text: 返回
 				Container@MAP_EDITOR_MENU:
 					Width: PARENT_RIGHT
 					Visible: False
@@ -192,7 +192,7 @@ Container@MENU_BACKGROUND:
 							Y: 0 - 28
 							Width: PARENT_RIGHT
 							Height: 20
-							Text: Map Editor
+							Text: 地图编辑器
 							Align: Center
 							Font: Bold
 							Contrast: True
@@ -201,21 +201,21 @@ Container@MENU_BACKGROUND:
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: New Map
+							Text: 新地图
 							Font: Bold
 						Button@LOAD_MAP_BUTTON:
 							X: 150
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Load Map
+							Text: 加载地图
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: 300
 							Y: 0
 							Width: 140
 							Height: 35
-							Text: Back
+							Text: 返回
 							Font: Bold
 							Key: escape
 		Container@NEWS_BG:
@@ -225,7 +225,7 @@ Container@MENU_BACKGROUND:
 					Y: 50
 					Width: 400
 					Height: 25
-					Text: Battlefield News
+					Text: 战地新闻
 					Font: Bold
 		Container@UPDATE_NOTICE:
 			X: (WINDOW_RIGHT - WIDTH) / 2
@@ -237,14 +237,14 @@ Container@MENU_BACKGROUND:
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: You are running an outdated version of OpenRA.
+					Text: 您正在运行过时的OpenRA版本，
 				Label@B:
 					Y: 20
 					Width: PARENT_RIGHT
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: Download the latest version from www.openra.net
+					Text: 请从www.openra.net下载最新版本
 		Container@PERFORMANCE_INFO:
 			Logic: PerfDebugLogic
 			Children:

@@ -33,104 +33,104 @@ Container@REPLAYBROWSER_PANEL:
 									Height: 25
 									Font: Bold
 									Align: Center
-									Text: Filter
+									Text: 筛选
 								Label@FLT_GAMETYPE_DESC:
 									X: 0
 									Y: 30
 									Width: 80
 									Height: 25
-									Text: Type:
+									Text: 类型：
 									Align: Right
 								DropDownButton@FLT_GAMETYPE_DROPDOWNBUTTON:
 									X: 85
 									Y: 30
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Any
+									Text: 任意
 								Label@FLT_DATE_DESC:
 									X: 0
 									Y: 60
 									Width: 80
 									Height: 25
-									Text: Date:
+									Text: 日期：
 									Align: Right
 								DropDownButton@FLT_DATE_DROPDOWNBUTTON:
 									X: 85
 									Y: 60
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Any
+									Text: 任意
 								Label@FLT_DURATION_DESC:
 									X: 0
 									Y: 90
 									Width: 80
 									Height: 25
-									Text: Duration:
+									Text: 游戏时长：
 									Align: Right
 								DropDownButton@FLT_DURATION_DROPDOWNBUTTON:
 									X: 85
 									Y: 90
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Any
+									Text: 任意
 								Label@FLT_MAPNAME_DESC:
 									X: 0
 									Y: 120
 									Width: 80
 									Height: 25
-									Text: Map:
+									Text: 地图：
 									Align: Right
 								DropDownButton@FLT_MAPNAME_DROPDOWNBUTTON:
 									X: 85
 									Y: 120
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Any
+									Text: 任意
 								Label@FLT_PLAYER_DESC:
 									X: 0
 									Y: 150
 									Width: 80
 									Height: 25
-									Text: Player:
+									Text: 玩家：
 									Align: Right
 								DropDownButton@FLT_PLAYER_DROPDOWNBUTTON:
 									X: 85
 									Y: 150
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Anyone
+									Text: 任意
 								Label@FLT_OUTCOME_DESC:
 									X: 0
 									Y: 180
 									Width: 80
 									Height: 25
-									Text: Outcome:
+									Text: 结果：
 									Align: Right
 								DropDownButton@FLT_OUTCOME_DROPDOWNBUTTON:
 									X: 85
 									Y: 180
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Any
+									Text: 任意
 								Label@FLT_FACTION_DESC:
 									X: 0
 									Y: 210
 									Width: 80
 									Height: 25
-									Text: Faction:
+									Text: 阵营：
 									Align: Right
 								DropDownButton@FLT_FACTION_DROPDOWNBUTTON:
 									X: 85
 									Y: 210
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Any
+									Text: 任意
 								Button@FLT_RESET_BUTTON:
 									X: 85
 									Y: 250
 									Width: PARENT_RIGHT - 85
 									Height: 25
-									Text: Reset Filters
+									Text: 重置筛选
 									Font: Bold
 						Container@MANAGEMENT:
 							X: 85
@@ -144,12 +144,12 @@ Container@REPLAYBROWSER_PANEL:
 									Height: 25
 									Font: Bold
 									Align: Center
-									Text: Manage
+									Text: 管理
 								Button@MNG_RENSEL_BUTTON:
 									Y: 30
 									Width: PARENT_RIGHT
 									Height: 25
-									Text: Rename
+									Text: 重命名
 									Font: Bold
 									Key: F2
 								Button@MNG_DELSEL_BUTTON:
@@ -158,12 +158,12 @@ Container@REPLAYBROWSER_PANEL:
 									Height: 25
 									Text: Delete
 									Font: Bold
-									Key: Delete
+									Key: 删除
 								Button@MNG_DELALL_BUTTON:
 									Y: 90
 									Width: PARENT_RIGHT
 									Height: 25
-									Text: Delete All
+									Text: 删除全部
 									Font: Bold
 				Container@REPLAY_LIST_CONTAINER:
 					X: 310
@@ -175,7 +175,7 @@ Container@REPLAYBROWSER_PANEL:
 							Y: 1
 							Width: PARENT_RIGHT
 							Height: 25
-							Text: Choose Replay
+							Text: 选择录像
 							Align: Center
 							Font: Bold
 						ScrollPanel@REPLAY_LIST:
@@ -260,12 +260,12 @@ Container@REPLAYBROWSER_PANEL:
 					Y: PARENT_BOTTOM - 1
 					Width: 140
 					Height: 35
-					Text: Back
+					Text: 返回
 				Button@WATCH_BUTTON:
 					Key: return
 					X: PARENT_RIGHT - 140
 					Y: PARENT_BOTTOM - 1
 					Width: 140
 					Height: 35
-					Text: Watch
+					Text: 观看
 				TooltipContainer@TOOLTIP_CONTAINER:

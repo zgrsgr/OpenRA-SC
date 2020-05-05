@@ -11,20 +11,20 @@ Container@LOBBY_MUSIC_BIN:
 				Label@MUSIC:
 					Width: 308
 					Height: 25
-					Text: Music
+					Text: 背景音乐
 					Align: Center
 					Font: Bold
 				Label@TITLE:
 					X: 317
 					Width: 230
 					Height: 25
-					Text: Track
+					Text: 曲目
 					Font: Bold
 				Label@TYPE:
 					X: PARENT_RIGHT - 63
 					Height: 25
 					Width: 50
-					Text: Length
+					Text: 时长
 					Font: Bold
 		Background@CONTROLS:
 			Background: panel-transparent
@@ -124,20 +124,20 @@ Container@LOBBY_MUSIC_BIN:
 					Width: 85
 					Height: 20
 					Font: Regular
-					Text: Shuffle
+					Text: 随机播放
 				Checkbox@REPEAT:
 					X: PARENT_RIGHT - 15 - WIDTH
 					Y: 150
 					Width: 70
 					Height: 20
 					Font: Regular
-					Text: Loop
+					Text: 循环播放
 				Label@VOLUME_LABEL:
 					Y: 182
 					Width: 65
 					Height: 25
 					Align: Right
-					Text: Volume:
+					Text: 音量：
 				ExponentialSlider@MUSIC_SLIDER:
 					X: 70
 					Y: 186
@@ -178,16 +178,16 @@ Container@LOBBY_MUSIC_BIN:
 					Height: 25
 					Font: Bold
 					Align: Center
-					Text: Music Not Installed
+					Text: 音乐未安装
 				Label@DESCA:
 					Y: 95
 					Width: PARENT_RIGHT - 24
 					Height: 25
 					Align: Center
-					Text: The game music can be installed
+					Text: 可以在资源管理器中
 				Label@DESCB:
 					Y: 115
 					Width: PARENT_RIGHT - 24
 					Height: 25
 					Align: Center
-					Text: from the "Manage Content" menu.
+					Text: 安装游戏音乐

@@ -8,7 +8,7 @@ Container@MISSIONBROWSER_PANEL:
 		Label@MISSIONBROWSER_TITLE:
 			Y: 0 - 22
 			Width: PARENT_RIGHT
-			Text: Missions
+			Text: 任务
 			Align: Center
 			Contrast: true
 			Font: BigBold
@@ -25,11 +25,12 @@ Container@MISSIONBROWSER_PANEL:
 					Children:
 						ScrollItem@HEADER:
 							Width: PARENT_RIGHT - 27
-							Height: 13
+							Height: 20
 							X: 2
 							Visible: false
 							Children:
 								Label@LABEL:
+									Y: 5
 									Font: TinyBold
 									Width: PARENT_RIGHT
 									Height: 13
@@ -81,7 +82,7 @@ Container@MISSIONBROWSER_PANEL:
 							Y: 365
 							Width: 56
 							Height: 25
-							Text: Difficulty:
+							Text: 难度：
 							Align: Right
 						DropDownButton@DIFFICULTY_DROPDOWNBUTTON:
 							X: 61
@@ -94,7 +95,7 @@ Container@MISSIONBROWSER_PANEL:
 							Y: 365
 							Width: 120
 							Height: 25
-							Text: Speed:
+							Text: 速度：
 							Align: Right
 						DropDownButton@GAMESPEED_DROPDOWNBUTTON:
 							X: PARENT_RIGHT - WIDTH
@@ -106,7 +107,7 @@ Container@MISSIONBROWSER_PANEL:
 			Y: 419
 			Width: 140
 			Height: 35
-			Text: Back
+			Text: 返回
 			Font: Bold
 			Key: escape
 		Button@START_BRIEFING_VIDEO_BUTTON:
@@ -114,35 +115,35 @@ Container@MISSIONBROWSER_PANEL:
 			Y: 419
 			Width: 140
 			Height: 35
-			Text: Watch Briefing
+			Text: 过场电影
 			Font: Bold
 		Button@STOP_BRIEFING_VIDEO_BUTTON:
 			X: PARENT_RIGHT - 290
 			Y: 419
 			Width: 140
 			Height: 35
-			Text: Stop Briefing
+			Text: 停止播放
 			Font: Bold
 		Button@START_INFO_VIDEO_BUTTON:
 			X: PARENT_RIGHT - 440
 			Y: 419
 			Width: 140
 			Height: 35
-			Text: Watch Info Video
+			Text: 序幕
 			Font: Bold
 		Button@STOP_INFO_VIDEO_BUTTON:
 			X: PARENT_RIGHT - 440
 			Y: 419
 			Width: 140
 			Height: 35
-			Text: Stop Info Video
+			Text: 停止播放
 			Font: Bold
 		Button@STARTGAME_BUTTON:
 			X: PARENT_RIGHT - 140
 			Y: 419
 			Width: 140
 			Height: 35
-			Text: Play
+			Text: 开始游戏
 			Font: Bold
 		Container@MISSION_BIN:
 			Children:
