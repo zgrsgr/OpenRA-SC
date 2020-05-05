@@ -1,28 +1,28 @@
 Background@SETTINGS_PANEL:
 	Logic: SettingsLogic
 		HotkeyGroups:
-			Game Commands:
+			游戏指令:
 				Template: TWO_COLUMN
 				Types: OrderGenerator, World, Menu
-			Viewport Commands:
+			视角指令:
 				Template: TWO_COLUMN
 				Types: Viewport
-			Observer / Replay Commands:
+			观战 / 回放指令:
 				Template: TWO_COLUMN
 				Types: Observer, Replay
-			Unit Commands:
+			单位指令:
 				Template: THREE_COLUMN
 				Types: Unit
-			Unit Stance Commands:
+			单位姿态指令:
 				Template: TWO_COLUMN
 				Types: Stance
-			Production Commands:
+			生产指令:
 				Template: THREE_COLUMN
 				Types: Production, ProductionSlot
-			Support Power Commands:
+			支援能力指令:
 				Template: THREE_COLUMN
 				Types: SupportPower
-			Music Commands:
+			音乐指令:
 				Template: TWO_COLUMN
 				Types: Music
 	X: (WINDOW_RIGHT - WIDTH) / 2
@@ -627,10 +627,11 @@ Background@SETTINGS_PANEL:
 						ScrollItem@HEADER:
 							BaseName: scrollheader
 							Width: 528
-							Height: 13
+							Height: 20
 							Visible: false
 							Children:
 								Label@LABEL:
+									Y: 5
 									Font: TinyBold
 									Width: PARENT_RIGHT
 									Height: 10

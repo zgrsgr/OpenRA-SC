@@ -21,11 +21,12 @@ Background@MISSIONBROWSER_PANEL:
 				ScrollItem@HEADER:
 					BaseName: scrollheader
 					Width: PARENT_RIGHT - 27
-					Height: 13
+					Height: 20
 					X: 2
 					Visible: false
 					Children:
 						Label@LABEL:
+							Y: 5
 							Font: TinyBold
 							Width: PARENT_RIGHT
 							Height: 13
