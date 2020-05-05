@@ -1,32 +1,34 @@
 #!/bin/bash
 
-LAUNCHER_TAG="osx-launcher-20200316"
+echo "Fetching thirdparty deps from server."
+set -e
 
-download_dir="${0%/*}/download/osx"
-mkdir -p "$download_dir"
-cd "$download_dir" || exit 1
+cd "${0%/*}" || exit 1
 
-if [ ! -f libSDL2.dylib ]; then
-	echo "Fetching OS X SDL2 library from GitHub."
-	curl -LOs https://github.com/OpenRA/OpenRALauncherOSX/releases/download/${LAUNCHER_TAG}/libSDL2.dylib
+if [ -d "./download" ]; then
+	rm -rf download
 fi
 
-if [ ! -f liblua.5.1.dylib ]; then
-	echo "Fetching OS X Lua 5.1 library from GitHub."
-	curl -LOs https://github.com/OpenRA/OpenRALauncherOSX/releases/download/${LAUNCHER_TAG}/liblua.5.1.dylib
+if [ ! -f "deps.zip" ]; then
+	# Download zip:
+	echo "Downloading the archive."
+	zipFileName="deps-20200503.zip"
+	if command -v curl >/dev/null 2>&1; then
+		curl -s -L "ftp://139.155.24.179/thirdparty/${zipFileName}" -o "deps.zip"
+	else
+		wget -cq "ftp://139.155.24.179/thirdparty/${zipFileName}" -O "deps.zip"
+	fi
 fi
 
-if [ ! -f Eluant.dll.config ]; then
-	echo "Fetching OS X Lua configuration file from GitHub."
-	curl -LOs https://raw.githubusercontent.com/OpenRA/OpenRALauncherOSX/${LAUNCHER_TAG}/Eluant.dll.config
-fi
+# Extract zip:
+echo "Extracting the archive"
+unzip -o -qq "deps.zip" 
 
-if [ ! -f libfreetype.6.dylib ]; then
-	echo "Fetching OS X FreeType library from GitHub."
-	curl -LOs https://github.com/OpenRA/OpenRALauncherOSX/releases/download/${LAUNCHER_TAG}/libfreetype.6.dylib
-fi
+# Copy files
+echo "Copying the archive"
+mv "./deps/osx" "./download"
 
-if [ ! -f libopenal.1.dylib ]; then
-	echo "Fetching OS X OpenAL Soft library from GitHub."
-	curl -LOs https://github.com/OpenRA/OpenRALauncherOSX/releases/download/${LAUNCHER_TAG}/libopenal.1.dylib
-fi
+# Remove junk files:
+rm -rf "./deps"
+
+
