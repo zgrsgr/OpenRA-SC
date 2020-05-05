@@ -2,8 +2,7 @@ mcv:
 	idle:
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: mcvicnh.tem
-		AddExtension: False
+	icon: mcvicnh
 
 mcv.destroyed:
 	idle: mcv
@@ -24,8 +23,7 @@ harv:
 		Length: 7
 	dock-loop: harvdump
 		Start: 7
-	icon: harvicnh.tem
-		AddExtension: False
+	icon: harvicnh
 
 harv.destroyed:
 	idle: harv
@@ -44,8 +42,7 @@ bggy:
 	muzzle: minigun
 		Length: 6
 		Facings: 8
-	icon: bggyicnh.tem
-		AddExtension: False
+	icon: bggyicnh
 
 bggy.destroyed:
 	idle: bggy
@@ -68,8 +65,7 @@ mtnk:
 		UseClassicFacingFudge: True
 	muzzle: gunfire2
 		Length: *
-	icon: mtnkicnh.tem
-		AddExtension: False
+	icon: mtnkicnh
 
 mtnk.destroyed:
 	idle: mtnk
@@ -92,8 +88,7 @@ ltnk:
 		UseClassicFacingFudge: True
 	muzzle: gunfire2
 		Length: *
-	icon: ltnkicnh.tem
-		AddExtension: False
+	icon: ltnkicnh
 
 ltnk.destroyed:
 	idle: ltnk
@@ -116,8 +111,7 @@ htnk:
 		UseClassicFacingFudge: True
 	muzzle: gunfire2
 		Length: *
-	icon: htnkicnh.tem
-		AddExtension: False
+	icon: htnkicnh
 
 htnk.destroyed:
 	idle: htnk
@@ -141,8 +135,7 @@ jeep:
 	muzzle: minigun
 		Length: 6
 		Facings: 8
-	icon: jeepicnh.tem
-		AddExtension: False
+	icon: jeepicnh
 
 jeep.destroyed:
 	idle: jeep
@@ -159,8 +152,7 @@ bike:
 	idle:
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: bikeicnh.tem
-		AddExtension: False
+	icon: bikeicnh
 
 bike.destroyed:
 	idle: bike
@@ -200,8 +192,7 @@ ftnk:
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-	icon: ftnkicnh.tem
-		AddExtension: False
+	icon: ftnkicnh
 
 ftnk.destroyed:
 	idle: ftnk
@@ -234,8 +225,7 @@ msam:
 		Start: 64
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: msamicnh.tem
-		AddExtension: False
+	icon: msamicnh
 
 msam.destroyed:
 	idle: msam
@@ -264,8 +254,7 @@ mlrs:
 		Start: 96
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: mlrsicnh.tem
-		AddExtension: False
+	icon: mlrsicnh
 
 mlrs.destroyed:
 	idle: mlrs
@@ -282,8 +271,7 @@ stnk:
 	idle:
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: stnkicnh.tem
-		AddExtension: False
+	icon: stnkicnh
 
 stnk.destroyed:
 	idle: stnk
@@ -297,8 +285,7 @@ arty:
 		UseClassicFacingFudge: True
 	muzzle: gunfire2
 		Length: *
-	icon: artyicnh.tem
-		AddExtension: False
+	icon: artyicnh
 
 arty.destroyed:
 	idle: arty
@@ -321,8 +308,7 @@ apc:
 		Length: 3
 	unload:
 		Start: 32
-	icon: apcicnh.tem
-		AddExtension: False
+	icon: apcicnh
 
 apc.destroyed:
 	idle: apc

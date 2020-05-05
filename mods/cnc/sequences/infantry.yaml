@@ -133,8 +133,7 @@ e1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: e1icnh.tem
-		AddExtension: False
+	icon: e1icnh
 
 e2:
 	stand:
@@ -226,8 +225,7 @@ e2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: e2icnh.tem
-		AddExtension: False
+	icon: e2icnh
 
 e3:
 	stand:
@@ -319,8 +317,7 @@ e3:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: e3icnh.tem
-		AddExtension: False
+	icon: e3icnh
 
 e4:
 	stand:
@@ -440,8 +437,7 @@ e4:
 				Offset: -7,8
 		Facings: 8
 		Length: 13
-	icon: e4icnh.tem
-		AddExtension: False
+	icon: e4icnh
 
 e5:
 	stand:
@@ -561,8 +557,7 @@ e5:
 				Offset: -3,2
 		Facings: 8
 		Length: 13
-	icon: e5icnh.tem
-		AddExtension: False
+	icon: e5icnh
 
 e6:
 	stand:
@@ -646,8 +641,7 @@ e6:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: e6icnh.tem
-		AddExtension: False
+	icon: e6icnh
 
 rmbo:
 	stand:
@@ -743,5 +737,4 @@ rmbo:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-	icon: rmboicnh.tem
-		AddExtension: False
+	icon: rmboicnh
