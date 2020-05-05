@@ -7,7 +7,7 @@ World:
 		Scripts: monster-tank-madness.lua
 	-StartGameNotification:
 	MissionData:
-		Briefing: Dr. Demitri, creator of a Soviet Super Tank, wants to defect.\n\nWe planned to extract him while the Soviets were testing their new weapon, but something has gone wrong.\n\nThe Super Tanks are out of control, and Demitri is missing -- likely hiding in the village to the far south.\n\nFind our outpost and start repairs on it, then find and evacuate Demitri.\n\nAs for the tanks, we can reprogram them. Send a spy into the Soviet radar dome in the NE, turning the tanks on their creators.\n
+		Briefing: 迪米特里博士正准备向我方投诚，\n他正是苏联新式超级坦克的首席设计师。\n我们原计划在试验场营救出博士，\n但你懂的，\n总有些意外阻止我们成功。 \n\n由于超级坦克失去了控制，\n试验场一片混乱，\n我们跟丢了博士；\n据情报，他可能在南部的藏身处避险。 \n\n重启我军在此处的废弃哨站，\n营救迪米特里博士。\n\n当然我们也可以接手苏军的新玩具，\n我们的特工可以渗透入东北方的雷达站，\n从而让这些大家伙调转枪头。\n
 		WinVideo: sovbatl.vqa
 		LossVideo: sovtstar.vqa
 
@@ -88,7 +88,7 @@ V19:
 DEMITRI:
 	Inherits: DELPHI
 	Tooltip:
-		Name: Dr. Demitri
+		Name: 迪米特里博士 #Dr. Demitri
 	Passenger:
 		CargoType: Demitri
 	RenderSprites:
@@ -123,8 +123,8 @@ PBOX:
 	Valued:
 		Cost: 10000
 	Tooltip:
-		Name: Super Tank
-		GenericName: Super Tank
+		Name: 超级坦克 #Super Tank
+		GenericName: 超级坦克 #Super Tank
 	Health:
 		HP: 2000000
 	Armor:
@@ -176,7 +176,7 @@ PBOX:
 5TNK.Husk:
 	Inherits: ^Husk
 	Tooltip:
-		Name: Husk (Super Tank)
+		Name: 超级坦克残骸 #Husk (Super Tank)
 	ThrowsParticle@turret:
 		Anim: turret
 	Health:

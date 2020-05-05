@@ -273,7 +273,7 @@ EvacuateAlliedUnit = function(unit)
 			a.Destroy()
 		end)
 
-		UserInterface.SetMissionText(UnitsEvacuated .. "/" .. unitsEvacuatedThreshold .. " units evacuated.", TextColor)
+		UserInterface.SetMissionText("撤离进度:" .. UnitsEvacuated .. "/" .. unitsEvacuatedThreshold, TextColor)
 
 		if UnitsEvacuated >= unitsEvacuatedThreshold then
 			Utils.Do(humans, function(player)
@@ -311,15 +311,15 @@ WorldLoaded = function()
 	Utils.Do(humans, function(player)
 		if player and player.IsLocalPlayer then
 			Trigger.OnObjectiveAdded(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 			end)
 
 			Trigger.OnObjectiveCompleted(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 			end)
 
 			Trigger.OnObjectiveFailed(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 			end)
 
 			Trigger.OnPlayerWon(player, function()
@@ -335,12 +335,12 @@ WorldLoaded = function()
 	end)
 
 	unitsEvacuatedThreshold = UnitsEvacuatedThreshold[Difficulty]
-	UserInterface.SetMissionText(UnitsEvacuated .. "/" .. unitsEvacuatedThreshold .. " units evacuated.", TextColor)
+	UserInterface.SetMissionText("撤离进度:" .. UnitsEvacuated .. "/" .. unitsEvacuatedThreshold, TextColor)
 	Utils.Do(humans, function(player)
 		if player then
-			evacuateUnits = player.AddPrimaryObjective("Evacuate " .. unitsEvacuatedThreshold .. " units.")
-			destroyAirbases = player.AddSecondaryObjective("Destroy the nearby Soviet airbases.")
-			evacuateMgg = player.AddSecondaryObjective("Evacuate at least one mobile gap generator.")
+			evacuateUnits = player.AddPrimaryObjective("至少撤离" .. unitsEvacuatedThreshold .. "单位。")
+			destroyAirbases = player.AddSecondaryObjective("摧毁附近的苏联空军基地。")
+			evacuateMgg = player.AddSecondaryObjective("撤离一辆机动电磁干扰车。")
 		end
 	end)
 
@@ -352,7 +352,7 @@ WorldLoaded = function()
 		end)
 	end)
 
-	sovietObjective = soviets.AddPrimaryObjective("Eradicate all allied troops.")
+	sovietObjective = soviets.AddPrimaryObjective("消灭全部盟军。")
 
 	if not allies2 or allies1.IsLocalPlayer then
 		Camera.Position = Allies1EntryPoint.CenterPosition
@@ -362,7 +362,7 @@ WorldLoaded = function()
 
 	if not allies2 then
 		allies1.Cash = 10000
-		Media.DisplayMessage("Transferring funds.", "Co-Commander is missing")
+		Media.DisplayMessage("资金转移中", "盟友指挥官无法抵达")
 	end
 
 	SpawnAlliedUnit(MobileConstructionVehicle)

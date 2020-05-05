@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 08a:  Investigate Elba Island
+Title: 08a: 围攻厄尔巴
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 17,17,94,94
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

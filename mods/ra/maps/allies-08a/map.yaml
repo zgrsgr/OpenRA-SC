@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 08a: Protect the Chronosphere
+Title: 08a: 坚持到底
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 23,57,87,54
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

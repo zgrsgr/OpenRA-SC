@@ -2,15 +2,15 @@ World:
 	LuaScript:
 		Scripts: crackdown.lua, crackdown-AI.lua
 	MissionData:
-		Briefing: A Soviet convoy of Sarin nerve gas has stopped at a riverside outpost for refuelling. This is a perfect opportunity to destroy the Sarin shipment, and remove the Soviet threat in the area.\n\nUse your forces to destroy the convoy trucks and the base. It is imperative that none of the convoy trucks escape.\n\nThe Soviets keep their convoy information in their radar center. If a spy was to infiltrate the facility, it may help us locate the convoy escape routes.
+		Briefing: 情报显示：\n一批苏联车队正在河边的前哨站重新补给，\n他们正在运输骇人听闻的沙林毒气！\n这也是千载难逢的良机，\n我们可以一举销毁沙林毒气，\n同时清除本地区的赤色威胁。\n\n摧毁苏军基地以及所有的运输车辆，\n决不能让任何毒气运输车脱离我们的控制！\n\n另外，苏军雷达站和车队保持着暗码联络，\n如果我方特工成功渗透其中，\n将会帮助我们截获敌人的重要情报。\n
 		WinVideo: allymorf.vqa
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 Player:

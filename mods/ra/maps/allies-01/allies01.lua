@@ -22,7 +22,7 @@ SendInsertionHelicopter = function()
 	local tanya = passengers[1]
 	Trigger.OnKilled(tanya, TanyaKilledInAction)
 	Trigger.AfterDelay(DateTime.Seconds(4), function()
-		Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
+		Media.DisplayMessage("指挥官，根据参加这场行动的合约，\n没有你的命令我不会贸然开火！", "谭雅")
 	end)
 end
 
@@ -129,7 +129,7 @@ CreateEinstein = function()
 	einstein = Actor.Create(EinsteinType, true, { Location = EinsteinSpawnPoint.Location, Owner = player })
 	einstein.Scatter()
 	Trigger.OnKilled(einstein, RescueFailed)
-	ExtractObjective = player.AddPrimaryObjective("Wait for the helicopter and extract Einstein.")
+	ExtractObjective = player.AddPrimaryObjective("等待直升机抵达并撤离爱因斯坦。")
 	Trigger.AfterDelay(DateTime.Seconds(1), function() Media.PlaySpeechNotification(player, "TargetFreed") end)
 end
 
@@ -175,22 +175,22 @@ WorldLoaded = function()
 	ussr = Player.GetPlayer("USSR")
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(player, MissionFailed)
 	Trigger.OnPlayerWon(player, MissionAccomplished)
 
-	FindEinsteinObjective = player.AddPrimaryObjective("Find Einstein.")
-	TanyaSurviveObjective = player.AddPrimaryObjective("Tanya must survive.")
-	EinsteinSurviveObjective = player.AddPrimaryObjective("Einstein must survive.")
-	CivilProtectionObjective = player.AddSecondaryObjective("Protect all civilians.")
+	FindEinsteinObjective = player.AddPrimaryObjective("找到爱因斯坦。")
+	TanyaSurviveObjective = player.AddPrimaryObjective("谭雅必须存活。")
+	EinsteinSurviveObjective = player.AddPrimaryObjective("爱因斯坦必须存活。")
+	CivilProtectionObjective = player.AddSecondaryObjective("保护所有平民。")
 
 	RunInitialActivities()
 

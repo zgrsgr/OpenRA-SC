@@ -136,7 +136,7 @@ CaptureRadarDome = function()
 			end
 		end)
 
-		Media.DisplayMessage("Coordinates of the Soviet tech centers discovered.")
+		Media.DisplayMessage("发现苏军科技中心的位置。")
 
 		if Map.LobbyOption("difficulty") == "easy" then
 			Actor.Create("Camera", true, { Owner = player, Location = Weapcam.Location })
@@ -151,13 +151,13 @@ InfiltrateTechCenter = function()
 				return
 			end
 			infiltrated = true
-			DestroySovietsObj = player.AddPrimaryObjective("Destroy all Soviet buildings and units in the area.")
+			DestroySovietsObj = player.AddPrimaryObjective("肃清所有苏联军事力量。")
 			player.MarkCompletedObjective(InfiltrateTechCenterObj)
 		end)
 
 		Trigger.OnCapture(a, function()
 			if not infiltrated then
-				Media.DisplayMessage("Do not capture the tech centers! Infiltrate one with a spy.")
+				Media.DisplayMessage("不要占领科技中心！用间谍渗透它。")
 			end
 		end)
 	end)
@@ -184,15 +184,15 @@ WorldLoaded = function()
 	ussr = Player.GetPlayer("USSR")
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(player, function()
@@ -202,8 +202,8 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "MissionAccomplished")
 	end)
 
-	InfiltrateTechCenterObj = player.AddPrimaryObjective("Infiltrate one of the Soviet tech centers with a spy.")
-	CaptureRadarDomeObj = player.AddSecondaryObjective("Capture the Radar Dome at the shore.")
+	InfiltrateTechCenterObj = player.AddPrimaryObjective("用间谍渗透该地区的一个苏军科技中心。")
+	CaptureRadarDomeObj = player.AddSecondaryObjective("占领岸边的雷达站。")
 
 	Camera.Position = DefaultCameraPosition.CenterPosition
 

@@ -6,7 +6,7 @@ World:
 	LuaScript:
 		Scripts: allies04.lua, allies04-AI.lua
 	MissionData:
-		Briefing: Soviet forces are trying to retake the pass you cleared for our convoys.\n\nDon't let this happen. Hold the pass and prevent the Soviets from taking this vital area.\n\nDestroy all Soviet units and buildings in this region.
+		Briefing: 苏联妄图夺回那片你为我军车队清理的区域。\n必须粉碎他们的企图！ \n\n把守这条通路，\n拦截苏联补给车队，\n并彻底歼灭盘踞在该地区的所有敌人！\n
 		BriefingVideo: ally4.vqa
 		StartVideo: binoc.vqa
 		WinVideo: oildrum.vqa
@@ -15,12 +15,12 @@ World:
 		TechLevel: medium
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
-			tough: Real tough guy
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
+			tough: 挑战 #Real tough guy
 		Default: easy
 
 powerproxy.paratroopers:

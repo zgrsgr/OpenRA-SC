@@ -1,5 +1,5 @@
 --[[
-   Copyright 2007-2020 The OpenRA Developers (see AUTHORS)
+   Copyright 2007-2019 The OpenRA Developers (see AUTHORS)
    This file is part of OpenRA, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -118,18 +118,18 @@ WorldLoaded = function()
 	RunInitialActivities()
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
-	KillAll = player.AddPrimaryObjective("Defeat the Allied forces.")
-	BeatUSSR = Greece.AddPrimaryObjective("Defeat the Soviet forces.")
-	KillRadar = player.AddSecondaryObjective("Destroy Allied Radar Dome to stop enemy\nreinforcements.")
+	KillAll = player.AddPrimaryObjective("消灭盟军。")
+	BeatUSSR = Greece.AddPrimaryObjective("消灭苏军。")
+	KillRadar = player.AddSecondaryObjective("摧毁盟军雷达站以阻止敌人呼叫增援。")
 
 	Trigger.OnPlayerLost(player, function()
 		Media.PlaySpeechNotification(player, "Lose")

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 07:   Core of the matter
+Title: 07:   核心问题
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 40,43,70,45
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

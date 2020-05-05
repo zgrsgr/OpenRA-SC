@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Drop Zone W
+Title: 冰海大逃杀
 
 Author: riderr3
 
@@ -14,7 +14,7 @@ Bounds: 16,16,32,32
 
 Visibility: Lobby
 
-Categories: Drop Zone
+Categories: 大逃杀 #Drop Zone
 
 Players:
 	PlayerReference@Neutral:

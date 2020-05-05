@@ -2,16 +2,16 @@ World:
 	LuaScript:
 		Scripts: scu35ea.lua, scu35ea-AI.lua
 	MissionData:
-		Briefing: The Allies have stolen a new armor plating from us. With it, they can make structures nearly invulnerable. Their processing plant must be destroyed.\n\nFor this critical mission, we are allowing you access to Soldier Volkov. Use him and his cybernetic dog to sabotage the Allied control center, allowing our units in the southeast access to the alloy facility.\n\nThe mission is a success when Volkov destroys the control center, and our units destroy the alloy facility.\n
+		Briefing: 盟军特务窃取了我军的新型装甲技术！\n如果盟军决定对此加以应用的话，\n他们的军用建筑将会刀枪不入！\n\n我们必须摧毁盟军的相关研发设施。\n考虑到这一任务的重要性，\n我们不得不派遣沃尔科夫执行任务。\n你必须指挥沃尔科夫与契琴科伊，\n他的半机械犬搭档，\n摧毁盟军的指挥部。\n\n随后在东南方早已就位的红军将开入战场，\n彻底摧毁盟军的合金加工厂。\n
 		WinVideo: grvestne.vqa
 		LossVideo: sovcemet.vqa
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 Player:
@@ -69,7 +69,7 @@ V01:
 
 HOSP:
 	Tooltip:
-		GenericName: Hospital
+		GenericName: 医院 #Hospital
 		GenericVisibility: Enemy, Ally, Neutral
 		GenericStancePrefix: false
 	-TooltipDescription@ally:
@@ -91,8 +91,8 @@ AFAC:
 	Health:
 		HP: 400000
 	Tooltip:
-		Name: Alloy Facility
-		GenericName: Alloy Facility
+		Name: 合金加工设施 #Alloy Facility
+		GenericName: 合金加工设施 #Alloy Facility
 		GenericVisibility: Enemy, Ally, Neutral
 		GenericStancePrefix: false
 	Capturable:
@@ -107,8 +107,8 @@ CCEN:
 	Buildable:
 		Prerequisites: ~disabled
 	Tooltip:
-		Name: Control Center
-		GenericName: Control Center
+		Name: 控制中心 #Control Center
+		GenericName: 控制中心 #Control Center
 		GenericVisibility: Enemy, Ally, Neutral
 		GenericStancePrefix: false
 	Capturable:
@@ -128,7 +128,7 @@ HGUN:
 	Valued:
 		Cost: 2800
 	Tooltip:
-		Name: Heavy Turret Prototype
+		Name: 重型炮塔原型 #Heavy Turret Prototype
 	Health:
 		HP: 350000
 	Armor:
@@ -147,8 +147,8 @@ ZKOI:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Chitzkoi
-		GenericName: Cyborg Dog
+		Name: 契琴科伊 #Chitzkoi
+		GenericName: 半机械犬 #Cyborg Dog
 	Health:
 		HP: 100000
 	-Crushable:
@@ -166,7 +166,7 @@ VOLK:
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Volkov
+		Name: 沃尔科夫 #Volkov
 	Health:
 		HP: 250000
 	Armor:

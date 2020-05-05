@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 06a: Bridge over the River Grotzny
+Title: 06a: 格罗兹尼之桥
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 5,1,93,53
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

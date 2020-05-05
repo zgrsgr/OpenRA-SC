@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Sarin Gas 1: Crackdown
+Title: 沙林毒气 01：无情镇压
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 16,34,65,62
 
 Visibility: MissionSelector
 
-Categories: Mission
+Categories: 战役 #Mission
 
 LockPreview: True
 

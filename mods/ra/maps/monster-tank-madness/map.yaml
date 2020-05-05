@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Monster Tank Madness
+Title: 脱缰野马
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 19,16,87,88
 
 Visibility: MissionSelector
 
-Categories: Mission
+Categories: 战役 #Mission
 
 LockPreview: True
 

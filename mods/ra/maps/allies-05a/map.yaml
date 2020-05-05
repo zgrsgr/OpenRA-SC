@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 05a: Tanya's Tale
+Title: 05a: 传奇特工
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 12,48,60,64
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

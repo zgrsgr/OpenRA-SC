@@ -81,7 +81,7 @@ FinishTimer = function()
 			c = HSLColor.White
 		end
 
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("The experiment is a success!", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("试验成功了！", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(6), function() UserInterface.SetMissionText("") end)
 end
@@ -115,7 +115,7 @@ Tick = function()
 	end
 
 	if ticked > 0 then
-		UserInterface.SetMissionText("Chronosphere experiment completes in " .. Utils.FormatTime(ticked), TimerColor)
+		UserInterface.SetMissionText("超时空技术实验将在" .. Utils.FormatTime(ticked) .. "后完成", TimerColor)
 		ticked = ticked - 1
 	elseif ticked == 0 and (greece.PowerState ~= "Normal") then
 		greece.MarkFailedObjective(KeepBasePowered)
@@ -130,16 +130,19 @@ WorldLoaded = function()
 	ussr = Player.GetPlayer("USSR")
 	germany = Player.GetPlayer("Germany")
 
-	DefendChronosphere = greece.AddPrimaryObjective("Defend the Chronosphere and the Tech Center\nat all costs.")
-	KeepBasePowered = greece.AddPrimaryObjective("The Chronosphere must have power when the\ntimer runs out.")
-	EvacuateScientists = greece.AddSecondaryObjective("Evacuate all scientists from the island to\nthe west.")
-	BeatAllies = ussr.AddPrimaryObjective("Defeat the Allied forces.")
+	DefendChronosphere = greece.AddPrimaryObjective("不惜一切代价保护超时空传送仪和科技中心。")
+	KeepBasePowered = greece.AddPrimaryObjective("计时结束时，确保超时空传送仪供电稳定。")
+	EvacuateScientists = greece.AddSecondaryObjective("救援并撤离岛上的科学家到指定地点。")
+	BeatAllies = ussr.AddPrimaryObjective("击败盟军的部队。")
 
+	Trigger.OnObjectiveAdded(greece, function(p, id)
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
+	end)
 	Trigger.OnObjectiveCompleted(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(greece, function()

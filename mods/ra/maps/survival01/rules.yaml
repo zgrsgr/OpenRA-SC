@@ -6,14 +6,14 @@ World:
 	LuaScript:
 		Scripts: survival01.lua
 	MissionData:
-		Briefing: LANDCOM 66 HQS.\nTOP SECRET.\nTO: FIELD COMMANDER A34\n\nTHE SOVIETS STARTED HEAVY ATTACKS AT OUR POSITION.\n SURVIVE AND HOLD THE BASE UNTIL OUR FRENCH ALLIES ARRIVE.\n\nCONFIRMATION CODE 5593.\n\nTRANSMISSION ENDS.
+		Briefing: 陆军司令部第六十六指挥中心\n最高机密\n致：战地指挥官A34\n\n我军正面对苏联方面的强烈攻势。\n\n坚持下去，\n法国友军的支援正在路上！\n\n确认代码5593\n\n传输结束\n
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 ^Palettes:

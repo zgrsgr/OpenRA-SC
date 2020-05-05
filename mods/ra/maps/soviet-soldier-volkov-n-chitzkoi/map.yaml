@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Soviet Soldier Volkov & Chitzkoi
+Title: 最佳拍档
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 18,23,60,73
 
 Visibility: MissionSelector
 
-Categories: Mission
+Categories: 战役 #Mission
 
 LockPreview: True
 

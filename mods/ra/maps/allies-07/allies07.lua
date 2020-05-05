@@ -121,7 +121,7 @@ FinishTimer = function()
 			c = HSLColor.White
 		end
 
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("Enemy approaching", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("敌军正在接近", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(6), function() UserInterface.SetMissionText("") end)
 end
@@ -164,7 +164,7 @@ Tick = function()
 
 	if StartTimer then
 		if ticked > 0 then
-			UserInterface.SetMissionText("Soviet armored battalion arrives in " .. Utils.FormatTime(ticked), TimerColor)
+			UserInterface.SetMissionText("苏联装甲部队将在" .. Utils.FormatTime(ticked) .. "抵达战场", TimerColor)
 			ticked = ticked - 1
 		elseif ticked == 0 then
 			FinishTimer()
@@ -185,16 +185,19 @@ WorldLoaded = function()
 
 	Camera.Position = DefaultCameraPosition.CenterPosition
 
-	CaptureRadarDomeObj = greece.AddPrimaryObjective("Capture the Radar Dome.")
-	DestroySubPens = greece.AddPrimaryObjective("Destroy all Soviet Sub Pens")
-	ClearSubActivity = greece.AddSecondaryObjective("Clear the area of all sub activity")
-	BeatAllies = ussr.AddPrimaryObjective("Defeat the Allied forces.")
+	CaptureRadarDomeObj = greece.AddPrimaryObjective("占领雷达站。")
+	DestroySubPens = greece.AddPrimaryObjective("摧毁所有苏联潜艇母港。")
+	ClearSubActivity = greece.AddSecondaryObjective("清除这个区域的所有潜艇。")
+	BeatAllies = ussr.AddPrimaryObjective("击败盟军的部队。")
 
+	Trigger.OnObjectiveAdded(greece, function(p, id)
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
+	end)
 	Trigger.OnObjectiveCompleted(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(greece, function()

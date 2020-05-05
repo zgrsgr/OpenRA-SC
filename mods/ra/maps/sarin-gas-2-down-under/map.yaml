@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Sarin Gas 2: Down Under
+Title: 沙林毒气 02：地表之下
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 3,37,110,50
 
 Visibility: MissionSelector
 
-Categories: Mission
+Categories: 战役
 
 LockPreview: True
 

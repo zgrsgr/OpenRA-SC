@@ -4,16 +4,16 @@ World:
 		Green: 0.55
 		Blue: 0
 	MissionData:
-		Briefing: The Soviets are currently developing a new weapon system at a secret research laboratory. This is a reconnaissance mission. Do not engage until we know what we are up against and wait for reinforcements. Our civilian contacts reported a heavily guarded installation under ruthless command.
+		Briefing: 根据可靠情报，\n苏联正在一处秘密设施研发新式武器。\n指挥部任命你来执行本次侦察任务。\n\n注意：\n在指挥部派遣援军之前，\n不要发动攻击！\n因为我们的线人指出，\n本地的苏联指挥部戒备森严，\n贸然出击一定有去无回。\n
 	LuaScript:
 		Scripts: infiltration.lua
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单
+			normal: 正常
+			hard: 困难
 		Default: normal
 	TimeLimitManager:
 		TimeLimitLocked: True

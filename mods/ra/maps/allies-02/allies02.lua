@@ -168,7 +168,7 @@ FinishTimer = function()
 			c = HSLColor.White
 		end
 
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("The convoy arrived!", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("车队已抵达！", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(6), function() UserInterface.SetMissionText("") end)
 end
@@ -180,7 +180,7 @@ SendTrucks = function()
 
 		DateTime.TimeLimit = 0
 		UserInterface.SetMissionText("")
-		ConvoyObjective = player.AddPrimaryObjective("Escort the convoy.")
+		ConvoyObjective = player.AddPrimaryObjective("护送车队。")
 
 		Media.PlaySpeechNotification(player, "ConvoyApproaching")
 		Trigger.AfterDelay(DateTime.Seconds(3), function()
@@ -219,13 +219,13 @@ WorldLoaded = function()
 	ussr = Player.GetPlayer("USSR")
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 	Trigger.OnPlayerLost(player, function()
 		Media.PlaySpeechNotification(player, "MissionFailed")
@@ -234,10 +234,10 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "MissionAccomplished")
 	end)
 
-	ussrObj = ussr.AddPrimaryObjective("Deny the allies!")
+	ussrObj = ussr.AddPrimaryObjective("歼灭盟军！")
 
-	SecureObjective = player.AddPrimaryObjective("Secure the convoy's path.")
-	ConquestObjective = player.AddPrimaryObjective("Eliminate the entire soviet presence in this area.")
+	SecureObjective = player.AddPrimaryObjective("保护车队的运输路线。")
+	ConquestObjective = player.AddPrimaryObjective("肃清所有苏联军事力量。")
 
 	Trigger.AfterDelay(DateTime.Seconds(1), function() Media.PlaySpeechNotification(allies, "MissionTimerInitialised") end)
 

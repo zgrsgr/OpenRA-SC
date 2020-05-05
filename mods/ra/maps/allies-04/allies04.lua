@@ -140,17 +140,17 @@ end
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
-	KillUSSR = player.AddPrimaryObjective("Destroy all Soviet units and buildings in this region.")
-	DestroyConvoys = player.AddSecondaryObjective("Eliminate all passing Soviet convoys.")
+	KillUSSR = player.AddPrimaryObjective("肃清所有苏联军事力量。")
+	DestroyConvoys = player.AddSecondaryObjective("拦截途径该地区的所有苏联车队。")
 
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(player, function()

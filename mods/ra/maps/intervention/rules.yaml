@@ -6,13 +6,13 @@ World:
 	LuaScript:
 		Scripts: intervention.lua
 	MissionData:
-		Briefing: The Soviet Air Force is flying air raids against a civilian village.\n\nWe have to do everything in our power to stop them!\n\nYour job is to establish a base on the mainland ASAP. We can prevent the village's destruction by capturing the enemy's Air Force Headquarters building. The enemy base is heavily guarded, though.  You will not have enough time to build a force big enough to overpower the Soviet defences. You will have to find a way to sneak in!\n\nGood luck, Commander!\n
+		Briefing: 苏联空军正在无情地袭击一个平民住地！\n我们必须阻止这些嗜血的疯子！\n\n以下是你的任务目标：\n尽快在内陆建立一个行动基地，\n攻占敌方的空军司令部。\n\n注意：\n苏军基地固若金汤，\n如果要组织起一支足够庞大的军队，\n恐怕为时已晚。\n\n指挥官，\n考虑到这是和时间赛跑，\n虽然强攻不成但我们可以智取，\n祝你好运！\n 
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			normal: Normal
-			hard: Hard
+			normal: 正常
+			hard: 困难
 		Default: normal
 
 ^Palettes:
@@ -29,7 +29,7 @@ CAMERA:
 
 MISS:
 	Tooltip:
-		Name: Soviet Air Force HQ
+		Name: 苏军空军司令部 #Soviet Air Force HQ
 	Capturable:
 		Types: building
 		ValidStances: Enemy
@@ -53,7 +53,7 @@ MAINLAND:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Reach the mainland
+		Name: 抵达内陆
 	ProvidesPrerequisite:
 		Prerequisite: mainland
 
@@ -69,7 +69,7 @@ GIVEFIX:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Weapons Factory or Helipad
+		Name: 战车工厂 或 停机坪 
 
 MIG.SCRIPTED:
 	Inherits: MIG

@@ -196,7 +196,7 @@ Tick = function()
 	end
 
 	if allies2.IsLocalPlayer and DateTime.GameTime <= ReinforcementsDelay then
-		UserInterface.SetMissionText("Allied reinforcements arrive in " .. Utils.FormatTime(ReinforcementsDelay - DateTime.GameTime))
+		UserInterface.SetMissionText("盟军增援部队将在 " .. Utils.FormatTime(ReinforcementsDelay - DateTime.GameTime) .. " 后到达")
 	else
 		UserInterface.SetMissionText("")
 	end
@@ -242,7 +242,7 @@ SetupTriggers = function()
 
 	Trigger.OnAllKilledOrCaptured(Sams, function()
 		allies1.MarkCompletedObjective(objDestroySamSites)
-		objExtractEinstein = allies1.AddPrimaryObjective("Wait for a helicopter at the LZ and extract Einstein.")
+		objExtractEinstein = allies1.AddPrimaryObjective("等待直升机抵达并撤离爱因斯坦。")
 		Actor.Create("flare", true, { Owner = allies1, Location = ExtractionLZ.Location + CVec.New(1, -1) })
 		Beacon.New(allies1, ExtractionLZ.CenterPosition)
 		Media.PlaySpeechNotification(allies1, "SignalFlareNorth")
@@ -271,7 +271,7 @@ SetupTriggers = function()
 			ReassignActors(TownUnits, neutral, allies1)
 			Utils.Do(TownUnits, function(a) a.Stance = "Defend" end)
 			allies1.MarkCompletedObjective(objFindEinstein)
-			objEinsteinSurvival = allies1.AddPrimaryObjective("Keep Einstein alive at all costs.")
+			objEinsteinSurvival = allies1.AddPrimaryObjective("不惜一切代价保护爱因斯坦。")
 			Trigger.OnKilled(Einstein, function()
 				allies1.MarkFailedObjective(objEinsteinSurvival)
 			end)
@@ -300,7 +300,7 @@ SpawnTanya = function()
 
 	if Map.LobbyOption("difficulty") ~= "easy" and allies1.IsLocalPlayer then
 		Trigger.AfterDelay(DateTime.Seconds(2), function()
-			Media.DisplayMessage("According to the rules of engagement I need your explicit orders to fire, Commander!", "Tanya")
+			Media.DisplayMessage("指挥官，根据参加这场行动的合约，\n没有你的命令我不会贸然开火！", "谭雅")
 		end)
 	end
 end
@@ -331,15 +331,15 @@ WorldLoaded = function()
 	Utils.Do({ allies1, allies2 }, function(player)
 		if player and player.IsLocalPlayer then
 			Trigger.OnObjectiveAdded(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 			end)
 
 			Trigger.OnObjectiveCompleted(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 			end)
 
 			Trigger.OnObjectiveFailed(player, function(p, id)
-				Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+				Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 			end)
 
 			Trigger.OnPlayerWon(player, function()
@@ -365,13 +365,13 @@ WorldLoaded = function()
 	ReassignActors(Map.ActorsInWorld, allies, allies2)
 	SpawnTanya()
 
-	objTanyaMustSurvive = allies1.AddPrimaryObjective("Tanya must survive.")
-	objFindEinstein = allies1.AddPrimaryObjective("Find Einstein's crashed helicopter.")
-	objDestroySamSites = allies1.AddPrimaryObjective("Destroy the SAM sites.")
+	objTanyaMustSurvive = allies1.AddPrimaryObjective("谭雅必须存活。")
+	objFindEinstein = allies1.AddPrimaryObjective("定位载有爱因斯坦的直升机坠机点。")
+	objDestroySamSites = allies1.AddPrimaryObjective("摧毁所有地对空导弹阵地。")
 
-	objHoldPosition = allies2.AddPrimaryObjective("Hold your position and protect the base.")
-	objLimitLosses = allies2.AddSecondaryObjective("Do not lose more than " .. DeathThreshold[Map.LobbyOption("difficulty")] .. " units.")
-	objCutSovietPower = allies2.AddSecondaryObjective("Take out the Soviet power grid.")
+	objHoldPosition = allies2.AddPrimaryObjective("坚守你的基地。")
+	objLimitLosses = allies2.AddSecondaryObjective("不要损失超过" .. DeathThreshold[Map.LobbyOption("difficulty")] .. "个的单位。")
+	objCutSovietPower = allies2.AddSecondaryObjective("摧毁苏联所有供电设施。")
 
 	SetupTriggers()
 	SetupSoviets()

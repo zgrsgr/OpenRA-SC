@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Survival 01
+Title: 绝地求生 01
 
 Author: Nuke'm Bro
 
@@ -14,7 +14,7 @@ Bounds: 4,4,88,56
 
 Visibility: MissionSelector
 
-Categories: Mission
+Categories: 战役 #Mission
 
 LockPreview: True
 

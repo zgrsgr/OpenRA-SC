@@ -1,0 +1,78 @@
+2Inch:
+	Range: 10c0
+
+TTankZap:
+	Range: 4c768
+
+FLAK-23-AG:
+	Range: 4c0
+
+Sniper2:
+	Report: gun5.aud
+	Inherits: ^SnipeWeapon
+	ReloadDelay: 40
+	Range: 9c0
+	Projectile: Bullet
+		Speed: 2c0
+		ContrailLength: 20
+	Warhead@1Dam: SpreadDamage
+		Damage: 14000
+Laser2:
+	ReloadDelay: 24
+	Range: 6c0
+	Report: zrobo.aud
+	Projectile: LaserZap
+		Width: 130
+		Duration: 8
+		ZOffset: 2047
+		Color: 0FF5FF
+		SecondaryBeam: true
+		SecondaryBeamWidth: 180
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: 8833EE
+	Warhead@1Dam: SpreadDamage
+		Spread: 60
+		Damage: 360
+		Versus:
+			None: 3100
+			Wood: 1250
+			Light: 2975
+			Heavy: 1600
+			Concrete: 500
+		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
+
+Maverick2:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 60
+	Range: 8c0
+	Report: missile7.aud
+	Burst: 2
+	BurstDelays: 7
+	ValidTargets: Air, Ground
+	Projectile: Missile
+		Speed: 256
+		Inaccuracy: 316
+		CruiseAltitude: 2c0
+		RangeLimit: 9c410
+	Warhead@1Dam: SpreadDamage
+		Damage: 7000
+		Versus:
+			None: 30
+			Wood: 70
+			Light: 130
+			Heavy: 155
+			Concrete: 100
+
+DogJaw:
+	ValidTargets: Infantry
+	ReloadDelay: 10
+	Range: 2c0
+	Report: dogg5p.aud
+	TargetActorCenter: true
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		Damage: 100000
+		ValidTargets: Infantry
+		InvalidTargets: Ant, bonus
+		DamageTypes: DefaultDeath
+

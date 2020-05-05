@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: soviet01.lua
 	MissionData:
-		Briefing: A pitiful excuse for resistance has blockaded itself in this village.\n\nStalin has decided to make an example of them. Kill them all and destroy their homes. You will have Yak aircraft to use in teaching these rebels a lesson.
+		Briefing: 一群可悲的反革命分子躲在这个村庄里，\n他们勾结盟军，负隅顽抗。\n\n斯大林同志下令杀一儆百！\n\n用你的雅克攻击机告诉他们：\n苏维埃的土地上容不下一个叛徒！\n
 		BackgroundVideo: prolog.vqa
 		BriefingVideo: soviet1.vqa
 		StartVideo: flare.vqa

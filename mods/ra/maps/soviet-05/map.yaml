@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 05:   Distant Thunder
+Title: 05:   风驰电掣
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 20,42,90,50
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

@@ -103,7 +103,7 @@ MoveTruckEscapeRoute = function(truck, route)
 	if truck.IsDead then
 		return
 	else
-		Media.DisplayMessage("Convoy truck attempting to escape!")
+		Media.DisplayMessage("运送毒气的卡车企图逃跑!", "战场控制")
 		Media.PlaySoundNotification(greece, "AlertBleep")
 		Utils.Do(route, function(waypoint)
 			truck.Move(waypoint.Location)
@@ -139,19 +139,19 @@ WorldLoaded = function()
 	badguy = Player.GetPlayer("BadGuy")
 
 	Trigger.OnObjectiveAdded(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 
-	objDestroyAllTrucks = greece.AddPrimaryObjective("Prevent Soviet convoy trucks from escaping.")
-	objKillAll = greece.AddPrimaryObjective("Clear the sector of all Soviet presence.")
-	objRadarSpy = greece.AddSecondaryObjective("Infiltrate the Soviet Radar Dome to reveal truck \necape routes.")
-	ussrObj = ussr.AddPrimaryObjective("Deny the Allies.")
+	objDestroyAllTrucks = greece.AddPrimaryObjective("防止运送沙林毒气的苏联车队逃跑。")
+	objKillAll = greece.AddPrimaryObjective("肃清所有苏联军事力量。")
+	objRadarSpy = greece.AddSecondaryObjective("渗透苏联雷达站以获取敌情。")
+	ussrObj = ussr.AddPrimaryObjective("消灭盟军。")
 
 	Trigger.OnObjectiveCompleted(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(greece, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(greece, function()

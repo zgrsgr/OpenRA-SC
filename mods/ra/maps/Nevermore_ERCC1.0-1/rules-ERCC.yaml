@@ -1,0 +1,84 @@
+PROC:
+	RenderSprites:
+		Image: ref-bot
+	Building:
+		Footprint: ==x === x==
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Refinery:
+		DockAngle: 192
+		DockOffset: 1,1
+	FreeActor:
+		Actor: HARV
+		SpawnOffset: 1,1
+		Facing: 192
+	Selectable:
+		Bounds: 72,45,0,-14
+		DecorationBounds: 72,77,0,-15
+	-WithIdleOverlay@TOP:
+	WithIdleOverlay@topsolid:
+		Sequence: topsolid
+		RequiresCondition: !cloak
+	GrantConditionOnDamageState@CRIT:
+		Condition: critical
+		EnabledSounds: kaboom1.aud
+		ValidDamageStates: Critical   
+    -HitShape:
+    -HitShape@BOTTOMLEFT:
+    -HitShape@TOP:
+	ExternalCondition@cloak:
+		Condition: cloak
+	WithIdleOverlay@cloak:
+		Sequence: topsolid
+		Palette: cloak
+		IsPlayerPalette: true
+		RequiresCondition: cloak
+
+    HitShape@TOPLEFT:
+		TargetableOffsets: 560,-1152,0  , 880,-630,0 
+		Type: Rectangle
+			TopLeft: -1536, -768
+			BottomRight: -256,-256
+
+
+	HitShape@TOPRIGHT:
+		TargetableOffsets: 1400,1152,0  ,   1720,630,0
+		Type: Rectangle
+			TopLeft: 256, -1536
+			BottomRight: 1536, -256
+
+	HitShape@BOTRIGHT:
+		TargetableOffsets: -560,1152,0  , -800,630,0
+		Type: Rectangle
+			TopLeft: 256, 256
+			BottomRight: 1536, 768
+
+	HitShape@BOTLEFT:
+		TargetableOffsets: -560,-1152,0  ,  -800,-630,0
+		Type: Rectangle
+			TopLeft: -1536, 256
+			BottomRight: -256, 1536
+            
+	
+^Palettes:
+    PaletteFromPaletteWithAlpha@cloak:
+        Name: cloak
+        BasePalette: player
+        Alpha: 0.45
+
+HARV:
+	ProximityExternalCondition@cloak:
+		ValidStances: enemy
+
+^Infantry:
+    Inherits@PROC: ^AffectsPROC
+^Vehicle:
+    Inherits@PROC: ^AffectsPROC
+^AffectsPROC:
+	ProximityExternalCondition@cloak:
+		Condition: cloak
+		ValidStances: enemy, neutral, ally
+		Range: 1c512
+		RequiresCondition: !moving
+	GrantConditionOnMovement@proc:
+    	Condition: moving

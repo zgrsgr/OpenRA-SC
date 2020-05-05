@@ -244,7 +244,7 @@ Tick = function()
 			player.MarkFailedObjective(villageObjective)
 		end
 
-		UserInterface.SetMissionText(VillagePercentage .. "% of the village destroyed.", CurrentColor)
+		UserInterface.SetMissionText("村庄的" .. VillagePercentage .. "%已被破坏", CurrentColor)
 	end
 end
 
@@ -253,13 +253,13 @@ WorldLoaded = function()
 	soviets	= Player.GetPlayer("Soviets")
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerWon(player, function()
@@ -270,9 +270,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "MissionFailed")
 	end)
 
-	sovietObjective = soviets.AddPrimaryObjective("Destroy the village.")
-	villageObjective = player.AddPrimaryObjective("Save the village.")
-	beachheadObjective = player.AddPrimaryObjective("Get your MCV to the main island.")
+	sovietObjective = soviets.AddPrimaryObjective("摧毁村庄。")
+	villageObjective = player.AddPrimaryObjective("保护村庄。")
+	beachheadObjective = player.AddPrimaryObjective("在内陆建立前进基地。")
 
 	beachheadTrigger = false
 	Trigger.OnExitedFootprint(BeachheadTrigger, function(a, id)
@@ -281,7 +281,7 @@ WorldLoaded = function()
 			Trigger.RemoveFootprintTrigger(id)
 			player.MarkCompletedObjective(beachheadObjective)
 
-			captureObjective = player.AddPrimaryObjective("Locate and capture the enemy's Air Force HQ.")
+			captureObjective = player.AddPrimaryObjective("找到并占领苏联空军司令部。")
 
 			if AirForceHQ.IsDead then
 				player.MarkFailedObjective(captureObjective)

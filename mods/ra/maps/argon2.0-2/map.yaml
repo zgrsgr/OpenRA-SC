@@ -1,0 +1,118 @@
+MapFormat: 11
+RequiresMod: ra
+Title: 氩气风暴
+Author: kazu.
+Tileset: DESERT
+MapSize: 88,88
+Bounds: 1,1,86,86
+Visibility: Lobby
+Categories: 作战 #Conquest
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: england
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: england
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+Actors:
+	Actor6: mine
+		Owner: Neutral
+		Location: 67,61
+	Actor12: mine
+		Owner: Neutral
+		Location: 67,66
+	Actor21: mine
+		Owner: Neutral
+		Location: 37,33
+	Actor24: hosp
+		Owner: Neutral
+		Location: 43,43
+	Actor26: mine
+		Owner: Neutral
+		Location: 20,21
+	Actor27: mine
+		Owner: Neutral
+		Location: 20,26
+	Actor31: tc01
+		Owner: Neutral
+		Location: 24,68
+	Actor32: t09
+		Owner: Neutral
+		Location: 22,66
+	Actor33: tc01.husk
+		Owner: Neutral
+		Location: 22,62
+	Actor34: t04
+		Owner: Neutral
+		Location: 20,60
+	Actor37: tc01
+		Owner: Neutral
+		Location: 64,24
+	Actor38: t09
+		Owner: Neutral
+		Location: 65,20
+	Actor39: t04
+		Owner: Neutral
+		Location: 61,16
+	Actor40: tc01.husk
+		Owner: Neutral
+		Location: 60,19
+	Actor29: mine
+		Owner: Neutral
+		Location: 26,78
+	Actor35: mine
+		Owner: Neutral
+		Location: 4,59
+	Actor36: mine
+		Owner: Neutral
+		Location: 4,65
+	Actor44: mine
+		Owner: Neutral
+		Location: 51,55
+	Actor46: mpspawn
+		Owner: Neutral
+		Location: 17,65
+	Actor47: mine
+		Owner: Neutral
+		Location: 83,22
+	Actor48: mine
+		Owner: Neutral
+		Location: 83,28
+	Actor30: mine
+		Owner: Neutral
+		Location: 84,76
+	Actor45: oilb
+		Owner: Neutral
+		Location: 75,74
+	Actor49: oilb
+		Owner: Neutral
+		Location: 57,52
+	Actor43: mpspawn
+		Owner: Neutral
+		Location: 70,22
+	Actor41: mine
+		Owner: Neutral
+		Location: 61,10
+	Actor42: mine
+		Owner: Neutral
+		Location: 2,9
+	Actor28: oilb
+		Owner: Neutral
+		Location: 12,12
+	Actor50: oilb
+		Owner: Neutral
+		Location: 29,34

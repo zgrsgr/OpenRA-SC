@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Center of Attention Redux 2
+Title: 关注焦点
 
 Author: Buddha
 
@@ -14,7 +14,7 @@ Bounds: 15,10,105,114
 
 Visibility: Lobby
 
-Categories: Conquest
+Categories: 作战 #Conquest
 
 Players:
 	PlayerReference@Neutral:

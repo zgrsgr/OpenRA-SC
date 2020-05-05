@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Bomber John
+Title: 炸个痛快-炸弹人小游戏
 
 Author: Holloweye
 
@@ -14,7 +14,7 @@ Bounds: 16,16,24,24
 
 Visibility: Lobby
 
-Categories: Minigame
+Categories: 小游戏 #Minigame
 
 Players:
 	PlayerReference@Neutral:

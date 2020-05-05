@@ -82,7 +82,7 @@ Expand = function()
 	ExpansionCheck = true
 	Trigger.ClearAll(mcvGG)
 	Trigger.ClearAll(mcvtransport)
-	Media.DisplayMessage("Allied MCV detected moving to the island.")
+	Media.DisplayMessage("发现盟军正在向岛上扩张。", "战场控制")
 
 	Reinforcements.Reinforce(GoodGuy, { "dd", "dd" }, ShipArrivePath, 0, function(ddsquad)
 		ddsquad.AttackMove(NearExpPoint.Location) end)
@@ -195,19 +195,19 @@ WorldLoaded = function()
 	Greece = Player.GetPlayer("Greece")
 
 	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 		Media.PlaySpeechNotification(player, "ObjectiveMet")
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
-	CaptureObjective = player.AddPrimaryObjective("Capture the Radar Dome.")
-	KillAll = player.AddPrimaryObjective("Defeat the Allied forces.")
-	BeatUSSR = GoodGuy.AddPrimaryObjective("Defeat the Soviet forces.")
+	CaptureObjective = player.AddPrimaryObjective("占领雷达站。")
+	KillAll = player.AddPrimaryObjective("消灭盟军。")
+	BeatUSSR = GoodGuy.AddPrimaryObjective("消灭苏军。")
 
 	RunInitialActivities()
 
@@ -231,15 +231,15 @@ WorldLoaded = function()
 			return
 		end
 
-		HoldObjective = player.AddPrimaryObjective("Defend the Radar Dome.")
+		HoldObjective = player.AddPrimaryObjective("保护雷达站。")
 		player.MarkCompletedObjective(CaptureObjective)
 		Beacon.New(player, MCVDeploy.CenterPosition)
 		if Map.LobbyOption("difficulty") == "easy" then
 			Actor.Create("camera", true, { Owner = player, Location = MCVDeploy.Location })
-			Media.DisplayMessage("Movement of an Allied expansion base discovered.")
+			Media.DisplayMessage("发现盟军试图部署前进基地。", "战场控制")
 		else
 			Actor.Create("MCV.CAM", true, { Owner = player, Location = MCVDeploy.Location })
-			Media.DisplayMessage("Coordinates of an Allied expansion base discovered.")
+			Media.DisplayMessage("已定位盟军前进基地。", "战场控制")
 		end
 
 		if not ExpansionCheck then

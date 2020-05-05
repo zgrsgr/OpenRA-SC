@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 04:  Ten to one
+Title: 04:   以一当十
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 37,21,56,65
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

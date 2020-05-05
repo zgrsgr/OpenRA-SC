@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: 02b: The thin red line
+Title: 02b: 越过红线
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 36,52,54,35
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役 #Campaign
 
 LockPreview: True
 

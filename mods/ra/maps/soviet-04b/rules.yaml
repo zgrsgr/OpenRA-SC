@@ -6,7 +6,7 @@ World:
 	LuaScript:
 		Scripts: soviet04b.lua, soviet04b-AI.lua, soviet04b-reinforcements_teams.lua
 	MissionData:
-		Briefing: The Allied base in this region is proving to be problematic.\n\nYour mission is to take it out so that we can begin to move forces through this area.\n\nAs long as they have communications they will be able to call upon heavy reinforcements.\n\nCrush their communications, and they should be easier to remove.
+		Briefing: 实践证明，\n该区域的盟军基地已成为我军的重大威胁。\n\n为便于红军的调动，\n你必须肃清该地区的所有盟军部队。\n\n根据我们潜伏同志提供的情报，\n盟军依赖当地通讯设施调度援军，\n如果能破坏盟军的军事通讯，\n我军定能轻松取胜。\n
 		BriefingVideo: soviet4.vqa
 		StartVideo: sovmcv.vqa
 		WinVideo: radrraid.vqa
@@ -15,11 +15,11 @@ World:
 		TechLevel: medium
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: 难度 #Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单 #Easy
+			normal: 正常 #Normal
+			hard: 困难 #Hard
 		Default: easy
 
 AFLD:

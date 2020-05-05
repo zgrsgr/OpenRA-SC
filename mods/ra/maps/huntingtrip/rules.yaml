@@ -1,0 +1,136 @@
+Player:
+    PlayerResources:
+        DefaultCash: 0
+
+World:
+    LuaScript: 
+        Scripts: huntingtrip.lua
+    MissionData:
+        Briefing: 我们收到侦察机中队传来的情报：\n代号“电动”的盟军特务，\n现正出没于此地的盟军基地。\n很遗憾，\n侦察机在获知敌特的具体位置之前，\n就遭到盟军击落。\n\n万幸的是，\n我们一位潜伏在盟军战区指挥部内的同志，\n成功地截获了盟军的通讯，\n并通过秘密渠道，\n完成了本次突击行动的各项准备。\n\n盟军在此地有不少遗弃的武器装备，\n并且毫不知晓我们的行动，\n所以务必妥善利用这一情报上的重大优势；\n但是不要过于狂妄，\n毕竟在敌占区内，\n我们无法为突击行动提供后续支援。\n\n特别的，\n总书记同志对本次行动非常感兴趣，\n如果你能为他带来一场好戏的话，\n相信他定会慷慨地通电嘉奖。\n所以，\n找到那个特务，\n并送他上路。\n\n建议你不要让这只煮熟的鸭子飞了，\n请谨慎行事。\n\n\n此战役剧本由 Narcoleptic 制作，\nOpenRA汉化组代为收录至RASC。\n
+        BriefingVideo: 
+        StartVideo: spotter.vqa
+		WinVideo: sovtstar.vqa
+		LossVideo: allymorf.vqa
+    MapOptions:
+        TechLevel: medium
+    ScriptLobbyDropdown@difficulty:
+        ID: difficulty
+        Label: Difficulty
+        Values:
+            easy: 简单
+            normal: 正常
+            hard: 困难
+        Default: normal
+
+CAMERA.medium:
+    Inherits: CAMERA
+    RevealsShroud:
+        Range: 7c0
+
+THF.hijacker:
+    Inherits: THF
+    Tooltip:
+        Name: 劫持者
+    Buildable:
+        Prerequisites: ~disabled
+    RenderSprites:
+        Image: THF
+    Captures:
+        CaptureTypes: vehicle, aircraft, ship
+        PlayerExperience: 50
+
+DOG.tracker:
+    Inherits: DOG
+    RevealsShroud:
+		Range: 8c7
+    RenderSprites:
+        Image: DOG
+        
+TRAN.capturable:
+    Inherits: TRAN
+    Buildable:
+        Prerequisites: ~disabled
+    RevealsShroud:
+		Range: 9c0
+    RenderSprites:
+        Image: TRAN
+    CaptureManager:
+    Capturable:
+        Types: aircraft
+        CancelActivity: True
+    CaptureNotification:
+        Notification: UnitStolen
+        LoseNotification: UnitLost
+
+SPY:
+    Crushable:
+		WarnProbability: 0
+
+LST.capturable:
+    Inherits: LST
+    Buildable:
+        Prerequisites: ~disabled
+    RenderSprites:
+        Image: LST
+    CaptureManager:
+    Capturable:
+        Types: ship
+        CancelActivity: True
+    CaptureNotification:
+        Notification: UnitStolen
+        LoseNotification: UnitLost
+
+E1.Autotarget:
+    Inherits: E1
+    Buildable:
+        Prerequisites: ~disabled
+    RevealsShroud:
+        Range: 8c0
+    AutoTarget:
+        ScanRadius: 7
+    RenderSprites:
+        Image: E1
+
+E3.Autotarget:
+	Inherits: E3
+	Buildable:
+		Prerequisites: ~disabled
+	RevealsShroud:
+		Range: 8c0
+	AutoTarget:
+		ScanRadius: 7
+	RenderSprites:
+		Image: E3        
+
+SNIPER:
+    Buildable:
+		Prerequisites: ~disabled
+    MustBeDestroyed:
+
+SNIPER.noautotarget:
+    Inherits: SNIPER
+    Buildable:
+		Prerequisites: ~disabled
+    -AutoTarget:
+	-AutoTargetPriority@DEFAULT:
+    RenderSprites:
+		Image: SNIPER   
+        
+
+E3:
+	Buildable:
+		Prerequisites: ~tent
+
+THF:
+	Buildable:
+		Prerequisites: ~disabled
+
+V01:
+	SpawnActorOnDeath:
+		Actor: healcrate
+
+V05:
+	SpawnActorOnDeath:
+		Actor: healcrate
+
+

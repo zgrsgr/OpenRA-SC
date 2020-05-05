@@ -120,18 +120,18 @@ WorldLoaded = function()
 	greece = Player.GetPlayer("Greece")
 	
 	Trigger.OnObjectiveAdded(ussr, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "新的" .. string.lower(p.GetObjectiveType(id)))
 	end)
 	
-	KillAll = ussr.AddPrimaryObjective("Destroy all Allied units and structures.")
-	DestroyVillageObjective = ussr.AddSecondaryObjective("Destroy the village of Allied sympathizers.")
-	BeatUSSR = greece.AddPrimaryObjective("Defeat the Soviet forces.")
-	
+	KillAll = ussr.AddPrimaryObjective("肃清所有盟军武装力量。")
+	DestroyVillageObjective = ussr.AddSecondaryObjective("摧毁盟军支持者所在的村庄。")
+	BeatUSSR = greece.AddPrimaryObjective("消灭苏军。")
+
 	Trigger.OnObjectiveCompleted(ussr, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标完成")
 	end)
 	Trigger.OnObjectiveFailed(ussr, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), "目标失败")
 	end)
 
 	Trigger.OnPlayerLost(ussr, function()
