@@ -714,7 +714,7 @@ Zombie:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 200
 		Prerequisites: ~barracks, ~bio
-		Description: 行动缓慢的不死生物\n只能进行近战攻击
+		Description: 行动缓慢的亡灵生物\n只能进行近战攻击
 	Health:
 		HP: 25000
 	Mobile:
@@ -745,7 +745,7 @@ Ant:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 1954
 		Prerequisites: ~barracks, ~bio
-		Description: 因辐射而突变的庞大蚂蚁
+		Description: 因辐射而突变的大型蚂蚁
 	Selectable:
 		Bounds: 24,24,0,-5
 		DecorationBounds: 30,30,0,-2
