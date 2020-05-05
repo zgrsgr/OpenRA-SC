@@ -79,7 +79,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					var font = Game.Renderer.Fonts[authorLabel.Font];
 					var author = new CachedTransform<MapPreview, string>(
-						m => WidgetUtils.TruncateText("由{0}创建".F(m.Author), authorLabel.Bounds.Width, font));
+						m => WidgetUtils.TruncateText("由{0}创作".F(m.Author), authorLabel.Bounds.Width, font));
 					authorLabel.GetText = () => author.Update(preview);
 				}
 			}
