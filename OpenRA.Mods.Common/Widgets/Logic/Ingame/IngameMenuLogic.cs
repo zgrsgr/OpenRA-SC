@@ -227,18 +227,18 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				Game.RunAfterDelay(exitDelay, Game.RestartGame);
 			};
 
-			var button = AddButton("RESTART", "Restart");
+			var button = AddButton("RESTART", "重新开始");
 			button.IsDisabled = () => hasError || leaving;
 			button.OnClick = () =>
 			{
 				hideMenu = true;
 				ConfirmationDialogs.ButtonPrompt(
-					title: "Restart",
-					text: "Are you sure you want to restart?",
+					title: "重新开始",
+					text: "重新开始游戏？",
 					onConfirm: onRestart,
 					onCancel: ShowMenu,
-					confirmText: "Restart",
-					cancelText: "Stay");
+					confirmText: "重新开始",
+					cancelText: "取消");
 			};
 		}
 
