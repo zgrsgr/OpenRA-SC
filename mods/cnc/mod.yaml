@@ -1,5 +1,5 @@
 Metadata:
-	Title: Tiberian Dawn
+	Title: Tiberian Dawn 中文版
 	Version: {DEV_VERSION}
 	Website: https://www.openra.net
 	WebIcon32: https://www.openra.net/images/icons/cnc_32x32.png
@@ -157,7 +157,7 @@ LoadScreen: CncLoadScreen
 	Image: cnc|uibits/chrome.png
 	Image2x: cnc|uibits/chrome-2x.png
 	Image3x: cnc|uibits/chrome-3x.png
-	Text: Loading
+	Text: 载入中...
 
 ServerTraits:
 	LobbyCommands
@@ -172,35 +172,35 @@ ChromeMetrics:
 Fonts:
 	Tiny:
 		Font: common|SourceHanSansK-Medium.ttf
-		Size: 10
+		Size: 12
 		Ascender: 8
 	TinyBold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 10
+		Size: 12
 		Ascender: 8
 	Small:
 		Font: common|SourceHanSansK-Medium.ttf
-		Size: 12
+		Size: 14
 		Ascender: 9
 	Regular:
 		Font: common|SourceHanSansK-Medium.ttf
-		Size: 14
+		Size: 16
 		Ascender: 11
 	Bold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 14
+		Size: 17
 		Ascender: 11
 	MediumBold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 18
+		Size: 20
 		Ascender: 14
 	BigBold:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 24
+		Size: 26
 		Ascender: 18
 	Title:
 		Font: common|SourceHanSansK-Regular.ttf
-		Size: 32
+		Size: 48
 		Ascender: 24
 
 Missions:
@@ -231,27 +231,27 @@ AssetBrowser:
 
 GameSpeeds:
 	slowest:
-		Name: Slowest
+		Name: 最慢
 		Timestep: 80
 		OrderLatency: 2
 	slower:
-		Name: Slower
+		Name: 较慢
 		Timestep: 50
 		OrderLatency: 3
 	default:
-		Name: Normal
+		Name: 默认
 		Timestep: 40
 		OrderLatency: 3
 	fast:
-		Name: Fast
+		Name: 较快
 		Timestep: 35
 		OrderLatency: 4
 	faster:
-		Name: Faster
+		Name: 很快
 		Timestep: 30
 		OrderLatency: 4
 	fastest:
-		Name: Fastest
+		Name: 最快
 		Timestep: 20
 		OrderLatency: 6
 
@@ -259,26 +259,26 @@ ColorValidator:
 	TeamColorPresets: f70606, ff7a22, f8d3b3, f8e947, 94b319, f335a0, a64d6c, ce08f9, f5b2db, 12b572, 502048, 1d06f7, 328dff, 78dbf8, cef6b1, 391d1d
 
 ModContent:
-	InstallPromptMessage: Tiberian Dawn requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2007 C&C Gold freeware release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
+	InstallPromptMessage: 本模组需要从官方游戏中读取音频与图像文件；\n\n快速安装模式将直接从服务器下载命令与征服2008年免费版的内容，\n但不包括游戏原声音乐与过场电影；\n\n如您希望从正版游戏目录或正版光碟中导入其他附加内容，\n请选择自定义导入模式。
 	QuickDownload: basefiles
-	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the 2007 freeware release of C&C.
+	HeaderMessage: 本模组可以从已安装的正版命令与征服中读取必要文件，\n例如正版命令与征服游戏光碟或命令与征服官方数字版；\nOpenRA也可以从服务器下载命令与征服2007年免费版的相关内容。
 	Packages:
-		base: Base Game Files
+		base: 基础文件包
 			TestFiles: ^Content/cnc/conquer.mix, ^Content/cnc/desert.mix, ^Content/cnc/sounds.mix, ^Content/cnc/speech.mix, ^Content/cnc/temperat.mix, ^Content/cnc/tempicnh.mix, ^Content/cnc/winter.mix
 			Sources: gdi95, gdi95-linux, nod95, nod95-linux, tfd, origin
 			Required: true
 			Download: basefiles
-		music: Base Game Music
+		music: 基础音乐包
 			TestFiles: ^Content/cnc/scores.mix
 			Sources: gdi95, gdi95-linux, nod95, nod95-linux, tfd, origin
 			Download: music
-		movies-gdi: GDI Campaign Briefings
+		movies-gdi: GDI战役简报
 			TestFiles: ^Content/cnc/movies/visor.vqa, ^Content/cnc/movies/turtkill.vqa, ^Content/cnc/movies/trailer.vqa, ^Content/cnc/movies/tbrinfo3.vqa, ^Content/cnc/movies/tbrinfo2.vqa, ^Content/cnc/movies/tbrinfo1.vqa, ^Content/cnc/movies/seige.vqa, ^Content/cnc/movies/samsite.vqa, ^Content/cnc/movies/samdie.vqa, ^Content/cnc/movies/sabotage.vqa, ^Content/cnc/movies/retro.vqa, ^Content/cnc/movies/podium.vqa, ^Content/cnc/movies/planecra.vqa, ^Content/cnc/movies/pintle.vqa, ^Content/cnc/movies/paratrop.vqa, ^Content/cnc/movies/nodsweep.vqa, ^Content/cnc/movies/nodlose.vqa, ^Content/cnc/movies/nodflees.vqa, ^Content/cnc/movies/nod1.vqa, ^Content/cnc/movies/nitejump.vqa, ^Content/cnc/movies/napalm.vqa, ^Content/cnc/movies/logo.vqa, ^Content/cnc/movies/landing.vqa, ^Content/cnc/movies/intro2.vqa, ^Content/cnc/movies/hellvaly.vqa, ^Content/cnc/movies/gunboat.vqa, ^Content/cnc/movies/generic.vqa, ^Content/cnc/movies/gdilose.vqa, ^Content/cnc/movies/gdifinb.vqa, ^Content/cnc/movies/gdifina.vqa, ^Content/cnc/movies/gdiend2.vqa, ^Content/cnc/movies/gdiend1.vqa, ^Content/cnc/movies/gdi9.vqa, ^Content/cnc/movies/gdi8b.vqa, ^Content/cnc/movies/gdi8a.vqa, ^Content/cnc/movies/gdi7.vqa, ^Content/cnc/movies/gdi6.vqa, ^Content/cnc/movies/gdi5.vqa, ^Content/cnc/movies/gdi4b.vqa, ^Content/cnc/movies/gdi4a.vqa, ^Content/cnc/movies/gdi3lose.vqa, ^Content/cnc/movies/gdi3.vqa, ^Content/cnc/movies/gdi2.vqa, ^Content/cnc/movies/gdi15.vqa, ^Content/cnc/movies/gdi14.vqa, ^Content/cnc/movies/gdi13.vqa, ^Content/cnc/movies/gdi12.vqa, ^Content/cnc/movies/gdi11.vqa, ^Content/cnc/movies/gdi10.vqa, ^Content/cnc/movies/gdi1.vqa, ^Content/cnc/movies/gameover.vqa, ^Content/cnc/movies/forestkl.vqa, ^Content/cnc/movies/flyy.vqa, ^Content/cnc/movies/flag.vqa, ^Content/cnc/movies/dino.vqa, ^Content/cnc/movies/desolat.vqa, ^Content/cnc/movies/consyard.vqa, ^Content/cnc/movies/cc2tease.vqa, ^Content/cnc/movies/burdet2.vqa, ^Content/cnc/movies/burdet1.vqa, ^Content/cnc/movies/bombflee.vqa, ^Content/cnc/movies/bombaway.vqa, ^Content/cnc/movies/bkground.vqa, ^Content/cnc/movies/bcanyon.vqa, ^Content/cnc/movies/banner.vqa
 			Sources: gdi95, gdi95-linux, tfd, origin
-		movies-nod: Nod Campaign Briefings
+		movies-nod: Nod战役简报
 			TestFiles: ^Content/cnc/movies/visor.vqa, ^Content/cnc/movies/trtkil_d.vqa, ^Content/cnc/movies/trailer.vqa, ^Content/cnc/movies/tiberfx.vqa, ^Content/cnc/movies/tankkill.vqa, ^Content/cnc/movies/tankgo.vqa, ^Content/cnc/movies/sundial.vqa, ^Content/cnc/movies/stealth.vqa, ^Content/cnc/movies/spycrash.vqa, ^Content/cnc/movies/sethpre.vqa, ^Content/cnc/movies/seige.vqa, ^Content/cnc/movies/samsite.vqa, ^Content/cnc/movies/retro.vqa, ^Content/cnc/movies/refint.vqa, ^Content/cnc/movies/obel.vqa, ^Content/cnc/movies/nuke.vqa, ^Content/cnc/movies/nodlose.vqa, ^Content/cnc/movies/nodfinal.vqa, ^Content/cnc/movies/nodend4.vqa, ^Content/cnc/movies/nodend3.vqa, ^Content/cnc/movies/nodend2.vqa, ^Content/cnc/movies/nodend1.vqa, ^Content/cnc/movies/nod9.vqa, ^Content/cnc/movies/nod8.vqa, ^Content/cnc/movies/nod7b.vqa, ^Content/cnc/movies/nod7a.vqa, ^Content/cnc/movies/nod6.vqa, ^Content/cnc/movies/nod5.vqa, ^Content/cnc/movies/nod4b.vqa, ^Content/cnc/movies/nod4a.vqa, ^Content/cnc/movies/nod3.vqa, ^Content/cnc/movies/nod2.vqa, ^Content/cnc/movies/nod1pre.vqa, ^Content/cnc/movies/nod13.vqa, ^Content/cnc/movies/nod12.vqa, ^Content/cnc/movies/nod11.vqa, ^Content/cnc/movies/nod10b.vqa, ^Content/cnc/movies/nod10a.vqa, ^Content/cnc/movies/nod1.vqa, ^Content/cnc/movies/logo.vqa, ^Content/cnc/movies/landing.vqa, ^Content/cnc/movies/kanepre.vqa, ^Content/cnc/movies/intro2.vqa, ^Content/cnc/movies/insites.vqa, ^Content/cnc/movies/generic.vqa, ^Content/cnc/movies/gdi1.vqa, ^Content/cnc/movies/gameover.vqa, ^Content/cnc/movies/forestkl.vqa, ^Content/cnc/movies/flag.vqa, ^Content/cnc/movies/dino.vqa, ^Content/cnc/movies/dessweep.vqa, ^Content/cnc/movies/deskill.vqa, ^Content/cnc/movies/desflees.vqa, ^Content/cnc/movies/consyard.vqa, ^Content/cnc/movies/cc2tease.vqa, ^Content/cnc/movies/bombflee.vqa, ^Content/cnc/movies/bombaway.vqa, ^Content/cnc/movies/bcanyon.vqa, ^Content/cnc/movies/banner.vqa, ^Content/cnc/movies/akira.vqa, ^Content/cnc/movies/airstrk.vqa
 			Sources: nod95, nod95-linux, tfd, origin
-		music-covertops: Covert Operations Music
+		music-covertops: 隐秘行动音乐包
 			TestFiles: ^Content/cnc/scores-covertops.mix
 			Sources: covertops, covertops-linux, tfd, origin
 	Downloads:
