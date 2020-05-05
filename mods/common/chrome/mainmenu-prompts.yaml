@@ -11,21 +11,21 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: 正在建立战场控制
+			Text: 欢迎归队，指挥官！
 		Label@DESC_A:
 			Width: PARENT_RIGHT
 			Y: 50
 			Height: 16
 			Font: Regular
 			Align: Center
-			Text: 欢迎回来，指挥官！您可以使用以下选项来配置您的战斗参数。
+			Text: 作为建立战场控制的第一步，您需要选择下达指令的基本模式：
 		Label@DESC_B:
 			Width: PARENT_RIGHT
 			Y: 68
 			Height: 16
 			Font: Regular
 			Align: Center
-			Text: 之后您可以在“设置”中对这些参数进行设置。
+			Text: 您可以在“设置”选单中进行详细改动。
 		Label@PROFILE_TITLE:
 			Width: PARENT_RIGHT
 			Y: 100
@@ -51,7 +51,7 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 			Y: 130
 			Width: 145
 			Height: 25
-			Text: 玩家颜色：
+			Text: 偏好颜色：
 			Align: Right
 		ColorPreviewManager@COLOR_MANAGER:
 		DropDownButton@PLAYERCOLOR:
@@ -80,7 +80,7 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 			Width: 120
 			Height: 25
 			Font: Regular
-			Text: 控制方案：
+			Text: 控制模式：
 			Align: Right
 		DropDownButton@MOUSE_CONTROL_DROPDOWN:
 			X: 145
@@ -94,7 +94,7 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 			Width: 180
 			Height: 20
 			Font: Regular
-			Text: 屏幕边缘滚动
+			Text: 地图边缘滚屏
 		Container@MOUSE_CONTROL_DESC_CLASSIC:
 			X: 25
 			Y: 220
@@ -103,12 +103,12 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 				LabelWithHighlight@DESC_SELECTION:
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标左键}选择单位
+					Text: - 使用{鼠标左键}选取单位
 				LabelWithHighlight@DESC_COMMANDS:
 					Y: 17
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标左键}下达命令
+					Text: - 使用{鼠标左键}下达指令
 				LabelWithHighlight@DESC_BUILDIGS:
 					Y: 34
 					Height: 16
@@ -118,37 +118,37 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 					X: 265
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标左键}释放支援技能
+					Text: - 使用{鼠标左键}施放支援技能
 				LabelWithHighlight@DESC_ZOOM:
 					X: 265
 					Y: 17
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标滚轮}缩放战场
+					Text: - 使用{鼠标滚轮}缩放视距
 				LabelWithHighlight@DESC_ZOOM_MODIFIER:
 					X: 265
 					Y: 17
 					Height: 16
 					Font: Small
-					Text: - 使用{MODIFIER + 鼠标滚轮}来缩放战场
+					Text: - 使用{MODIFIER + 鼠标滚轮}缩放视距
 				LabelWithHighlight@DESC_SCROLL_RIGHT:
 					X: 265
 					Y: 34
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标右键}来滚动屏幕
+					Text: - 按住{鼠标右键}滚屏
 				LabelWithHighlight@DESC_SCROLL_MIDDLE:
 					X: 265
 					Y: 34
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标中键}来滚动屏幕
+					Text: - 按住{鼠标中键}滚屏
 				Label@DESC_EDGESCROLL:
 					X: 274
 					Y: 51
 					Height: 16
 					Font: Small
-					Text: 或将光标移动到屏幕边缘来滚动屏幕
+					Text: 或将鼠标移动到地图边缘滚动屏幕
 		Container@MOUSE_CONTROL_DESC_MODERN:
 			X: 25
 			Y: 220
@@ -157,12 +157,12 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 				LabelWithHighlight@DESC_SELECTION:
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标左键}选择单位
+					Text: - 使用{鼠标左键}选取单位
 				LabelWithHighlight@DESC_COMMANDS:
 					Y: 17
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标右键}下达命令
+					Text: - 使用{鼠标右键}下达指令
 				LabelWithHighlight@DESC_BUILDIGS:
 					Y: 34
 					Height: 16
@@ -172,37 +172,37 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 					X: 265
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标左键}释放支援技能
+					Text: - 使用{鼠标左键}施放支援技能
 				LabelWithHighlight@DESC_ZOOM:
 					X: 265
 					Y: 17
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标滚轮}缩放战场
+					Text: - 使用{鼠标滚轮}缩放视距
 				LabelWithHighlight@DESC_ZOOM_MODIFIER:
 					X: 265
 					Y: 17
 					Height: 16
 					Font: Small
-					Text: - 使用{MODIFIER + 鼠标滚轮}来缩放战场
+					Text: - 使用{MODIFIER + 鼠标滚轮}缩放视距
 				LabelWithHighlight@DESC_SCROLL_RIGHT:
 					X: 265
 					Y: 34
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标右键}来滚动屏幕
+					Text: - 按住{鼠标右键}滚屏
 				LabelWithHighlight@DESC_SCROLL_MIDDLE:
 					X: 265
 					Y: 34
 					Height: 16
 					Font: Small
-					Text: - 使用{鼠标中键}来滚动屏幕
+					Text: - 按住{鼠标中键}滚屏
 				Label@DESC_EDGESCROLL:
 					X: 274
 					Y: 51
 					Height: 16
 					Font: Small
-					Text: 或将光标移动到屏幕边缘来滚动屏幕
+					Text: 或将鼠标移动到地图边缘滚动屏幕
 		Label@INPUT_TITLE:
 			Width: PARENT_RIGHT
 			Y: 290
@@ -215,7 +215,7 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 			Y: 320
 			Width: 120
 			Height: 25
-			Text: 战场相机：
+			Text: 视距：
 			Align: Right
 		DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
 			X: 145
@@ -242,7 +242,7 @@ Background@MAINMENU_INTRODUCTION_PROMPT:
 			Width: 200
 			Height: 20
 			Font: Regular
-			Text: 增大光标
+			Text: 更大的指针
 		Button@CONTINUE_BUTTON:
 			X: PARENT_RIGHT - 180
 			Y: PARENT_BOTTOM - 45 
@@ -265,21 +265,21 @@ Background@MAINMENU_SYSTEM_INFO_PROMPT:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: 正在建立战场控制
+			Text: 欢迎归队，指挥官！
 		Label@PROMPT_TEXT_A:
 			X: 15
 			Y: 50
 			Width: PARENT_RIGHT - 30
 			Height: 16
 			Align: Center
-			Text: 我们想收集一些系统细节，以帮助我们优化OpenRA。
+			Text: 我们想收集一些有助于我们优化OpenRA的细节。
 		Label@PROMPT_TEXT_B:
 			X: 15
 			Y: 68
 			Width: PARENT_RIGHT - 30
 			Height: 16
 			Align: Center
-			Text: 在您允许的情况下，每次游戏启动时都会匿名发送以下数据：
+			Text: 如您许可的话，我们将获取以下匿名的系统数据：
 		ScrollPanel@SYSINFO_DATA:
 			X: 20
 			Y: 98
@@ -299,7 +299,7 @@ Background@MAINMENU_SYSTEM_INFO_PROMPT:
 			Width: 200
 			Height: 20
 			Font: Regular
-			Text: 发送系统信息
+			Text: 确认发送系统信息
 		Button@CONTINUE_BUTTON:
 			X: PARENT_RIGHT - WIDTH - 20
 			Y: PARENT_BOTTOM - 45
