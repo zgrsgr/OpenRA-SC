@@ -58,7 +58,7 @@ TECN:
 	Inherits@1: ^CivInfantry
 	Inherits@2: ^ArmedCivilian
 	Tooltip:
-		Name: Technician
+		Name: 技师
 	RenderSprites:
 		Image: C1
 
@@ -78,12 +78,12 @@ FCOM:
 	Armor:
 		Type: Wood
 	Tooltip:
-		Name: Forward Command
+		Name: 前哨站
 	TooltipDescription@ally:
-		Description: Provides buildable area.
+		Description: 提供可建造范围
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to give buildable area.
+		Description: 占领以获得建造范围拓展
 		ValidStances: Neutral, Enemy
 	RevealsShroud:
 		MinRange: 4c0
@@ -131,12 +131,12 @@ HOSP:
 	CapturableProgressBlink:
 	EngineerRepairable:
 	Tooltip:
-		Name: Hospital
+		Name: 市民医院
 	TooltipDescription@ally:
-		Description: Provides infantry with self-healing.
+		Description: 为步兵提供自愈能力
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to enable self-healing for infantry.
+		Description: 占领后为步兵提供自愈能力
 		ValidStances: Neutral, Enemy
 	RevealsShroud:
 		Range: 4c0
@@ -156,7 +156,7 @@ V01:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Church
+		Name: 教堂
 	RevealsShroud:
 		Range: 10c0
 	MapEditorData:
@@ -297,7 +297,7 @@ V19:
 	RenderSprites:
 		Palette: player
 	Tooltip:
-		Name: Oil Pump
+		Name: 钻油井
 	-SpawnActorOnDeath@1:
 	-SpawnActorOnDeath@2:
 	-SpawnActorOnDeath@3:
@@ -311,7 +311,7 @@ V19.Husk:
 	RenderSprites:
 		Palette: player
 	Tooltip:
-		Name: Husk (Oil Pump)
+		Name: 钻油井废墟
 	WithSpriteBody:
 	WithIdleOverlay:
 		StartSequence: fire-start
@@ -337,7 +337,7 @@ BARL:
 	Explodes:
 		Weapon: BarrelExplode
 	Tooltip:
-		Name: Explosive Barrel
+		Name: 炸药桶
 		ShowOwnerRow: False
 	Armor:
 		Type: None
@@ -361,7 +361,7 @@ BRL3:
 	Explodes:
 		Weapon: BarrelExplode
 	Tooltip:
-		Name: Explosive Barrel
+		Name: 炸药桶
 		ShowOwnerRow: False
 	Armor:
 		Type: None
@@ -410,12 +410,12 @@ MISS:
 	Armor:
 		Type: Wood
 	Tooltip:
-		Name: Communications Center
+		Name: 通讯中心
 	TooltipDescription@ally:
-		Description: Provides range of vision.
+		Description: 提供一定范围的视野
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to give visual range.
+		Description: 占领后获得一定范围的视野
 		ValidStances: Neutral, Enemy
 	WithBuildingBib:
 	CaptureManager:
@@ -451,12 +451,12 @@ BIO:
 	CapturableProgressBar:
 	EngineerRepairable:
 	Tooltip:
-		Name: Biological Lab
+		Name: 生物实验室
 	TooltipDescription@ally:
-		Description: Provides prerequisite for Bio-Lab units.
+		Description: 解锁生物科技单位
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to produce Bio-Lab units.
+		Description: 占领以解锁生物科技单位
 		ValidStances: Neutral, Enemy
 	WithDeathAnimation:
 		DeathSequence: dead
@@ -494,12 +494,12 @@ OILB:
 		Interval: 375
 		Amount: 100
 	Tooltip:
-		Name: Oil Derrick
+		Name: 油井
 	TooltipDescription@ally:
-		Description: Provides additional funds.
+		Description: 提供额外资金
 		ValidStances: Ally
 	TooltipDescription@other:
-		Description: Capture to receive additional funds.
+		Description: 占领以获取额外资金
 		ValidStances: Neutral, Enemy
 	Explodes:
 		Weapon: BarrelExplode
@@ -761,7 +761,7 @@ V25:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Church
+		Name: 教堂
 	RevealsShroud:
 		Range: 10c0
 	HitShape:
@@ -875,7 +875,7 @@ LHUS:
 	Selectable:
 		Bounds: 24,48,0,-16
 	Tooltip:
-		Name: Lighthouse
+		Name: 灯塔
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -889,7 +889,7 @@ WINDMILL:
 		DecorationBounds: 36,36,0,-14
 	SelectionDecorations:
 	Tooltip:
-		Name: Windmill
+		Name: 风车
 	Building:
 		Footprint: x
 		Dimensions: 1,1

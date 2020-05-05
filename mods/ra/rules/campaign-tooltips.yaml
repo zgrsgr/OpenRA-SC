@@ -86,6 +86,6 @@ FCOM:
 
 MISS:
 	Tooltip:
-		Name: Technology Center
+		Name: 科技中心
 	-TooltipDescription@ally:
 	-TooltipDescription@other:

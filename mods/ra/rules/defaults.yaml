@@ -268,7 +268,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Vehicle
+		GenericName: 载具
 	CaptureManager:
 		BeingCapturedCondition: being-captured
 	Capturable:
@@ -370,7 +370,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Soldier
+		GenericName: 步兵
 	SelfHealing@HOSPITAL:
 		Step: 500
 		Delay: 100
@@ -453,7 +453,7 @@
 	Valued:
 		Cost: 10
 	Tooltip:
-		Name: Civilian
+		Name: 平民
 		GenericVisibility: None
 	RevealsShroud:
 		Range: 3c0
@@ -522,7 +522,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Ship
+		GenericName: 舰艇
 	MustBeDestroyed:
 	MapEditorData:
 		ExcludeTilesets: INTERIOR
@@ -583,7 +583,7 @@
 	GpsDot:
 		String: Plane
 	Tooltip:
-		GenericName: Plane
+		GenericName: 战机
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129
@@ -609,7 +609,7 @@
 ^Helicopter:
 	Inherits: ^Plane
 	Tooltip:
-		GenericName: Helicopter
+		GenericName: 直升机
 	Aircraft:
 		CanHover: True
 		CruisingCondition: cruising
@@ -666,7 +666,7 @@
 	FrozenUnderFog:
 	FrozenUnderFogUpdatedByGps:
 	Tooltip:
-		GenericName: Structure
+		GenericName: 建筑
 	Demolishable:
 	MapEditorData:
 		Categories: Building
@@ -712,6 +712,19 @@
 		ReferencePoint: Center
 		Palette: player
 		IsPlayerPalette: True
+	# WithDecoration@primary:
+	# 	RequiresSelection: true
+	# 	Image: pips
+	# 	Sequence: tag-primary
+	# 	ReferencePoint: Top
+	# 	ZOffset: 256
+	# 	RequiresCondition: primary
+	WithTextDecoration@primary:
+		RequiresSelection: true
+		Text: 主要生产建筑
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
 
 ^ScienceBuilding:
 	Inherits: ^Building
@@ -795,7 +808,7 @@
 	Armor:
 		Type: Wood
 	Tooltip:
-		Name: Civilian Building
+		Name: 民用建筑
 		GenericVisibility: None
 	FrozenUnderFog:
 	MapEditorData:
@@ -846,7 +859,7 @@
 	Explodes:
 		Weapon: UnitExplode
 	Tooltip:
-		Name: Ammo Box
+		Name: 弹药箱
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, NoAutoTarget
 	Armor:
@@ -886,7 +899,7 @@
 	-Selectable:
 	-SelectionDecorations:
 	Tooltip:
-		Name: Field
+		Name: 田野
 	-Targetable:
 	-Demolishable:
 	MapEditorData:
@@ -898,7 +911,7 @@
 	Inherits@shape: ^1x1Shape
 	Interactable:
 	Tooltip:
-		Name: Tree
+		Name: 树
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: terrain
@@ -958,7 +971,7 @@
 		Dimensions: 1,1
 	WithSpriteBody:
 	Tooltip:
-		Name: Tree (Burnt)
+		Name: 烧焦的树
 		ShowOwnerRow: false
 	HiddenUnderShroud:
 	ScriptTriggers:
@@ -972,7 +985,7 @@
 	RenderSprites:
 		Palette: player
 	Tooltip:
-		Name: Boxes
+		Name: 箱子
 	MapEditorData:
 		-ExcludeTilesets:
 		Categories: Decoration
@@ -1017,7 +1030,7 @@
 		RequiresForceFire: true
 	Chronoshiftable:
 	Tooltip:
-		GenericName: Destroyed Vehicle
+		GenericName: 载具残骸
 	BodyOrientation:
 		UseClassicFacingFudge: True
 
@@ -1027,7 +1040,7 @@
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Tooltip:
-		GenericName: Destroyed Plane
+		GenericName: 战机残骸
 	Aircraft:
 	FallsToEarth:
 		Moves: True
@@ -1045,7 +1058,7 @@
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Tooltip:
-		GenericName: Destroyed Helicopter
+		GenericName: 直升机残骸
 	Aircraft:
 		CanHover: True
 		VTOL: true
@@ -1063,7 +1076,7 @@
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
 	Tooltip:
-		Name: Bridge
+		Name: 桥
 		ShowOwnerRow: false
 	Targetable:
 		TargetTypes: Ground, Water, Bridge
@@ -1088,7 +1101,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Rock
+		Name: 石头
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: desert
@@ -1122,8 +1135,8 @@
 		Bounds: 24,24
 	HiddenUnderFog:
 	Tooltip:
-		Name: Crate
-		GenericName: Crate
+		Name: 工具箱
+		GenericName: 工具箱
 		ShowOwnerRow: false
 	Crate:
 		Lifetime: 180
@@ -1174,7 +1187,7 @@
 		CloakTypes: Mine
 		InitialDelay: 0
 	Tooltip:
-		Name: Mine
+		Name: 地雷
 	Targetable:
 		TargetTypes: Ground, Mine
 	Immobile:

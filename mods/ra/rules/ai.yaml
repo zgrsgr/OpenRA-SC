@@ -1,15 +1,15 @@
 Player:
 	ModularBot@RushAI:
-		Name: Rush AI
+		Name: 快攻型电脑玩家
 		Type: rush
 	ModularBot@NormalAI:
-		Name: Normal AI
+		Name: 传统型电脑玩家
 		Type: normal
 	ModularBot@TurtleAI:
-		Name: Turtle AI
+		Name: 龟缩型电脑玩家
 		Type: turtle
 	ModularBot@NavalAI:
-		Name: Naval AI
+		Name: 海军型电脑玩家
 		Type: naval
 	GrantConditionOnBotOwner@rush:
 		Condition: enable-rush-ai

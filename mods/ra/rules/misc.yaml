@@ -112,7 +112,7 @@ CRATE:
 MONEYCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Money Crate
+		Name: 资金工具箱 #Money Crate
 	GiveCashCrateAction:
 		Amount: 500
 		SelectionShares: 1
@@ -123,7 +123,7 @@ MONEYCRATE:
 HEALCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Heal Crate
+		Name: 治疗工具箱 #Heal Crate
 	HealUnitsCrateAction:
 		Sound: heal2.aud
 		SelectionShares: 1
@@ -132,19 +132,19 @@ HEALCRATE:
 WCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Wooden Crate
+		Name: 木质工具箱 #Wooden Crate
 	RenderSprites:
 		Image: wcrate
 
 SCRATE:
 	Inherits: ^Crate
 	Tooltip:
-		Name: Steel Crate
+		Name: 铁质工具箱 #Steel Crate
 
 CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (reveals area to owner)
+		Name: （向所有者显示区域） #(reveals area to owner)
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -162,19 +162,19 @@ CAMERA:
 camera.paradrop:
 	Inherits: CAMERA
 	EditorOnlyTooltip:
-		Name: (support power proxy camera)
+		Name: 空降兵镜头 #(support power proxy camera)
 	RevealsShroud:
 		Range: 6c0
 
 camera.spyplane:
 	Inherits: CAMERA
 	EditorOnlyTooltip:
-		Name: (support power proxy camera)
+		Name: 侦察机镜头 #(support power proxy camera)
 
 SONAR:
 	Inherits: camera.spyplane
 	EditorOnlyTooltip:
-		Name: (support power proxy camera)
+		Name: 声呐镜头 #(support power proxy camera)
 	-RevealsShroud:
 	DetectCloaked:
 		CloakTypes: Underwater
@@ -196,7 +196,7 @@ FLARE:
 		Type: CenterPosition
 	Interactable:
 	Tooltip:
-		Name: Flare
+		Name: 狼烟
 		ShowOwnerRow: false
 	MapEditorData:
 		Categories: Decoration
@@ -206,7 +206,7 @@ MINE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Ore Mine
+		Name: 矿井
 	RenderSprites:
 		Palette: terrain
 	WithSpriteBody:
@@ -229,7 +229,7 @@ GMINE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Gem Mine
+		Name: 宝石矿井
 	RenderSprites:
 		Palette: player
 	WithSpriteBody:
@@ -253,7 +253,7 @@ RAILMINE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Abandoned Mine
+		Name: 废弃矿井
 	RenderSprites:
 		Palette: player
 	WithSpriteBody:
@@ -272,7 +272,7 @@ QUEE:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Queen Ant
+		Name: 蚁后
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -288,7 +288,7 @@ LAR1:
 	Interactable:
 	HiddenUnderShroud:
 	Tooltip:
-		Name: Ant Larva
+		Name: 幼蚁
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -303,14 +303,14 @@ LAR1:
 LAR2:
 	Inherits@1: LAR1
 	Tooltip:
-		Name: Ant Larvae
+		Name: 幼蚁
 
 powerproxy.parabombs:
 	AlwaysVisible:
 	AirstrikePower:
 		Icon: parabombs
-		Description: Parabombs (Single Use)
-		LongDesc: A Badger drops a load of parachuted bombs on your target.
+		Description: 地毯式轰炸（单次使用） # Description: Parabombs (Single Use)
+		LongDesc: 友方轰炸机将在目标 \n位置投放炸弹  # LongDesc: A Badger drops a load of parachuted bombs on your target.
 		OneShot: true
 		AllowMultiple: true
 		UnitType: badr.bomber
@@ -328,8 +328,8 @@ powerproxy.sonarpulse:
 	AlwaysVisible:
 	SpawnActorPower:
 		Icon: sonar
-		Description: Sonar Pulse
-		LongDesc: Reveals all submarines in the vicinity for a \nshort time.
+		Description: 声呐探测 #Sonar Pulse
+		LongDesc: 短时间内强制点亮目标范围内的所有潜艇  # LongDesc: Reveals all submarines in the vicinity for a \nshort time.
 		ChargeInterval: 750
 		EndChargeSpeechNotification: SonarPulseReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -344,8 +344,8 @@ powerproxy.paratroopers:
 	AlwaysVisible:
 	ParatroopersPower:
 		Icon: paratroopers
-		Description: Paratroopers
-		LongDesc: A Badger drops a squad of infantry\nanywhere on the map.
+		Description: 伞兵 # Description: Paratroopers
+		LongDesc: 友方运输机将在目标 \n位置投放一队伞兵  # LongDesc: A Badger drops a squad of infantry\nanywhere on the map.
 		DropItems: E1,E1,E1,E3,E3
 		SelectTargetSpeechNotification: SelectTarget
 		AllowImpassableCells: false
@@ -372,7 +372,7 @@ aircraft.upgraded:
 mpspawn:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (multiplayer player starting point)
+		Name: 玩家初始位置 #(multiplayer player starting point)#
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -388,7 +388,7 @@ mpspawn:
 waypoint:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (waypoint for scripted behavior)
+		Name: 脚本中的路径点 #(waypoint for scripted behavior)#
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -413,7 +413,7 @@ CTFLAG:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Flag
+		Name: 旗子
 	WithBuildingBib:
 		HasMinibib: true
 	-HitShape:

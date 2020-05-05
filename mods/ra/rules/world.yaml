@@ -96,61 +96,61 @@
 		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
 		UseExtendedIndex: true
 	Faction@0:
-		Name: Allies
+		Name: 盟军
 		InternalName: allies
-		Side: Allies
+		Side: 盟军
 		Selectable: False
 	Faction@1:
-		Name: England
+		Name: 英国
 		InternalName: england
-		Side: Allies
-		Description: England: Counterintelligence\nSpecial Unit: British Spy\nSpecial Unit: Mobile Gap Generator
+		Side: 盟军
+		Description: 情报与反情报\n·独有单位：皇家特工\n·独有单位：机动电磁干扰车
 	Faction@2:
-		Name: France
+		Name: 法国
 		InternalName: france
-		Side: Allies
-		Description: France: Deception\nSpecial Ability: Can build fake structures\nSpecial Unit: Phase Transport
+		Side: 盟军
+		Description: 诡计与伪装\n·独有能力：可以建造建筑模型以欺骗对手\n·独有单位：相位运兵车
 	Faction@3:
-		Name: Germany
+		Name: 德国
 		InternalName: germany
-		Side: Allies
-		Description: Germany: Technology\nSpecial Ability: Advanced Chronoshift\nSpecial Unit: Chrono Tank
+		Side: 盟军
+		Description: 先进科技\n·独有能力：先进超时空传送仪\n·独有单位：超时空坦克
 	Faction@4:
-		Name: Soviet
+		Name: 苏联
 		InternalName: soviet
-		Side: Soviet
+		Side: 苏联
 		Selectable: False
 	Faction@5:
-		Name: Russia
+		Name: 苏俄
 		InternalName: russia
-		Side: Soviet
-		Description: Russia: Tesla Weapons\nSpecial Unit: Tesla Tank\nSpecial Unit: Shock Trooper
+		Side: 苏联
+		Description: 电磁武器\n·独有单位：磁能坦克\n·独有单位：震电突击队
 	Faction@6:
-		Name: Ukraine
+		Name: 乌克兰
 		InternalName: ukraine
-		Side: Soviet
-		Description: Ukraine: Demolitions\nSpecial Ability: Parabombs\nSpecial Unit: Demolition Truck
+		Side: 苏联
+		Description: 破坏与毁灭\n·独有能力：地毯式轰炸\n·独有单位：自爆卡车
 	Faction@random:
-		Name: Any
+		Name: 随机
 		InternalName: Random
 		RandomFactionMembers: RandomAllies, RandomSoviet
-		Side: Random
-		Description: Random Country\nA random country will be chosen when the game starts.
+		Side: 随机
+		Description: 随机阵营与国家\n系统将会为玩家分配一个随机阵营下的随机国家
 	Faction@randomallies:
-		Name: Allies
+		Name: 盟军
 		InternalName: RandomAllies
 		RandomFactionMembers: england, france, germany
-		Side: Random
-		Description: Random Allied Country\nA random Allied country will be chosen when the game starts.
+		Side: 随机
+		Description: 盟军阵营随机\n系统将会为玩家分配一个随机的盟军国家
 	Faction@randomsoviet:
-		Name: Soviet
+		Name: 苏联
 		InternalName: RandomSoviet
 		RandomFactionMembers: russia, ukraine
-		Side: Random
-		Description: Random Soviet Country\nA random Soviet country will be chosen when the game starts.
+		Side: 随机
+		Description: 苏联阵营随机\n系统将会为玩家分配一个随机的苏联国家
 	ResourceType@ore:
 		Type: Ore
-		Name: Valuable Minerals
+		Name: 矿石
 		PipColor: Yellow
 		ResourceType: 1
 		TerrainType: Ore
@@ -162,7 +162,7 @@
 		AllowUnderActors: true
 	ResourceType@gem:
 		Type: Gems
-		Name: Valuable Minerals
+		Name: 宝石
 		PipColor: Red
 		ResourceType: 2
 		TerrainType: Gems
@@ -195,6 +195,8 @@ World:
 		SpawnInterval: 3000
 		WaterChance: 20
 		InitialSpawnDelay: 1500
+		CheckboxLabel: 随机工具箱
+		CheckboxDescription: 启用后地图上随机出现奖惩效果不一的工具箱
 		CheckboxDisplayOrder: 1
 	DomainIndex:
 	SmudgeLayer@SCORCH:
@@ -211,21 +213,31 @@ World:
 	WarheadDebugOverlay:
 	SpawnMapActors:
 	MapBuildRadius:
+		AllyBuildRadiusCheckboxLabel: 协助建设
+		AllyBuildRadiusCheckboxDescription: 启用后可以在盟友附近建设且与盟友共享建筑范围
 		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxLabel: 有限的建筑范围
+		BuildRadiusCheckboxDescription: 启用后建筑只能放置在建筑工厂的一定范围之内
 		BuildRadiusCheckboxDisplayOrder: 5
 	MapOptions:
+		ShortGameCheckboxLabel: 快速游戏
+		ShortGameCheckboxDescription: 消灭敌方所有基础建筑与移动基地车即可获胜
 		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownLabel: 科技等级限制
+		TechLevelDropdownDescription:　限制玩家最高能使用的科技技术
 		TechLevelDropdownDisplayOrder: 2
+		GameSpeedDropdownLabel: 游戏速度
+		GameSpeedDropdownDescription: 更改游戏内时间的流速
 		GameSpeedDropdownDisplayOrder: 3
 	CreateMPPlayers:
 	MPStartUnits@mcvonly:
 		Class: none
-		ClassName: MCV Only
+		ClassName: 仅基地车
 		Factions: allies, england, france, germany, soviet, russia, ukraine
 		BaseActor: mcv
 	MPStartUnits@lightallies:
 		Class: light
-		ClassName: Light Support
+		ClassName: 少量援军
 		Factions: allies, england, france, germany
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e3,e3,jeep,1tnk
@@ -233,7 +245,7 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@lightsoviet:
 		Class: light
-		ClassName: Light Support
+		ClassName: 少量援军
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e3,e3,apc,ftrk
@@ -241,7 +253,7 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@heavyallies:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 大量援军
 		Factions: allies, england, france, germany
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e3,e3,jeep,1tnk,2tnk,2tnk,2tnk
@@ -249,15 +261,19 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@heavysoviet:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 大量援军
 		Factions: soviet, russia, ukraine
 		BaseActor: mcv
 		SupportActors: e1,e1,e1,e3,e3,apc,ftrk,3tnk,3tnk
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	MPStartLocations:
+		SeparateTeamSpawnsCheckboxLabel: 安全出生点
+		SeparateTeamSpawnsCheckboxDescription: 启用后所有随机出生的玩家将被分配到尽可能远离对手的位置
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:
+		DropdownLabel: 初始部队
+		DropdownDescription: 调整玩家初始部队的规模
 		DropdownDisplayOrder: 1
 	PathFinder:
 	ValidateOrder:
@@ -269,6 +285,8 @@ World:
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
 	TimeLimitManager:
+		TimeLimitLabel: 时限作战
+		TimeLimitDescription: 游戏进行到选定时刻时，得分最高的玩家或小队将会立即获得胜利
 		TimeLimitWarnings:
 			40: FourtyMinutesRemaining
 			30: ThirtyMinutesRemaining

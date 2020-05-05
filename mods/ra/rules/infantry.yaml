@@ -5,12 +5,12 @@ DOG:
 		BuildAtProductionType: Dog
 		BuildPaletteOrder: 50
 		Prerequisites: ~kenn, ~techlevel.infonly
-		Description: Anti-infantry unit.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 反步兵军犬\n可以侦测伪装单位\n\n强势对抗：步兵\n弱势对抗：载具、建筑、飞行器
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Attack Dog
-		GenericName: Dog
+		Name: 军犬
+		GenericName: 军犬
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Selectable:
@@ -73,13 +73,13 @@ E1:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 10
 		Prerequisites: ~barracks, ~techlevel.infonly
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 泛用型步兵\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Selectable:
 		Class: E1
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Rifle Infantry
+		Name: 步枪兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -118,11 +118,11 @@ E2:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 40
 		Prerequisites: ~barr, ~techlevel.infonly
-		Description: Infantry armed with grenades.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 装备有手榴弹的专业步兵\n\n·强势对抗：步兵、建筑 \n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 160
 	Tooltip:
-		Name: Grenadier
+		Name: 掷弹兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -160,13 +160,13 @@ E3:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 30
 		Prerequisites: ~barracks, ~techlevel.infonly
-		Description: Anti-tank/Anti-aircraft infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: 反装甲防空步兵\n\n·强势对抗：载具、飞行器 \n·弱势对抗：步兵 
 	Selectable:
 		Class: E3
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Rocket Soldier
+		Name: 导弹兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -213,11 +213,11 @@ E4:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 70
 		Prerequisites: ~barr, ftur, ~techlevel.low
-		Description: Advanced anti-structure unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: 装备火焰喷射器的特种部队\n\n·强势对抗：步兵、建筑 \n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Flamethrower
+		Name: 火焰兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -252,11 +252,11 @@ E6:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 60
 		Prerequisites: ~barracks, ~techlevel.infonly
-		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
+		Description: 功能型步兵\n可维修友军建筑或占领中立、敌方建筑\n\n·无武装
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Engineer
+		Name: 工程师
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	WithInfantryBody:
@@ -297,12 +297,12 @@ SPY:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 90
 		Prerequisites: ~!infantry.england, dome, ~tent, ~techlevel.medium
-		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\nCan detect spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguised
+		Description: 渗透敌方建筑进行破坏\n破坏效果视目标建筑而异\n可以伪装成敌方步兵\n按住Ctrl以攻击敌方步兵\n在攻击时会失去伪装\n可以侦测伪装单位\n\n·强势对抗：步兵、建筑\n·特殊能力：伪装
 	Valued:
 		Cost: 500
 	-Tooltip:
 	DisguiseTooltip:
-		Name: Spy
+		Name: 间谍
 		GenericName: Soldier
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -353,7 +353,7 @@ SPY.England:
 	GivesExperience:
 		Experience: 500
 	DisguiseTooltip:
-		Name: British Spy
+		Name: 皇家特工
 	RenderSprites:
 		Image: spy
 
@@ -366,11 +366,11 @@ E7:
 		BuildPaletteOrder: 120
 		Prerequisites: ~tent, atek, ~techlevel.high
 		BuildLimit: 1
-		Description: Elite commando infantry. Armed with\ndual pistols and C4.\nMaximum 1 can be trained.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4
+		Description: 手持双枪身背C4炸弹的盟军精英突击队员\n同一玩家同时只能拥有一个\n\n·强势对抗：步兵、建筑\n·弱势对抗：载具、飞行器\n·特殊能力：爆破建筑
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Tanya
+		Name: 谭雅
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -417,11 +417,11 @@ MEDI:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 40
 		Prerequisites: ~tent, ~techlevel.infonly
-		Description: Heals nearby infantry.\n  Unarmed
+		Description: 战地医师\n为友军步兵提供治疗\n\n·无武装
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Medic
+		Name: 医疗兵
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -455,11 +455,11 @@ MECH:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 100
 		Prerequisites: ~tent, fix, ~techlevel.medium
-		Description: Repairs nearby vehicles and restores\nhusks to working condition by capturing them.\n  Unarmed
+		Description: 战地机械师\n可以维修友方载具\n修复载具残骸并化为己用\n\n·无武装
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Mechanic
+		Name: 机械师
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -503,7 +503,7 @@ EINSTEIN:
 	Inherits: ^CivInfantry
 	-Wanders:
 	Tooltip:
-		Name: Prof. Einstein
+		Name: 爱因斯坦博士
 	Mobile:
 		Speed: 71
 	Voiced:
@@ -513,7 +513,7 @@ DELPHI:
 	Inherits: ^CivInfantry
 	-Wanders:
 	Tooltip:
-		Name: Agent Delphi
+		Name: 德尔菲特工
 	Mobile:
 		Speed: 71
 
@@ -524,14 +524,14 @@ CHAN:
 	Selectable:
 		Class: CHAN
 	Tooltip:
-		Name: Scientist
+		Name: 科学家
 
 GNRL:
 	Inherits@1: ^CivInfantry
 	Inherits@2: ^ArmedCivilian
 	-Wanders:
 	Tooltip:
-		Name: General
+		Name: 将军
 	Selectable:
 		Class: GNRL
 	Mobile:
@@ -561,11 +561,11 @@ THF:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 110
 		Prerequisites: ~barr, dome, ~techlevel.medium
-		Description: Steals enemy credits.\nHijacks enemy vehicles.\n  Unarmed
+		Description: 可以窃取敌方资金或载具\n静止一段时间后隐形\n\n·无武装
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Thief
+		Name: 劫持者
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -612,11 +612,11 @@ SHOK:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 130
 		Prerequisites: ~barr, stek, tsla, ~infantry.russia, ~techlevel.high
-		Description: Elite infantry with portable Tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: 装备便携式电磁武器的精英部队\n\n·强势对抗：地面单位\n·弱势对抗：飞行器 
 	Valued:
 		Cost: 350
 	Tooltip:
-		Name: Shock Trooper
+		Name: 震电突击队
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -657,7 +657,7 @@ SNIPER:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Sniper
+		Name: 狙击手
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -665,7 +665,7 @@ SNIPER:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 80
 		Prerequisites: ~disabled
-		Description: Elite sniper infantry unit.\nCan detect cloaked units.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 高效猎杀敌方步兵的精英射手\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器、建筑 
 	Health:
 		HP: 8000
 	Passenger:
@@ -706,7 +706,7 @@ Zombie:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Zombie
+		Name: 僵尸
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -714,7 +714,7 @@ Zombie:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 200
 		Prerequisites: ~barracks, ~bio
-		Description: Slow undead. Attacks in close combat.
+		Description: 行动缓慢的不死生物\n只能进行近战攻击
 	Health:
 		HP: 25000
 	Mobile:
@@ -736,8 +736,8 @@ Ant:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Giant Ant
-		GenericName: Ant
+		Name: 巨型蚂蚁
+		GenericName: 巨型蚂蚁
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -745,7 +745,7 @@ Ant:
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 1954
 		Prerequisites: ~barracks, ~bio
-		Description: Irradiated insect that grew oversize.
+		Description: 因辐射而突变的庞大蚂蚁
 	Selectable:
 		Bounds: 24,24,0,-5
 		DecorationBounds: 30,30,0,-2
@@ -777,7 +777,7 @@ Ant:
 FireAnt:
 	Inherits: Ant
 	Tooltip:
-		Name: Fire Ant
+		Name: 火蚁
 		GenericVisibility: none
 	Mobile:
 		Speed: 80
@@ -793,7 +793,7 @@ FireAnt:
 ScoutAnt:
 	Inherits: Ant
 	Tooltip:
-		Name: Scout Ant
+		Name: 斥候蚁
 		GenericVisibility: none
 	Health:
 		HP: 8500
@@ -807,7 +807,7 @@ ScoutAnt:
 WarriorAnt:
 	Inherits: Ant
 	Tooltip:
-		Name: Warrior Ant
+		Name: 兵蚁
 		GenericVisibility: none
 	Mobile:
 		Speed: 65

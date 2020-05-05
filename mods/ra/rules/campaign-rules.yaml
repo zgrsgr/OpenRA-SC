@@ -11,7 +11,7 @@ Player:
 		DefaultCashDropdownLocked: True
 		DefaultCash: 0
 	ModularBot@CampaignAI:
-		Name: Campaign Player AI
+		Name: 战役AI #Campaign Player AI
 		Type: campaign
 
 World:
@@ -50,7 +50,7 @@ E7.noautotarget:
 
 MONEYCRATE:
 	Tooltip:
-		Name: Crate
+		Name: 现金工具箱
 	GiveCashCrateAction:
 		Amount: 2000
 	RenderSprites:

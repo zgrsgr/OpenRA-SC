@@ -11,11 +11,11 @@ FPWR:
 		BuildPaletteOrder: 870
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.infonly
-		Description: Looks like a Power Plant.
+		Description: 假装成一个发电厂
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Power Plant
-		GenericName: Power Plant
+		Name: 发电厂模型
+		GenericName: 发电厂
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -42,11 +42,11 @@ TENF:
 		BuildPaletteOrder: 880
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.infonly
-		Description: Looks like an Allied Barracks.
+		Description: 假装成一个盟军兵营
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Allied Barracks
-		GenericName: Allied Barracks
+		Name: 兵营模型
+		GenericName: 兵营
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -75,11 +75,11 @@ SYRF:
 		BuildPaletteOrder: 890
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.medium
-		Description: Looks like a Naval Yard.
+		Description: 假装成一个造船厂
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Naval Yard
-		GenericName: Naval Yard
+		Name: 造船厂模型
+		GenericName: 造船厂
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Targetable:
@@ -122,11 +122,11 @@ SPEF:
 		BuildPaletteOrder: 890
 		Queue: Defense
 		Prerequisites: ~disabled
-		Description: Looks like a Sub Pen.
+		Description: 假装成一个潜艇母港
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Sub Pen
-		GenericName: Sub Pen
+		Name: 潜艇母港模型
+		GenericName: 潜艇母港
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -165,11 +165,11 @@ WEAF:
 		BuildPaletteOrder: 920
 		Prerequisites: ~structures.france, ~techlevel.medium
 		Queue: Defense
-		Description: Looks like a War Factory.
+		Description: 假装成一个战车工厂
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake War Factory
-		GenericName: War Factory
+		Name: 战车工厂模型
+		GenericName: 战车工厂
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -204,15 +204,15 @@ DOMF:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-384,0, 630,384,0, -700,-512,0, -700,512,0
 	Tooltip:
-		Name: Fake Radar Dome
-		GenericName: Radar Dome
+		Name: 雷达站模型
+		GenericName: 雷达站
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Buildable:
 		BuildPaletteOrder: 930
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.medium
-		Description: Looks like a Radar Dome.
+		Description: 假装成一个雷达站
 		Icon: fake-icon
 	Building:
 		Footprint: xx xx ==
@@ -237,11 +237,11 @@ FIXF:
 		BuildPaletteOrder: 940
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.medium
-		Description: Looks like a Service Depot.
+		Description: 假装成一个维修平台
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Service Depot
-		GenericName: Service Depot
+		Name: 维修平台模型
+		GenericName: 维修平台
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -272,11 +272,11 @@ FAPW:
 		BuildPaletteOrder: 950
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.medium
-		Description: Looks like an Advanced Power Plant.
+		Description: 假装成一个大型发电厂
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Advanced Power Plant
-		GenericName: Advanced Power Plant
+		Name: 大型发电厂模型
+		GenericName: 大型发电厂
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
@@ -304,15 +304,15 @@ ATEF:
 	Selectable:
 		Bounds: 48,48
 	Tooltip:
-		Name: Fake Allied Tech Center
-		GenericName: Allied Tech Center
+		Name: 科技中心模型
+		GenericName: 科技中心
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Buildable:
 		BuildPaletteOrder: 970
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.high
-		Description: Looks like an Allied Tech Center.
+		Description: 假装成一个科技中心
 		Icon: fake-icon
 	Building:
 		Footprint: xx xx ==
@@ -335,8 +335,8 @@ PDOF:
 	Selectable:
 		Bounds: 48,48
 	Tooltip:
-		Name: Fake Chronosphere
-		GenericName: Chronosphere
+		Name: 超时空传送仪模型
+		GenericName: 超时空传送仪
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Buildable:
@@ -344,7 +344,7 @@ PDOF:
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.unrestricted
 		BuildLimit: 1
-		Description: Looks like a Chronosphere.\nMaximum 1 can be built.
+		Description: 假装成一个超时空传送仪\n最多只能建造一个
 		Icon: fake-icon
 	Building:
 		Footprint: xx xx
@@ -369,8 +369,8 @@ MSLF:
 	Selectable:
 		Bounds: 48,24
 	Tooltip:
-		Name: Fake Missile Silo
-		GenericName: Missile Silo
+		Name: 核弹发射井模型
+		GenericName: 核弹发射井
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Buildable:
@@ -378,7 +378,7 @@ MSLF:
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.unrestricted
 		BuildLimit: 1
-		Description: Looks like a Missile Silo.\nMaximum 1 can be built.
+		Description: 假装成一个核弹发射井\n最多只能建造一个
 		Icon: fake-icon
 	Building:
 		Footprint: xx
@@ -402,11 +402,11 @@ FACF:
 		BuildPaletteOrder: 1000
 		Queue: Defense
 		Prerequisites: ~structures.france, ~techlevel.medium
-		Description: Looks like a Construction Yard.
+		Description: 假装成一个建筑工厂
 		Icon: fake-icon
 	Tooltip:
-		Name: Fake Construction Yard
-		GenericName: Construction Yard
+		Name: 建筑工厂模型
+		GenericName: 建筑工厂
 		GenericVisibility: Enemy
 		GenericStancePrefix: False
 	Building:
