@@ -17,7 +17,7 @@ Background@CONTENT_PANEL:
 			Y: 14
 			Width: PARENT_RIGHT
 			Height: 25
-			Text: Manage Content
+			Text: 资源管理
 			Align: Center
 			Font: MediumBold
 		Label@HEADER_TEMPLATE:
@@ -49,7 +49,7 @@ Background@CONTENT_PANEL:
 							Align: Center
 							Font: Bold
 							TextColor: CC0000
-							Text: Required
+							Text: 必需
 						Image@DISC:
 							X: 275
 							Y: 2
@@ -65,7 +65,7 @@ Background@CONTENT_PANEL:
 							Width: 100
 							Height: 23
 							Background: button-highlighted-thin
-							Text: Download
+							Text: 下载
 						Label@INSTALLED:
 							X: 304
 							Width: 100
@@ -73,7 +73,7 @@ Background@CONTENT_PANEL:
 							Align: Center
 							Font: Bold
 							TextColor: 00CC00
-							Text: Installed
+							Text: 已安装
 						Label@REQUIRES_DISC:
 							X: 304
 							Width: 100
@@ -81,14 +81,14 @@ Background@CONTENT_PANEL:
 							Align: Center
 							Font: Bold
 							TextColor: DDDDDD
-							Text: Requires Disc
+							Text: 需要源光碟
 		Button@CHECK_DISC_BUTTON:
 			X: 30
 			Y: PARENT_BOTTOM - 52
 			Background: button-highlighted
 			Width: 200
 			Height: 32
-			Text: Detect Disc or Installation
+			Text: 识别光碟或导入
 			Font: Bold
 		Button@BACK_BUTTON:
 			X: PARENT_RIGHT - 140
@@ -96,7 +96,7 @@ Background@CONTENT_PANEL:
 			Background: button-highlighted
 			Width: 110
 			Height: 32
-			Text: Back
+			Text: 返回
 			Font: Bold
 			Key: escape
 		TooltipContainer@TOOLTIP_CONTAINER:
@@ -164,7 +164,7 @@ Container@PACKAGE_DOWNLOAD_PANEL:
 			Width: 120
 			Height: 32
 			Visible: false
-			Text: Retry
+			Text: 重试
 			Font: Bold
 			Key: return
 		Button@CANCEL_BUTTON:
@@ -173,7 +173,7 @@ Container@PACKAGE_DOWNLOAD_PANEL:
 			Background: button-highlighted
 			Width: 110
 			Height: 32
-			Text: Cancel
+			Text: 取消
 			Font: Bold
 			Key: escape
 
@@ -189,7 +189,7 @@ Background@DISC_INSTALL_PANEL:
 			X: 30
 			Y: 50
 			Width: 440
-			Height:150
+			Height: 150
 			Background: panel-rule
 		Label@TITLE:
 			Y: 12
@@ -304,7 +304,7 @@ Background@CONTENT_PROMPT_PANEL:
 			Y: 12
 			Width: PARENT_RIGHT
 			Height: 25
-			Text: Install Content
+			Text: 导入资源
 			Align: Center
 			Font: MediumBold
 		Label@HEADER_TEMPLATE:
@@ -318,7 +318,7 @@ Background@CONTENT_PROMPT_PANEL:
 			Background: button-highlighted
 			Width: 140
 			Height: 32
-			Text: Advanced Install
+			Text: 自定义导入
 			Font: Bold
 		Button@QUICK_BUTTON:
 			X: 185
@@ -326,7 +326,7 @@ Background@CONTENT_PROMPT_PANEL:
 			Background: button-highlighted
 			Width: 110
 			Height: 32
-			Text: Quick Install
+			Text: 快速安装
 			Font: Bold
 		Button@QUIT_BUTTON:
 			X: PARENT_RIGHT - WIDTH - 30
@@ -334,7 +334,7 @@ Background@CONTENT_PROMPT_PANEL:
 			Background: button-highlighted
 			Width: 110
 			Height: 32
-			Text: Quit
+			Text: 退出
 			Font: Bold
 			Key: escape
 
