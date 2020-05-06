@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 05b: Repair the GDI base
+Title: 05b: 焕然一新
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 8,13,51,47
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 
@@ -483,9 +483,6 @@ Actors:
 		Owner: Nod
 		Facing: 160
 		SubCell: 4
-	Actor167: moneycrate
-		Location: 26,42
-		Owner: Neutral
 	waypoint27: waypoint
 		Location: 32,41
 		Owner: Neutral

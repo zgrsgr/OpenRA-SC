@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: campaign-global.lua, nod10b.lua
 	MissionData:
-		Briefing: GDI is developing a new, heavily armored tank. Our spies have located the GDI R&D base.\n\nUse your small strike force to locate and penetrate the center. Be sure to destroy the tanks in the base and the factory.
+		Briefing: GDI可能在研发一种强大的重型坦克。\n我们的间谍发现了一处科研设施，\n确认了这些重型坦克的存在。\n\n我们的突击队已经就绪，\n指挥他们冲入科研设施，\n将这些原型车和制造厂全数摧毁。\n
 		BackgroundVideo: kanepre.vqa
 		LossVideo: deskill.vqa
 		WinVideo: tankkill.vqa
@@ -11,9 +11,9 @@ World:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单
+			normal: 正常
+			hard: 困难
 		Default: easy
 		Locked: false
 	-LegacyBridgeLayer:

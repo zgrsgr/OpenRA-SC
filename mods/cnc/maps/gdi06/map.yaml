@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 06:   Infiltrate Nod Base
+Title: 06:   秘密潜入
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 15,1,47,61
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

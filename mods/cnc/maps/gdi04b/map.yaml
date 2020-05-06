@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 04b: Get the Rods back
+Title: 04b: 物归原主
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 5,11,50,38
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

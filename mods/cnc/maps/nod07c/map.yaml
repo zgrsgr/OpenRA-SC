@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 07c: Orca Theft
+Title: 07c: 捕鲸人
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 4,4,55,56
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

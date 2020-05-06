@@ -60,8 +60,8 @@ WorldLoaded = function()
 
 	InitObjectives(GDI)
 
-	DestroyNod = GDI.AddObjective("Eliminate all Nod forces in the area.")
-	local airSupportObjective = GDI.AddObjective("Destroy the SAM sites to receive air support.", "Secondary", false)
+	DestroyNod = GDI.AddObjective("肃清所有Nod武装力量")
+	local airSupportObjective = GDI.AddObjective("摧毁Nod防空设施以获取空中支援", "次要目标", false)
 
 	Trigger.OnAllKilled(SamSites, function()
 		GDI.MarkCompletedObjective(airSupportObjective)

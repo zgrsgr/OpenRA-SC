@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: aoi
 	MissionData:
-		Briefing: Nod is experimenting on civilians with Tiberium. Use the commando to take out the SAM sites surrounding the dropoff area. With the SAMs gone you will then get an airstrike.  Take out the Obelisk and an MCV will be delivered to help you to locate and destroy the biochem facility.
+		Briefing: Nod正在此地进行泰伯利亚活体实验，\n真是惨无人道！\n\n引导我们的突击队员清理出一片着陆区，\n在排除敌对防空火力后，\n你可获得空袭支援。\n\n你必须摧毁光明石碑，\n为我们的基地车扫除障碍，\n随后迅速建立基地，\n将这一地区从Nod的折磨下彻底解放！
 		StartVideo: obel.vqa
 		WinVideo: orcabomb.vqa
 		LossVideo: cutout.vqa

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: C&C64 Special Ops - GDI 1
+Title: N64版本特别任务——GDI 01
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 2,9,48,53
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

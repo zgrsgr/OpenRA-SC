@@ -24,7 +24,7 @@ World:
 		Blue: 1.5
 		Ambient: 0.45
 	MissionData:
-		Briefing: Use a GDI Commando to infiltrate the Nod base. **** ** destroy the ******** so that the base is incapacitated. Get in, hit it, and get the **** out.
+		Briefing: -----信号接入-----\n\n引导我方突击队员渗透敌方**\n摧毁****，\n从而使基地****。\n\n潜入，猎杀，\n并且**回来。\n\n-----信号中断-----\n
 		BriefingVideo: gdi6.vqa
 		StartVideo: nitejump.vqa
 		WinVideo: sabotage.vqa
@@ -36,9 +36,9 @@ World:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单
+			normal: 正常
+			hard: 困难
 		Default: easy
 		Locked: false
 

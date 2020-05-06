@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: befeared
 	MissionData:
-		Briefing: Defend your position, deploy the MCV, then build a sizable force to search out and destroy the Nod base in the area.\n\nAll Nod units and structures must be either destroyed or captured to complete objective.
+		Briefing: 坚守阵地，指挥官！\n部署你的前进基地，\n随后组织军队向Nod发动攻势，\n\n务必清除此地区所有Nod武装力量！\n
 		BriefingVideo: gdi2.vqa
 		WinVideo: flag.vqa
 		LossVideo: gameover.vqa

@@ -5,7 +5,7 @@ World:
 		StartingMusic: chrg226m
 		VictoryMusic: nod_win1
 	MissionData:
-		Briefing: GDI has established a prison camp, where they are detaining some of the local political leaders.\n\nKane wishes to liberate these victims.\n\nDestroy the GDI forces and capture the prison, do not destroy it.
+		Briefing: GDI集结了一批政治犯，\n并将他们集中到苏丹某处集中关押。\n\n先知凯恩希望能将这些桎梏全部打破，\n突袭这座监狱，\n占领它并释放那些遭受迫害的人们。
 		BriefingVideo: nod3.vqa
 		StartVideo: dessweep.vqa
 		WinVideo: desflees.vqa
@@ -19,7 +19,7 @@ HQ:
 	AirstrikePower:
 		Prerequisites: ~disabled
 	Buildable:
-		Description: Provides an overview of the battlefield.\nRequires power to operate.
+		Description: 提供战场视野\n提供战术地图\n需要电力才能运转
 
 CYCL:
 	Buildable:

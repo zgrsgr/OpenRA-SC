@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 04b: Oum Hadjer
+Title: 04b: 内斗内行
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 7,17,52,44
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

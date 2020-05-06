@@ -75,7 +75,7 @@ DiscoverGDIBase = function(actor, discoverer)
 
 	BaseDiscovered = true
 
-	EliminateNod = GDI.AddObjective("Eliminate all Nod forces in the area.")
+	EliminateNod = GDI.AddObjective("肃清所有Nod武装力量")
 	GDI.MarkCompletedObjective(FindBase)
 end
 
@@ -115,9 +115,9 @@ WorldLoaded = function()
 
 	RepairNamedActors(Nod, RepairThreshold)
 
-	FindBase = GDI.AddObjective("Find the GDI base.")
-	DestroySAMs = GDI.AddObjective("Destroy all SAM sites to receive air support.", "Secondary", false)
-	NodObjective = Nod.AddObjective("Destroy all GDI troops.")
+	FindBase = GDI.AddObjective("确认友方基地位置")
+	DestroySAMs = GDI.AddObjective("摧毁Nod防空设施以获取空中支援", "次要目标", false)
+	NodObjective = Nod.AddObjective("消灭所有GDI")
 
 	Trigger.AfterDelay(Atk1Delay, Atk1TriggerFunction)
 	Trigger.AfterDelay(Atk2Delay, Atk2TriggerFunction)

@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 07:   Finish the Nod Base
+Title: 07:   亡羊补牢
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 4,1,58,50
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

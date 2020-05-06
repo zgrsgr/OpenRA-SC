@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: Strange Behavior
+Title: 发现异常
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 10,5,45,52
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

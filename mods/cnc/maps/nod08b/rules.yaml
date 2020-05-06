@@ -5,7 +5,7 @@ World:
 		StartingMusic: linefire
 		VictoryMusic: nod_win1
 	MissionData:
-		Briefing: Since we are low on troops, you will have to make use of all available resources.\n\n Locate the abandoned GDI base in the area and restore it to operational status. Once that is done, use GDI's own weapons against them.\n\nBe sure that no GDI forces remain alive.
+		Briefing: 战局艰困，指挥官。\n你必须善加利用手边一切资源！\n\n找到GDI的前哨站，\n占领它，\n利用GDI的武装来对付他们自己。\n你必须将GDI在此处的势力彻底铲除。\n
 		BackgroundVideo: tiberfx.vqa
 		BriefingVideo: nod8.vqa
 		LossVideo: flag.vqa

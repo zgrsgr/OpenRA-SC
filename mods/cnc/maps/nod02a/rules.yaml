@@ -9,7 +9,7 @@ World:
 		StartingMusic: ind2
 		VictoryMusic: nod_win1
 	MissionData:
-		Briefing: GDI has kept a stranglehold on Egypt for many years.  Set up a forward attack base in your area.  To do this you must select your Mobile Construction Vehicle (MCV) and right click on it.  From here you can begin to build a base. This area contains plenty of Tiberium, so establishing the base should be easy.
+		Briefing: GDI在埃及要塞盘踞了许多年，\n但他们的好日子今天就要到头了。\n\n尽快建立一座前进基地，\n此地富余的资源正好可以充作军费，\n速战速决。\n
 		BriefingVideo: nod2.vqa
 		StartVideo: seige.vqa
 		WinVideo: airstrk.vqa

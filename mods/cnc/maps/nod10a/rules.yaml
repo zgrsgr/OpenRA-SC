@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: campaign-global.lua, nod10a.lua
 	MissionData:
-		Briefing: GDI is developing an orbital weapon. Our spies have told us of a large lake near the location of the R&D center.\n\nFind the base, and use the sniper to eliminate their scientist.
+		Briefing: GDI可能正在研发一种天基武器。\n我们的间谍发现了一处科研设施，\n并确认GDI武器科研团队在此工作。\n\n确认这一设施的位置，\n除掉他们的科研团队，\n尤其是他们的科研领袖——王博士，\n让GDI竹篮打水一场空。\n
 		BackgroundVideo: kanepre.vqa
 		LossVideo: nodlose.vqa
 		BriefingVideo: nod10a.vqa
@@ -26,9 +26,9 @@ World:
 		ID: difficulty
 		Label: Difficulty
 		Values:
-			easy: Easy
-			normal: Normal
-			hard: Hard
+			easy: 简单
+			normal: 正常
+			hard: 困难
 		Default: easy
 		Locked: false
 	-LegacyBridgeLayer:

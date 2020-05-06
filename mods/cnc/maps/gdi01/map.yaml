@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 01:   Storm the Beachhead
+Title: 01:   抢滩登陆
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 35,39,27,23
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

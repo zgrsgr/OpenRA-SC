@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 05a: Repair the GDI base
+Title: 05a: 焕然一新
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 8,21,49,39
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

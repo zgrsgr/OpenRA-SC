@@ -51,7 +51,7 @@ SendGDIReinforcements = function()
 			if GDIReinforcementsLeft > 0 then
 				GDIReinforcementsLeft = GDIReinforcementsLeft - 1
 				Trigger.AfterDelay(DateTime.Seconds(5), function()
-					Media.DisplayMessage("APC squads in reserve: " .. GDIReinforcementsLeft, "Battlefield Control")
+					Media.DisplayMessage("剩余APC预备队：" .. GDIReinforcementsLeft, "战场控制")
 					SendGDIReinforcements()
 				end)
 			end
@@ -104,8 +104,8 @@ WorldLoaded = function()
 
 	InitObjectives(GDI)
 
-	GDIObjective = GDI.AddObjective("Retrieve the crate with the stolen rods.")
-	ReinforcementsObjective = GDI.AddObjective("Eliminate " .. KillsUntilReinforcements .. " Nod units for reinforcements.", "Secondary", false)
+	GDIObjective = GDI.AddObjective("收回装有被盗物资的工具箱")
+	ReinforcementsObjective = GDI.AddObjective("消灭" .. KillsUntilReinforcements .. "名敌人以获得支援", "次要目标", false)
 
 	SetupWorld()
 

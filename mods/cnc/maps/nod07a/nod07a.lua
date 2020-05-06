@@ -171,10 +171,10 @@ WorldLoaded = function()
 
 	InitObjectives(Nod)
 
-	FindBase = Nod.AddObjective("Find the Nod base.")
-	EliminateGDI = Nod.AddObjective("Eliminate all GDI forces in the area.")
-	BuildSAMs = Nod.AddObjective("Build 3 SAMs to fend off the GDI bombers.", "Secondary", false)
-	GDIObjective = GDI.AddObjective("Eliminate all Nod forces in the area.")
+	FindBase = Nod.AddObjective("确认Nod基地的位置")
+	EliminateGDI = Nod.AddObjective("肃清所有GDI武装力量")
+	BuildSAMs = Nod.AddObjective("建造三座防空导弹平台以抵御GDI空袭", "次要目标", false)
+	GDIObjective = GDI.AddObjective("消灭所有敌人")
 
 	Trigger.OnKilled(GDIProc, function()
 		Actor.Create("moneycrate", true, { Owner = GDI, Location = CPos.New(24, 54) })

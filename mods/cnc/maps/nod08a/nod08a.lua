@@ -159,10 +159,10 @@ WorldLoaded = function()
 
 	InitObjectives(Nod)
 
-	LocateNodBase = Nod.AddObjective("Locate the Nod base.")
-	CaptureGDIOutpost = Nod.AddObjective("Capture the GDI outpost.")
-	EliminateGDI = Nod.AddObjective("Eliminate all GDI forces in the area.")
-	GDIObjective = GDI.AddObjective("Eliminate all Nod forces in the area.")
+	LocateNodBase = Nod.AddObjective("确认Nod基地位置")
+	CaptureGDIOutpost = Nod.AddObjective("占领GDI前哨站")
+	EliminateGDI = Nod.AddObjective("肃清所有GDI武装力量")
+	GDIObjective = GDI.AddObjective("肃清所有Nod武装力量")
 end
 
 Tick = function()

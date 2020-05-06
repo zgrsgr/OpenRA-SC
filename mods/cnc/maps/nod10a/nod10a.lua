@@ -32,7 +32,7 @@ end
 CreateScientist = function()
 	local scientist = Actor.Create("CHAN", true, { Owner = GDI, Location = ScientistLocation.Location })
 
-	KillScientistObjective = Nod.AddObjective("Kill the GDI scientist.")
+	KillScientistObjective = Nod.AddObjective("杀死GDI的科学家。")
 	Nod.MarkCompletedObjective(DestroyTechCenterObjective)
 
 	Trigger.OnKilled(scientist, function()
@@ -54,7 +54,7 @@ WorldLoaded = function()
 		RepairBuilding(GDI, building, 0.75)
 	end)
 
-	DestroyTechCenterObjective = Nod.AddObjective("Destroy the GDI R&D center.")
+	DestroyTechCenterObjective = Nod.AddObjective("捣毁GDI的 R&D 研究中心。")
 
 	Actor.Create(Rambo, true, { Owner = Nod, Location = RamboLocation.Location })
 

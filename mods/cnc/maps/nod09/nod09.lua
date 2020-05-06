@@ -189,13 +189,13 @@ WorldLoaded = function()
 
 	InitObjectives(Nod)
 
-	SecureFirstLanding = Nod.AddObjective("Secure the first landing zone.")
-	SecureSecondLanding = Nod.AddObjective("Secure the second landing zone.")
-	LocateNodBase = Nod.AddObjective("Locate the Nod base.")
-	CaptureRefinery = Nod.AddObjective("Capture the refinery.")
-	EliminateGDI = Nod.AddObjective("Eliminate all GDI forces in the area.")
-	BuildSAMs = Nod.AddObjective("Build 3 SAMs to fend off the GDI bombers.", "Secondary", false)
-	GDIObjective = GDI.AddObjective("Eliminate all Nod forces in the area.")
+	SecureFirstLanding = Nod.AddObjective("清空首个着陆区")
+	SecureSecondLanding = Nod.AddObjective("清空第二个着陆区")
+	LocateNodBase = Nod.AddObjective("确认Nod基地位置")
+	CaptureRefinery = Nod.AddObjective("占领泰伯利亚精炼厂")
+	EliminateGDI = Nod.AddObjective("肃清GDI所有武装力量")
+	BuildSAMs = Nod.AddObjective("建造三个防空导弹平台抵御GDI空袭", "次要目标", false)
+	GDIObjective = enemy.AddPrimaryObjective("肃清Nod所有武装力量")
 end
 
 Tick = function()

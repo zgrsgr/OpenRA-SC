@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: The Hot Box
+Title: 热火朝天
 
 Author: Dan9550
 
@@ -14,7 +14,7 @@ Bounds: 16,16,36,36
 
 Visibility: Lobby
 
-Categories: Drop Zone
+Categories: 空降区
 
 Players:
 	PlayerReference@Neutral:

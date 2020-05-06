@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: aoi
 	MissionData:
-		Briefing: Use the units provided to protect the Mobile Construction Vehicle (MCV).\n\nYou should then deploy the MCV by selecting it with a left-click and then right-clicking on it.\n\nThen you can begin to build up a base. Start with a Power Plant.\n\nFinally, search out and destroy all enemy Nod units in the surrounding area.
+		Briefing: 不惜一切代价保护你的基地车！\n\n建立一个滩头阵地，\n运用你手头的资源清除此地的所有Nod武装。\n
 		BackgroundVideo: intro2.vqa
 		BriefingVideo: gdi1.vqa
 		StartVideo: landing.vqa

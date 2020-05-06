@@ -73,7 +73,7 @@ CreateCivilians = function(actor, discoverer)
 		actor.Owner = Nod
 	end)
 
-	ProtectCivilians = Nod.AddPrimaryObjective("Protect the civilians that support Nod.")
+	ProtectCivilians = Nod.AddPrimaryObjective("保护支持者的村庄")
 	Trigger.OnAllKilled(NodCiviliansActors, function()
 		Nod.MarkFailedObjective(ProtectCivilians)
 	end)
@@ -189,7 +189,7 @@ WorldLoaded = function()
 		end
 	end)
 
-	KillGDI = Nod.AddObjective("Kill all civilian GDI supporters.")
+	KillGDI = Nod.AddObjective("消灭所有GDI支持者")
 
 	Media.PlaySpeechNotification(Nod, "Reinforce")
 	Reinforcements.Reinforce(Nod, NodUnitsBuggy, { UnitsEntryBuggy.Location, UnitsRallyBuggy.Location }, 11)

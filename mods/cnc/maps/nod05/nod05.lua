@@ -112,9 +112,9 @@ WorldLoaded = function()
 
 	InitObjectives(Nod)
 
-	BuildSAMObjective = Nod.AddObjective("Build 3 SAMs.")
-	DestroyGDI = Nod.AddObjective("Destroy the GDI base.")
-	GDIObjective = GDI.AddObjective("Kill all enemies.")
+	BuildSAMObjective = Nod.AddObjective("建造三座防空导弹平台")
+	DestroyGDI = Nod.AddObjective("摧毁GDI基地")
+	GDIObjective = GDI.AddObjective("消灭所有敌人")
 
 	Trigger.AfterDelay(AirstrikeDelay, SendGDIAirstrike)
 	Trigger.AfterDelay(DateTime.Minutes(1) + DateTime.Seconds(30), SendGDI2Units)

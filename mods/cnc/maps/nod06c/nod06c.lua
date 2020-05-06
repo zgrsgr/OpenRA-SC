@@ -61,8 +61,8 @@ WorldLoaded = function()
 
 	InitObjectives(Nod)
 
-	NodObjective1 = Nod.AddObjective("Steal the GDI nuclear detonator.")
-	InfiltrateObjective = Nod.AddObjective("Infiltrate the barracks, weapon factory and\nthe construction yard.", "Secondary", false)
+	NodObjective1 = Nod.AddObjective("窃取GDI核爆装置")
+	InfiltrateObjective = Nod.AddObjective("渗透GDI全部生产设施", "次要目标", false)
 
 	InsertNodUnits()
 
@@ -95,7 +95,7 @@ WorldLoaded = function()
 
 	Trigger.OnEnteredFootprint(Win1CellTriggerActivator, function(a, id)
 		if a.Owner == Nod then
-			EvacuateObjective = Nod.AddObjective("Move to the evacuation point.")
+			EvacuateObjective = Nod.AddObjective("前往撤离点")
 			Nod.MarkCompletedObjective(NodObjective1)
 			Trigger.RemoveFootprintTrigger(id)
 		end

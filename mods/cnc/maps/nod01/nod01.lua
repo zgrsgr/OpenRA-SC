@@ -41,10 +41,10 @@ WorldLoaded = function()
 
 	InitObjectives(Nod)
 
-	KillNikoomba = Nod.AddObjective("Kill Nikoomba.")
-	DestroyVillage = Nod.AddObjective("Destroy the village.")
-	DestroyGDI = Nod.AddObjective("Destroy all GDI troops in the area.", "Secondary", false)
-	GDIObjective = GDI.AddObjective("Eliminate all Nod forces.")
+	KillNikoomba = Nod.AddObjective("除掉尼寇穆巴")
+	DestroyVillage = Nod.AddObjective("摧毁整个村庄")
+	DestroyGDI = Nod.AddObjective("肃清所有GDI武装力量", "次要目标", false)
+	GDIObjective = GDI.AddObjective("消灭Nod")
 
 	Trigger.OnKilled(Nikoomba, function()
 		Nod.MarkCompletedObjective(KillNikoomba)

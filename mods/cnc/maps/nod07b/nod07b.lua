@@ -169,8 +169,8 @@ WorldLoaded = function()
 
 	InitObjectives(Nod)
 
-	EliminateGDI = Nod.AddObjective("Eliminate all GDI forces in the area.")
-	BuildSAMs = Nod.AddObjective("Build 3 SAMs to fend off the GDI bombers.", "Secondary", false)
+	EliminateGDI = Nod.AddObjective("肃清所有GDI武装力量")
+	BuildSAMs = Nod.AddObjective("建造三座防空导弹平台以抵御GDI空袭", "次要目标", false)
 end
 
 Tick = function()
