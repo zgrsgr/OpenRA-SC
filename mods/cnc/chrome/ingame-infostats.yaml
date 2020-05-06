@@ -26,7 +26,7 @@ Container@SKIRMISH_STATS:
 					Height: 20
 					Font: Bold
 					Text: 击败所有敌人！
-					Disabled: yes
+					Disabled: true
 					TextColorDisabled: FFFFFF
 		Container@STATS_HEADERS:
 			X: 17
