@@ -55,6 +55,10 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Text shown in the production tooltip.")]
 		public readonly string Description = "";
 
+		[Translate]
+		[Desc("Texts shown on the icon. defualt as Tooltip:Name.")]
+		public readonly string[] IconTexts = {};
+	
 		public static string GetInitialFaction(ActorInfo ai, string defaultFaction)
 		{
 			var bi = ai.TraitInfoOrDefault<BuildableInfo>();

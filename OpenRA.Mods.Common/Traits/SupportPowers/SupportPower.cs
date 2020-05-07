@@ -20,6 +20,10 @@ namespace OpenRA.Mods.Common.Traits
 		public readonly string Icon = null;
 		public readonly string Description = "";
 		public readonly string LongDesc = "";
+		
+		[Translate]
+		[Desc("Texts shown on the icon. defualt as Tooltip:Name.")]
+		public readonly string[] IconTexts = {};
 		public readonly bool AllowMultiple = false;
 		public readonly bool OneShot = false;
 

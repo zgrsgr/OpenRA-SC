@@ -29,6 +29,7 @@ namespace OpenRA.Mods.Common.Widgets
 		public string Name;
 		public HotkeyReference Hotkey;
 		public Sprite Sprite;
+		public string[] IconTexts;
 		public PaletteReference Palette;
 		public PaletteReference IconClockPalette;
 		public PaletteReference IconDarkenPalette;
@@ -46,6 +47,12 @@ namespace OpenRA.Mods.Common.Widgets
 		public readonly int2 IconSize = new int2(64, 48);
 		public readonly int2 IconMargin = int2.Zero;
 		public readonly int2 IconSpriteOffset = int2.Zero;
+
+		public readonly bool ShowIconText = false;
+		public readonly string IconTextFont = "TinyBold";
+		public readonly Color IconTextColor = Color.White;
+		public readonly TextAlign IconTextAlign = TextAlign.Center;
+		public readonly float2 IconTextOffset = float2.Zero;
 
 		public readonly string ClickSound = ChromeMetrics.Get<string>("ClickSound");
 		public readonly string ClickDisabledSound = ChromeMetrics.Get<string>("ClickDisabledSound");
@@ -109,7 +116,7 @@ namespace OpenRA.Mods.Common.Widgets
 
 		readonly WorldRenderer worldRenderer;
 
-		SpriteFont overlayFont, symbolFont;
+		SpriteFont overlayFont, symbolFont, iconFont;
 		float2 holdOffset, readyOffset, timeOffset, queuedOffset, infiniteOffset;
 
 		[CustomLintableHotkeyNames]
@@ -156,7 +163,7 @@ namespace OpenRA.Mods.Common.Widgets
 		public override void Initialize(WidgetArgs args)
 		{
 			base.Initialize(args);
-
+			iconFont = Game.Renderer.Fonts[IconTextFont];
 			hotkeys = Exts.MakeArray(HotkeyCount,
 				i => modData.Hotkeys[HotkeyPrefix + (i + 1).ToString("D2")]);
 		}
@@ -432,6 +439,15 @@ namespace OpenRA.Mods.Common.Widgets
 				var icon = new Animation(World, rsi.GetImage(item, World.Map.Rules.Sequences, faction));
 				var bi = item.TraitInfo<BuildableInfo>();
 				icon.Play(bi.Icon);
+				string[] iTexts = {};
+				if(bi.IconTexts.Length == 0)
+				{
+					var ti = item.TraitInfos<TooltipInfo>();
+					foreach(var i in ti)
+						iTexts = new string[]{i.Name};
+				}
+				else
+					iTexts = bi.IconTexts;
 
 				var pi = new ProductionIcon()
 				{
@@ -439,6 +455,7 @@ namespace OpenRA.Mods.Common.Widgets
 					Name = item.Name,
 					Hotkey = DisplayedIconCount < HotkeyCount ? hotkeys[DisplayedIconCount] : null,
 					Sprite = icon.Image,
+					IconTexts = iTexts,
 					Palette = worldRenderer.Palette(bi.IconPalette),
 					IconClockPalette = worldRenderer.Palette(ClockPalette),
 					IconDarkenPalette = worldRenderer.Palette(NotBuildablePalette),
@@ -455,6 +472,26 @@ namespace OpenRA.Mods.Common.Widgets
 
 			if (oldIconCount != DisplayedIconCount)
 				OnIconCountChanged(oldIconCount, DisplayedIconCount);
+		}
+
+		private float2 GetIconTextOffset(int index, string text)
+		{
+			var tOffset = iconFont.Measure(text);
+			float xOffset = 0;
+			float yOffset = IconSize.Y - index * tOffset.Y;
+			switch(IconTextAlign)
+			{
+				case TextAlign.Center:
+					xOffset = (IconSize.X - tOffset.X) / 2;
+					return new float2(xOffset, yOffset);
+				case TextAlign.Left:
+					return new float2(0, yOffset);
+				case TextAlign.Right:
+					xOffset = (IconSize.X - tOffset.X);
+					return new float2(xOffset, yOffset);
+				default:
+					return new float2(0, 0);
+			}
 		}
 
 		public override void Draw()
@@ -502,6 +539,9 @@ namespace OpenRA.Mods.Common.Widgets
 				}
 				else if (!buildableItems.Any(a => a.Name == icon.Name))
 					WidgetUtils.DrawSHPCentered(cantBuild.Image, icon.Pos + iconOffset, icon.IconDarkenPalette);
+				if(ShowIconText)
+					for(int i = 0; i < icon.IconTexts.Length; ++i)
+						iconFont.DrawTextWithContrast(icon.IconTexts[i], icon.Pos + GetIconTextOffset(icon.IconTexts.Length - i, icon.IconTexts[i]) + IconSpriteOffset + IconTextOffset, IconTextColor, Color.Black, 1);
 			}
 
 			Game.Renderer.DisableAntialiasingFilter();
