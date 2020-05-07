@@ -12,9 +12,9 @@ Container@SKIRMISH_STATS:
 					Width: 482
 					Height: 25
 					Font: MediumBold
-					Text: 任务：
+					Text: 任务目标：
 				Label@STATS_STATUS:
-					X: 90
+					X: 135
 					Y: 22
 					Width: PARENT_RIGHT - 10
 					Height: 25
