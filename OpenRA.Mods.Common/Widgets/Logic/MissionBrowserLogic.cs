@@ -244,7 +244,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					fontCacheLocker = true;
 
 					briefing = WidgetUtils.WrapText(missionData.Briefing.Replace("\\n", "\n"), description.Bounds.Width, descriptionFont);
-					
+
 					var height = descriptionFont.Measure(briefing).Y;
 					Game.RunAfterTick(() =>
 					{

@@ -152,7 +152,7 @@ namespace OpenRA.Mods.Common.Widgets
 					Power = p,
 					Pos = new float2(rect.Location),
 					Sprite = icon.Image,
-					IconTexts = p.Info.IconTexts.Length == 0 ? new string[]{p.Info.Description} : p.Info.IconTexts,
+					IconTexts = p.Info.IconTexts.Length == 0 ? new string[] { p.Info.Description } : p.Info.IconTexts,
 					Palette = worldRenderer.Palette(p.Info.IconPalette),
 					IconClockPalette = worldRenderer.Palette(ClockPalette),
 					Hotkey = IconCount < HotkeyCount ? hotkeys[IconCount] : null,
@@ -201,10 +201,10 @@ namespace OpenRA.Mods.Common.Widgets
 			var tOffset = iconFont.Measure(text);
 			float xOffset = 0;
 			float yOffset = IconSize.Y - index * tOffset.Y;
-			switch(IconTextAlign)
+			switch (IconTextAlign)
 			{
 				case TextAlign.Center:
-					xOffset = (IconSize.X - tOffset.X) / 2;
+					xOffset = (IconSize.X - tOffset.X) / 2f;
 					return new float2(xOffset, yOffset);
 				case TextAlign.Left:
 					return new float2(0, yOffset);
@@ -239,8 +239,8 @@ namespace OpenRA.Mods.Common.Widgets
 
 				clock.Tick();
 				WidgetUtils.DrawSHPCentered(clock.Image, p.Pos + iconOffset, p.IconClockPalette);
-				if(ShowIconText)
-					for(int i = 0; i < p.IconTexts.Length; ++i)
+				if (ShowIconText)
+					for (int i = 0; i < p.IconTexts.Length; ++i)
 						iconFont.DrawTextWithContrast(p.IconTexts[i], p.Pos + GetIconTextOffset(p.IconTexts.Length - i, p.IconTexts[i]) + IconSpriteOffset + IconTextOffset, IconTextColor, Color.Black, 1);
 			}
 

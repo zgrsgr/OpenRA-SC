@@ -439,12 +439,12 @@ namespace OpenRA.Mods.Common.Widgets
 				var icon = new Animation(World, rsi.GetImage(item, World.Map.Rules.Sequences, faction));
 				var bi = item.TraitInfo<BuildableInfo>();
 				icon.Play(bi.Icon);
-				string[] iTexts = {};
-				if(bi.IconTexts.Length == 0)
+				string[] iTexts = { };
+				if (bi.IconTexts.Length == 0)
 				{
 					var ti = item.TraitInfos<TooltipInfo>();
-					foreach(var i in ti)
-						iTexts = new string[]{i.Name};
+					foreach (var i in ti)
+						iTexts = new string[] { i.Name };
 				}
 				else
 					iTexts = bi.IconTexts;
@@ -479,10 +479,10 @@ namespace OpenRA.Mods.Common.Widgets
 			var tOffset = iconFont.Measure(text);
 			float xOffset = 0;
 			float yOffset = IconSize.Y - index * tOffset.Y;
-			switch(IconTextAlign)
+			switch (IconTextAlign)
 			{
 				case TextAlign.Center:
-					xOffset = (IconSize.X - tOffset.X) / 2;
+					xOffset = (IconSize.X - tOffset.X) / 2f;
 					return new float2(xOffset, yOffset);
 				case TextAlign.Left:
 					return new float2(0, yOffset);
@@ -539,8 +539,8 @@ namespace OpenRA.Mods.Common.Widgets
 				}
 				else if (!buildableItems.Any(a => a.Name == icon.Name))
 					WidgetUtils.DrawSHPCentered(cantBuild.Image, icon.Pos + iconOffset, icon.IconDarkenPalette);
-				if(ShowIconText)
-					for(int i = 0; i < icon.IconTexts.Length; ++i)
+				if (ShowIconText)
+					for (int i = 0; i < icon.IconTexts.Length; ++i)
 						iconFont.DrawTextWithContrast(icon.IconTexts[i], icon.Pos + GetIconTextOffset(icon.IconTexts.Length - i, icon.IconTexts[i]) + IconSpriteOffset + IconTextOffset, IconTextColor, Color.Black, 1);
 			}
 
