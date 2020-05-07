@@ -131,6 +131,7 @@ ChromeLayout:
 	cnc|chrome/assetbrowser.yaml
 	cnc|chrome/missionbrowser.yaml
 	cnc|chrome/editor.yaml
+	cnc|chrome/mainmenu-prerelease-notification.yaml
 
 Voices:
 	cnc|audio/voices.yaml

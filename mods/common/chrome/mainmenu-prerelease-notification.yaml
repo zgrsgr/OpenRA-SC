@@ -1,0 +1,98 @@
+Background@MAINMENU_PRERELEASE_NOTIFICATION:
+	Logic: PreReleaseWarningPrompt
+		IgnoreDevVersion: false
+	X: (WINDOW_RIGHT - WIDTH) / 2
+	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	Width: 560
+	Height: 400
+	Children:
+		Label@PROMPT_TITLE:
+			Width: PARENT_RIGHT
+			Y: 20
+			Height: 25
+			Align: Center
+			Text: --- OpenRA汉化组声明 ---
+		Label@PROMPT_TEXT_A:
+			X: 15
+			Y: 45 + 25
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: OpenRA汉化组不曾也不会授权任何个人、组织，
+		Label@PROMPT_TEXT_B:
+			X: 15
+			Y: 45 + 25 * 2
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: 以付费方式或作为条件来传播本游戏，
+		Label@PROMPT_TEXT_C:
+			X: 15
+			Y: 45 + 25 * 3
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: 并反对且抵制上述恶劣行径。
+		Label@PROMPT_TEXT_D:
+			X: 15
+			Y: 45 + 25 * 4
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text:  如果您是以付费方式或条件而获得的本游戏，
+		Label@PROMPT_TEXT_E:
+			X: 15
+			Y: 45 + 25 * 5
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: 请及时联系您的卖家与汉化组，
+		Label@PROMPT_TEXT_F:
+			X: 15
+			Y: 45 + 25 * 6
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: 从而维护您与汉化组各自的权益；
+		Label@PROMPT_TEXT_G:
+			X: 15
+			Y: 45 + 25 * 7
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: 汉化组联系方式：
+		Label@PROMPT_TEXT_H:
+			X: 15
+			Y: 45 + 25 * 8
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: OpenRA作战司令部：https://kaihei.co/BwzarM（开黑啦频道）
+		Label@PROMPT_TEXT_I:
+			X: 15
+			Y: 45 + 25 * 9
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: OpenRA作战司令部：742982428（QQ群）
+		Label@PROMPT_TEXT_J:
+			X: 15
+			Y: 45 + 25 * 10
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: 
+		Label@PROMPT_TEXT_K:
+			X: 15
+			Y: 45 + 25 * 11
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: 您可以免费扩散或传播本游戏。
+		Button@CONTINUE_BUTTON:
+			X: PARENT_RIGHT - WIDTH - 20
+			Y: PARENT_BOTTOM - 45
+			Width: 120
+			Height: 25
+			Text: 我已知晓
+			Font: Bold

@@ -277,7 +277,7 @@ World:
 		PanelName: SKIRMISH_STATS
 	RadarPings:
 	LoadWidgetAtGameStart:
-		ShellmapRoot: MENU_BACKGROUND
+		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 	ScriptTriggers:
 	TimeLimitManager:
 		TimeLimitLabel: 时限作战

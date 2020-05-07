@@ -127,6 +127,7 @@ ChromeLayout:
 	common|chrome/confirmation-dialogs.yaml
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
+	common|chrome/mainmenu-prerelease-notification.yaml
 
 Weapons:
 	ra|weapons/explosions.yaml

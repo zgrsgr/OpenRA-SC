@@ -1,4 +1,4 @@
-Container@MENU_BACKGROUND:
+Container@MAINMENU:
 	Width: WINDOW_RIGHT
 	Height: WINDOW_BOTTOM
 	Logic: MainMenuLogic
