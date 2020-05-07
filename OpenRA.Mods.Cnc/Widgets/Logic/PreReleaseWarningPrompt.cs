@@ -11,6 +11,7 @@
 
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Widgets;
+using System.Collections.Generic;
 
 namespace OpenRA.Mods.Cnc.Widgets.Logic
 {
@@ -19,9 +20,12 @@ namespace OpenRA.Mods.Cnc.Widgets.Logic
 		static bool promptAccepted;
 
 		[ObjectCreator.UseCtor]
-		public PreReleaseWarningPrompt(Widget widget, World world, ModData modData)
+		public PreReleaseWarningPrompt(Widget widget, World world, ModData modData, Dictionary<string, MiniYaml> logicArgs)
 		{
-			if (!promptAccepted && modData.Manifest.Metadata.Version != "{DEV_VERSION}")
+			bool ignoreDevVersion = true;
+			if (logicArgs.ContainsKey("IgnoreDevVersion"))
+				ignoreDevVersion = FieldLoader.GetValue<bool>("IgnoreDevVersion", logicArgs["IgnoreDevVersion"].Value);
+			if (!promptAccepted && (!ignoreDevVersion || modData.Manifest.Metadata.Version != "{DEV_VERSION}"))
 				widget.Get<ButtonWidget>("CONTINUE_BUTTON").OnClick = () => ShowMainMenu(world);
 			else
 				ShowMainMenu(world);
