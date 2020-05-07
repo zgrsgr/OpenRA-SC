@@ -94,6 +94,7 @@ Container@OBSERVER_WIDGETS:
 		Container@GAME_TIMER_BLOCK:
 			Logic: GameTimerLogic
 			X: WINDOW_RIGHT / 2 - WIDTH
+			Y: 50
 			Width: 100
 			Height: 55
 			Children:
@@ -1183,6 +1184,11 @@ Container@PLAYER_WIDGETS:
 					HoldText: 等 待
 					HotkeyPrefix: SupportPower
 					HotkeyCount: 6
+					ShowIconText: true #是否开启用引擎绘制建造栏图标文字
+					IconTextAlign: Left #对齐方式, Left左对齐, Center居中, Right右对齐
+					IconTextFont: Mini #所用字体, 见mod.yaml, font
+					IconTextColor: ffffffff #文字颜色rgb
+					IconTextOffset: 2,-4
 		Image@COMMAND_BAR_BACKGROUND:
 			X: 5
 			Y: WINDOW_BOTTOM - HEIGHT - 5
@@ -1839,6 +1845,11 @@ Container@PLAYER_WIDGETS:
 			HotkeyPrefix: Production
 			HotkeyCount: 24
 			SelectProductionBuildingHotkey: SelectProductionBuilding
+			ShowIconText: true #是否开启用引擎绘制建造栏图标文字
+			IconTextAlign: Left #对齐方式, Left左对齐, Center居中, Right右对齐
+			IconTextFont: Mini #所用字体, 见mod.yaml, font
+			IconTextColor: ffffffff #文字颜色rgb
+			IconTextOffset: 2,-4
 		ProductionTabs@PRODUCTION_TABS:
 			Logic: AddFactionSuffixLogic, ProductionTabsLogic
 			PaletteWidget: PRODUCTION_PALETTE

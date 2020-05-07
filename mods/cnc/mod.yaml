@@ -170,6 +170,10 @@ ChromeMetrics:
 	cnc|metrics.yaml
 
 Fonts:
+	Mini:
+		Font: common|Zfull-GB.ttf
+		Size: 10
+		Ascender: 7
 	Tiny:
 		Font: common|SourceHanSansK-Medium.ttf
 		Size: 12
