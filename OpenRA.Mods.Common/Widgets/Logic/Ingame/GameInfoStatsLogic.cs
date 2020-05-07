@@ -43,7 +43,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					checkbox.GetText = () => mo.Objectives.First().Description;
 				}
 
-				statusLabel.GetText = () => player.WinState == WinState.Won ? "胜利" :
+				statusLabel.GetText = () => player.WinState == WinState.Won ? "完成" :
 					player.WinState == WinState.Lost ? "失败" : "正在进行";
 				statusLabel.GetColor = () => player.WinState == WinState.Won ? Color.LimeGreen :
 					player.WinState == WinState.Lost ? Color.Red : Color.White;
