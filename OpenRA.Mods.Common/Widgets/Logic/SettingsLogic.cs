@@ -258,14 +258,15 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var displaySelectionDropDown = panel.Get<DropDownButtonWidget>("DISPLAY_SELECTION_DROPDOWN");
 			displaySelectionDropDown.OnMouseDown = _ => ShowDisplaySelectionDropdown(displaySelectionDropDown, ds);
-			var displaySelectionLabel = new CachedTransform<int, string>(i => "Display {0}".F(i + 1));
+			var displaySelectionLabel = new CachedTransform<int, string>(i => "显示器{0}".F(i + 1));
 			displaySelectionDropDown.GetText = () => displaySelectionLabel.Update(ds.VideoDisplay);
 			displaySelectionDropDown.IsDisabled = () => Game.Renderer.DisplayCount < 2;
 
 			var glProfileLabel = new CachedTransform<GLProfile, string>(p => p.ToString());
 			var glProfileDropdown = panel.Get<DropDownButtonWidget>("GL_PROFILE_DROPDOWN");
 			glProfileDropdown.OnMouseDown = _ => ShowGLProfileDropdown(glProfileDropdown, ds);
-			glProfileDropdown.GetText = () => glProfileLabel.Update(ds.GLProfile);
+			glProfileDropdown.GetText = () => ds.GLProfile == GLProfile.Modern ? "现代" :
+			ds.GLProfile == GLProfile.Embedded ? "内建" : "经典";
 			glProfileDropdown.IsDisabled = () => Game.Renderer.SupportedGLProfiles.Length < 2;
 
 			var statusBarsDropDown = panel.Get<DropDownButtonWidget>("STATUS_BAR_DROPDOWN");
@@ -521,7 +522,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var mouseControlDropdown = panel.Get<DropDownButtonWidget>("MOUSE_CONTROL_DROPDOWN");
 			mouseControlDropdown.OnMouseDown = _ => ShowMouseControlDropdown(mouseControlDropdown, gs);
-			mouseControlDropdown.GetText = () => gs.UseClassicMouseStyle ? "Classic" : "Modern";
+			mouseControlDropdown.GetText = () => gs.UseClassicMouseStyle ? "经典" : "现代";
 
 			var mouseScrollDropdown = panel.Get<DropDownButtonWidget>("MOUSE_SCROLL_TYPE_DROPDOWN");
 			mouseScrollDropdown.OnMouseDown = _ => ShowMouseScrollDropdown(mouseScrollDropdown, gs);
@@ -724,8 +725,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		{
 			var options = new Dictionary<string, bool>()
 			{
-				{ "Classic", true },
-				{ "Modern", false },
+				{ "经典", true },
+				{ "现代", false },
 			};
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (o, itemTemplate) =>
@@ -873,7 +874,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					() => s.VideoDisplay == o,
 					() => s.VideoDisplay = o);
 
-				var label = "Display {0}".F(o + 1);
+				var label = "显示器{0}".F(o + 1);
 				item.Get<LabelWidget>("LABEL").GetText = () => label;
 				return item;
 			};
@@ -889,7 +890,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					() => s.GLProfile == o,
 					() => s.GLProfile = o);
 
-				var label = o.ToString();
+				var label = o == GLProfile.Modern ? "现代" :
+				o == GLProfile.Embedded ? "内建" : "经典";
 				item.Get<LabelWidget>("LABEL").GetText = () => label;
 				return item;
 			};
