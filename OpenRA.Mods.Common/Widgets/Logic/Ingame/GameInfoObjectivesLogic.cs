@@ -44,7 +44,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var missionStatus = widget.Get<LabelWidget>("MISSION_STATUS");
 			missionStatus.GetText = () => player.WinState == WinState.Undefined ? "正在进行" :
-				player.WinState == WinState.Won ? "胜利" : "失败";
+				player.WinState == WinState.Won ? "完成" : "失败";
 			missionStatus.GetColor = () => player.WinState == WinState.Undefined ? Color.White :
 				player.WinState == WinState.Won ? Color.LimeGreen : Color.Red;
 
