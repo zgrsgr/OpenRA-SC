@@ -54,6 +54,10 @@ namespace OpenRA.Mods.Common.Widgets
 		public readonly TextAlign IconTextAlign = TextAlign.Center;
 		public readonly float2 IconTextOffset = float2.Zero;
 
+		public readonly bool ShowShadowBar = false;
+		public readonly int ShadowBarHeightExpand = 1;
+		public readonly Color ShadowBarColor = Color.FromArgb(200, 0, 0, 0);
+
 		public readonly string ClickSound = ChromeMetrics.Get<string>("ClickSound");
 		public readonly string ClickDisabledSound = ChromeMetrics.Get<string>("ClickDisabledSound");
 		public readonly string TooltipContainer;
@@ -119,6 +123,8 @@ namespace OpenRA.Mods.Common.Widgets
 		SpriteFont overlayFont, symbolFont, iconFont;
 		float2 holdOffset, readyOffset, timeOffset, queuedOffset, infiniteOffset;
 
+		int iconFontHeight;
+
 		[CustomLintableHotkeyNames]
 		public static IEnumerable<string> LinterHotkeyNames(MiniYamlNode widgetNode, Action<string> emitError, Action<string> emitWarning)
 		{
@@ -164,6 +170,7 @@ namespace OpenRA.Mods.Common.Widgets
 		{
 			base.Initialize(args);
 			iconFont = Game.Renderer.Fonts[IconTextFont];
+			iconFontHeight = iconFont.Measure("A").Y;
 			hotkeys = Exts.MakeArray(HotkeyCount,
 				i => modData.Hotkeys[HotkeyPrefix + (i + 1).ToString("D2")]);
 		}
@@ -494,6 +501,13 @@ namespace OpenRA.Mods.Common.Widgets
 			}
 		}
 
+		private Rectangle GetShadowRect(float2 iconPos, int iconTextSize, int heightExpand)
+		{
+			float height = iconFontHeight * iconTextSize + heightExpand;
+			float y = iconPos.Y + IconSize.Y - height;
+			return new Rectangle((int)iconPos.X, (int)y, IconSize.X, (int)height);
+		}
+
 		public override void Draw()
 		{
 			var iconOffset = 0.5f * IconSize.ToFloat2() + IconSpriteOffset;
@@ -526,6 +540,9 @@ namespace OpenRA.Mods.Common.Widgets
 				if (pio != null)
 					WidgetUtils.DrawSHPCentered(pio.Sprite, icon.Pos + iconOffset + pio.Offset(IconSize), worldRenderer.Palette(pio.Palette), 1f);
 
+				// Draw Shadow Bar and Icon Texts
+				if (ShowShadowBar)
+					WidgetUtils.FillRectWithColor(GetShadowRect(icon.Pos + IconSpriteOffset, icon.IconTexts.Length, ShadowBarHeightExpand - (int)IconTextOffset.Y), ShadowBarColor);
 				// Build progress
 				if (icon.Queued.Count > 0)
 				{

@@ -41,6 +41,10 @@ namespace OpenRA.Mods.Common.Widgets
 		public readonly TextAlign IconTextAlign = TextAlign.Center;
 		public readonly float2 IconTextOffset = float2.Zero;
 
+		public readonly bool ShowShadowBar = false;
+		public readonly int ShadowBarHeightExpand = 1;
+		public readonly Color ShadowBarColor = Color.FromArgb(200, 0, 0, 0);
+
 		// Note: LinterHotkeyNames assumes that these are disabled by default
 		public readonly string HotkeyPrefix = null;
 		public readonly int HotkeyCount = 0;
@@ -71,6 +75,8 @@ namespace OpenRA.Mods.Common.Widgets
 		public override Rectangle EventBounds { get { return eventBounds; } }
 		SpriteFont overlayFont, iconFont;
 		float2 holdOffset, readyOffset, timeOffset;
+
+		int iconFontHeight;
 
 		[CustomLintableHotkeyNames]
 		public static IEnumerable<string> LinterHotkeyNames(MiniYamlNode widgetNode, Action<string> emitError, Action<string> emitWarning)
@@ -112,6 +118,7 @@ namespace OpenRA.Mods.Common.Widgets
 		{
 			base.Initialize(args);
 			iconFont = Game.Renderer.Fonts[IconTextFont];
+			iconFontHeight = iconFont.Measure("A").Y;
 			hotkeys = Exts.MakeArray(HotkeyCount,
 				i => modData.Hotkeys[HotkeyPrefix + (i + 1).ToString("D2")]);
 		}
@@ -216,6 +223,13 @@ namespace OpenRA.Mods.Common.Widgets
 			}
 		}
 
+		private Rectangle GetShadowRect(float2 iconPos, int iconTextSize, int heightExpand)
+		{
+			float height = iconFontHeight * iconTextSize + heightExpand;
+			float y = iconPos.Y + IconSize.Y - height;
+			return new Rectangle((int)iconPos.X, (int)y, IconSize.X, (int)height);
+		}
+
 		public override void Draw()
 		{
 			var iconOffset = 0.5f * IconSize.ToFloat2() + IconSpriteOffset;
@@ -231,6 +245,9 @@ namespace OpenRA.Mods.Common.Widgets
 			{
 				WidgetUtils.DrawSHPCentered(p.Sprite, p.Pos + iconOffset, p.Palette);
 
+				// Draw Shadow Bar and Icon Texts
+				if (ShowShadowBar)
+					WidgetUtils.FillRectWithColor(GetShadowRect(p.Pos + IconSpriteOffset, p.IconTexts.Length, ShadowBarHeightExpand - (int)IconTextOffset.Y), ShadowBarColor);						
 				// Charge progress
 				var sp = p.Power;
 				clock.PlayFetchIndex(ClockSequence,
