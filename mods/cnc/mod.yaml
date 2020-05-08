@@ -173,8 +173,8 @@ ChromeMetrics:
 Fonts:
 	Mini:
 		Font: common|Zfull-GB.ttf
-		Size: 10
-		Ascender: 7
+		Size: 9
+		Ascender: 6
 	Tiny:
 		Font: common|SourceHanSansK-Medium.ttf
 		Size: 12
