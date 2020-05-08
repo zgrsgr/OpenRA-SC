@@ -10,6 +10,13 @@ World:
 		StartVideo: landing.vqa
 		WinVideo: consyard.vqa
 		LossVideo: gameover.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 NUKE:
 	-Sellable:

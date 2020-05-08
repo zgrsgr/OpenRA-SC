@@ -13,6 +13,13 @@ World:
 		InitialSmudges:
 			37,24: sc6,0
 			36,18: sc6,0
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 Player:
 	EnemyWatcher:

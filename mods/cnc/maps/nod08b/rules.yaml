@@ -43,6 +43,13 @@ World:
 			53,36: cr1,0
 			55,6: cr1,0
 			54,5: cr1,0
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 Player:
 	PlayerResources:

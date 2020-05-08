@@ -10,6 +10,14 @@ World:
 		StartVideo: dessweep.vqa
 		WinVideo: desflees.vqa
 		LossVideo: flag.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
+
 
 Player:
 	PlayerResources:

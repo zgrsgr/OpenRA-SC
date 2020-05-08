@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 08a: Restore GDI Presence Near Salzburg
+Title: 08a: 精打细算
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 3,7,51,50
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

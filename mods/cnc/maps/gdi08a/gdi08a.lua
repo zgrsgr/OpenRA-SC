@@ -118,13 +118,13 @@ WorldLoaded = function()
 
 	InitObjectives(GDI)
 
-	SecureArea = GDI.AddObjective("Destroy the Nod strike force.")
-	KillGDI = Nod.AddObjective("Kill all enemies!")
+	SecureArea = GDI.AddObjective("肃清所有Nod武装力量")
+	KillGDI = Nod.AddObjective("肃清所有GDI武装势力")
 
-	RepairAssets = GDI.AddObjective("Repair GDI base and vehicles.", "Secondary", false)
+	RepairAssets = GDI.AddObjective("修复所有建筑与载具", "次要目标", false)
 	Trigger.AfterDelay(DateTime.Seconds(5), function() CeckRepairGDIAssetsObjective() end)
 
-	AirSupport = GDI.AddObjective("Destroy the SAM sites to receive air support.", "Secondary", false)
+	AirSupport = GDI.AddObjective("摧毁Nod防空设施以获取空中支援", "次要目标", false)
 	Trigger.OnAllKilled(SamSites, function()
 		GDI.MarkCompletedObjective(AirSupport)
 		Actor.Create("airstrike.proxy", true, { Owner = GDI })

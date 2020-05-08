@@ -22,6 +22,14 @@ World:
 		InitialSmudges:
 			42,39: cr1,0
 			43,36: cr1,0
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
+
 
 Player:
 	PlayerResources:

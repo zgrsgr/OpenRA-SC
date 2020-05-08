@@ -8,6 +8,13 @@ World:
 		Briefing: GDI正在渗透那些支持我们的村落！\n你需要代表兄弟会给予我们的支持者一些信心。\n\n找到那些GDI支持者的藏身处，\n彻底消灭他们。\n\n不用担心，\n我们会设法将这一事件包装成GDI的背叛与内斗。\n
 		BriefingVideo: nod4b.vqa
 		LossVideo: nodlose.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 Player:
 	EnemyWatcher:

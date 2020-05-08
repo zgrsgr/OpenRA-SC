@@ -109,7 +109,7 @@ WorldLoaded = function()
 
 	Camera.Position = DefaultCameraPosition.CenterPosition
 
-	DestroyBunkers = GDI.AddObjective("Destroy the Nod bunkers to allow Carter's\nconvoy to pass through safely.")
+	DestroyBunkers = GDI.AddObjective("摧毁Nod岸防设施")
 	Trigger.OnAllKilled(NodBunkersNorth, function()
 		GDI.MarkCompletedObjective(DestroyBunkers)
 		Trigger.AfterDelay(DateTime.Seconds(1), SpawnGunboat)
@@ -122,17 +122,17 @@ WorldLoaded = function()
 	Trigger.OnEnteredFootprint(BoatEscapeTrigger, function(a, id)
 		if a.Type == "boat" then
 			a.Destroy()
-			Media.DisplayMessage("Part of Carter's convoy passed through!")
+			Media.DisplayMessage("我方舰队已抵达！")
 			Media.PlaySoundNotification(GDI, "AlertBleep")
 		end
 	end)
 
-	SecureArea = GDI.AddObjective("Destroy the Nod strike force.")
-	KillGDI = Nod.AddObjective("Kill all enemies!")
+	SecureArea = GDI.AddObjective("肃清所有Nod武装力量")
+	KillGDI = Nod.AddObjective("肃清所有GDI武装力量")
 
 	Trigger.AfterDelay(DateTime.Seconds(5), SendGDIReinforcements)
 
-	AirSupport = GDI.AddObjective("Destroy the SAM sites to receive air support.", "Secondary", false)
+	AirSupport = GDI.AddObjective("摧毁Nod防空设施以获取空中支援", "次要目标", false)
 	Trigger.OnAllKilled(SamSites, function()
 		GDI.MarkCompletedObjective(AirSupport)
 		Actor.Create("airstrike.proxy", true, { Owner = GDI })

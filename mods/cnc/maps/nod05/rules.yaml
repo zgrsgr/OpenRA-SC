@@ -14,6 +14,13 @@ World:
 	SmudgeLayer@CRATER:
 		InitialSmudges:
 			46,48: cr1,0
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 ^Palettes:
 	IndexedPlayerPalette:

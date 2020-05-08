@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: 09:   Secure the Danube
+Title: 09:   多瑙河保卫战
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 2,3,60,48
 
 Visibility: MissionSelector
 
-Categories: Campaign
+Categories: 战役
 
 LockPreview: True
 

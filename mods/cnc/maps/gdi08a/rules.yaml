@@ -5,7 +5,7 @@ World:
 		StartingMusic: march
 		VictoryMusic: gdi_win1
 	MissionData:
-		Briefing: U.N. Sanction has cut funding to the Global Defense Initiative. Field Units are helpless.\n\nUse the repair facility to keep your units in the field long enough to destroy the Nod base in this region.\n\nAll Nod units and structures must be destroyed.
+		Briefing: 联合国竟然对我们实行了经济制裁，\n我们前线的将士却要为此忍饥挨饿，\n不可理喻！\n\n我们失去了后方的支援，\n为此你必须利用好手边的一切资源，\n及时修复受损的载具和建筑，\n尽可能避免任何有生力量的损失。\n\n在这种情况下要夺回此地非常艰难，\n但我们必须消灭本地区所有的Nod武装势力！\n
 		BriefingVideo: gdi8a.vqa
 		BackgroundVideo: tbrinfo1.vqa
 		WinVideo: paratrop.vqa
@@ -18,6 +18,13 @@ World:
 			43,50: sc3,0
 			40,48: sc4,0
 			47,46: sc5,0
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 ATWR:
 	Buildable:
@@ -147,7 +154,7 @@ HQ:
 	Tooltip:
 	-AirstrikePower:
 	Buildable:
-		Description: Provides an overview of the battlefield.\n  Requires power to operate.
+		Description: 提供战场视野\n提供战术地图\n需要电力才能运转
 
 AFLD:
 	RallyPoint:

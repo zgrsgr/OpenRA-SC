@@ -8,6 +8,14 @@ World:
 		StartVideo: obel.vqa
 		WinVideo: orcabomb.vqa
 		LossVideo: cutout.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
+
 
 Player:
 	PlayerResources:

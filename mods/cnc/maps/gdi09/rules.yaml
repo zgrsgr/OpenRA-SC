@@ -5,10 +5,17 @@ World:
 		StartingMusic: march
 		VictoryMusic: gdi_win1
 	MissionData:
-		Briefing: Take out Nod turrets along shore so Gunboats can move in safely on the Nod base.\n\nThe Nod base must be destroyed.\n\nIf gunboats can get in, they should be able to destroy the base with no difficulty.\n\nKeep an eye out for the new weapon Nod is rumored to be working on.
+		Briefing: Nod在多瑙河一岸建立了行动基地，\n我们必须将他们消灭于此。\n\n我们已准备在多瑙河部署我们的水面舰艇，\n一旦我们摧毁了Nod的岸防阵地，\n我方舰队就能沿河而上，\n直扑Nod基地。\n\n不过千万不能大意，\nNod据说已在此地部署了某种原型武器，\n我们还是应当做好万全准备。
 		BriefingVideo: gdi9.vqa
 		WinVideo: gunboat.vqa
 		LossVideo: gameover.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 ATWR:
 	Buildable:
@@ -132,7 +139,7 @@ HQ:
 	Tooltip:
 	-AirstrikePower:
 	Buildable:
-		Description: Provides an overview of the battlefield.\n  Requires power to operate.
+		Description: 提供战场视野\n提供战术地图\n需要电力才能运转
 
 airstrike.proxy:
 	AirstrikePower:

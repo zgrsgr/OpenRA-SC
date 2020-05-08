@@ -9,6 +9,13 @@ World:
 		BackgroundVideo: intro2.vqa
 		BriefingVideo: nod1.vqa
 		LossVideo: nodlose.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
 
 ^Palettes:
 	IndexedPlayerPalette:

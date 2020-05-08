@@ -18,7 +18,14 @@ World:
 			39,52: sc5,0
 			24,52: sc1,0
 			39,51: sc4,0
-
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: 正常
+		Default: normal
+		Locked: true
+		
 Player:
 	EnemyWatcher:
 	PlayerResources:
