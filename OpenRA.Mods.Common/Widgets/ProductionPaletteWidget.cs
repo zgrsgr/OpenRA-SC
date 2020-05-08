@@ -543,6 +543,10 @@ namespace OpenRA.Mods.Common.Widgets
 				// Draw Shadow Bar and Icon Texts
 				if (ShowShadowBar)
 					WidgetUtils.FillRectWithColor(GetShadowRect(icon.Pos + IconSpriteOffset, icon.IconTexts.Length, ShadowBarHeightExpand - (int)IconTextOffset.Y), ShadowBarColor);
+				if (ShowIconText)
+					for (int i = 0; i < icon.IconTexts.Length; ++i)
+						iconFont.DrawTextWithContrast(icon.IconTexts[i], icon.Pos + GetIconTextOffset(icon.IconTexts.Length - i, icon.IconTexts[i]) + IconSpriteOffset + IconTextOffset, IconTextColor, Color.Black, 1);
+
 				// Build progress
 				if (icon.Queued.Count > 0)
 				{
@@ -556,9 +560,6 @@ namespace OpenRA.Mods.Common.Widgets
 				}
 				else if (!buildableItems.Any(a => a.Name == icon.Name))
 					WidgetUtils.DrawSHPCentered(cantBuild.Image, icon.Pos + iconOffset, icon.IconDarkenPalette);
-				if (ShowIconText)
-					for (int i = 0; i < icon.IconTexts.Length; ++i)
-						iconFont.DrawTextWithContrast(icon.IconTexts[i], icon.Pos + GetIconTextOffset(icon.IconTexts.Length - i, icon.IconTexts[i]) + IconSpriteOffset + IconTextOffset, IconTextColor, Color.Black, 1);
 			}
 
 			Game.Renderer.DisableAntialiasingFilter();
