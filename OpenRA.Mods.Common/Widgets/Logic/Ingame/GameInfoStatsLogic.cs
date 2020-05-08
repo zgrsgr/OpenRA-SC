@@ -101,7 +101,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 					nameLabel.GetText = () =>
 					{
-						var suffix = pp.WinState == WinState.Undefined ? "" : " (" + pp.WinState + ")";
+						var suffix = pp.WinState == WinState.Undefined ? "" : " (" + (pp.WinState == WinState.Won ? "胜利" : pp.WinState == WinState.Lost ? "战败" : "未知") + ")";
 						if (client != null && client.State == Session.ClientState.Disconnected)
 							suffix = " (已离开)";
 

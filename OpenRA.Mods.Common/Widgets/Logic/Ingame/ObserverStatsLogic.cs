@@ -534,7 +534,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			playerName.GetText = () =>
 			{
-				var suffix = player.WinState == WinState.Undefined ? "" : " (" + player.WinState + ")";
+				var suffix = player.WinState == WinState.Undefined ? "" : " (" + (player.WinState == WinState.Won ? "胜利" : player.WinState == WinState.Lost ? "战败" : "未知") + ")";
 				if (client != null && client.State == Session.ClientState.Disconnected)
 					suffix = " (已离开)";
 
