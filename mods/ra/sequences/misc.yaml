@@ -504,6 +504,8 @@ icon:
 	gps: gpssicon
 	parabombs: pbmbicon
 	sonar: sonricon
+	fake: fake.png
+		AddExtension: false
 
 quee:
 	idle:

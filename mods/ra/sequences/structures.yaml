@@ -53,6 +53,7 @@ oilb:
 			INTERIOR: TEMPERAT
 
 fact:
+	Inherits: ^WithFakeActor
 	idle:
 	make: factmake
 		Length: *
@@ -77,7 +78,6 @@ fact:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	icon: facticon
-	fake-icon: facficon
 
 proc:
 	idle:
@@ -123,6 +123,7 @@ silo:
 	icon: siloicon
 
 powr:
+	Inherits: ^WithFakeActor
 	idle:
 	damaged-idle:
 		Start: 1
@@ -136,9 +137,9 @@ powr:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	icon: powricon
-	fake-icon: fpwricon
 
 apwr:
+	Inherits: ^WithFakeActor
 	idle:
 		Offset: 0,-10
 	damaged-idle:
@@ -156,7 +157,6 @@ apwr:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	icon: apwricon
-	fake-icon: fapwicon
 
 barr:
 	idle:
@@ -177,6 +177,7 @@ barr:
 	icon: barricon
 
 tent:
+	Inherits: ^WithFakeActor
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -192,8 +193,6 @@ tent:
 		Length: *
 	icon: tenticon
 		UseTilesetExtension: false
-	fake-icon: tenficon
-		UseTilesetExtension: false
 
 kenn:
 	idle:
@@ -207,6 +206,7 @@ kenn:
 	icon: kennicon
 
 dome:
+	Inherits: ^WithFakeActor
 	idle:
 		Offset: 0,-4
 	damaged-idle:
@@ -221,9 +221,9 @@ dome:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	icon: domeicon
-	fake-icon: domficon
 
 atek:
+	Inherits: ^WithFakeActor
 	idle:
 	damaged-idle:
 		Start: 1
@@ -238,7 +238,6 @@ atek:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	icon: atekicon
-	fake-icon: ateficon
 
 stek:
 	idle:
@@ -254,6 +253,7 @@ stek:
 	icon: stekicon
 
 weap:
+	Inherits: ^WithFakeActor
 	idle:
 	damaged-idle:
 		Start: 1
@@ -272,7 +272,6 @@ weap:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	icon: weapicon
-	fake-icon: weaficon
 
 hpad:
 	idle:
@@ -328,6 +327,7 @@ afld:
 	icon: afldicon
 
 spen:
+	Inherits: ^WithFakeActor
 	idle:
 		Offset: 0,2
 	damaged-idle:
@@ -337,18 +337,18 @@ spen:
 		Length: *
 		Offset: 0,2
 	icon: spenicon
-	fake-icon: speficon
 
 syrd:
+	Inherits: ^WithFakeActor
 	idle:
 	damaged-idle:
 		Start: 1
 	make: syrdmake
 		Length: *
 	icon: syrdicon
-	fake-icon: syrficon
 
 fix:
+	Inherits: ^WithFakeActor
 	idle:
 		Offset: 0,1
 		ZOffset: -1c511
@@ -375,7 +375,6 @@ fix:
 		Offset: 0,-4
 		UseTilesetExtension: true
 	icon: fixicon
-	fake-icon: fixficon
 
 gun:
 	idle:
@@ -566,6 +565,7 @@ iron:
 	icon: ironicon
 
 pdox:
+	Inherits: ^WithFakeActor
 	idle:
 	damaged-idle:
 		Start: 29
@@ -581,9 +581,9 @@ pdox:
 		Offset: 0,-4
 		UseTilesetExtension: true
 	icon: pdoxicon
-	fake-icon: pdoficon
 
 mslo:
+	Inherits: ^WithFakeActor
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -600,9 +600,7 @@ mslo:
 	damaged-active:
 		Start: 9
 		Length: 7
-	icon: msloicon2
-		UseTilesetExtension: false
-	fake-icon: mslficon
+	icon: msloicon
 		UseTilesetExtension: false
 
 miss:

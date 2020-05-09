@@ -1,0 +1,3 @@
+^WithFakeActor:
+	fake: fake.png
+		AddExtension: false
