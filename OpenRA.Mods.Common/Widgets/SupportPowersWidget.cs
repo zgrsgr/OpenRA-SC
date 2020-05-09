@@ -128,6 +128,7 @@ namespace OpenRA.Mods.Common.Widgets
 			public SupportPowerInstance Power;
 			public float2 Pos;
 			public Sprite Sprite;
+			public Sprite[] OverlaySequences;
 			public string[] IconTexts;
 			public PaletteReference Palette;
 			public PaletteReference IconClockPalette;
@@ -153,12 +154,20 @@ namespace OpenRA.Mods.Common.Widgets
 					rect = new Rectangle(rb.X, rb.Y + IconCount * (IconSize.Y + IconMargin), IconSize.X, IconSize.Y);
 
 				icon.Play(p.Info.Icon);
+				var iconImage = icon.Image;
+				Sprite[] overlaySequences = new Sprite[p.Info.OverlaySequences.Length];
+				for (int i = 0; i < p.Info.OverlaySequences.Length; i++)
+				{
+					icon.Play(p.Info.OverlaySequences[i]);
+					overlaySequences[i] = icon.Image;
+				}
 
 				var power = new SupportPowerIcon()
 				{
 					Power = p,
 					Pos = new float2(rect.Location),
-					Sprite = icon.Image,
+					Sprite = iconImage,
+					OverlaySequences = overlaySequences,
 					IconTexts = p.Info.IconTexts.Length == 0 ? new string[] { p.Info.Description } : p.Info.IconTexts,
 					Palette = worldRenderer.Palette(p.Info.IconPalette),
 					IconClockPalette = worldRenderer.Palette(ClockPalette),
@@ -244,6 +253,9 @@ namespace OpenRA.Mods.Common.Widgets
 			foreach (var p in icons.Values)
 			{
 				WidgetUtils.DrawSHPCentered(p.Sprite, p.Pos + iconOffset, p.Palette);
+
+				foreach (var os in p.OverlaySequences)
+					WidgetUtils.DrawSHPCentered(os, p.Pos + iconOffset, p.Palette);
 
 				// Draw Shadow Bar and Icon Texts
 				if (ShowShadowBar)

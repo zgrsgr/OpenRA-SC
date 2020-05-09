@@ -29,6 +29,7 @@ namespace OpenRA.Mods.Common.Widgets
 		public string Name;
 		public HotkeyReference Hotkey;
 		public Sprite Sprite;
+		public Sprite[] OverlaySequences;
 		public string[] IconTexts;
 		public PaletteReference Palette;
 		public PaletteReference IconClockPalette;
@@ -446,6 +447,14 @@ namespace OpenRA.Mods.Common.Widgets
 				var icon = new Animation(World, rsi.GetImage(item, World.Map.Rules.Sequences, faction));
 				var bi = item.TraitInfo<BuildableInfo>();
 				icon.Play(bi.Icon);
+				var iconImage = icon.Image;
+				Sprite[] overlaySequences = new Sprite[bi.OverlaySequences.Length];
+				for (int i = 0; i < bi.OverlaySequences.Length; i++)
+				{
+					icon.Play(bi.OverlaySequences[i]);
+					overlaySequences[i] = icon.Image;
+				}
+
 				string[] iTexts = { };
 				if (bi.IconTexts.Length == 0)
 				{
@@ -461,7 +470,8 @@ namespace OpenRA.Mods.Common.Widgets
 					Actor = item,
 					Name = item.Name,
 					Hotkey = DisplayedIconCount < HotkeyCount ? hotkeys[DisplayedIconCount] : null,
-					Sprite = icon.Image,
+					Sprite = iconImage,
+					OverlaySequences = overlaySequences,
 					IconTexts = iTexts,
 					Palette = worldRenderer.Palette(bi.IconPalette),
 					IconClockPalette = worldRenderer.Palette(ClockPalette),
@@ -534,6 +544,9 @@ namespace OpenRA.Mods.Common.Widgets
 			foreach (var icon in icons.Values)
 			{
 				WidgetUtils.DrawSHPCentered(icon.Sprite, icon.Pos + iconOffset, icon.Palette);
+
+				foreach (var os in icon.OverlaySequences)
+					WidgetUtils.DrawSHPCentered(os, icon.Pos + iconOffset, icon.Palette);
 
 				// Draw the ProductionIconOverlay's sprite
 				var pio = pios.FirstOrDefault(p => p.IsOverlayActive(icon.Actor));

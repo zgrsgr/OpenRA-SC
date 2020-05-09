@@ -59,6 +59,10 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Texts shown on the icon. defualt as Tooltip:Name.")]
 		public readonly string[] IconTexts = { };
 
+		[PaletteReference]
+		[Desc("Sequences of the actor draw on icon")]
+		public readonly string[] OverlaySequences = { };
+
 		public static string GetInitialFaction(ActorInfo ai, string defaultFaction)
 		{
 			var bi = ai.TraitInfoOrDefault<BuildableInfo>();

@@ -72,6 +72,10 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Palette used for the icon.")]
 		public readonly string IconPalette = "chrome";
 
+		[PaletteReference]
+		[Desc("Sequences of the actor draw on icon")]
+		public readonly string[] OverlaySequences = { };
+
 		[Desc("Beacons are only supported on the Airstrike, Paratroopers, and Nuke powers")]
 		public readonly bool DisplayBeacon = false;
 
