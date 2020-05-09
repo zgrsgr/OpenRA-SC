@@ -259,7 +259,7 @@ namespace OpenRA.Mods.Common.Widgets
 
 				// Draw Shadow Bar and Icon Texts
 				if (ShowShadowBar)
-					WidgetUtils.FillRectWithColor(GetShadowRect(p.Pos + IconSpriteOffset, p.IconTexts.Length, ShadowBarHeightExpand - (int)IconTextOffset.Y), ShadowBarColor);						
+					WidgetUtils.FillRectWithColor(GetShadowRect(p.Pos + IconSpriteOffset, p.IconTexts.Length, ShadowBarHeightExpand - (int)IconTextOffset.Y), ShadowBarColor);
 				if (ShowIconText)
 					for (int i = 0; i < p.IconTexts.Length; ++i)
 						iconFont.DrawTextWithContrast(p.IconTexts[i], p.Pos + GetIconTextOffset(p.IconTexts.Length - i, p.IconTexts[i]) + IconSpriteOffset + IconTextOffset, IconTextColor, Color.Black, 1);
