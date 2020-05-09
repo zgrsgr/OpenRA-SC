@@ -1184,12 +1184,12 @@ Container@PLAYER_WIDGETS:
 					HoldText: 等 待
 					HotkeyPrefix: SupportPower
 					HotkeyCount: 6
-					ShowIconText: true #是否开启用引擎绘制建造栏图标文字
+					ShowIconText: false #是否开启用引擎绘制建造栏图标文字
 					IconTextAlign: Left #对齐方式, Left左对齐, Center居中, Right右对齐
 					IconTextFont: Mini #所用字体, 见mod.yaml, font
 					IconTextColor: ffffffff #文字颜色rgb
 					IconTextOffset: 2,-4
-					ShowShadowBar: true
+					ShowShadowBar: false
 					ShadowBarHeightExpand: 1
 					ShadowBarColor: 00000077
 		Image@COMMAND_BAR_BACKGROUND:
@@ -1848,12 +1848,12 @@ Container@PLAYER_WIDGETS:
 			HotkeyPrefix: Production
 			HotkeyCount: 24
 			SelectProductionBuildingHotkey: SelectProductionBuilding
-			ShowIconText: true #是否开启用引擎绘制建造栏图标文字
+			ShowIconText: false #是否开启用引擎绘制建造栏图标文字
 			IconTextAlign: Center #对齐方式, Left左对齐, Center居中, Right右对齐
 			IconTextFont: Mini #所用字体, 见mod.yaml, font
 			IconTextColor: ffffffff #文字颜色rgba
 			IconTextOffset: 0,-2
-			ShowShadowBar: true
+			ShowShadowBar: false
 			ShadowBarHeightExpand: 1
 			ShadowBarColor: 00000077
 		ProductionTabs@PRODUCTION_TABS:
