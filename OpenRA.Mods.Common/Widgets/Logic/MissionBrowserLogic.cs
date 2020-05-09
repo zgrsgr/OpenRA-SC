@@ -199,7 +199,6 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			}
 		}
 
-		static bool fontCacheLocker = false;
 		void SelectMap(MapPreview preview)
 		{
 			selectedMap = preview;
@@ -214,50 +213,38 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var infoVideo = "";
 			var infoVideoVisible = false;
 
-			new Thread(() =>
+			var mapDifficulty = preview.Rules.Actors["world"].TraitInfos<ScriptLobbyDropdownInfo>()
+				.FirstOrDefault(sld => sld.ID == "difficulty");
+
+			if (mapDifficulty != null)
 			{
-				var mapDifficulty = preview.Rules.Actors["world"].TraitInfos<ScriptLobbyDropdownInfo>()
-					.FirstOrDefault(sld => sld.ID == "difficulty");
+				difficulty = mapDifficulty.Default;
+				difficulties = mapDifficulty.Values;
+				difficultyDisabled = mapDifficulty.Locked;
+			}
 
-				if (mapDifficulty != null)
+			var missionData = preview.Rules.Actors["world"].TraitInfoOrDefault<MissionDataInfo>();
+			if (missionData != null)
+			{
+				briefingVideo = missionData.BriefingVideo;
+				briefingVideoVisible = briefingVideo != null;
+
+				infoVideo = missionData.BackgroundVideo;
+				infoVideoVisible = infoVideo != null;
+
+				var briefing = WidgetUtils.WrapText(missionData.Briefing.Replace("\\n", "\n"), description.Bounds.Width, descriptionFont);
+
+				var height = descriptionFont.Measure(briefing).Y;
+				Game.RunAfterTick(() =>
 				{
-					difficulty = mapDifficulty.Default;
-					difficulties = mapDifficulty.Values;
-					difficultyDisabled = mapDifficulty.Locked;
-				}
-
-				var missionData = preview.Rules.Actors["world"].TraitInfoOrDefault<MissionDataInfo>();
-				if (missionData != null)
-				{
-					briefingVideo = missionData.BriefingVideo;
-					briefingVideoVisible = briefingVideo != null;
-
-					infoVideo = missionData.BackgroundVideo;
-					infoVideoVisible = infoVideo != null;
-					string briefing;
-
-					if (fontCacheLocker)
+					if (preview == selectedMap)
 					{
-						return;
+						description.Text = briefing;
+						description.Bounds.Height = height;
+						descriptionPanel.Layout.AdjustChildren();
 					}
-
-					fontCacheLocker = true;
-
-					briefing = WidgetUtils.WrapText(missionData.Briefing.Replace("\\n", "\n"), description.Bounds.Width, descriptionFont);
-
-					var height = descriptionFont.Measure(briefing).Y;
-					Game.RunAfterTick(() =>
-					{
-						if (preview == selectedMap)
-						{
-							description.Text = briefing;
-							description.Bounds.Height = height;
-							descriptionPanel.Layout.AdjustChildren();
-						}
-					});
-					fontCacheLocker = false;
-				}
-			}).Start();
+				});
+			}
 
 			startBriefingVideoButton.IsVisible = () => briefingVideoVisible && playingVideo != PlayingVideo.Briefing;
 			startBriefingVideoButton.OnClick = () => PlayVideo(videoPlayer, briefingVideo, PlayingVideo.Briefing);
