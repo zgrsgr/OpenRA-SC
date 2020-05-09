@@ -2,7 +2,7 @@ World:
 	LuaScript:
 		Scripts: scu35ea.lua, scu35ea-AI.lua
 	MissionData:
-		Briefing: 盟军特务窃取了我军的新型装甲技术！\n如果盟军决定对此加以应用的话，\n他们的军用建筑将会刀枪不入！\n\n我们必须摧毁盟军的相关研发设施。\n考虑到这一任务的重要性，\n我们不得不派遣沃尔科夫执行任务。\n你必须指挥沃尔科夫与契琴科伊，\n他的半机械犬搭档，\n摧毁盟军的指挥部。\n\n随后在东南方早已就位的红军将开入战场，\n彻底摧毁盟军的合金加工厂。\n
+		Briefing: 盟军特务窃取了我军的新型装甲技术！\n如果盟军决定对此加以应用的话，\n他们的军用建筑将会刀枪不入！\n\n我们必须摧毁盟军的相关研发设施。\n考虑到这一任务的重要性，\n我们不得不派遣沃尔科夫执行任务。\n你必须指挥他和他的半机械犬搭档——契琴科伊，\n摧毁盟军的指挥部。\n\n随后在东南方早已就位的红军将开入战场，\n彻底摧毁盟军的合金加工厂。\n
 		WinVideo: grvestne.vqa
 		LossVideo: sovcemet.vqa
 	ScriptLobbyDropdown@difficulty:

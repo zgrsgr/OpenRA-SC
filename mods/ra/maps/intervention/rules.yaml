@@ -6,7 +6,7 @@ World:
 	LuaScript:
 		Scripts: intervention.lua
 	MissionData:
-		Briefing: 苏联空军正在无情地袭击一个平民住地！\n我们必须阻止这些嗜血的疯子！\n\n以下是你的任务目标：\n尽快在内陆建立一个行动基地，\n攻占敌方的空军司令部。\n\n注意：\n苏军基地固若金汤，\n如果要组织起一支足够庞大的军队，\n恐怕为时已晚。\n\n指挥官，\n考虑到这是和时间赛跑，\n虽然强攻不成但我们可以智取，\n祝你好运！\n 
+		Briefing: 苏联空军正在无情地袭击一个平民住地！\n我们必须阻止这些嗜血的疯子！\n\n以下是你的任务目标：\n尽快在内陆建立一个行动基地，\n攻占敌方的空军司令部。\n\n注意：\n苏联基地固若金汤，\n如果要组织起一支足够庞大的军队，\n恐怕为时已晚。\n\n指挥官，\n考虑到这是和时间赛跑，\n虽然强攻不成但我们可以智取，\n祝你好运！\n 
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
@@ -29,7 +29,7 @@ CAMERA:
 
 MISS:
 	Tooltip:
-		Name: 苏军空军司令部 #Soviet Air Force HQ
+		Name: 苏联空军司令部
 	Capturable:
 		Types: building
 		ValidStances: Enemy
