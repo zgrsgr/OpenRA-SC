@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Snow Town
+Title: 覆雪小镇
 
 Author: MicroBit
 
@@ -14,7 +14,7 @@ Bounds: 16,16,96,96
 
 Visibility: Lobby
 
-Categories: Conquest
+Categories: 作战 #Conquest
 
 Players:
 	PlayerReference@Neutral:
