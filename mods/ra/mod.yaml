@@ -38,8 +38,8 @@ Packages:
 
 MapFolders:
 	ra|maps: System
+	~^maps/ra/common: System
 	~^maps/ra/{DEV_VERSION}: User
-	~^maps/ra/common: User
 
 Rules:
 	ra|rules/misc.yaml
