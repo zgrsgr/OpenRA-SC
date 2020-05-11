@@ -81,7 +81,7 @@ FinishTimer = function()
 			c = HSLColor.White
 		end
 
-		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("The experiment is a success!", c) end)
+		Trigger.AfterDelay(DateTime.Seconds(i), function() UserInterface.SetMissionText("试验成功了！", c) end)
 	end
 	Trigger.AfterDelay(DateTime.Seconds(6), function() UserInterface.SetMissionText("") end)
 end
@@ -115,7 +115,7 @@ Tick = function()
 	end
 
 	if ticked > 0 then
-		UserInterface.SetMissionText("Chronosphere experiment completes in " .. Utils.FormatTime(ticked), TimerColor)
+		UserInterface.SetMissionText("超时空技术实验将在" .. Utils.FormatTime(ticked) .. "后完成", TimerColor)
 		ticked = ticked - 1
 	elseif ticked == 0 and (greece.PowerState ~= "Normal") then
 		greece.MarkFailedObjective(KeepBasePowered)
