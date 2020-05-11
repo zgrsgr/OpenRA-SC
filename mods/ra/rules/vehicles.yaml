@@ -796,7 +796,7 @@ QTNK:
 		Queue: Vehicle
 		BuildPaletteOrder: 420
 		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
-		Description: 通过制造地震波破坏周围的建筑和载具的自杀型单位\n·自身无武装，但地震波能造成伤害\n通过部署发动攻击并自毁\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵、飞行器
+		Description: 通过制造地震波破坏周围的建筑和载具的自杀型单位\n通过部署发动攻击并自毁\n自身无武装，但地震波能造成伤害\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵、飞行器
 	Valued:
 		Cost: 2000
 	Tooltip:
