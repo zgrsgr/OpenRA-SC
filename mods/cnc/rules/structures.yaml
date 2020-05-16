@@ -1037,7 +1037,7 @@ ATWR:
 		Queue: Defence.GDI
 		BuildDuration: 2880
 		BuildDurationModifier: 40
-		Description: 泛用型先进基地防御\n可以侦测隐形单位\n需要电力才能运转\n\n·强势对抗：步兵、轻型载具、飞行器\n·弱势对抗：装甲载具
+		Description: 泛用型先进基地防御\n可以侦测隐形单位\n需要电力才能运转\n\n·强势对抗：步兵、载具、飞行器\n·弱势对抗：建筑
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 22,48,0,-12
